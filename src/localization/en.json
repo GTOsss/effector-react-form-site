@@ -1,0 +1,51 @@
+{
+  "global": {
+    "navItemExamples": "Examples"
+  },
+  "index": {
+    "h1": "Rect Effector Form"
+  },
+  "examples": {
+    "simpleFormLocal": {
+      "title": "Simple form local",
+      "description": "Simple form with values in local state."
+    },
+    "simpleFormGlobal": {
+      "title": "Simple form global",
+      "description": "Simple form with values in global state."
+    },
+    "initialValues": {
+      "title": "Initial values"
+    },
+    "initialValuesAdvanced": {
+      "title": "Initial values advanced",
+      "description": "An advanced example that implements the following features: {br} initial values, {br}reset to initial values, {br} clear form."
+    },
+    "setValuesLocal": {
+      "title": "Set values local",
+      "description": "Set values local state level."
+    },
+    "setValuesGlobal": {
+      "title": "Set values global",
+      "description": "Set values global state level."
+    },
+    "setValuesAdvanced": {
+      "title": "Set values advanced",
+      "description": "An advanced example that implements the following features: {br}loading a user, {br}changing a user, {br}saving a user, {br}checking that the user was changed, {br}canceling changes (resetting)"
+    },
+    "fieldLevelValidation": {
+      "title": "Field level validation"
+    },
+    "formLevelValidation": {
+      "title": "Form level validation"
+    },
+    "setErrorLocal": {
+      "title": "Set error local",
+      "description": "Set field error local state level."
+    },
+    "setErrorGlobal": {
+      "title": "Set error global",
+      "description": "Set field error global state state."
+    }
+  }
+}

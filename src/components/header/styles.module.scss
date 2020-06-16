@@ -1,0 +1,27 @@
+@import '../../assets/variables';
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 60px;
+  background-color: $background-secondary;
+  border-bottom: 1px solid $border-primary;
+}
+
+.leftGroup {
+  display: flex;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  line-height: 20px;
+  padding: 10px;
+}
+
+.logoLink {
+  composes: link;
+  font-weight: 700;
+  font-size: 20px;
+}
