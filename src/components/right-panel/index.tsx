@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Link} from 'gatsby-plugin-intl'
+import {Link} from 'gatsby-plugin-intl';
 import styles from './styles.module.scss';
 
 export type Element = {
@@ -19,9 +19,9 @@ const NavPanel: React.FC<Props> = React.memo(({
   return (
     <div className={styles.wrap}>
       <ul className={styles.list}>
-        {elements.map(({label, link}) => (
-          <li>
-            <Link className={styles.link} to={link}>{label}</Link>
+        {elements.map(({label, link, id}) => (
+          <li key={id}>
+            <Link className={styles.link} activeClassName={styles.activeLink} to={link}>{label}</Link>
           </li>
         ))}
       </ul>

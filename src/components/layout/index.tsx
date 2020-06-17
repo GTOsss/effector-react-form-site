@@ -1,8 +1,9 @@
 import * as React from 'react';
 import {useStaticQuery, graphql} from 'gatsby';
 import Header from '../header';
-import RightPanel, {Element as NavElement} from '../right-panel';
 import {FormattedMessage} from 'gatsby-plugin-intl';
+import cn from 'classnames';
+import RightPanel, {Element as NavElement} from '../right-panel';
 import styles from './styles.module.scss';
 
 type NavElementsKey = 'Getting started' | 'Examples' | 'API';
@@ -32,6 +33,21 @@ const navElementsMap: NavElementsMap = {
       id: 3,
       label: <FormattedMessage id="examples.initialValuesAdvanced.title" />,
       link: '/examples/initial-values-advanced',
+    },
+    {
+      id: 4,
+      label: <FormattedMessage id="examples.setValuesLocal.title" />,
+      link: '/examples/set-values-local',
+    },
+    {
+      id: 5,
+      label: <FormattedMessage id="examples.setValuesGlobal.title" />,
+      link: '/examples/set-values-global',
+    },
+    {
+      id: 6,
+      label: <FormattedMessage id="examples.setValuesAdvanced.title" />,
+      link: '/examples/set-values-advanced',
     },
 
     {
@@ -84,16 +100,18 @@ const Layout = ({
     }
   `);
 
+  const withLeftPanel = Boolean(menuKey);
+
   return (
     <div className={styles.wrap}>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div className={styles.body}>
+      <div className={cn(styles.body, {[styles.bodyWithLeftPanel]: withLeftPanel})}>
         <main className={styles.main}>
           <div className={styles.wrapContent}>
             {children}
           </div>
         </main>
-        {menuKey ? <RightPanel elements={navElementsMap[menuKey]} /> : null}
+        {menuKey && <RightPanel elements={navElementsMap[menuKey]} />}
       </div>
       {/*<footer className={styles.footer}>*/}
       {/*  © {new Date().getFullYear()}*/}

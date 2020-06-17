@@ -3,38 +3,43 @@ import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
 import {darcula} from 'react-syntax-highlighter/dist/esm/styles/prism';
 import simpleFormLocal from './simple-form-local';
 import simpleFormGlobal from './simple-form-global';
-import fieldLevelValidation from './field-level-validation';
 import initialValues from './initial-values';
 import initialValuesAdvanced from './initial-values-advanced';
+import setValuesLocal from './set-values-local';
+import setValuesGlobal from './set-values-global';
+import fieldLevelValidation from './field-level-validation';
 import fieldArray from './field-array';
 import wizardForm from './wizard-form';
 
 const mapExamples = {
   simpleFormLocal,
   simpleFormGlobal,
-  fieldLevelValidation,
   initialValues,
   initialValuesAdvanced,
+  setValuesLocal,
+  setValuesGlobal,
+
+  fieldLevelValidation,
   fieldArray,
   wizardForm,
 };
 
 export type ExampleKey = keyof typeof mapExamples;
 
-interface IProps {
+interface Props {
   exampleKey: ExampleKey;
 }
 
-export const SimpleExample = React.memo(({exampleKey}: IProps) => {
+export const SimpleExample: React.FC<Props> = React.memo(({exampleKey, children}) => {
 
   return (
     <SyntaxHighlighter
       wrapLines
       language="jsx"
       style={darcula}
-      customStyle={{backgroundColor: '#050a11', border: '0px solid #162A4E'}}
+      customStyle={{backgroundColor: '#242424', border: '0px solid #162A4E'}}
     >
-      {mapExamples[exampleKey]}
+      {children || mapExamples[exampleKey]}
     </SyntaxHighlighter>
   );
 });

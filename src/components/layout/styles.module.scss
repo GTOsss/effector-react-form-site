@@ -12,6 +12,11 @@
   display: flex;
   flex-grow: 1;
   background-color: $background-primary;
+  padding-top: 60px;
+}
+
+.body-withLeftPanel {
+  padding-right: 460px;
 }
 
 .main {

@@ -30,14 +30,17 @@
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-transformer-sharp": "^2.3.7",
     "jsx-to-string": "^1.4.0",
+    "lodash.isequal": "^4.5.0",
     "node-sass": "^4.14.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-effector-form": "^1.0.13",
+    "react-effector-form": "^1.0.14",
     "react-helmet": "^5.2.1",
     "react-syntax-highlighter": "^12.2.1"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.10",
+    "@types/lodash.isequal": "^4.5.5",
     "@types/node": "^13.1.5",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",

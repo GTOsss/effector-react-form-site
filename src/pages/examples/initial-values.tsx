@@ -45,9 +45,9 @@ const Form = () => {
       </form>
 
       <div className="row">
-        <JsonExample source={$values} title="values" />
-        <JsonExample source={$fieldsInline} title="fields state" />
-        <JsonExample source={$form} title="form state" />
+        <JsonExample source={$values} title="$values" />
+        <JsonExample source={$fieldsInline} title="$fieldsInline" />
+        <JsonExample source={$form} title="$form" />
       </div>
     </div>
   );

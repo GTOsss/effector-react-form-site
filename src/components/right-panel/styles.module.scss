@@ -2,7 +2,12 @@
 
 .wrap {
   width: 460px;
+  background-color: $background-secondary;
   border-left: 1px solid $border-primary;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  height: calc(100vh - 60px);
 }
 
 .list {
@@ -16,4 +21,9 @@
   color: white;
   text-decoration: none;
   padding: 10px 30px;
+}
+
+.activeLink {
+  composes: link;
+  background-color: $background-primary;
 }

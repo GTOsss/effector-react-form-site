@@ -20,7 +20,7 @@ const Input = ({
 };
 
 const Form = () => {
-  const {handleSubmit, controller, $values, $form, $fieldsInline} = useForm();
+  const {handleSubmit, controller, setValue, $form, $fieldsInline, $values} = useForm();
 
   const onSubmit = ({values}) => {
     alert(JSON.stringify(values, null, '  '));
@@ -29,18 +29,15 @@ const Form = () => {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Input
-          label="Username"
-          controller={controller({name: 'username'})}
-        />
-        <Input
-          label="First name"
-          controller={controller({name: 'profile.firstName'})}
-        />
-        <Input
-          label="Last name"
-          controller={controller({name: 'profile.lastName'})}
-        />
+        <Input label="Username" controller={controller({name: 'username'})} />
+        <Input label="First name" controller={controller({name: 'profile.firstName'})} />
+        <Input label="Last name" controller={controller({name: 'profile.lastName'})} />
+        <button
+          type="button"
+          onClick={() => setValue({field: 'profile.firstName', value: 'some value'})}
+        >
+          set first name
+        </button>
         <button type="submit">submit</button>
       </form>
 
@@ -57,15 +54,15 @@ interface Props {
 
 }
 
-const SimpleFormLocal = React.memo(({}: Props) => {
+const SetValuesLocal = React.memo(({}: Props) => {
   return (
     <Layout menuKey="Examples">
-      <h1><FormattedMessage id="examples.simpleFormLocal.title" /></h1>
-      <p><FormattedMessage id="examples.simpleFormLocal.description" /></p>
+      <h1><FormattedMessage id="examples.setValuesLocal.title" /></h1>
+      <p><FormattedMessage id="examples.setValuesLocal.description" values={{br: <br />}} /></p>
       <Form />
-      <TemplateExamplePage formName="simpleFormLocal" />
+      <TemplateExamplePage formName="setValuesLocal" />
     </Layout>
   );
 });
 
-export default SimpleFormLocal;
+export default SetValuesLocal;
