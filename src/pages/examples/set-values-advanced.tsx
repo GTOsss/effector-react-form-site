@@ -113,7 +113,6 @@ const Form = () => {
 
       <div className="row">
         <JsonExample source={$values} title="$values" />
-        <JsonExample source={$fieldsInline} title="$fieldsInline" />
         <JsonExample source={$formSnapshot} title="$formSnapshot (saved user)" />
       </div>
     </div>

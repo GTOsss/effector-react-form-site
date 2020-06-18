@@ -8,6 +8,7 @@ import initialValuesAdvanced from './initial-values-advanced';
 import setValuesLocal from './set-values-local';
 import setValuesGlobal from './set-values-global';
 import fieldLevelValidation from './field-level-validation';
+
 import fieldArray from './field-array';
 import wizardForm from './wizard-form';
 
@@ -18,8 +19,8 @@ const mapExamples = {
   initialValuesAdvanced,
   setValuesLocal,
   setValuesGlobal,
-
   fieldLevelValidation,
+
   fieldArray,
   wizardForm,
 };

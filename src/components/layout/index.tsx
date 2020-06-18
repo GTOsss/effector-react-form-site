@@ -49,26 +49,15 @@ const navElementsMap: NavElementsMap = {
       label: <FormattedMessage id="examples.setValuesAdvanced.title" />,
       link: '/examples/set-values-advanced',
     },
-
     {
-      id: 20,
-      label: <FormattedMessage id="examples.titles.fieldLevelValidation" />,
+      id: 7,
+      label: <FormattedMessage id="examples.fieldLevelValidation.title" />,
       link: '/examples/field-level-validation',
     },
     {
-      id: 30,
-      label: <FormattedMessage id="examples.titles.initialValues" />,
-      link: '/examples/initial-values',
-    },
-    {
-      id: 50,
-      label: <FormattedMessage id="examples.titles.fieldArray" />,
-      link: '/examples/field-array',
-    },
-    {
-      id: 60,
-      label: <FormattedMessage id="examples.titles.wizardForm" />,
-      link: '/examples/wizard-form',
+      id: 8,
+      label: <FormattedMessage id="examples.formLevelValidation.title" />,
+      link: '/examples/form-level-validation',
     },
   ],
   API: [

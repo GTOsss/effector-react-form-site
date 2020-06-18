@@ -36,10 +36,6 @@ form {
 	margin-bottom: 10px;
 }
 
-.input-error {
-	border: 1px solid #ff0c0c;
-}
-
 .input-error-message {
 	font-size: 13px;
 	color: #ff0c0c;
@@ -58,6 +54,10 @@ form {
 	&:focus {
 	  box-shadow: 0 0 0 1px #80d5ff;
 	}
+}
+
+.input-error {
+	background-color: #ffd5d5;
 }
 
 button {
