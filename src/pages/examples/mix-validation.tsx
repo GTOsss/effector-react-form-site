@@ -90,8 +90,8 @@ interface Props {
 const FieldLevelValidation = React.memo(({}: Props) => {
   return (
     <Layout menuKey="Examples">
-      <h1><FormattedMessage id="examples.formLevelValidation.title" /></h1>
-      <p><FormattedMessage id="examples.formLevelValidation.description" values={{br: <br />}} /></p>
+      <h1><FormattedMessage id="examples.mixValidation.title" /></h1>
+      <p><FormattedMessage id="examples.mixValidation.description" values={{br: <br />}} /></p>
       <Form />
       <TemplateExamplePage formName="mixValidation" />
     </Layout>
