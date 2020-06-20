@@ -15,12 +15,12 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@types/react-syntax-highlighter": "^11.0.4",
     "classnames": "^2.2.6",
     "effector": "^20.16.2",
     "effector-react": "^20.7.4",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
+    "gatsby-plugin-intl": "^0.3.3",
     "gatsby-plugin-manifest": "^2.2.31",
     "gatsby-plugin-offline": "^3.0.27",
     "gatsby-plugin-react-helmet": "^3.1.16",
@@ -34,7 +34,7 @@
     "node-sass": "^4.14.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-effector-form": "^1.0.14",
+    "react-effector-form": "^1.0.18",
     "react-helmet": "^5.2.1",
     "react-syntax-highlighter": "^12.2.1"
   },
@@ -45,7 +45,7 @@
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.4",
     "@types/react-redux": "^7.1.7",
-    "gatsby-plugin-intl": "^0.3.2",
+    "@types/react-syntax-highlighter": "^11.0.4",
     "prettier": "^1.19.1",
     "typescript": "^3.7.4"
   },

@@ -6,21 +6,28 @@ import JsonExample from '../../components/json-example';
 import Layout from '../../components/layout';
 import TemplateExamplePage from '../../string-examples/template-example-page';
 
-const validateRequired = (value) => !value ? 'Field is required' : undefined;
-
-const validateUsername = (value) => {
-  const requiredError = validateRequired(value);
-  if (requiredError) return requiredError;
+const validatePassword = (value) => {
+  if (!value) return 'Field is required';
   if (value.length < 4) return 'Minimum of 4 characters';
-}
+};
 
-const Input = ({
-  controller,
-  label,
-}) => {
+const formValidate = ({values, errorsInline}) => {
+  const errors = {};
+
+  // errorsInline contain fields-level errors
+  const passwordsValid = !errorsInline.password && !errorsInline.passwordRepeat;
+  const passwordsDontMatch = values.password !== values.passwordRepeat;
+  if (passwordsValid && passwordsDontMatch) {
+    errors.password = 'Passwords don\'t match';
+    errors.passwordRepeat = 'Passwords don\'t match';
+  }
+
+  return errors;
+};
+
+const Input = ({controller,label}) => {
   const {input, error, form, fieldState} = controller();
-
-  const showError = (form.submitted || fieldState.blurred) && error;
+  const showError = form.submitted || fieldState.blurred;
 
   return (
     <div className="input-wrap">
@@ -28,10 +35,10 @@ const Input = ({
       <input
         {...input}
         value={input.value || ''}
-        className={cn('input', {'input-error': Boolean(showError)})}
+        className={cn('input', {'input-error': Boolean(showError && error)})}
         autoComplete="off"
       />
-      {showError && (
+      {(form.submitted || fieldState.blurred) && error && (
         <div className="input-error-message">
           {error}
         </div>
@@ -41,7 +48,7 @@ const Input = ({
 };
 
 const Form = () => {
-  const {handleSubmit, controller, $values, $errorsInline, $form} = useForm();
+  const {handleSubmit, controller, $values, $errorsInline, $form} = useForm({validate: formValidate});
 
   const onSubmit = ({values, form}) => {
     if (!form.hasError) {
@@ -53,16 +60,12 @@ const Form = () => {
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Input
-          label="Username"
-          controller={controller({name: 'username', validate: validateUsername})}
+          label="Password"
+          controller={controller({name: 'password', validate: validatePassword})}
         />
         <Input
-          label="First name"
-          controller={controller({name: 'profile.firstName', validate: validateRequired})}
-        />
-        <Input
-          label="Last name"
-          controller={controller({name: 'profile.lastName', validate: validateRequired})}
+          label="Repeat password"
+          controller={controller({name: 'passwordRepeat', validate: validatePassword})}
         />
         <button type="submit">submit</button>
       </form>
@@ -74,7 +77,7 @@ const Form = () => {
       </div>
     </div>
   );
-}
+};
 
 interface Props {
 
@@ -83,9 +86,9 @@ interface Props {
 const FieldLevelValidation = React.memo(({}: Props) => {
   return (
     <Layout menuKey="Examples">
-      <h1><FormattedMessage id="examples.fieldLevelValidation.title" /></h1>
+      <h1><FormattedMessage id="examples.formLevelValidation.title" /></h1>
       <Form />
-      <TemplateExamplePage formName="fieldLevelValidation" />
+      <TemplateExamplePage formName="formLevelValidation" />
     </Layout>
   );
 });

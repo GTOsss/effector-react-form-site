@@ -6,21 +6,12 @@ const validateRequired = (value) => !value ? 'Field is required' : undefined;
 
 const validateUsername = (value) => {
   const requiredError = validateRequired(value);
-  if (requiredError) {
-    return requiredError;
-  }
-
-  if (value.length < 4) {
-    return 'Minimum of 4 characters';
-  }
+  if (requiredError) return requiredError;
+  if (value.length < 4) return 'Minimum of 4 characters';
 }
 
-const Input = ({
-  controller,
-  label,
-}) => {
+const Input = ({controller, label}) => {
   const {input, error, form, fieldState} = controller();
-
   // You can also pass your own store where errors will be stored:
   // const {input, error, form, fieldState} = controller({$errorsInline});
 
@@ -35,11 +26,7 @@ const Input = ({
         className={cn('input', {'input-error': Boolean(showError)})}
         autoComplete="off"
       />
-      {showError && (
-        <div className="input-error-message">
-          {error}
-        </div>
-      )}
+      {showError && (<div className="input-error-message">{error}</div>)}
     </div>
   );
 };

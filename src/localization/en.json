@@ -39,6 +39,10 @@
     "formLevelValidation": {
       "title": "Form level validation"
     },
+    "mixValidation": {
+      "title": "Mix validation",
+      "description": "A mix of field-level and form-level validations."
+    },
     "setErrorLocal": {
       "title": "Set error local",
       "description": "Set field error local state level."

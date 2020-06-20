@@ -59,6 +59,11 @@ const navElementsMap: NavElementsMap = {
       label: <FormattedMessage id="examples.formLevelValidation.title" />,
       link: '/examples/form-level-validation',
     },
+    {
+      id: 9,
+      label: <FormattedMessage id="examples.mixValidation.title" />,
+      link: '/examples/mix-validation',
+    },
   ],
   API: [
     {
