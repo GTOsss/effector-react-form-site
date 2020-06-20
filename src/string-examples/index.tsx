@@ -9,6 +9,7 @@ import setValuesLocal from './set-values-local';
 import setValuesGlobal from './set-values-global';
 import fieldLevelValidation from './field-level-validation';
 import formLevelValidation from './form-level-validation';
+import mixValidation from './mix-validation';
 
 import fieldArray from './field-array';
 import wizardForm from './wizard-form';
@@ -22,6 +23,7 @@ const mapExamples = {
   setValuesGlobal,
   fieldLevelValidation,
   formLevelValidation,
+  mixValidation,
 
   fieldArray,
   wizardForm,

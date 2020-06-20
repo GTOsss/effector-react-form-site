@@ -22,10 +22,14 @@ const formValidate = ({values, errorsInline}) => {
     errors.passwordRepeat = 'Passwords don\'t match';
   }
 
+  // If you assign undefined instead of the error, the error from field-level will be removed.
+  // For example:
+  // errors.password = undefined; // Password will always be valid.
+
   return errors;
 };
 
-const Input = ({controller,label}) => {
+const Input = ({controller, label}) => {
   const {input, error, form, fieldState} = controller();
   const showError = form.submitted || fieldState.blurred;
 
@@ -87,8 +91,9 @@ const FieldLevelValidation = React.memo(({}: Props) => {
   return (
     <Layout menuKey="Examples">
       <h1><FormattedMessage id="examples.formLevelValidation.title" /></h1>
+      <p><FormattedMessage id="examples.formLevelValidation.description" values={{br: <br />}} /></p>
       <Form />
-      <TemplateExamplePage formName="formLevelValidation" />
+      <TemplateExamplePage formName="mixValidation" />
     </Layout>
   );
 });
