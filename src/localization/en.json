@@ -50,6 +50,10 @@
     "setErrorGlobal": {
       "title": "Set error global",
       "description": "Set field error global state state."
+    },
+    "serverSideValidation": {
+      "title": "Server side validation",
+      "description": "An example that implements the following features: {br}sync field level validate, {br}async (server side) validate."
     }
   }
 }

@@ -1,18 +1,30 @@
 export default `import React from 'react';
 import {useForm} from 'react-effector-form';
 import cn from 'classnames';
+import {createEvent, createStore} from 'effector';
+
+const setError = createEvent();
+
+const $outerErrorsInline = createStore({});
+const $fieldsInline = createStore({});
+
+$outerErrorsInline.on(setError, (state, {field, error}) => ({...state, [field]: error}));
+
+$fieldsInline.on(setError, (state, {field}) => ({
+  ...state,
+  [field]: {
+    ...state[field],
+    touchedAfterOuterError: false,
+    changedAfterOuterError: false,
+    blurredAfterOuterError: false,
+  },
+}));
 
 const validateRequired = (value) => !value ? 'Field is required' : undefined;
 
-const validateUsername = (value) => {
-  const requiredError = validateRequired(value);
-  if (requiredError) return requiredError;
-  if (value.length < 4) return 'Minimum of 4 characters';
-}
-
 const Input = ({controller, label}) => {
   const {input, error, isShowError} = controller();
-  
+
   return (
     <div className="input-wrap">
       <label>{label}</label>
@@ -28,10 +40,7 @@ const Input = ({controller, label}) => {
 };
 
 const Form = () => {
-  const {handleSubmit, controller} = useForm();
-
-  // You can also pass your own store where errors will be stored.
-  // const {handleSubmit, controller} = useForm({$errorsInline});
+  const {handleSubmit, controller} = useForm({$outerErrorsInline, $fieldsInline});
 
   const onSubmit = ({values, form}) => {
     if (!form.hasError) {
@@ -42,10 +51,6 @@ const Form = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Input
-        label="Username"
-        controller={controller({name: 'username', validate: validateUsername})}
-      />
-      <Input
         label="First name"
         controller={controller({name: 'profile.firstName', validate: validateRequired})}
       />
@@ -54,6 +59,18 @@ const Form = () => {
         controller={controller({name: 'profile.lastName', validate: validateRequired})}
       />
       <button type="submit">submit</button>
+      <button
+        type="button"
+        onClick={() => setError({field: 'profile.firstName', error: 'firstName error'})}
+      >
+        set firstName error
+      </button>
+      <button
+        type="button"
+        onClick={() => setError({field: 'profile.lastName', error: 'lastName error'})}
+      >
+        set lastName error
+      </button>
     </form>
   );
-}`;
+};`;

@@ -64,6 +64,21 @@ const navElementsMap: NavElementsMap = {
       label: <FormattedMessage id="examples.mixValidation.title" />,
       link: '/examples/mix-validation',
     },
+    {
+      id: 10,
+      label: <FormattedMessage id="examples.setErrorLocal.title" />,
+      link: '/examples/set-error-local',
+    },
+    {
+      id: 11,
+      label: <FormattedMessage id="examples.setErrorGlobal.title" />,
+      link: '/examples/set-error-global',
+    },
+    {
+      id: 12,
+      label: <FormattedMessage id="examples.serverSideValidation.title" />,
+      link: '/examples/server-side-validation',
+    },
   ],
   API: [
     {

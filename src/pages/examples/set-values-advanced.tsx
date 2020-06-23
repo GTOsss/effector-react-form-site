@@ -129,9 +129,9 @@ const SetValuesAdvanced = React.memo(({}: Props) => {
       <h1><FormattedMessage id="examples.setValuesAdvanced.title" /></h1>
       <p><FormattedMessage id="examples.setValuesAdvanced.description" values={{br: <br />}} /></p>
       <Form />
-      <p>Store</p>
+      <h3>Store</h3>
       <StringExample>{strStore}</StringExample>
-      <p>Components</p>
+      <h3>Components</h3>
       <StringExample>{strComponents}</StringExample>
     </Layout>
   );

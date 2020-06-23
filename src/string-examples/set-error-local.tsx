@@ -2,21 +2,7 @@ export default `import React from 'react';
 import {useForm} from 'react-effector-form';
 import cn from 'classnames';
 
-const formValidate = ({values}) => {
-  const errors = {};
-
-  if (!values.username) {
-    errors.username = 'Field is required';
-  } else if (values.username.length < 4) {
-    errors.username = 'Minimum of 4 characters';
-  }
-
-  if (!values.profile || !values.profile.firstName) {
-    errors['profile.firstName'] = 'Field is required'; // Field without nesting!
-  }
-
-  return errors;
-};
+const validateRequired = (value) => !value ? 'Field is required' : undefined;
 
 const Input = ({controller, label}) => {
   const {input, error, isShowError} = controller();
@@ -36,7 +22,7 @@ const Input = ({controller, label}) => {
 };
 
 const Form = () => {
-  const {handleSubmit, controller} = useForm({validate: formValidate});
+  const {handleSubmit, controller, setOrDeleteOuterError} = useForm();
 
   const onSubmit = ({values, form}) => {
     if (!form.hasError) {
@@ -46,10 +32,23 @@ const Form = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <Input label="Username" controller={controller({name: 'username'})} />
-      <Input label="First name" controller={controller({name: 'profile.firstName'})} />
-      <Input label="Last name" controller={controller({name: 'profile.lastName'})} />
+      <Input
+        label="First name"
+        controller={controller({name: 'profile.firstName', validate: validateRequired})}
+      />
       <button type="submit">submit</button>
+      <button
+        type="button"
+        onClick={() => setOrDeleteOuterError({field: 'profile.firstName', error: 'firstName error'})}
+      >
+        set firstName error
+      </button>
+      <button
+        type="button"
+        onClick={() => setOrDeleteOuterError({field: 'profile.lastName', error: 'lastName error'})}
+      >
+        set lastName error
+      </button>
     </form>
   );
 };`;

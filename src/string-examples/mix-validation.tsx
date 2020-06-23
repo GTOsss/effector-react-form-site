@@ -26,8 +26,7 @@ const formValidate = ({values, errorsInline}) => {
 };
 
 const Input = ({controller, label}) => {
-  const {input, error, form, fieldState} = controller();
-  const showError = form.submitted || fieldState.blurred;
+  const {input, error, isShowError} = controller();
 
   return (
     <div className="input-wrap">
@@ -35,12 +34,10 @@ const Input = ({controller, label}) => {
       <input
         {...input}
         value={input.value || ''}
-        className={cn('input', {'input-error': Boolean(showError && error)})}
+        className={cn('input', {'input-error': isShowError})}
         autoComplete="off"
       />
-      {(form.submitted || fieldState.blurred) && error && (
-        <div className="input-error-message">{error}</div>
-      )}
+      {isShowError && (<div className="input-error-message">{error}</div>)}
     </div>
   );
 };

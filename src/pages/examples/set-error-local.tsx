@@ -1,26 +1,12 @@
 import React from 'react';
 import {useForm} from 'react-effector-form';
 import cn from 'classnames';
-import {FormattedMessage} from "gatsby-plugin-intl";
+import {FormattedMessage} from 'gatsby-plugin-intl';
 import JsonExample from '../../components/json-example';
 import Layout from '../../components/layout';
 import TemplateExamplePage from '../../string-examples/template-example-page';
 
-const formValidate = ({values}) => {
-  const errors = {};
-
-  if (!values.username) {
-    errors.username = 'Field is required';
-  } else if (values.username.length < 4) {
-    errors.username = 'Minimum of 4 characters';
-  }
-
-  if (!values.profile || !values.profile.firstName) {
-    errors['profile.firstName'] = 'Field is required'; // Field without nesting!
-  }
-
-  return errors;
-};
+const validateRequired = (value) => !value ? 'Field is required' : undefined;
 
 const Input = ({controller, label}) => {
   const {input, error, isShowError} = controller();
@@ -40,7 +26,7 @@ const Input = ({controller, label}) => {
 };
 
 const Form = () => {
-  const {handleSubmit, controller, $values, $errorsInline, $form} = useForm({validate: formValidate});
+  const {handleSubmit, controller, setOrDeleteOuterError, $fieldsInline, $outerErrorsInline, $form} = useForm();
 
   const onSubmit = ({values, form}) => {
     if (!form.hasError) {
@@ -51,15 +37,32 @@ const Form = () => {
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Input label="Username" controller={controller({name: 'username'})} />
-        <Input label="First name" controller={controller({name: 'profile.firstName'})} />
-        <Input label="Last name" controller={controller({name: 'profile.lastName'})} />
+        <Input
+          label="First name"
+          controller={controller({name: 'profile.firstName', validate: validateRequired})}
+        />
+        <Input
+          label="Last name"
+          controller={controller({name: 'profile.lastName', validate: validateRequired})}
+        />
         <button type="submit">submit</button>
+        <button
+          type="button"
+          onClick={() => setOrDeleteOuterError({field: 'profile.firstName', error: 'firstName error'})}
+        >
+          set firstName error
+        </button>
+        <button
+          type="button"
+          onClick={() => setOrDeleteOuterError({field: 'profile.lastName', error: 'lastName error'})}
+        >
+          set lastName error
+        </button>
       </form>
 
       <div className="row">
-        <JsonExample source={$values} title="$values" />
-        <JsonExample source={$errorsInline} title="$errorsInline" />
+        <JsonExample source={$fieldsInline} title="$fieldsInline" />
+        <JsonExample source={$outerErrorsInline} title="$outerErrorsInline" />
         <JsonExample source={$form} title="$form" />
       </div>
     </div>
@@ -73,9 +76,9 @@ interface Props {
 const FieldLevelValidation = React.memo(({}: Props) => {
   return (
     <Layout menuKey="Examples">
-      <h1><FormattedMessage id="examples.formLevelValidation.title" /></h1>
+      <h1><FormattedMessage id="examples.setErrorLocal.title" /></h1>
       <Form />
-      <TemplateExamplePage formName="formLevelValidation" />
+      <TemplateExamplePage formName="setErrorLocal" />
     </Layout>
   );
 });
