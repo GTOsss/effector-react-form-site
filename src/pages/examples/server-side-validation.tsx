@@ -112,7 +112,7 @@ const SimpleFormLocal = React.memo(({}: Props) => {
   return (
     <Layout menuKey="Examples">
       <h1><FormattedMessage id="examples.serverSideValidation.title" /></h1>
-      <p><FormattedMessage id="examples.serverSideValidation.description" /></p>
+      <p><FormattedMessage id="examples.serverSideValidation.description" values={{br: <br />}} /></p>
       <Form />
       <TemplateExamplePage formName="serverSideValidation" />
     </Layout>
