@@ -1,5 +1,5 @@
 export default `import React from 'react';
-import {useForm} from 'react-effector-form';
+import {useForm} from 'effector-react-form';
 import {createStore} from 'effector';
 
 const $values = createStore({}); // create global store for values

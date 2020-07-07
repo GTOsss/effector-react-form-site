@@ -1,5 +1,5 @@
 export default `import React from 'react';
-import {useForm} from 'react-effector-form';
+import {useForm} from 'effector-react-form';
 import cn from 'classnames';
 
 const formValidate = ({values}) => {

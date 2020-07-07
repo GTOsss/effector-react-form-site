@@ -1,6 +1,6 @@
 import React from 'react';
 import {FormattedMessage} from 'gatsby-plugin-intl';
-import {useForm} from 'react-effector-form';
+import {useForm} from 'effector-react-form';
 import JsonExample from '../../components/json-example';
 import StringExample from '../../string-examples';
 import {strStore, strComponents} from '../../string-examples/set-values-advanced';

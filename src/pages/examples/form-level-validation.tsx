@@ -1,5 +1,5 @@
 import React from 'react';
-import {useForm} from 'react-effector-form';
+import {useForm} from 'effector-react-form';
 import cn from 'classnames';
 import {FormattedMessage} from "gatsby-plugin-intl";
 import JsonExample from '../../components/json-example';

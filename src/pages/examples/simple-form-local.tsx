@@ -1,6 +1,6 @@
 import React from 'react';
 import {FormattedMessage} from 'gatsby-plugin-intl';
-import {useForm} from 'react-effector-form';
+import {useForm} from 'effector-react-form';
 import JsonExample from '../../components/json-example';
 import TemplateExamplePage from '../../string-examples/template-example-page';
 import Layout from '../../components/layout';
