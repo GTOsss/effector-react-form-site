@@ -25,8 +25,8 @@ const getUserFx = createEffect({
 });
 
 const putUserFx = createEffect({
-  handler: async values => {
-    console.log('save: ', values);
+  handler: async params => {
+    console.log('save: ', params.values);
     await sleep();
   },
 });
@@ -51,7 +51,7 @@ const $values = createStore(initialUser)
   .reset(clearUser);
 
 const $formSnapshot = createStore(initialUser)
-  .on(putUserFx.done, (_, {params}) => params);
+  .on(putUserFx.done, (_, {params}) => params.values);
 
 const $isChanged = combine(
   $values,
@@ -85,11 +85,7 @@ const Input = ({
 };
 
 const Form = () => {
-  const {handleSubmit, controller, $form, $fieldsInline} = useForm({$values});
-
-  const onSubmit = ({values}) => {
-    putUserFx(values);
-  };
+  const {handleSubmit, controller} = useForm({$values, onSubmit: putUserFx});
 
   const disabled = useStore($isPending);
   const changed = useStore($isChanged);
@@ -97,7 +93,7 @@ const Form = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit}>
         <Input label="Username" controller={controller({name: 'username'})} />
         <Input label="First name" controller={controller({name: 'profile.firstName'})} />
         <Input label="Last name" controller={controller({name: 'profile.lastName'})} />

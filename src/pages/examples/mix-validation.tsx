@@ -52,17 +52,18 @@ const Input = ({controller, label}) => {
 };
 
 const Form = () => {
-  const {handleSubmit, controller, $values, $errorsInline, $form} = useForm({validate: formValidate});
-
-  const onSubmit = ({values, form}) => {
-    if (!form.hasError) {
-      alert(JSON.stringify(values, null, '  '));
-    }
-  };
+  const {handleSubmit, controller, $values, $errorsInline, $form} = useForm({
+    validate: formValidate,
+    onSubmit: ({values, form}) => {
+      if (!form.hasError) {
+        alert(JSON.stringify(values, null, '  '));
+      }
+    },
+  });
 
   return (
     <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit}>
         <Input
           label="Password"
           controller={controller({name: 'password', validate: validatePassword})}

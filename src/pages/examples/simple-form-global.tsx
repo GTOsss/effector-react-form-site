@@ -1,6 +1,6 @@
 import React from 'react';
 import {FormattedMessage} from 'gatsby-plugin-intl';
-import {useForm} from 'effector-react-form';
+import {useForm, SubmitParams} from 'effector-react-form';
 import JsonExample from '../../components/json-example';
 import TemplateExamplePage from '../../string-examples/template-example-page';
 import Layout from '../../components/layout';
@@ -23,15 +23,16 @@ const Input = ({
 };
 
 const Form = () => {
-  const {handleSubmit, controller, $form, $fieldsInline} = useForm({$values});
-
-  const onSubmit = ({values}) => {
-    alert(JSON.stringify(values, null, '  '));
-  };
+  const {handleSubmit, controller, $form, $fieldsInline} = useForm({
+    $values,
+    onSubmit: ({values}) => {
+      alert(JSON.stringify(values, null, '  '));
+    },
+  });
 
   return (
     <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit}>
         <Input
           label="Username"
           controller={controller({name: 'username'})}

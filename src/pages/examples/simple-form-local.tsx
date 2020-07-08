@@ -20,15 +20,15 @@ const Input = ({
 };
 
 const Form = () => {
-  const {handleSubmit, controller, $values, $form, $fieldsInline} = useForm();
-
-  const onSubmit = ({values}) => {
-    alert(JSON.stringify(values, null, '  '));
-  };
+  const {handleSubmit, controller, $values, $form, $fieldsInline} = useForm({
+    onSubmit: ({values}) => {
+      alert(JSON.stringify(values, null, '  '));
+    }
+  });
 
   return (
     <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit}>
         <Input
           label="Username"
           controller={controller({name: 'username'})}

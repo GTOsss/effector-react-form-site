@@ -31,7 +31,7 @@ const clearOuterErrors = createEvent();
 const $outerErrorsInline = createStore({}).reset(clearOuterErrors);
 
 const postUserFx = createEffect({
-  handler: async values => {
+  handler: async (values) => {
     await sleep();
 
     const serverSideError = createServerErrors(values);
@@ -65,21 +65,22 @@ const Input = ({controller, label}) => {
 };
 
 const Form = () => {
-  const {handleSubmit, controller, $form, $fieldsInline} = useForm({$outerErrorsInline});
+  const {handleSubmit, controller, $form, $fieldsInline} = useForm({
+    $outerErrorsInline,
+    onSubmit: ({values, form}) => {
+      clearOuterErrors();
 
-  const onSubmit = ({values, form}) => {
-    clearOuterErrors();
-
-    if (!form.hasError) {
-      postUserFx(values);
+      if (!form.hasError) {
+        postUserFx(values);
+      }
     }
-  };
+  });
 
   const pending = useStore(postUserFx.pending);
 
   return (
     <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit}>
         <Input
           label="Username"
           controller={controller({name: 'username', validate: validateRequired})}

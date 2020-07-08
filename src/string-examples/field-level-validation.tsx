@@ -28,19 +28,19 @@ const Input = ({controller, label}) => {
 };
 
 const Form = () => {
-  const {handleSubmit, controller} = useForm();
+  const {handleSubmit, controller} = useForm({
+    onSubmit: ({values, form}) => {
+      if (!form.hasError) {
+        alert(JSON.stringify(values, null, '  '));
+      }
+    },
+  });
 
   // You can also pass your own store where errors will be stored.
   // const {handleSubmit, controller} = useForm({$errorsInline});
 
-  const onSubmit = ({values, form}) => {
-    if (!form.hasError) {
-      alert(JSON.stringify(values, null, '  '));
-    }
-  };
-
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit}>
       <Input
         label="Username"
         controller={controller({name: 'username', validate: validateUsername})}

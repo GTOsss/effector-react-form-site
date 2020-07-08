@@ -44,17 +44,19 @@ const Input = ({controller, label}) => {
 };
 
 const Form = () => {
-  const {handleSubmit, controller, $form} = useForm({$outerErrorsInline, $fieldsInline});
-
-  const onSubmit = ({values, form}) => {
-    if (!form.hasError) {
-      alert(JSON.stringify(values, null, '  '));
-    }
-  };
+  const {handleSubmit, controller, $form} = useForm({
+    $outerErrorsInline,
+    $fieldsInline,
+    onSubmit: ({values, form}) => {
+      if (!form.hasError) {
+        alert(JSON.stringify(values, null, '  '));
+      }
+    },
+  });
 
   return (
     <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit}>
         <Input
           label="First name"
           controller={controller({name: 'profile.firstName', validate: validateRequired})}
@@ -95,6 +97,7 @@ const FieldLevelValidation = React.memo(({}: Props) => {
   return (
     <Layout menuKey="Examples">
       <h1><FormattedMessage id="examples.setErrorGlobal.title" /></h1>
+      <p><FormattedMessage id="examples.setErrorGlobal.description" values={{br: <br />}} /></p>
       <Form />
       <TemplateExamplePage formName="setErrorGlobal" />
     </Layout>

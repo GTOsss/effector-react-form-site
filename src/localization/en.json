@@ -45,11 +45,11 @@
     },
     "setErrorLocal": {
       "title": "Set error local",
-      "description": "Set field error local state level."
+      "description": "Set field error local state level. {br} Submit is not blocked when outer errors are set. {br} After the change, errors are hidden, but still remain in the form state. {br} After submit, errors will be visible again until the fields change. {br} This logic is set by default and it is most suitable for server side validation."
     },
     "setErrorGlobal": {
       "title": "Set error global",
-      "description": "Set field error global state state."
+      "description": "Set field error global state state. {br} Submit is not blocked when outer errors are set. {br} After the change, errors are hidden, but still remain in the form state. {br} After submit, errors will be visible again until the fields change. {br} This logic is set by default and it is most suitable for server side validation.",
     },
     "serverSideValidation": {
       "title": "Server side validation",

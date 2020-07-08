@@ -54,20 +54,21 @@ const Input = ({controller, label}) => {
 };
 
 const Form = () => {
-  const {handleSubmit, controller} = useForm({$outerErrorsInline});
-
-  const onSubmit = ({values, form}) => {
-    clearOuterErrors();
-
-    if (!form.hasError) {
-      postUserFx(values);
-    }
-  };
+  const {handleSubmit, controller} = useForm({
+    $outerErrorsInline,
+    onSubmit: ({values, form}) => {
+      clearOuterErrors();
+  
+      if (!form.hasError) {
+        postUserFx(values);
+      }
+    },
+  });
 
   const pending = useStore(postUserFx.pending);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit}>
       <Input
         label="Username"
         controller={controller({name: 'username', validate: validateRequired})}

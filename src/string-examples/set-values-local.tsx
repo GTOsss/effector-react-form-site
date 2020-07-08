@@ -29,11 +29,11 @@ const Code = ({source, title, className}) => {
 }
 
 const Form = () => {
-  const {handleSubmit, controller, setValue} = useForm();
-  
-  const onSubmit = ({values}) => {
-    alert(JSON.stringify(values, null, '  '));
-  };
+  const {handleSubmit, controller, setValue} = useForm({
+    onSubmit: ({values}) => {
+      alert(JSON.stringify(values, null, '  '));
+    },
+  });
 
   return (
     <div>
@@ -49,8 +49,6 @@ const Form = () => {
         </button>
         <button type="submit">submit</button>
       </form>
-
-      <Code className="code-center" source={$values} title="values" />
     </div>
   );
 }`;
