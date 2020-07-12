@@ -15,9 +15,9 @@ import setErrorGlobal from './set-error-global';
 import serverSideValidation from './server-side-validation';
 import virtualized from './virtualized';
 import onchange from './onchange';
+import wizard from './wizard';
 
 import fieldArray from './field-array';
-import wizardForm from './wizard-form';
 
 const mapExamples = {
   simpleFormLocal,
@@ -34,9 +34,9 @@ const mapExamples = {
   serverSideValidation,
   virtualized,
   onchange,
+  wizard,
 
   fieldArray,
-  wizardForm,
 };
 
 export type ExampleKey = keyof typeof mapExamples;
