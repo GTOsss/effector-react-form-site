@@ -49,11 +49,15 @@
     },
     "setErrorGlobal": {
       "title": "Set error global",
-      "description": "Set field error global state state. {br} Submit is not blocked when outer errors are set. {br} After the change, errors are hidden, but still remain in the form state. {br} After submit, errors will be visible again until the fields change. {br} This logic is set by default and it is most suitable for server side validation.",
+      "description": "Set field error global state state. {br} Submit is not blocked when outer errors are set. {br} After the change, errors are hidden, but still remain in the form state. {br} After submit, errors will be visible again until the fields change. {br} This logic is set by default and it is most suitable for server side validation."
     },
     "serverSideValidation": {
       "title": "Server side validation",
       "description": "An example that implements the following features: {br}sync field level validate, {br}async (server side) validate."
+    },
+    "virtualized": {
+      "title": "Virtualized",
+      "description": "An example that implements the following features: {br}virtualized list with 1000 inputs, {br}validate and scroll to first invalid input."
     }
   }
 }

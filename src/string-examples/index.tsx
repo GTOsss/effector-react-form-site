@@ -13,6 +13,7 @@ import mixValidation from './mix-validation';
 import setErrorLocal from './set-error-local';
 import setErrorGlobal from './set-error-global';
 import serverSideValidation from './server-side-validation';
+import virtualized from './virtualized';
 
 import fieldArray from './field-array';
 import wizardForm from './wizard-form';
@@ -30,6 +31,7 @@ const mapExamples = {
   setErrorLocal,
   setErrorGlobal,
   serverSideValidation,
+  virtualized,
 
   fieldArray,
   wizardForm,
