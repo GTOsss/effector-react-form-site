@@ -17,14 +17,16 @@ const NavPanel: React.FC<Props> = React.memo(({
 }) => {
 
   return (
-    <div className={styles.wrap}>
-      <ul className={styles.list}>
-        {elements.map(({label, link, id}) => (
-          <li key={id}>
-            <Link className={styles.link} activeClassName={styles.activeLink} to={link}>{label}</Link>
-          </li>
-        ))}
-      </ul>
+    <div className={styles.container}>
+      <div className={styles.wrap}>
+        <ul className={styles.list}>
+          {elements.map(({label, link, id}) => (
+            <li key={id}>
+              <Link className={styles.link} activeClassName={styles.activeLink} to={link}>{label}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 });

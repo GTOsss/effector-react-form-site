@@ -1,19 +1,27 @@
 @import '../../assets/variables';
 
-.wrap {
+.container {
   width: 460px;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 300px;
+}
+
+.wrap {
   background-color: $background-secondary;
   border-left: 1px solid $border-primary;
   position: fixed;
-  top: 60px;
-  right: 0;
   height: calc(100vh - 60px);
+  overflow-y: auto;
+  margin-right: -999px;
+  padding-right: 999px;
 }
 
 .list {
   list-style: none;
   padding: 10px 0;
   margin: 0;
+  width: 460px;
 }
 
 .link {

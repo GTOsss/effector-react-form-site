@@ -12,77 +12,97 @@ type NavElementsMap = {
   [key in NavElementsKey]: Array<NavElement>;
 };
 
+const getId = (() => {
+  let count = 0;
+  return () => count++;
+})();
+
 const navElementsMap: NavElementsMap = {
   Examples: [
     {
-      id: 0,
+      id: getId(),
       label: <FormattedMessage id="examples.simpleFormLocal.title" />,
       link: '/examples/simple-form-local',
     },
     {
-      id: 1,
+      id: getId(),
       label: <FormattedMessage id="examples.simpleFormGlobal.title" />,
       link: '/examples/simple-form-global',
     },
     {
-      id: 2,
+      id: getId(),
+      label: <FormattedMessage id="examples.onchange.title" />,
+      link: '/examples/onchange',
+    },
+    {
+      id: getId(),
       label: <FormattedMessage id="examples.initialValues.title" />,
       link: '/examples/initial-values',
     },
     {
-      id: 3,
+      id: getId(),
       label: <FormattedMessage id="examples.initialValuesAdvanced.title" />,
       link: '/examples/initial-values-advanced',
     },
     {
-      id: 4,
+      id: getId(),
       label: <FormattedMessage id="examples.setValuesLocal.title" />,
       link: '/examples/set-values-local',
     },
     {
-      id: 5,
+      id: getId(),
       label: <FormattedMessage id="examples.setValuesGlobal.title" />,
       link: '/examples/set-values-global',
     },
     {
-      id: 6,
+      id: getId(),
       label: <FormattedMessage id="examples.setValuesAdvanced.title" />,
       link: '/examples/set-values-advanced',
     },
     {
-      id: 7,
+      id: getId(),
       label: <FormattedMessage id="examples.fieldLevelValidation.title" />,
       link: '/examples/field-level-validation',
     },
     {
-      id: 8,
+      id: getId(),
       label: <FormattedMessage id="examples.formLevelValidation.title" />,
       link: '/examples/form-level-validation',
     },
     {
-      id: 9,
+      id: getId(),
       label: <FormattedMessage id="examples.mixValidation.title" />,
       link: '/examples/mix-validation',
     },
     {
-      id: 10,
+      id: getId(),
       label: <FormattedMessage id="examples.setErrorLocal.title" />,
       link: '/examples/set-error-local',
     },
     {
-      id: 11,
+      id: getId(),
       label: <FormattedMessage id="examples.setErrorGlobal.title" />,
       link: '/examples/set-error-global',
     },
     {
-      id: 12,
+      id: getId(),
       label: <FormattedMessage id="examples.serverSideValidation.title" />,
       link: '/examples/server-side-validation',
     },
     {
-      id: 13,
+      id: getId(),
       label: <FormattedMessage id="examples.virtualized.title" />,
       link: '/examples/virtualized',
+    },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.wizard.title" />,
+      link: '/examples/wizard',
+    },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.fieldArray.title" />,
+      link: '/examples/field-array',
     },
   ],
   API: [
@@ -114,12 +134,10 @@ const Layout = ({
     }
   `);
 
-  const withLeftPanel = Boolean(menuKey);
-
   return (
     <div className={styles.wrap}>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div className={cn(styles.body, {[styles.bodyWithLeftPanel]: withLeftPanel})}>
+      <div className={cn(styles.body)}>
         <main className={styles.main}>
           <div className={styles.wrapContent}>
             {children}

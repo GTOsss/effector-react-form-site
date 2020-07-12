@@ -14,6 +14,7 @@ import setErrorLocal from './set-error-local';
 import setErrorGlobal from './set-error-global';
 import serverSideValidation from './server-side-validation';
 import virtualized from './virtualized';
+import onchange from './onchange';
 
 import fieldArray from './field-array';
 import wizardForm from './wizard-form';
@@ -32,6 +33,7 @@ const mapExamples = {
   setErrorGlobal,
   serverSideValidation,
   virtualized,
+  onchange,
 
   fieldArray,
   wizardForm,

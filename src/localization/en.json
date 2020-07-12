@@ -58,6 +58,16 @@
     "virtualized": {
       "title": "Virtualized",
       "description": "An example that implements the following features: {br}virtualized list with 1000 inputs, {br}validate and scroll to first invalid input."
+    },
+    "onchange": {
+      "title": "OnChange form handler",
+      "description": "An example that implements the following features: {br}onchange form handler {br}debounced request to server (500ms)"
+    },
+    "wizard": {
+      "title": "Wizard"
+    },
+    "fieldArray": {
+      "title": "onChangeFilter"
     }
   }
 }
