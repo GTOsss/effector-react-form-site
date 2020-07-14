@@ -104,6 +104,16 @@ const navElementsMap: NavElementsMap = {
       label: <FormattedMessage id="examples.fieldArray.title" />,
       link: '/examples/field-array',
     },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.fieldArrayNested.title" />,
+      link: '/examples/field-array-nested',
+    },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.fieldArrayVirtualized.title" />,
+      link: '/examples/field-array-virtualized',
+    },
   ],
   API: [
     {

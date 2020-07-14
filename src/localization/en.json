@@ -67,7 +67,13 @@
       "title": "Wizard"
     },
     "fieldArray": {
-      "title": "onChangeFilter"
+      "title": "Field array"
+    },
+    "fieldArrayNested": {
+      "title": "Field array nested"
+    },
+    "fieldArrayVirtualized": {
+      "title": "Field array virtualized"
     }
   }
 }

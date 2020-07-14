@@ -78,6 +78,14 @@ button {
 	}
 }
 
+button.danger {
+	background-color: #720505;
+}
+
+button.success {
+	background-color: #057214;
+}
+
 .row {
 	display: flex;
 	justify-content: space-between;
@@ -104,4 +112,17 @@ button {
 	top: 50%;
 	transform: translateY(-50%);
 	cursor: pointer;
+}
+
+.formItem {
+	background-color: #3C3F41;
+	border: solid 1px #555555;
+	border-radius: 3px;
+	padding: 20px;
+	margin-bottom: 10px;
+
+	.formItem {
+		background-color: #2B2B2B;
+		margin: 10px 0;
+	}
 }

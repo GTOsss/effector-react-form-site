@@ -1,5 +1,9 @@
-export default `import React from 'react';
+import React from 'react';
 import cn from 'classnames';
+import {FormattedMessage} from 'gatsby-plugin-intl';
+import JsonExample from '../../components/json-example';
+import Layout from '../../components/layout';
+import TemplateExamplePage from '../../string-examples/template-example-page';
 import {useForm, useFieldArray} from 'effector-react-form';
 import {createStore} from 'effector';
 
@@ -39,22 +43,16 @@ const Users = ({controller, name}) => {
         <div key={field.id} className="formItem">
           <Input
             label="Username"
-            controller={controller({name: \`\${formItemName}.username\`, validate: validateRequired})}
+            controller={controller({name: `${formItemName}.username`, validate: validateRequired})}
           />
           <Input
             label="First name"
-            controller={controller({name: \`\${formItemName}.profile.firstName\`, validate: validateRequired})}
+            controller={controller({name: `${formItemName}.profile.firstName`, validate: validateRequired})}
           />
-          <button type="button" onClick={() => remove(index)} className="danger">
-            remove user
-          </button>
+          <button type="button" onClick={() => remove(index)} className="danger">remove user</button>
         </div>
       ))}
-      <button
-        type="button"
-        onClick={() => push({id: getId(), username: '', profile: {}})}
-        className="success"
-      >
+      <button type="button" onClick={() => push({id: getId(), username: '', profile: {}})} className="success">
         add user
       </button>
       <button
@@ -69,7 +67,7 @@ const Users = ({controller, name}) => {
 };
 
 const Form = () => {
-  const {handleSubmit, controller} = useForm({
+  const {handleSubmit, controller, $form, $errorsInline} = useForm({
     $values,
     $fieldsInline,
     onSubmit: ({values, form}) => {
@@ -80,9 +78,34 @@ const Form = () => {
   });
 
   return (
-    <form onSubmit={handleSubmit}>
-      <Users name="users" controller={controller} />
-      <button type="submit">submit</button>
-    </form>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <Users name="users" controller={controller} />
+        <button type="submit">submit</button>
+      </form>
+
+      <div className="row">
+        <JsonExample source={$values} title="$values" />
+        <JsonExample source={$errorsInline} title="$errorsInline" />
+        <JsonExample source={$fieldsInline} title="$fieldsInline" />
+      </div>
+      <JsonExample source={$form} title="$form" center />
+    </div>
   );
-};`;
+};
+
+interface Props {
+
+}
+
+const FieldLevelValidation = React.memo(({}: Props) => {
+  return (
+    <Layout menuKey="Examples">
+      <h1><FormattedMessage id="examples.fieldArray.title" /></h1>
+      <Form />
+      <TemplateExamplePage formName="fieldArray" />
+    </Layout>
+  );
+});
+
+export default FieldLevelValidation;

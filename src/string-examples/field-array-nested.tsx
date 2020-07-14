@@ -30,6 +30,31 @@ const Input = ({controller, label}) => {
   );
 };
 
+const Friends = ({controller, name}) => {
+  const {map, push, remove} = useFieldArray({name, $values, $fieldsInline});
+
+  return (
+    <div className="formsItem" role="formItem">
+      {map(({formItemName, index, field}) => (
+        <div key={field.id} className="formItem">
+          <Input
+            label="First name"
+            controller={controller({name: \`\${formItemName}.firstName\`, validate: validateRequired})}
+          />
+          <Input
+            label="Last name"
+            controller={controller({name: \`\${formItemName}.lastName\`, validate: validateRequired})}
+          />
+          <button type="button" onClick={() => remove(index)} className="danger">remove friend</button>
+        </div>
+      ))}
+      <button type="button" onClick={() => push({id: getId()})} className="success">
+        add friend
+      </button>
+    </div>
+  );
+}
+
 const Users = ({controller, name}) => {
   const {map, push, remove} = useFieldArray({name, $values, $fieldsInline});
 
@@ -41,28 +66,15 @@ const Users = ({controller, name}) => {
             label="Username"
             controller={controller({name: \`\${formItemName}.username\`, validate: validateRequired})}
           />
-          <Input
-            label="First name"
-            controller={controller({name: \`\${formItemName}.profile.firstName\`, validate: validateRequired})}
-          />
           <button type="button" onClick={() => remove(index)} className="danger">
             remove user
           </button>
+
+          <Friends name={\`\${formItemName}.friends\`} controller={controller} />
         </div>
       ))}
-      <button
-        type="button"
-        onClick={() => push({id: getId(), username: '', profile: {}})}
-        className="success"
-      >
+      <button type="button" onClick={() => push({id: getId(), username: '', profile: {}})} className="success">
         add user
-      </button>
-      <button
-        type="button"
-        onClick={() => push({id: getId(), username: 'test username', profile: {firstName: 'test firstName'}})}
-        className="success"
-      >
-        add user with values
       </button>
     </div>
   );
@@ -85,4 +97,5 @@ const Form = () => {
       <button type="submit">submit</button>
     </form>
   );
-};`;
+};
+`

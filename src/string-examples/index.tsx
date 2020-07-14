@@ -16,8 +16,9 @@ import serverSideValidation from './server-side-validation';
 import virtualized from './virtualized';
 import onchange from './onchange';
 import wizard from './wizard';
-
 import fieldArray from './field-array';
+import fieldArrayNested from './field-array-nested';
+import fieldArrayVirtualized from './field-array-virtualized';
 
 const mapExamples = {
   simpleFormLocal,
@@ -35,8 +36,9 @@ const mapExamples = {
   virtualized,
   onchange,
   wizard,
-
   fieldArray,
+  fieldArrayNested,
+  fieldArrayVirtualized,
 };
 
 export type ExampleKey = keyof typeof mapExamples;
