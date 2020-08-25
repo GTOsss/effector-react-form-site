@@ -19,6 +19,7 @@ import wizard from './wizard';
 import fieldArray from './field-array';
 import fieldArrayNested from './field-array-nested';
 import fieldArrayVirtualized from './field-array-virtualized';
+import remoteSubmit from './remote-submit';
 
 const mapExamples = {
   simpleFormLocal,
@@ -39,6 +40,7 @@ const mapExamples = {
   fieldArray,
   fieldArrayNested,
   fieldArrayVirtualized,
+  remoteSubmit,
 };
 
 export type ExampleKey = keyof typeof mapExamples;

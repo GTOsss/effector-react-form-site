@@ -114,6 +114,11 @@ const navElementsMap: NavElementsMap = {
       label: <FormattedMessage id="examples.fieldArrayVirtualized.title" />,
       link: '/examples/field-array-virtualized',
     },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.remoteSubmit.title" />,
+      link: '/examples/remote-submit',
+    },
   ],
   API: [
     {

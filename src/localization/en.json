@@ -74,6 +74,9 @@
     },
     "fieldArrayVirtualized": {
       "title": "Field array virtualized"
+    },
+    "remoteSubmit": {
+      "title": "Remote submit"
     }
   }
 }
