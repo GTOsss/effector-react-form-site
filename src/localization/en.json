@@ -61,7 +61,7 @@
     },
     "onchange": {
       "title": "OnChange form handler",
-      "description": "An example that implements the following features: {br}onchange form handler {br}debounced request to server (500ms)"
+      "description": "An example that implements the following features: {br}onchange form handler {br}debounced request to server (500ms)."
     },
     "wizard": {
       "title": "Wizard"
@@ -77,6 +77,10 @@
     },
     "remoteSubmit": {
       "title": "Remote submit"
+    },
+    "mapSubmit": {
+      "title": "Map submit",
+      "description": "Changing data before submitting the form."
     }
   }
 }

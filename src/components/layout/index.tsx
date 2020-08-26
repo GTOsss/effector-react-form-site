@@ -119,6 +119,11 @@ const navElementsMap: NavElementsMap = {
       label: <FormattedMessage id="examples.remoteSubmit.title" />,
       link: '/examples/remote-submit',
     },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.mapSubmit.title" />,
+      link: '/examples/map-submit',
+    },
   ],
   API: [
     {
