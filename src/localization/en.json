@@ -6,81 +6,86 @@
     "h1": "Rect Effector Form"
   },
   "examples": {
-    "simpleFormLocal": {
-      "title": "Simple form local",
-      "description": "Simple form with values in local state."
+    "simpleForm": {
+      "title": "Simple form"
     },
-    "simpleFormGlobal": {
-      "title": "Simple form global",
-      "description": "Simple form with values in global state."
-    },
-    "initialValues": {
-      "title": "Initial values"
-    },
-    "initialValuesAdvanced": {
-      "title": "Initial values advanced",
-      "description": "An advanced example that implements the following features: {br} initial values, {br}reset to initial values, {br} clear form."
-    },
-    "setValuesLocal": {
-      "title": "Set values local",
-      "description": "Set values local state level."
-    },
-    "setValuesGlobal": {
-      "title": "Set values global",
-      "description": "Set values global state level."
-    },
-    "setValuesAdvanced": {
-      "title": "Set values advanced",
-      "description": "An advanced example that implements the following features: {br}loading a user, {br}changing a user, {br}saving a user, {br}checking that the user was changed, {br}canceling changes (resetting)"
-    },
-    "fieldLevelValidation": {
-      "title": "Field level validation"
-    },
-    "formLevelValidation": {
-      "title": "Form level validation"
-    },
-    "mixValidation": {
-      "title": "Mix validation",
-      "description": "A mix of field-level and form-level validations."
-    },
-    "setErrorLocal": {
-      "title": "Set error local",
-      "description": "Set field error local state level. {br} Submit is not blocked when outer errors are set. {br} After the change, errors are hidden, but still remain in the form state. {br} After submit, errors will be visible again until the fields change. {br} This logic is set by default and it is most suitable for server side validation."
-    },
-    "setErrorGlobal": {
-      "title": "Set error global",
-      "description": "Set field error global state state. {br} Submit is not blocked when outer errors are set. {br} After the change, errors are hidden, but still remain in the form state. {br} After submit, errors will be visible again until the fields change. {br} This logic is set by default and it is most suitable for server side validation."
-    },
-    "serverSideValidation": {
-      "title": "Server side validation",
-      "description": "An example that implements the following features: {br}sync field level validate, {br}async (server side) validate."
-    },
-    "virtualized": {
-      "title": "Virtualized",
-      "description": "An example that implements the following features: {br}virtualized list with 1000 inputs, {br}validate and scroll to first invalid input."
-    },
-    "onchange": {
-      "title": "OnChange form handler",
-      "description": "An example that implements the following features: {br}onchange form handler {br}debounced request to server (500ms)."
-    },
-    "wizard": {
-      "title": "Wizard"
-    },
-    "fieldArray": {
-      "title": "Field array"
-    },
-    "fieldArrayNested": {
-      "title": "Field array nested"
-    },
-    "fieldArrayVirtualized": {
-      "title": "Field array virtualized"
-    },
-    "remoteSubmit": {
-      "title": "Remote submit"
-    },
-    "mapSubmit": {
-      "title": "Map submit",
-      "description": "Changing data before submitting the form."
+    "v1": {
+      "simpleFormLocal": {
+        "title": "Simple form local",
+        "description": "Simple form with values in local state."
+      },
+      "simpleFormGlobal": {
+        "title": "Simple form global",
+        "description": "Simple form with values in global state."
+      },
+      "initialValues": {
+        "title": "Initial values"
+      },
+      "initialValuesAdvanced": {
+        "title": "Initial values advanced",
+        "description": "An advanced example that implements the following features: {br} initial values, {br}reset to initial values, {br} clear form."
+      },
+      "setValuesLocal": {
+        "title": "Set values local",
+        "description": "Set values local state level."
+      },
+      "setValuesGlobal": {
+        "title": "Set values global",
+        "description": "Set values global state level."
+      },
+      "setValuesAdvanced": {
+        "title": "Set values advanced",
+        "description": "An advanced example that implements the following features: {br}loading a user, {br}changing a user, {br}saving a user, {br}checking that the user was changed, {br}canceling changes (resetting)"
+      },
+      "fieldLevelValidation": {
+        "title": "Field level validation"
+      },
+      "formLevelValidation": {
+        "title": "Form level validation"
+      },
+      "mixValidation": {
+        "title": "Mix validation",
+        "description": "A mix of field-level and form-level validations."
+      },
+      "setErrorLocal": {
+        "title": "Set error local",
+        "description": "Set field error local state level. {br} Submit is not blocked when outer errors are set. {br} After the change, errors are hidden, but still remain in the form state. {br} After submit, errors will be visible again until the fields change. {br} This logic is set by default and it is most suitable for server side validation."
+      },
+      "setErrorGlobal": {
+        "title": "Set error global",
+        "description": "Set field error global state state. {br} Submit is not blocked when outer errors are set. {br} After the change, errors are hidden, but still remain in the form state. {br} After submit, errors will be visible again until the fields change. {br} This logic is set by default and it is most suitable for server side validation."
+      },
+      "serverSideValidation": {
+        "title": "Server side validation",
+        "description": "An example that implements the following features: {br}sync field level validate, {br}async (server side) validate."
+      },
+      "virtualized": {
+        "title": "Virtualized",
+        "description": "An example that implements the following features: {br}virtualized list with 1000 inputs, {br}validate and scroll to first invalid input."
+      },
+      "onchange": {
+        "title": "OnChange form handler",
+        "description": "An example that implements the following features: {br}onchange form handler {br}debounced request to server (500ms)."
+      },
+      "wizard": {
+        "title": "Wizard"
+      },
+      "fieldArray": {
+        "title": "Field array"
+      },
+      "fieldArrayNested": {
+        "title": "Field array nested"
+      },
+      "fieldArrayVirtualized": {
+        "title": "Field array virtualized"
+      },
+      "remoteSubmit": {
+        "title": "Remote submit"
+      },
+      "mapSubmit": {
+        "title": "Map submit",
+        "description": "Changing data before submitting the form."
+      }
     }
   }
 }
