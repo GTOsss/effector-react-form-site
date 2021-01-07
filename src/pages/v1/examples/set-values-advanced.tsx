@@ -1,15 +1,24 @@
 import React from 'react';
-import {FormattedMessage} from 'gatsby-plugin-intl';
-import {useForm} from 'effector-react-form';
+import { FormattedMessage } from 'gatsby-plugin-intl';
+import { useForm } from 'effector-react-form-v1';
 import JsonExample from '@components/json-example';
 import StringExample from '../../../string-examples';
-import {strStore, strComponents} from '../../../string-examples/set-values-advanced';
+import {
+  strStore,
+  strComponents,
+} from '../../../string-examples/set-values-advanced';
 import Layout from '@components/v1/layout';
-import {createStore, createEffect, sample, createEvent, combine} from 'effector';
-import {useStore} from 'effector-react';
+import {
+  createStore,
+  createEffect,
+  sample,
+  createEvent,
+  combine,
+} from 'effector';
+import { useStore } from 'effector-react';
 import isEqual from 'lodash.isequal';
 
-const sleep = () => new Promise(resolve => setTimeout(resolve, 700));
+const sleep = () => new Promise((resolve) => setTimeout(resolve, 700));
 
 const getUserFx = createEffect({
   handler: async () => {
@@ -25,7 +34,7 @@ const getUserFx = createEffect({
 });
 
 const putUserFx = createEffect({
-  handler: async params => {
+  handler: async (params) => {
     console.log('save: ', params.values);
     await sleep();
   },
@@ -34,8 +43,8 @@ const putUserFx = createEffect({
 const resetUser = createEvent();
 const clearUser = createEvent();
 
-const $isPending = combine([getUserFx.pending, putUserFx.pending], vars =>
-  vars.includes(true),
+const $isPending = combine([getUserFx.pending, putUserFx.pending], (vars) =>
+  vars.includes(true)
 );
 
 const initialUser = {
@@ -50,14 +59,12 @@ const $values = createStore(initialUser)
   .on(getUserFx.doneData, (_, user) => user)
   .reset(clearUser);
 
-const $formSnapshot = createStore(initialUser)
-  .on(putUserFx.done, (_, {params}) => params.values);
-
-const $isChanged = combine(
-  $values,
-  $formSnapshot,
-  (a, b) => !isEqual(a, b),
+const $formSnapshot = createStore(initialUser).on(
+  putUserFx.done,
+  (_, { params }) => params.values
 );
+
+const $isChanged = combine($values, $formSnapshot, (a, b) => !isEqual(a, b));
 
 sample({
   source: $formSnapshot,
@@ -66,15 +73,12 @@ sample({
 });
 
 const $isEmpty = $values.map(
-  values =>
-    !values.username && !values.profile.firstName && !values.profile.lastName,
+  (values) =>
+    !values.username && !values.profile.firstName && !values.profile.lastName
 );
 
-const Input = ({
-  controller,
-  label,
-}) => {
-  const {input} = controller();
+const Input = ({ controller, label }) => {
+  const { input } = controller();
 
   return (
     <div className="input-wrap">
@@ -85,7 +89,10 @@ const Input = ({
 };
 
 const Form = () => {
-  const {handleSubmit, controller} = useForm({$values, onSubmit: putUserFx});
+  const { handleSubmit, controller } = useForm({
+    $values,
+    onSubmit: putUserFx,
+  });
 
   const disabled = useStore($isPending);
   const changed = useStore($isChanged);
@@ -94,14 +101,32 @@ const Form = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <Input label="Username" controller={controller({name: 'username'})} />
-        <Input label="First name" controller={controller({name: 'profile.firstName'})} />
-        <Input label="Last name" controller={controller({name: 'profile.lastName'})} />
+        <Input label="Username" controller={controller({ name: 'username' })} />
+        <Input
+          label="First name"
+          controller={controller({ name: 'profile.firstName' })}
+        />
+        <Input
+          label="Last name"
+          controller={controller({ name: 'profile.lastName' })}
+        />
         <button disabled={disabled} type="button" onClick={() => getUserFx()}>
           {useStore(getUserFx.pending) ? 'loading...' : 'load user'}
         </button>
-        <button disabled={disabled || !changed} type="button" onClick={() => resetUser()}>reset</button>
-        <button disabled={disabled || empty} type="button" onClick={() => clearUser()}>clear</button>
+        <button
+          disabled={disabled || !changed}
+          type="button"
+          onClick={() => resetUser()}
+        >
+          reset
+        </button>
+        <button
+          disabled={disabled || empty}
+          type="button"
+          onClick={() => clearUser()}
+        >
+          clear
+        </button>
         <button disabled={disabled || !changed || empty} type="submit">
           {useStore(putUserFx.pending) ? 'saving...' : 'save'}
         </button>
@@ -109,21 +134,29 @@ const Form = () => {
 
       <div className="row">
         <JsonExample source={$values} title="$values" />
-        <JsonExample source={$formSnapshot} title="$formSnapshot (saved user)" />
+        <JsonExample
+          source={$formSnapshot}
+          title="$formSnapshot (saved user)"
+        />
       </div>
     </div>
   );
 };
 
-interface Props {
-
-}
+interface Props {}
 
 const SetValuesAdvanced = React.memo(({}: Props) => {
   return (
     <Layout menuKey="Examples">
-      <h1><FormattedMessage id="examples.setValuesAdvanced.title" /></h1>
-      <p><FormattedMessage id="examples.setValuesAdvanced.description" values={{br: <br />}} /></p>
+      <h1>
+        <FormattedMessage id="examples.setValuesAdvanced.title" />
+      </h1>
+      <p>
+        <FormattedMessage
+          id="examples.setValuesAdvanced.description"
+          values={{ br: <br /> }}
+        />
+      </p>
       <Form />
       <h3>Store</h3>
       <StringExample>{strStore}</StringExample>

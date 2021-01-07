@@ -1,10 +1,10 @@
 import React from 'react';
-import {FormattedMessage} from 'gatsby-plugin-intl';
-import {useForm} from 'effector-react-form';
+import { FormattedMessage } from 'gatsby-plugin-intl';
+import { useForm } from 'effector-react-form-v1';
 import JsonExample from '@components/json-example';
 import TemplateExamplePage from '../../../string-examples/template-example-page';
 import Layout from '@components/v1/layout';
-import {createStore} from 'effector';
+import { createStore } from 'effector';
 
 const $values = createStore({
   username: 'gtosss',
@@ -14,11 +14,8 @@ const $values = createStore({
   },
 });
 
-const Input = ({
-  controller,
-  label,
-}) => {
-  const {input} = controller();
+const Input = ({ controller, label }) => {
+  const { input } = controller();
 
   return (
     <div className="input-wrap">
@@ -29,9 +26,9 @@ const Input = ({
 };
 
 const Form = () => {
-  const {handleSubmit, controller, $form, $fieldsInline} = useForm({
+  const { handleSubmit, controller, $form, $fieldsInline } = useForm({
     $values,
-    onSubmit: ({values}) => {
+    onSubmit: ({ values }) => {
       alert(JSON.stringify(values, null, '  '));
     },
   });
@@ -39,9 +36,15 @@ const Form = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <Input label="Username" controller={controller({name: 'username'})} />
-        <Input label="First name" controller={controller({name: 'profile.firstName'})} />
-        <Input label="Last name" controller={controller({name: 'profile.lastName'})} />
+        <Input label="Username" controller={controller({ name: 'username' })} />
+        <Input
+          label="First name"
+          controller={controller({ name: 'profile.firstName' })}
+        />
+        <Input
+          label="Last name"
+          controller={controller({ name: 'profile.lastName' })}
+        />
         <button type="submit">submit</button>
       </form>
 
@@ -54,14 +57,14 @@ const Form = () => {
   );
 };
 
-interface Props {
-
-}
+interface Props {}
 
 const InitialValues = React.memo(({}: Props) => {
   return (
     <Layout menuKey="Examples">
-      <h1><FormattedMessage id="examples.initialValues.title" /></h1>
+      <h1>
+        <FormattedMessage id="examples.initialValues.title" />
+      </h1>
       <Form />
       <TemplateExamplePage formName="initialValues" />
     </Layout>

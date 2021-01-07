@@ -1,14 +1,14 @@
 import React from 'react';
-import {FormattedMessage} from 'gatsby-plugin-intl';
-import {createStore, createEvent, sample, createEffect} from 'effector';
-import {useStore} from 'effector-react';
-import {useForm} from 'effector-react-form';
+import { FormattedMessage } from 'gatsby-plugin-intl';
+import { createStore, createEvent, sample, createEffect } from 'effector';
+import { useStore } from 'effector-react';
+import { useForm } from 'effector-react-form-v1';
 import JsonExample from '@components/json-example';
 import TemplateExamplePage from '../../../string-examples/template-example-page';
 import Layout from '@components/v1/layout';
 import cn from 'classnames';
 
-const validateRequired = (value) => !value ? 'Field is required' : undefined;
+const validateRequired = (value) => (!value ? 'Field is required' : undefined);
 
 const createServerErrors = (values) => {
   const errors = {};
@@ -22,9 +22,9 @@ const createServerErrors = (values) => {
   }
 
   return errors;
-}
+};
 
-const sleep = () => new Promise(resolve => setTimeout(resolve, 700));
+const sleep = () => new Promise((resolve) => setTimeout(resolve, 700));
 
 const clearOuterErrors = createEvent();
 
@@ -47,8 +47,8 @@ sample({
   target: $outerErrorsInline,
 });
 
-const Input = ({controller, label}) => {
-  const {input, error, isShowError, } = controller();
+const Input = ({ controller, label }) => {
+  const { input, error, isShowError } = controller();
 
   return (
     <div className="input-wrap">
@@ -56,24 +56,24 @@ const Input = ({controller, label}) => {
       <input
         {...input}
         value={input.value || ''}
-        className={cn('input', {'input-error': isShowError})}
+        className={cn('input', { 'input-error': isShowError })}
         autoComplete="off"
       />
-      {isShowError && (<div className="input-error-message">{error}</div>)}
+      {isShowError && <div className="input-error-message">{error}</div>}
     </div>
   );
 };
 
 const Form = () => {
-  const {handleSubmit, controller, $form, $fieldsInline} = useForm({
+  const { handleSubmit, controller, $form, $fieldsInline } = useForm({
     $outerErrorsInline,
-    onSubmit: ({values, form}) => {
+    onSubmit: ({ values, form }) => {
       clearOuterErrors();
 
       if (!form.hasError) {
         postUserFx(values);
       }
-    }
+    },
   });
 
   const pending = useStore(postUserFx.pending);
@@ -83,17 +83,28 @@ const Form = () => {
       <form onSubmit={handleSubmit}>
         <Input
           label="Username"
-          controller={controller({name: 'username', validate: validateRequired})}
+          controller={controller({
+            name: 'username',
+            validate: validateRequired,
+          })}
         />
         <Input
           label="First name"
-          controller={controller({name: 'profile.firstName', validate: validateRequired})}
+          controller={controller({
+            name: 'profile.firstName',
+            validate: validateRequired,
+          })}
         />
         <Input
           label="Last name"
-          controller={controller({name: 'profile.lastName', validate: validateRequired})}
+          controller={controller({
+            name: 'profile.lastName',
+            validate: validateRequired,
+          })}
         />
-        <button type="submit" disabled={pending}>create user</button>
+        <button type="submit" disabled={pending}>
+          create user
+        </button>
       </form>
 
       <div className="row">
@@ -105,15 +116,20 @@ const Form = () => {
   );
 };
 
-interface Props {
-
-}
+interface Props {}
 
 const SimpleFormLocal = React.memo(({}: Props) => {
   return (
     <Layout menuKey="Examples">
-      <h1><FormattedMessage id="examples.serverSideValidation.title" /></h1>
-      <p><FormattedMessage id="examples.serverSideValidation.description" values={{br: <br />}} /></p>
+      <h1>
+        <FormattedMessage id="examples.serverSideValidation.title" />
+      </h1>
+      <p>
+        <FormattedMessage
+          id="examples.serverSideValidation.description"
+          values={{ br: <br /> }}
+        />
+      </p>
       <Form />
       <TemplateExamplePage formName="serverSideValidation" />
     </Layout>

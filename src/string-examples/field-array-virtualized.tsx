@@ -1,6 +1,6 @@
 export default `import React from 'react';
 import cn from 'classnames';
-import {useForm, useFieldArray, getIn} from 'effector-react-form';
+import {useForm, useFieldArray, getIn} from 'effector-react-form-v1';
 import {createStore} from 'effector';
 import {List} from 'react-virtualized';
 

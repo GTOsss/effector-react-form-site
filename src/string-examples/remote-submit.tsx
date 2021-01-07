@@ -1,5 +1,5 @@
 export default `import React from 'react';
-import {useForm} from 'effector-react-form';
+import {useForm} from 'effector-react-form-v1';
 import {createEvent} from 'effector';
 import cn from 'classnames';
 

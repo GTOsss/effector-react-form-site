@@ -1,10 +1,10 @@
 import React from 'react';
-import {FormattedMessage} from 'gatsby-plugin-intl';
-import {useForm} from 'effector-react-form';
+import { FormattedMessage } from 'gatsby-plugin-intl';
+import { useForm } from 'effector-react-form-v1';
 import JsonExample from '@components/json-example';
 import TemplateExamplePage from '../../../string-examples/template-example-page';
 import Layout from '@components/v1/layout';
-import {createStore, createEvent} from 'effector';
+import { createStore, createEvent } from 'effector';
 
 const resetValuesToInitial = createEvent(); // for reset to initial values
 const clearValues = createEvent(); // for clear all fields
@@ -22,11 +22,8 @@ const $values = createStore(initialValues) // set initial values
 
 $values.on(clearValues, () => ({})); // add handler for clear fields
 
-const Input = ({
-  controller,
-  label,
-}) => {
-  const {input} = controller();
+const Input = ({ controller, label }) => {
+  const { input } = controller();
 
   return (
     <div className="input-wrap">
@@ -37,9 +34,9 @@ const Input = ({
 };
 
 const Form = () => {
-  const {handleSubmit, controller, $form, $fieldsInline} = useForm({
+  const { handleSubmit, controller, $form, $fieldsInline } = useForm({
     $values,
-    onSubmit: ({values}) => {
+    onSubmit: ({ values }) => {
       alert(JSON.stringify(values, null, '  '));
     },
   });
@@ -47,12 +44,22 @@ const Form = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <Input label="Username" controller={controller({name: 'username'})} />
-        <Input label="First name" controller={controller({name: 'profile.firstName'})} />
-        <Input label="Last name" controller={controller({name: 'profile.lastName'})} />
+        <Input label="Username" controller={controller({ name: 'username' })} />
+        <Input
+          label="First name"
+          controller={controller({ name: 'profile.firstName' })}
+        />
+        <Input
+          label="Last name"
+          controller={controller({ name: 'profile.lastName' })}
+        />
         <button type="submit">submit</button>
-        <button type="button" onClick={() => resetValuesToInitial()}>reset</button>
-        <button type="button" onClick={() => clearValues()}>clear</button>
+        <button type="button" onClick={() => resetValuesToInitial()}>
+          reset
+        </button>
+        <button type="button" onClick={() => clearValues()}>
+          clear
+        </button>
       </form>
 
       <div className="row">
@@ -64,15 +71,20 @@ const Form = () => {
   );
 };
 
-interface Props {
-
-}
+interface Props {}
 
 const InitialValuesAdvanced = React.memo(({}: Props) => {
   return (
     <Layout menuKey="Examples">
-      <h1><FormattedMessage id="examples.initialValuesAdvanced.title" /></h1>
-      <p><FormattedMessage id="examples.initialValuesAdvanced.description" values={{br: <br />}} /></p>
+      <h1>
+        <FormattedMessage id="examples.initialValuesAdvanced.title" />
+      </h1>
+      <p>
+        <FormattedMessage
+          id="examples.initialValuesAdvanced.description"
+          values={{ br: <br /> }}
+        />
+      </p>
       <Form />
       <TemplateExamplePage formName="initialValuesAdvanced" />
     </Layout>

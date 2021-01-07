@@ -1,7 +1,7 @@
 export default `import React from 'react';
 import {createStore, createEvent, sample, createEffect} from 'effector';
 import {useStore} from 'effector-react';
-import {useForm} from 'effector-react-form';
+import {useForm} from 'effector-react-form-v1';
 import cn from 'classnames';
 
 const validateRequired = (value) => !value ? 'Field is required' : undefined;

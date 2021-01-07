@@ -1,22 +1,19 @@
 import React from 'react';
-import {useForm} from 'effector-react-form';
-import {FormattedMessage} from 'gatsby-plugin-intl';
+import { useForm } from 'effector-react-form-v1';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 import JsonExample from '@components/json-example';
 import Layout from '@components/v1/layout';
 import TemplateExamplePage from '../../../string-examples/template-example-page';
 import debounce from 'lodash.debounce';
 
-const onSubmit = ({values}) => {
-  alert(JSON.stringify(values, null, '  '))
-}
+const onSubmit = ({ values }) => {
+  alert(JSON.stringify(values, null, '  '));
+};
 
-const debouncedOnChange = debounce(onSubmit, 500)
+const debouncedOnChange = debounce(onSubmit, 500);
 
-const Input = ({
-  controller,
-  label,
-}) => {
-  const {input} = controller();
+const Input = ({ controller, label }) => {
+  const { input } = controller();
 
   return (
     <div className="input-wrap">
@@ -27,7 +24,7 @@ const Input = ({
 };
 
 const Form = () => {
-  const {handleSubmit, controller, $values, $errorsInline, $form} = useForm({
+  const { handleSubmit, controller, $values, $errorsInline, $form } = useForm({
     onChange: debouncedOnChange,
     onSubmit,
   });
@@ -35,13 +32,10 @@ const Form = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <Input
-          label="Search"
-          controller={controller({name: 'search'})}
-        />
+        <Input label="Search" controller={controller({ name: 'search' })} />
         <Input
           label="Search by email"
-          controller={controller({name: 'searchByEmail'})}
+          controller={controller({ name: 'searchByEmail' })}
         />
         <button type="submit">search</button>
       </form>
@@ -55,15 +49,20 @@ const Form = () => {
   );
 };
 
-interface Props {
-
-}
+interface Props {}
 
 const FieldLevelValidation = React.memo(({}: Props) => {
   return (
     <Layout menuKey="Examples">
-      <h1><FormattedMessage id="examples.onchange.title" /></h1>
-      <p><FormattedMessage id="examples.onchange.description" values={{br: <br />}} /></p>
+      <h1>
+        <FormattedMessage id="examples.onchange.title" />
+      </h1>
+      <p>
+        <FormattedMessage
+          id="examples.onchange.description"
+          values={{ br: <br /> }}
+        />
+      </p>
       <Form />
       <TemplateExamplePage formName="onchange" />
     </Layout>

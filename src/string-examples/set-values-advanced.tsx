@@ -63,7 +63,7 @@ const $isEmpty = $values.map(
 );`;
 
 export const strComponents = `import React from 'react';
-import {useForm} from 'effector-react-form';
+import {useForm} from 'effector-react-form-v1';
 import {useStore} from 'effector-react';
 
 const Input = ({controller, label}) => {

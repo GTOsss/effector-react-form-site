@@ -1,10 +1,20 @@
 import React from 'react';
+import { createForm, useForm } from 'effector-react-form-v1';
 
-const Input = ({
-  controller,
-  label,
-}) => {
-  const {input} = controller();
+type Values = {
+  username: string;
+  profile: {
+    firstName: string;
+    lastName: string;
+  };
+};
+
+const form = createForm<Values>({
+  onSubmit: ({ values }) => alert(JSON.stringify(values, null, '  ')),
+});
+
+const Input = ({ controller, label }) => {
+  const { input } = controller();
 
   return (
     <div className="input-wrap">
@@ -14,24 +24,21 @@ const Input = ({
   );
 };
 
-interface Props {
-}
+type Props = {};
 
 const SimpleForm: React.FC<Props> = ({}) => {
+  const { controller, handleSubmit } = useForm({ form });
 
   return (
     <form onSubmit={handleSubmit}>
-      <Input
-        label="Username"
-        controller={controller({name: 'username'})}
-      />
+      <Input label="Username" controller={controller({ name: 'username' })} />
       <Input
         label="First name"
-        controller={controller({name: 'profile.firstName'})}
+        controller={controller({ name: 'profile.firstName' })}
       />
       <Input
         label="Last name"
-        controller={controller({name: 'profile.lastName'})}
+        controller={controller({ name: 'profile.lastName' })}
       />
       <button type="submit">submit</button>
     </form>

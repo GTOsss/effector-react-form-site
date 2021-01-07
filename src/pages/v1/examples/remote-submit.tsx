@@ -1,8 +1,8 @@
 import React from 'react';
-import {useForm} from 'effector-react-form';
-import {createEvent} from 'effector';
+import { useForm } from 'effector-react-form-v1';
+import { createEvent } from 'effector';
 import cn from 'classnames';
-import {FormattedMessage} from 'gatsby-plugin-intl';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 import JsonExample from '@components/json-example';
 import Layout from '@components/v1/layout';
 import TemplateExamplePage from '../../../string-examples/template-example-page';
@@ -13,7 +13,7 @@ if (typeof window !== 'undefined') {
   window.remoteSubmit = submit;
 }
 
-const validateRequired = (value) => !value ? 'Field is required' : undefined;
+const validateRequired = (value) => (!value ? 'Field is required' : undefined);
 
 const validateUsername = (value) => {
   const requiredError = validateRequired(value);
@@ -21,8 +21,8 @@ const validateUsername = (value) => {
   if (value.length < 4) return 'Minimum of 4 characters';
 };
 
-const Input = ({controller, label}) => {
-  const {input, error, isShowError} = controller();
+const Input = ({ controller, label }) => {
+  const { input, error, isShowError } = controller();
 
   return (
     <div className="input-wrap">
@@ -30,17 +30,17 @@ const Input = ({controller, label}) => {
       <input
         {...input}
         value={input.value || ''}
-        className={cn('input', {'input-error': isShowError})}
+        className={cn('input', { 'input-error': isShowError })}
         autoComplete="off"
       />
-      {isShowError && (<div className="input-error-message">{error}</div>)}
+      {isShowError && <div className="input-error-message">{error}</div>}
     </div>
   );
 };
 
 const Form = () => {
-  const {handleSubmit, controller, $values, $errorsInline, $form} = useForm({
-    onSubmit: ({values, form}) => {
+  const { handleSubmit, controller, $values, $errorsInline, $form } = useForm({
+    onSubmit: ({ values, form }) => {
       console.log('submit');
       if (!form.hasError) {
         alert(JSON.stringify(values, null, '  '));
@@ -54,25 +54,33 @@ const Form = () => {
       <form onSubmit={handleSubmit}>
         <Input
           label="Username"
-          controller={controller({name: 'username', validate: validateUsername})}
+          controller={controller({
+            name: 'username',
+            validate: validateUsername,
+          })}
         />
         <Input
           label="First name"
-          controller={controller({name: 'profile.firstName', validate: validateRequired})}
+          controller={controller({
+            name: 'profile.firstName',
+            validate: validateRequired,
+          })}
         />
         <Input
           label="Last name"
-          controller={controller({name: 'profile.lastName', validate: validateRequired})}
+          controller={controller({
+            name: 'profile.lastName',
+            validate: validateRequired,
+          })}
         />
         <button type="submit">submit</button>
       </form>
 
-      <div style={{width: '460px', margin: 'auto' }}>
+      <div style={{ width: '460px', margin: 'auto' }}>
         <button onClick={submit as any} type="button">
           Button outside the form for submit form
         </button>
       </div>
-
 
       <div className="row">
         <JsonExample source={$values} title="$values" />
@@ -83,14 +91,14 @@ const Form = () => {
   );
 };
 
-interface Props {
-
-}
+interface Props {}
 
 const FieldLevelValidation = React.memo(({}: Props) => {
   return (
     <Layout menuKey="Examples">
-      <h1><FormattedMessage id="examples.remoteSubmit.title" /></h1>
+      <h1>
+        <FormattedMessage id="examples.remoteSubmit.title" />
+      </h1>
       <Form />
       <TemplateExamplePage formName="remoteSubmit" />
     </Layout>

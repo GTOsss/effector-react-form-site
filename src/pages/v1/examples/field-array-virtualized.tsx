@@ -1,11 +1,11 @@
 import React from 'react';
 import cn from 'classnames';
-import {FormattedMessage} from 'gatsby-plugin-intl';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 import Layout from '@components/v1/layout';
 import TemplateExamplePage from '../../../string-examples/template-example-page';
-import {useForm, useFieldArray, getIn} from 'effector-react-form';
-import {createStore} from 'effector';
-import {List} from 'react-virtualized';
+import { useForm, useFieldArray, getIn } from 'effector-react-form-v1';
+import { createStore } from 'effector';
+import { List } from 'react-virtualized';
 
 const getId = (() => {
   let counter = 0;
@@ -17,8 +17,8 @@ const FORM_ITEM_HEIGHT = 220;
 const $values = createStore({});
 const $fieldsInline = createStore({});
 
-const Input = ({controller, label}) => {
-  const {input, error, isShowError} = controller();
+const Input = ({ controller, label }) => {
+  const { input, error, isShowError } = controller();
 
   return (
     <div className="input-wrap">
@@ -26,16 +26,16 @@ const Input = ({controller, label}) => {
       <input
         {...input}
         value={input.value || ''}
-        className={cn('input', {'input-error': isShowError})}
+        className={cn('input', { 'input-error': isShowError })}
         autoComplete="off"
       />
-      {isShowError && (<div className="input-error-message">{error}</div>)}
+      {isShowError && <div className="input-error-message">{error}</div>}
     </div>
   );
 };
 
-const Users = ({controller, name}) => {
-  const {push, remove} = useFieldArray({name, $values, $fieldsInline});
+const Users = ({ controller, name }) => {
+  const { push, remove } = useFieldArray({ name, $values, $fieldsInline });
 
   const fields = getIn($values.getState(), name, []);
 
@@ -48,41 +48,63 @@ const Users = ({controller, name}) => {
         width={420}
         rowCount={fields.length}
         rowHeight={FORM_ITEM_HEIGHT}
-        rowRenderer={({key, index, style}) => (
-          <div key={key} style={{...style, height: '220px'}}>
-            <div className="formItem" style={{height: '210px', marginBottom: '10px'}}>
+        rowRenderer={({ key, index, style }) => (
+          <div key={key} style={{ ...style, height: '220px' }}>
+            <div
+              className="formItem"
+              style={{ height: '210px', marginBottom: '10px' }}
+            >
               <Input
                 label="Username"
-                controller={controller({name: `${name}.${index}.username`})}
+                controller={controller({ name: `${name}.${index}.username` })}
               />
               <Input
                 label="First name"
-                controller={controller({name: `${name}.${index}.profile.firstName`})}
+                controller={controller({
+                  name: `${name}.${index}.profile.firstName`,
+                })}
               />
-              <button type="button" onClick={() => remove(index)} className="danger">remove user</button>
+              <button
+                type="button"
+                onClick={() => remove(index)}
+                className="danger"
+              >
+                remove user
+              </button>
             </div>
           </div>
         )}
       />
       <button
         type="button"
-        onClick={() => push({id: getId(), username: '', profile: {}})} className="success"
+        onClick={() => push({ id: getId(), username: '', profile: {} })}
+        className="success"
       >
         add user
       </button>
       <button
         type="button"
-        onClick={() => push({id: getId(), username: 'test username', profile: {firstName: 'test firstName'}})}
+        onClick={() =>
+          push({
+            id: getId(),
+            username: 'test username',
+            profile: { firstName: 'test firstName' },
+          })
+        }
         className="success"
       >
         add user with values
       </button>
       <button
         type="button"
-        onClick={() => push((new Array(1000)).fill(null).map(() => {
-          const id = getId();
-          return ({id, username: `username${id}`});
-        }))}
+        onClick={() =>
+          push(
+            new Array(1000).fill(null).map(() => {
+              const id = getId();
+              return { id, username: `username${id}` };
+            })
+          )
+        }
         className="success"
       >
         add 1000 elements
@@ -92,10 +114,10 @@ const Users = ({controller, name}) => {
 };
 
 const Form = () => {
-  const {handleSubmit, controller} = useForm({
+  const { handleSubmit, controller } = useForm({
     $values,
     $fieldsInline,
-    onSubmit: ({values, form}) => {
+    onSubmit: ({ values, form }) => {
       if (!form.hasError) {
         alert(JSON.stringify(values, null, '  '));
       }
@@ -112,14 +134,14 @@ const Form = () => {
   );
 };
 
-interface Props {
-
-}
+interface Props {}
 
 const FieldLevelValidation = React.memo(({}: Props) => {
   return (
     <Layout menuKey="Examples">
-      <h1><FormattedMessage id="examples.fieldArrayVirtualized.title" /></h1>
+      <h1>
+        <FormattedMessage id="examples.fieldArrayVirtualized.title" />
+      </h1>
       <Form />
       <TemplateExamplePage formName="fieldArrayVirtualized" />
     </Layout>

@@ -1,20 +1,20 @@
-import React from "react"
-import { FormattedMessage } from "gatsby-plugin-intl"
-import { useForm } from "effector-react-form"
-import JsonExample from "@components/json-example"
-import TemplateExamplePage from "../../../string-examples/template-example-page"
-import Layout from "@components/v1/layout"
+import React from 'react';
+import { FormattedMessage } from 'gatsby-plugin-intl';
+import { useForm } from 'effector-react-form-v1';
+import JsonExample from '@components/json-example';
+import TemplateExamplePage from '../../../string-examples/template-example-page';
+import Layout from '@components/v1/layout';
 
 const Input = ({ controller, label }) => {
-  const { input } = controller()
+  const { input } = controller();
 
   return (
     <div className="input-wrap">
       <label>{label}</label>
-      <input {...input} value={input.value || ""} className="input" />
+      <input {...input} value={input.value || ''} className="input" />
     </div>
-  )
-}
+  );
+};
 
 const Form = () => {
   const {
@@ -26,26 +26,26 @@ const Form = () => {
     $values,
   } = useForm({
     onSubmit: ({ values }) => {
-      alert(JSON.stringify(values, null, "  "))
+      alert(JSON.stringify(values, null, '  '));
     },
-  })
+  });
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <Input label="Username" controller={controller({ name: "username" })} />
+        <Input label="Username" controller={controller({ name: 'username' })} />
         <Input
           label="First name"
-          controller={controller({ name: "profile.firstName" })}
+          controller={controller({ name: 'profile.firstName' })}
         />
         <Input
           label="Last name"
-          controller={controller({ name: "profile.lastName" })}
+          controller={controller({ name: 'profile.lastName' })}
         />
         <button
           type="button"
           onClick={() =>
-            setValue({ field: "profile.firstName", value: "some value" })
+            setValue({ field: 'profile.firstName', value: 'some value' })
           }
         >
           set first name
@@ -59,8 +59,8 @@ const Form = () => {
         <JsonExample source={$form} title="$form" />
       </div>
     </div>
-  )
-}
+  );
+};
 
 interface Props {}
 
@@ -79,7 +79,7 @@ const SetValuesLocal = React.memo(({}: Props) => {
       <Form />
       <TemplateExamplePage formName="setValuesLocal" />
     </Layout>
-  )
-})
+  );
+});
 
-export default SetValuesLocal
+export default SetValuesLocal;

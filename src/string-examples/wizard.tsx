@@ -1,6 +1,6 @@
 export default `import React, {useState} from 'react';
 import {createStore} from 'effector';
-import {useForm} from 'effector-react-form';
+import {useForm} from 'effector-react-form-v1';
 
 const $values = createStore({});
 
@@ -98,4 +98,4 @@ const Form = () => {
     </div>
   );
 };
-`
+`;

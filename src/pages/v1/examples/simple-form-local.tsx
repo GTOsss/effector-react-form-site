@@ -1,15 +1,12 @@
 import React from 'react';
-import {FormattedMessage} from 'gatsby-plugin-intl';
-import {useForm} from 'effector-react-form';
+import { FormattedMessage } from 'gatsby-plugin-intl';
+import { useForm } from 'effector-react-form-v1';
 import JsonExample from '@components/json-example';
 import TemplateExamplePage from '../../../string-examples/template-example-page';
 import Layout from '@components/v1/layout';
 
-const Input = ({
-  controller,
-  label,
-}) => {
-  const {input} = controller();
+const Input = ({ controller, label }) => {
+  const { input } = controller();
 
   return (
     <div className="input-wrap">
@@ -20,26 +17,23 @@ const Input = ({
 };
 
 const Form = () => {
-  const {handleSubmit, controller, $values, $form, $fieldsInline} = useForm({
-    onSubmit: ({values}) => {
+  const { handleSubmit, controller, $values, $form, $fieldsInline } = useForm({
+    onSubmit: ({ values }) => {
       alert(JSON.stringify(values, null, '  '));
-    }
+    },
   });
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <Input
-          label="Username"
-          controller={controller({name: 'username'})}
-        />
+        <Input label="Username" controller={controller({ name: 'username' })} />
         <Input
           label="First name"
-          controller={controller({name: 'profile.firstName'})}
+          controller={controller({ name: 'profile.firstName' })}
         />
         <Input
           label="Last name"
-          controller={controller({name: 'profile.lastName'})}
+          controller={controller({ name: 'profile.lastName' })}
         />
         <button type="submit">submit</button>
       </form>
@@ -53,15 +47,17 @@ const Form = () => {
   );
 };
 
-interface Props {
-
-}
+interface Props {}
 
 const SimpleFormLocal = React.memo(({}: Props) => {
   return (
     <Layout menuKey="Examples">
-      <h1><FormattedMessage id="examples.simpleFormLocal.title" /></h1>
-      <p><FormattedMessage id="examples.simpleFormLocal.description" /></p>
+      <h1>
+        <FormattedMessage id="examples.simpleFormLocal.title" />
+      </h1>
+      <p>
+        <FormattedMessage id="examples.simpleFormLocal.description" />
+      </p>
       <Form />
       <TemplateExamplePage formName="simpleFormLocal" />
     </Layout>

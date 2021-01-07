@@ -1,22 +1,19 @@
 import React from 'react';
-import {FormattedMessage} from 'gatsby-plugin-intl';
-import {useForm, setIn} from 'effector-react-form';
+import { FormattedMessage } from 'gatsby-plugin-intl';
+import { useForm, setIn } from 'effector-react-form-v1';
 import JsonExample from '@components/json-example';
 import TemplateExamplePage from '../../../string-examples/template-example-page';
 import Layout from '@components/v1/layout';
-import {createStore, createEvent} from 'effector';
+import { createStore, createEvent } from 'effector';
 
 const setValue = createEvent();
 
 const $values = createStore({});
 
-$values.on(setValue, (state, {field, value}) => setIn(state, field, value))
+$values.on(setValue, (state, { field, value }) => setIn(state, field, value));
 
-const Input = ({
-  controller,
-  label,
-}) => {
-  const {input} = controller();
+const Input = ({ controller, label }) => {
+  const { input } = controller();
 
   return (
     <div className="input-wrap">
@@ -27,8 +24,15 @@ const Input = ({
 };
 
 const Form = () => {
-  const {handleSubmit, controller, setValue, $form, $fieldsInline, $values} = useForm({
-    onSubmit: ({values}) => {
+  const {
+    handleSubmit,
+    controller,
+    setValue,
+    $form,
+    $fieldsInline,
+    $values,
+  } = useForm({
+    onSubmit: ({ values }) => {
       alert(JSON.stringify(values, null, '  '));
     },
   });
@@ -36,12 +40,20 @@ const Form = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <Input label="Username" controller={controller({name: 'username'})} />
-        <Input label="First name" controller={controller({name: 'profile.firstName'})} />
-        <Input label="Last name" controller={controller({name: 'profile.lastName'})} />
+        <Input label="Username" controller={controller({ name: 'username' })} />
+        <Input
+          label="First name"
+          controller={controller({ name: 'profile.firstName' })}
+        />
+        <Input
+          label="Last name"
+          controller={controller({ name: 'profile.lastName' })}
+        />
         <button
           type="button"
-          onClick={() => setValue({field: 'profile.firstName', value: 'some value'})}
+          onClick={() =>
+            setValue({ field: 'profile.firstName', value: 'some value' })
+          }
         >
           set first name
         </button>
@@ -57,15 +69,20 @@ const Form = () => {
   );
 };
 
-interface Props {
-
-}
+interface Props {}
 
 const SetValuesGlobal = React.memo(({}: Props) => {
   return (
     <Layout menuKey="Examples">
-      <h1><FormattedMessage id="examples.setValuesGlobal.title" /></h1>
-      <p><FormattedMessage id="examples.setValuesGlobal.description" values={{br: <br />}} /></p>
+      <h1>
+        <FormattedMessage id="examples.setValuesGlobal.title" />
+      </h1>
+      <p>
+        <FormattedMessage
+          id="examples.setValuesGlobal.description"
+          values={{ br: <br /> }}
+        />
+      </p>
       <Form />
       <TemplateExamplePage formName="setValuesGlobal" />
     </Layout>
