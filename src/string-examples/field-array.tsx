@@ -1,6 +1,6 @@
 export default `import React from 'react';
 import cn from 'classnames';
-import {useForm, useFieldArray} from 'effector-react-form-v1';
+import {useForm, useFieldArray} from 'effector-react-form';
 import {createStore} from 'effector';
 
 const getId = (() => {

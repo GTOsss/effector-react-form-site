@@ -1,4 +1,5 @@
 export default `import React from 'react';
+import {useForm} from 'effector-react-form';
 import {createStore} from 'effector';
 
 const $values = createStore({

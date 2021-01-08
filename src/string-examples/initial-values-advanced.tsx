@@ -1,4 +1,5 @@
 export default `import React from 'react';
+import {useForm} from 'effector-react-form';
 import {createStore, createEvent} from 'effector';
 
 const resetValuesToInitial = createEvent(); // for reset to initial values

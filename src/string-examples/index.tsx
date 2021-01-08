@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
-import {darcula} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import simpleFormLocal from './simple-form-local';
 import simpleFormGlobal from './simple-form-global';
 import initialValues from './initial-values';
@@ -51,18 +51,22 @@ interface Props {
   exampleKey: ExampleKey;
 }
 
-export const SimpleExample: React.FC<Props> = React.memo(({exampleKey, children}) => {
-
-  return (
-    <SyntaxHighlighter
-      wrapLines
-      language="jsx"
-      style={darcula}
-      customStyle={{backgroundColor: '#242424', border: '0px solid #162A4E'}}
-    >
-      {children || mapExamples[exampleKey]}
-    </SyntaxHighlighter>
-  );
-});
+export const SimpleExample: React.FC<Props> = React.memo(
+  ({ exampleKey, children }) => {
+    return (
+      <SyntaxHighlighter
+        wrapLines
+        language="tsx"
+        style={darcula}
+        customStyle={{
+          backgroundColor: '#242424',
+          border: '0px solid #162A4E',
+        }}
+      >
+        {children || mapExamples[exampleKey]}
+      </SyntaxHighlighter>
+    );
+  }
+);
 
 export default SimpleExample;

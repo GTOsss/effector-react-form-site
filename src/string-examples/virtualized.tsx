@@ -1,7 +1,7 @@
 export default `import {useStore} from 'effector-react';
 import {List, ListRowProps} from 'react-virtualized';
 import {createStore} from 'effector';
-import {useForm, makeNested} from 'effector-react-form-v1';
+import {useForm, makeNested} from 'effector-react-form';
 import cn from 'classnames';
 
 const INPUT_HEIGHT = 50;

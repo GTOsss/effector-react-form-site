@@ -1,5 +1,5 @@
 export default `import React from 'react';
-import {useForm, setIn} from 'effector-react-form-v1';
+import {useForm, setIn} from 'effector-react-form';
 import {createStore, createEvent} from 'effector';
 import {useStore} from 'effector-react';
 

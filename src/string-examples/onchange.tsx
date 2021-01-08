@@ -1,5 +1,5 @@
 export default `import React from 'react';
-import {useForm} from 'effector-react-form-v1';
+import {useForm} from 'effector-react-form';
 import debounce from 'lodash.debounce';
 
 const onSubmit = ({values}) => {

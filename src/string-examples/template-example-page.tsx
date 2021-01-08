@@ -1,5 +1,5 @@
 import * as React from 'react';
-import ExampleByKey, {ExampleKey} from './index';
+import ExampleByKey, { ExampleKey } from './index';
 import styles from './styles.module.scss';
 
 interface Props {
@@ -7,10 +7,7 @@ interface Props {
   wizard?: boolean;
 }
 
-const TemplateExamplePage: React.FC<Props> = ({
-  formName,
-}) => {
-
+const TemplateExamplePage: React.FC<Props> = ({ formName }) => {
   return (
     <div className={styles.wrap}>
       <ExampleByKey exampleKey={formName} />

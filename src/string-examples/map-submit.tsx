@@ -1,5 +1,5 @@
 export default `import React from 'react';
-import {useForm} from 'effector-react-form-v1';
+import {useForm} from 'effector-react-form';
 
 const mapSubmit = ({values, ...rest}) => {
   const mappedValues = {profile: values, someData: 'example data'};
