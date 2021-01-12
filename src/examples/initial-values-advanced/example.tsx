@@ -10,17 +10,15 @@ type Values = {
   };
 };
 
-const initialValues: Values = {
-  username: 'gtosss',
-  profile: {
-    firstName: 'Timofey',
-    lastName: 'Goncharov',
-  },
-};
-
 const form = createForm<Partial<Values>>({
   onSubmit: ({ values }) => alert(JSON.stringify(values, null, '  ')),
-  initialValues,
+  initialValues: {
+    username: 'gtosss',
+    profile: {
+      firstName: 'Timofey',
+      lastName: 'Goncharov',
+    },
+  },
 });
 
 const resetValuesToInitial = createEvent(); // for reset to initial values

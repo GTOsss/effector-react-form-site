@@ -5235,24 +5235,22 @@ ee-first@1.1.1:
   dependencies:
     lodash.topath "^4.5.2"
 
-effector-react-form@^2.0.25:
-  version "2.0.25"
-  resolved "https://registry.yarnpkg.com/effector-react-form/-/effector-react-form-2.0.25.tgz#6f7f57f929bdb2e98d932c4c1e4c6ce9394e3a67"
-  integrity sha512-Q0y1Y0pnunlrJsnXJiQHb1x2uRMe6b51qefsElXfaf1eJtFZDvhrS4MzbgFB1nxlAc+vrwxBwEak5kf0nSlTqw==
+effector-react-form@^2.0.27:
+  version "2.0.27"
+  resolved "https://registry.yarnpkg.com/effector-react-form/-/effector-react-form-2.0.27.tgz#edcb2ccb7edaa583f39d6b4ea34a084dad6a6cfd"
+  integrity sha512-iqAcsXAc3KUCK2dslJV2vkdOw8o1lTR+j0zwGMCGazBltpbKOkSZX34kqRUJPN0LsXtDFTwGrGAy1BtgTntpkw==
   dependencies:
     lodash.topath "^4.5.2"
 
-effector-react@^20.7.4:
-  version "20.9.0"
-  resolved "https://registry.yarnpkg.com/effector-react/-/effector-react-20.9.0.tgz#51cc0469321f56107ae75e219cc0280d46f72ae6"
-  integrity sha512-Fh/dGPFDGz8YyCbIeBxmqSlTGHdsTVl7lWSI92Z4PWf9Gac7Zvd7/1gE5a5uhfYSZvo0SjqYfT7fFsz81G4pEA==
+effector-react@^21.2.1:
+  version "21.2.1"
+  resolved "https://registry.yarnpkg.com/effector-react/-/effector-react-21.2.1.tgz#b6d1c8a5c61ffee841b41f4b697ec069094798c8"
+  integrity sha512-NvQBKnA6VQ14aZcHjag5muqvqnfr4H8g3Ry8/nuiEWqR/c9LkKK9mUoU1lyQU7m/eKlvuXSqeDQ1I4iBsobMqA==
 
-effector@^20.16.2:
-  version "20.17.2"
-  resolved "https://registry.yarnpkg.com/effector/-/effector-20.17.2.tgz#825987cdbf91b062e01074b5b47bcca9720efe94"
-  integrity sha512-Msbq6xem+Dal9BzReq6qqSKcb3ey4gVeJzG9S3wRVSPmErs8886STqGFGz9BbxrBR7Xy52cEMfI7KsBmmT1K7A==
-  dependencies:
-    symbol-observable "^1.2.0"
+effector@^21.7.5:
+  version "21.7.5"
+  resolved "https://registry.yarnpkg.com/effector/-/effector-21.7.5.tgz#6a8ed81c57e17cc8373ce29645e2715f9693aebd"
+  integrity sha512-sWB9xPJxfTHsPOzjxUIa2rJQ1T33Ya4X2N8RSqm+XMewEt5YmPpo2w82yZF27JxBl0qAQBg1ZI3Tz7u5fE+cwA==
 
 electron-to-chromium@^1.3.621:
   version "1.3.633"

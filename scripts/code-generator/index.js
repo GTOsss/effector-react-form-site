@@ -74,8 +74,7 @@ const handleCode = async ({ content, dirExample }) => {
 const createIndexFile = ({ dirExample }) => {
   const exampleComponentName = _.upperFirst(_.camelCase(dirExample));
   const path = resolve(pathToExamples, dirExample);
-  const fileContent = `import ${exampleComponentName} from './example';
-import { form } from './example';
+  const fileContent = `import ${exampleComponentName}, { form } from './example';
 import jsx from './generate-results/${dirExample}-jsx';
 import tsx from './generate-results/${dirExample}-tsx';
 
@@ -93,6 +92,7 @@ const start = () => {
     const pathForRead = resolve(pathToExamples, dirExample, 'example.tsx');
     let content = fs.readFileSync(pathForRead).toString();
     const ignore = fs.existsSync(resolve(pathToExamples, dirExample, 'generate-results'));
+    // const ignore = false;
 
     if (!ignore) {
       handleCode({ content, dirExample });

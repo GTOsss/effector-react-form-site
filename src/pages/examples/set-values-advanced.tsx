@@ -3,7 +3,7 @@ import MainLayout from '@components/main-layout';
 import JsonExample from '@components/json-example';
 import CodeHighlighter from '@components/code-highlighter';
 import { FormattedMessage } from 'gatsby-plugin-intl';
-import InitialValues, { form, examplesMap } from '@examples/initial-values-advanced';
+import SetValuesAdvanced, { form, examplesMap } from '@examples/set-values-advanced';
 
 type Props = {};
 
@@ -11,12 +11,12 @@ const Page: React.FC<Props> = ({}) => {
   return (
     <MainLayout menuKey="Examples">
       <h1>
-        <FormattedMessage id="examples.initialValuesAdvanced.title" />
+        <FormattedMessage id="examples.setValuesAdvanced.title" />
       </h1>
       <p>
-        <FormattedMessage id="examples.initialValuesAdvanced.description" values={{ br: <br /> }} />
+        <FormattedMessage id="examples.setValuesAdvanced.description" values={{ br: <br /> }} />
       </p>
-      <InitialValues />
+      <SetValuesAdvanced />
       <div className="row">
         <JsonExample source={form.$values} title="$values" />
         <JsonExample source={form.$fieldsInline} title="$fieldsInline" />

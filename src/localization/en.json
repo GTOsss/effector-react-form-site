@@ -16,6 +16,17 @@
       "title": "Initial values advanced",
       "description": "An advanced example that implements the following features: {br} initial values, {br}reset to initial values, {br} clear form."
     },
+    "setValues": {
+      "title": "Set values"
+    },
+    "setValuesAdvanced": {
+      "title": "Set values advanced",
+      "description": "An advanced example that implements the following features: {br}loading a user, {br}changing a user, {br}saving a user, {br}checking that the user was changed, {br}canceling changes (resetting)"
+    },
+    "onchange": {
+      "title": "OnChange form handler",
+      "description": "An example that implements the following features: {br}onchange form handler {br}debounced request to server (500ms)."
+    },
     "v1": {
       "simpleFormLocal": {
         "title": "Simple form local",

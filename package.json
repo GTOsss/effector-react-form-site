@@ -17,9 +17,9 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "effector": "^20.16.2",
-    "effector-react": "^20.7.4",
-    "effector-react-form": "^2.0.25",
+    "effector": "^21.7.5",
+    "effector-react": "^21.2.1",
+    "effector-react-form": "^2.0.27",
     "effector-react-form-v1": "npm:effector-react-form@^1.0.49",
     "jsx-to-string": "^1.4.0",
     "lodash.debounce": "^4.0.8",

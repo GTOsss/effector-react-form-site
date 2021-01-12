@@ -23,11 +23,11 @@ const navElementsMap: NavElementsMap = {
       label: <FormattedMessage id="examples.simpleForm.title" />,
       link: '/examples/simple-form',
     },
-    // {
-    //   id: getId(),
-    //   label: <FormattedMessage id="examples.onchange.title" />,
-    //   link: '/examples/onchange',
-    // },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.onchange.title" />,
+      link: '/examples/onchange',
+    },
     {
       id: getId(),
       label: <FormattedMessage id="examples.initialValues.title" />,
@@ -41,18 +41,13 @@ const navElementsMap: NavElementsMap = {
     {
       id: getId(),
       label: <FormattedMessage id="examples.setValues.title" />,
-      link: '/examples/set-values-local',
+      link: '/examples/set-values',
     },
-    // {
-    //   id: getId(),
-    //   label: <FormattedMessage id="examples.setValuesGlobal.title" />,
-    //   link: '/examples/set-values-global',
-    // },
-    // {
-    //   id: getId(),
-    //   label: <FormattedMessage id="examples.setValuesAdvanced.title" />,
-    //   link: '/examples/set-values-advanced',
-    // },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.setValuesAdvanced.title" />,
+      link: '/examples/set-values-advanced',
+    },
     // {
     //   id: getId(),
     //   label: <FormattedMessage id="examples.fieldLevelValidation.title" />,
@@ -144,6 +139,7 @@ const MainLayout: React.FC<Props> = ({ children, menuKey }) => {
       }
     }
   `);
+  console.log(navElementsMap['Examples']);
 
   return (
     <div className={styles.wrap}>
