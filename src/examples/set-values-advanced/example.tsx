@@ -40,13 +40,13 @@ const initialUser = {
 };
 
 const form = createForm({
-  onSubmit: ({ values }) => alert(JSON.stringify(values, null, '  ')),
+  onSubmit: putUserFx,
   initialValues: initialUser,
 });
 
 form.$values.on(getUserFx.doneData, (_, user) => user).reset(clearUser);
 
-const $formSnapshot = createStore(initialUser).on(putUserFx.done, (_, { params }) => params.values);
+export const $formSnapshot = createStore(initialUser).on(putUserFx.done, (_, { params }) => params.values);
 
 const $isChanged = combine(form.$values, $formSnapshot, (a, b) => !isEqual(a, b));
 
