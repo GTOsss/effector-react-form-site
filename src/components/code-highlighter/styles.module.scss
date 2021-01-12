@@ -1,0 +1,22 @@
+.wrapCode {
+  font-size: 15px;
+  padding: 10px 20px;
+  background-color: #242424;
+}
+
+.switcher {
+}
+
+.switchButton {
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  outline: none;
+  padding: 10px 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &_active {
+    background-color: #242424;
+  }
+}

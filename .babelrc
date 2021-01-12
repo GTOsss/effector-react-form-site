@@ -1,0 +1,18 @@
+{
+  "plugins": [
+    ["prismjs", {
+      "languages": ["tsx", "jsx"],
+      "css": false
+    }]
+  ],
+  "presets": [
+    [
+      "babel-preset-gatsby",
+      {
+        "targets": {
+          "browsers": [">0.25%", "not dead"]
+        }
+      }
+    ]
+  ]
+}

@@ -9,6 +9,9 @@
     "simpleForm": {
       "title": "Simple form"
     },
+    "initialValues": {
+      "title": "Initial values"
+    },
     "v1": {
       "simpleFormLocal": {
         "title": "Simple form local",
