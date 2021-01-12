@@ -1,9 +1,9 @@
 import * as React from 'react';
-import {useStaticQuery, graphql} from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import Header from '../../header';
-import {FormattedMessage} from 'gatsby-plugin-intl';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 import cn from 'classnames';
-import RightPanel, {Element as NavElement} from '../../right-panel';
+import RightPanel, { Element as NavElement } from '../../right-panel';
 import styles from './styles.module.scss';
 
 type NavElementsKey = 'Getting started' | 'Examples' | 'API';
@@ -137,13 +137,10 @@ const navElementsMap: NavElementsMap = {
 
 interface IProps {
   children: React.ReactNode;
-  menuKey?: NavElementsKey,
+  menuKey?: NavElementsKey;
 }
 
-const Layout = ({
-  children,
-  menuKey,
-}: IProps) => {
+const Layout = ({ children, menuKey }: IProps) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -159,9 +156,7 @@ const Layout = ({
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className={cn(styles.body)}>
         <main className={styles.main}>
-          <div className={styles.wrapContent}>
-            {children}
-          </div>
+          <div className={styles.wrapContent}>{children}</div>
         </main>
         {menuKey && <RightPanel elements={navElementsMap[menuKey]} />}
       </div>

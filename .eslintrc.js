@@ -49,5 +49,6 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
+    'no-duplicate-imports': 'error',
   },
 };

@@ -11,7 +11,7 @@ const Page: React.FC<Props> = ({}) => {
   return (
     <MainLayout menuKey="Examples">
       <h1>
-        <FormattedMessage id="examples.initialValues.title" />
+        <FormattedMessage id="examples.initialValuesAdvanced.title" />
       </h1>
       <InitialValues />
       <div className="row">

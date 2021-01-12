@@ -12,6 +12,10 @@
     "initialValues": {
       "title": "Initial values"
     },
+    "initialValuesAdvanced": {
+      "title": "Initial values advanced",
+      "description": "An advanced example that implements the following features: {br} initial values, {br}reset to initial values, {br} clear form."
+    },
     "v1": {
       "simpleFormLocal": {
         "title": "Simple form local",

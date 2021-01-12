@@ -1,49 +1,48 @@
-import React from "react"
-import styles from "./main-layout.module.scss"
-import RightPanel, { Element as NavElement } from "@components/right-panel"
-import { FormattedMessage } from "gatsby-plugin-intl"
-import { graphql, useStaticQuery } from "gatsby"
-import Header from "@components/header"
-import cn from "classnames"
-type NavElementsKey = "Getting started" | "Examples" | "API"
+import React from 'react';
+import styles from './main-layout.module.scss';
+import RightPanel, { Element as NavElement } from '@components/right-panel';
+import { FormattedMessage } from 'gatsby-plugin-intl';
+import { graphql, useStaticQuery } from 'gatsby';
+import Header from '@components/header';
+import cn from 'classnames';
+type NavElementsKey = 'Getting started' | 'Examples' | 'API';
 
 type NavElementsMap = {
-  [key in NavElementsKey]: Array<NavElement>
-}
+  [key in NavElementsKey]: Array<NavElement>;
+};
 
 const getId = (() => {
-  let count = 0
-  return () => count++
-})()
+  let count = 0;
+  return () => count++;
+})();
 
 const navElementsMap: NavElementsMap = {
   Examples: [
     {
       id: getId(),
       label: <FormattedMessage id="examples.simpleForm.title" />,
-      link: "/examples/simple-form",
+      link: '/examples/simple-form',
     },
-
     // {
     //   id: getId(),
     //   label: <FormattedMessage id="examples.onchange.title" />,
     //   link: '/examples/onchange',
     // },
-    // {
-    //   id: getId(),
-    //   label: <FormattedMessage id="examples.initialValues.title" />,
-    //   link: '/examples/initial-values',
-    // },
-    // {
-    //   id: getId(),
-    //   label: <FormattedMessage id="examples.initialValuesAdvanced.title" />,
-    //   link: '/examples/initial-values-advanced',
-    // },
-    // {
-    //   id: getId(),
-    //   label: <FormattedMessage id="examples.setValuesLocal.title" />,
-    //   link: '/examples/set-values-local',
-    // },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.initialValues.title" />,
+      link: '/examples/initial-values',
+    },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.initialValuesAdvanced.title" />,
+      link: '/examples/initial-values-advanced',
+    },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.setValues.title" />,
+      link: '/examples/set-values-local',
+    },
     // {
     //   id: getId(),
     //   label: <FormattedMessage id="examples.setValuesGlobal.title" />,
@@ -123,16 +122,17 @@ const navElementsMap: NavElementsMap = {
   API: [
     {
       id: 0,
-      label: "useForm",
-      link: "",
+      label: 'useForm',
+      link: '',
     },
   ],
-  "Getting started": [],
-}
+  'Getting started': [],
+};
 
 type Props = {
-  menuKey?: NavElementsKey
-}
+  menuKey?: NavElementsKey;
+  children: React.ReactNode;
+};
 
 const MainLayout: React.FC<Props> = ({ children, menuKey }) => {
   const data = useStaticQuery(graphql`
@@ -143,7 +143,7 @@ const MainLayout: React.FC<Props> = ({ children, menuKey }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <div className={styles.wrap}>
@@ -158,7 +158,7 @@ const MainLayout: React.FC<Props> = ({ children, menuKey }) => {
       {/*  © {new Date().getFullYear()}*/}
       {/*</footer>*/}
     </div>
-  )
-}
+  );
+};
 
-export default React.memo(MainLayout)
+export default React.memo(MainLayout);
