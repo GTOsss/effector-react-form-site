@@ -48,21 +48,21 @@ const navElementsMap: NavElementsMap = {
       label: <FormattedMessage id="examples.setValuesAdvanced.title" />,
       link: '/examples/set-values-advanced',
     },
-    // {
-    //   id: getId(),
-    //   label: <FormattedMessage id="examples.fieldLevelValidation.title" />,
-    //   link: '/examples/field-level-validation',
-    // },
-    // {
-    //   id: getId(),
-    //   label: <FormattedMessage id="examples.formLevelValidation.title" />,
-    //   link: '/examples/form-level-validation',
-    // },
-    // {
-    //   id: getId(),
-    //   label: <FormattedMessage id="examples.mixValidation.title" />,
-    //   link: '/examples/mix-validation',
-    // },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.fieldLevelValidation.title" />,
+      link: '/examples/field-level-validation',
+    },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.formLevelValidation.title" />,
+      link: '/examples/form-level-validation',
+    },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.mixValidation.title" />,
+      link: '/examples/mix-validation',
+    },
     // {
     //   id: getId(),
     //   label: <FormattedMessage id="examples.setErrorLocal.title" />,

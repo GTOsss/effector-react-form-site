@@ -9,6 +9,10 @@
     "simpleForm": {
       "title": "Simple form"
     },
+    "onchange": {
+      "title": "OnChange form handler",
+      "description": "An example that implements the following features: {br}onchange form handler {br}debounced request to server (500ms)."
+    },
     "initialValues": {
       "title": "Initial values"
     },
@@ -23,9 +27,15 @@
       "title": "Set values advanced",
       "description": "An advanced example that implements the following features: {br}loading a user, {br}changing a user, {br}saving a user, {br}checking that the user was changed, {br}canceling changes (resetting)"
     },
-    "onchange": {
-      "title": "OnChange form handler",
-      "description": "An example that implements the following features: {br}onchange form handler {br}debounced request to server (500ms)."
+    "fieldLevelValidation": {
+      "title": "Field level validation"
+    },
+    "formLevelValidation": {
+      "title": "Form level validation"
+    },
+    "mixValidation": {
+      "title": "Mix validation",
+      "description": "A mix of field-level and form-level validations."
     },
     "v1": {
       "simpleFormLocal": {
