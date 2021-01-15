@@ -49,6 +49,9 @@
       "title": "Virtualized",
       "description": "An example that implements the following features: {br}virtualized list with 1000 inputs, {br}validate and scroll to first invalid input."
     },
+    "wizard": {
+      "title": "Wizard"
+    },
     "v1": {
       "simpleFormLocal": {
         "title": "Simple form local",

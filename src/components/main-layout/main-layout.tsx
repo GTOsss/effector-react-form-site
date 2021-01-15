@@ -78,11 +78,11 @@ const navElementsMap: NavElementsMap = {
       label: <FormattedMessage id="examples.virtualized.title" />,
       link: '/examples/virtualized',
     },
-    // {
-    //   id: getId(),
-    //   label: <FormattedMessage id="examples.wizard.title" />,
-    //   link: '/examples/wizard',
-    // },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.wizard.title" />,
+      link: '/examples/wizard',
+    },
     // {
     //   id: getId(),
     //   label: <FormattedMessage id="examples.fieldArray.title" />,
