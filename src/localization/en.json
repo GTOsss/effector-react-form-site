@@ -37,6 +37,14 @@
       "title": "Mix validation",
       "description": "A mix of field-level and form-level validations."
     },
+    "setError": {
+      "title": "Set error",
+      "description": "Set field error. {br} Submit is not blocked when outer errors are set. {br} After the change, errors are hidden, but still remain in the form state. {br} After submit, errors will be visible again until the fields change. {br} This logic is set by default and it is most suitable for server side validation."
+    },
+    "serverSideValidation": {
+      "title": "Server side validation",
+      "description": "An example that implements the following features: {br}sync field level validate, {br}async (server side) validate,  {br} username test already taken and min length for firstName is  4 characters."
+    },
     "v1": {
       "simpleFormLocal": {
         "title": "Simple form local",
@@ -85,7 +93,7 @@
       },
       "serverSideValidation": {
         "title": "Server side validation",
-        "description": "An example that implements the following features: {br}sync field level validate, {br}async (server side) validate."
+        "description": "An example that implements the following features: {br}sync field level validate, {br}async (server side) validate, {br} username test already taken and min length for firstName is  4 characters"
       },
       "virtualized": {
         "title": "Virtualized",

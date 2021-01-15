@@ -5235,10 +5235,10 @@ ee-first@1.1.1:
   dependencies:
     lodash.topath "^4.5.2"
 
-effector-react-form@^2.0.30:
-  version "2.0.30"
-  resolved "https://registry.yarnpkg.com/effector-react-form/-/effector-react-form-2.0.30.tgz#a052473fe57c01098855c4d0b46958f2f3837ef3"
-  integrity sha512-g96b3+vtOSEaOIR8o7/OT62pqPXo31U0MqoqsqWHk0qfgNuPrLwycqv6BcHtwuYF7reNfPhB2aZlqq9IKUx7Jg==
+effector-react-form@^2.0.34:
+  version "2.0.34"
+  resolved "https://registry.yarnpkg.com/effector-react-form/-/effector-react-form-2.0.34.tgz#7ad808353b3efe08a0ed2267920341811c20d98e"
+  integrity sha512-QLDpY5KxFaCOxnthOv8mhvvx+Ey3Zs7wzyjN2Vo+wVbMClBUmtG/Br/1VPcrNjpYGtpw0fVBPM9ymFfAVua9ng==
   dependencies:
     lodash.topath "^4.5.2"
 

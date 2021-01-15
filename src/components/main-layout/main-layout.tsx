@@ -63,21 +63,16 @@ const navElementsMap: NavElementsMap = {
       label: <FormattedMessage id="examples.mixValidation.title" />,
       link: '/examples/mix-validation',
     },
-    // {
-    //   id: getId(),
-    //   label: <FormattedMessage id="examples.setErrorLocal.title" />,
-    //   link: '/examples/set-error-local',
-    // },
-    // {
-    //   id: getId(),
-    //   label: <FormattedMessage id="examples.setErrorGlobal.title" />,
-    //   link: '/examples/set-error-global',
-    // },
-    // {
-    //   id: getId(),
-    //   label: <FormattedMessage id="examples.serverSideValidation.title" />,
-    //   link: '/examples/server-side-validation',
-    // },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.setError.title" />,
+      link: '/examples/set-error',
+    },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.serverSideValidation.title" />,
+      link: '/examples/server-side-validation',
+    },
     // {
     //   id: getId(),
     //   label: <FormattedMessage id="examples.virtualized.title" />,
@@ -139,7 +134,6 @@ const MainLayout: React.FC<Props> = ({ children, menuKey }) => {
       }
     }
   `);
-  console.log(navElementsMap['Examples']);
 
   return (
     <div className={styles.wrap}>
