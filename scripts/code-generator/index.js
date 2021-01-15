@@ -57,7 +57,9 @@ const handleCode = async ({ content, dirExample }) => {
   const pathToSourceTsx = getPathToSource({ dirExample, fileName: dirExample, fileExt: 'tsx' });
   let tsxContent = content;
   createFileWithContent({ ...pathToSourceTsx, content: tsxContent });
-  const formattedCodeTsx = await startESLint(resolve(pathToSourceTsx.path, pathToSourceTsx.file));
+  let formattedCodeTsx = await startESLint(resolve(pathToSourceTsx.path, pathToSourceTsx.file));
+  formattedCodeTsx = formattedCodeTsx.replace(/[`]/gm, '\\`');
+  formattedCodeTsx = formattedCodeTsx.replace(/[$]/gm, '\\$');
   createFileWithStringExample({ exampleName: dirExample, type: 'tsx', content: formattedCodeTsx });
 
   const pathToSourceJsx = getPathToSource({ dirExample, fileName: `${dirExample}`, fileExt: 'tsx', suffix: 'jsx' });
@@ -65,7 +67,9 @@ const handleCode = async ({ content, dirExample }) => {
   jsxContent = jsxContent.replace(/(?<=controller\({)\n/gm, '');
   jsxContent = jsxContent.replace(/(?=const form)/, '\n');
   createFileWithContent({ ...pathToSourceJsx, content: jsxContent });
-  const formattedCodeJsx = await startESLint(resolve(pathToSourceJsx.path, pathToSourceJsx.file));
+  let formattedCodeJsx = await startESLint(resolve(pathToSourceJsx.path, pathToSourceJsx.file));
+  formattedCodeJsx = formattedCodeJsx.replace(/[`]/gm, '\\`');
+  formattedCodeJsx = formattedCodeJsx.replace(/[$]/gm, '\\$');
   createFileWithStringExample({ exampleName: dirExample, type: 'jsx', content: formattedCodeJsx });
 
   rimraf(resolve(pathToExamples, dirExample, 'source'), () => {});

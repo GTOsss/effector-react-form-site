@@ -37,7 +37,7 @@ const postUserFx = createEffect({
 const form = createForm<Values>({ onSubmit: postUserFx });
 
 sample({
-  source: postUserFx.failData,
+  source: postUserFx.failData as any,
   target: form.$outerErrorsInline,
 });
 

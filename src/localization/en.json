@@ -45,6 +45,10 @@
       "title": "Server side validation",
       "description": "An example that implements the following features: {br}sync field level validate, {br}async (server side) validate,  {br} username test already taken and min length for firstName is  4 characters."
     },
+    "virtualized": {
+      "title": "Virtualized",
+      "description": "An example that implements the following features: {br}virtualized list with 1000 inputs, {br}validate and scroll to first invalid input."
+    },
     "v1": {
       "simpleFormLocal": {
         "title": "Simple form local",

@@ -73,11 +73,11 @@ const navElementsMap: NavElementsMap = {
       label: <FormattedMessage id="examples.serverSideValidation.title" />,
       link: '/examples/server-side-validation',
     },
-    // {
-    //   id: getId(),
-    //   label: <FormattedMessage id="examples.virtualized.title" />,
-    //   link: '/examples/virtualized',
-    // },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.virtualized.title" />,
+      link: '/examples/virtualized',
+    },
     // {
     //   id: getId(),
     //   label: <FormattedMessage id="examples.wizard.title" />,
