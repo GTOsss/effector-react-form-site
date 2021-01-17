@@ -83,31 +83,31 @@ const navElementsMap: NavElementsMap = {
       label: <FormattedMessage id="examples.wizard.title" />,
       link: '/examples/wizard',
     },
-    // {
-    //   id: getId(),
-    //   label: <FormattedMessage id="examples.fieldArray.title" />,
-    //   link: '/examples/field-array',
-    // },
-    // {
-    //   id: getId(),
-    //   label: <FormattedMessage id="examples.fieldArrayNested.title" />,
-    //   link: '/examples/field-array-nested',
-    // },
-    // {
-    //   id: getId(),
-    //   label: <FormattedMessage id="examples.fieldArrayVirtualized.title" />,
-    //   link: '/examples/field-array-virtualized',
-    // },
-    // {
-    //   id: getId(),
-    //   label: <FormattedMessage id="examples.remoteSubmit.title" />,
-    //   link: '/examples/remote-submit',
-    // },
-    // {
-    //   id: getId(),
-    //   label: <FormattedMessage id="examples.mapSubmit.title" />,
-    //   link: '/examples/map-submit',
-    // },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.fieldArray.title" />,
+      link: '/examples/field-array',
+    },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.fieldArrayNested.title" />,
+      link: '/examples/field-array-nested',
+    },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.fieldArrayVirtualized.title" />,
+      link: '/examples/field-array-virtualized',
+    },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.remoteSubmit.title" />,
+      link: '/examples/remote-submit',
+    },
+    {
+      id: getId(),
+      label: <FormattedMessage id="examples.mapSubmit.title" />,
+      link: '/examples/map-submit',
+    },
   ],
   API: [
     {

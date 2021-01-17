@@ -52,6 +52,22 @@
     "wizard": {
       "title": "Wizard"
     },
+    "fieldArray": {
+      "title": "Field array"
+    },
+    "fieldArrayNested": {
+      "title": "Field array nested"
+    },
+    "fieldArrayVirtualized": {
+      "title": "Field array virtualized"
+    },
+    "remoteSubmit": {
+      "title": "Remote submit"
+    },
+    "mapSubmit": {
+      "title": "Map submit",
+      "description": "Changing data before submitting the form."
+    },
     "v1": {
       "simpleFormLocal": {
         "title": "Simple form local",

@@ -96,12 +96,16 @@ const start = () => {
     const pathForRead = resolve(pathToExamples, dirExample, 'example.tsx');
     let content = fs.readFileSync(pathForRead).toString();
     const ignore = fs.existsSync(resolve(pathToExamples, dirExample, 'generate-results'));
+    const ignoreIndex = fs.existsSync(resolve(pathToExamples, dirExample, 'index.ts'));
     // const ignore = false;
 
     if (!ignore) {
       handleCode({ content, dirExample });
     }
-    createIndexFile({ dirExample });
+
+    if (!ignoreIndex) {
+      createIndexFile({ dirExample });
+    }
   });
 };
 
