@@ -3,4 +3,4 @@ For add code example:
 2. import example in src/pages/examples/[name-exmaple]
 3. yarn run generate-example
 
-D
+Ddd
