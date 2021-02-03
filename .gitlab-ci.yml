@@ -1,0 +1,28 @@
+stages:
+  - build-effector-docs-front
+  - deploy-effector-docs-front
+
+step-build-effector-docs-front:
+  stage: build-effector-docs-front
+  tags:
+    - staging
+    - shell
+  only:
+    - master
+  services:
+    - docker:stable-dind-rootless
+  script:
+    - docker build -t webstap/effector-docs-front --network host .
+
+step-deploy-effector-docs-front:
+  stage: deploy-effector-docs-front
+  tags:
+    - staging
+    - shell
+  only:
+    - master
+  services:
+    - docker:stable-dind-rootless
+  script:
+    - docker container rm -f effector-docs-front || true
+    - docker run --rm -d -p 3004:3000 --name effector-docs-front webstap/effector-docs-front
