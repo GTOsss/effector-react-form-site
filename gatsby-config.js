@@ -5,7 +5,7 @@ module.exports = {
     author: `@gtosss`,
   },
   plugins: [
-    "gatsby-plugin-root-import",
+    'gatsby-plugin-root-import',
     {
       resolve: `gatsby-plugin-sass`,
     },
@@ -41,8 +41,16 @@ module.exports = {
         redirect: true,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/pages-md`,
+      },
+    },
+    `gatsby-transformer-remark`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
