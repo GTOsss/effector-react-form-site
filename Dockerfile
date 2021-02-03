@@ -1,7 +1,7 @@
 FROM node:alpine
 
 WORKDIR /app
-COPY ./ ./app
+COPY ./ ./
 
 RUN apk add libtool automake autoconf nasm
 RUN apk --no-cache add --virtual native-deps g++ gcc libgcc libstdc++ linux-headers make python
