@@ -25,4 +25,4 @@ step-deploy-effector-docs-front:
     - docker:stable-dind-rootless
   script:
     - docker container rm -f effector-docs-front || true
-    - docker run --rm -d -p 3004:3000 --name effector-docs-front webstap/effector-docs-front
+    - docker run --rm -d -p 6000:6000 --name effector-docs-front webstap/effector-docs-front
