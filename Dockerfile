@@ -9,7 +9,7 @@ RUN apk --no-cache add --virtual native-deps g++ gcc libgcc libstdc++ linux-head
 RUN npm install node-gyp -g && npm i -g serve
 RUN npm install && npm run build
 
-ENV PORT=3000
+ENV PORT=6000
 ENV HOST=0.0.0.0
 
 EXPOSE $PORT
