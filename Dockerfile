@@ -3,7 +3,7 @@ FROM node:alpine
 COPY ./ ./
 
 RUN apk add libtool automake autoconf nasm
-RUN apk add native-deps g++ gcc libgcc libstdc++ linux-headers make python
+RUN apk add --virtual native-deps g++ gcc libgcc libstdc++ linux-headers make python
 RUN npm install node-gyp -g && npm install serve -g
 RUN npm install && npm run build
 
