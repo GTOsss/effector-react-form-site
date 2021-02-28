@@ -1,11 +1,13 @@
-FROM node:14
+FROM node:alpine
+
+WORKDIR ./app
 
 COPY ./ ./
 
-RUN apt-get install libtool automake autoconf nasm
-RUN apt-get install --virtual native-deps g++ gcc libgcc libstdc++ linux-headers make python
-RUN npm install node-gyp -g && npm install serve -g
-RUN npm install && npm rebuild && npm run build
+RUN apk add python libpng-dev autoconf automake make g++ libtool nasm
+RUN yarn install
+RUN yarn global add serve
+RUN yarn run build
 
 ENV PORT=6000
 ENV HOST=0.0.0.0
