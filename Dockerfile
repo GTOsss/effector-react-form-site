@@ -5,7 +5,7 @@ COPY ./ ./
 RUN apk add libtool automake autoconf nasm && \
     apk add --virtual native-deps g++ gcc libgcc libstdc++ linux-headers make python
 RUN npm install node-gyp -g && npm install serve -g
-RUN npm install && npm run build
+RUN npm install && npm rebuild && npm run build
 
 ENV PORT=6000
 ENV HOST=0.0.0.0
