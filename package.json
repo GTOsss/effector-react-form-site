@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Timofey Goncharov <gtosss@mail.ru>",
   "scripts": {
+    "arc:start": "arc s",
     "build": "gatsby build",
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
@@ -16,6 +17,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "architect-project": "2.0.3-beta.9",
     "classnames": "^2.2.6",
     "effector": "^21.7.5",
     "effector-react": "^21.2.1",

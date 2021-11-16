@@ -30,6 +30,7 @@ module.exports = {
     'arrow-body-style': 'off',
     'implicit-arrow-linebreak': 'off',
     'function-paren-newline': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
     'import/no-extraneous-dependencies': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
