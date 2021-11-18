@@ -38,6 +38,7 @@ const map = {
     name: 'page',
   },
   'pages/api/unit-types/field-array': {
+    index: 'page',
     form: 'page',
     push: 'page',
     remove: 'page',

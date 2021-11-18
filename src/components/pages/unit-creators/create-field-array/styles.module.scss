@@ -1,4 +1,27 @@
 .root {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+
+a {
+  color: #FF8C00;
+  text-decoration: none;
+  &:hover {
+  text-decoration: underline;
+  };
+}
+
+.argumentList {
+  & > li {
+    margin-bottom: 20px;
+
+  }
+}
+
+.argumentName {
+  background-color: #333437;
+  width: fit-content;
+  margin: 0;
+  padding: 0 10px;
+  border-radius: 5px;
 }
