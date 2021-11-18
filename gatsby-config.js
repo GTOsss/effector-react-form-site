@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: `React Effector Form`,
@@ -30,6 +32,12 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/assets/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: path.resolve(__dirname, `./src/components/main-layout`),
       },
     },
     {

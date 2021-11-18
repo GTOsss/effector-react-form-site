@@ -1,9 +1,14 @@
 import React, { memo } from 'react';
+import MainLayout from '@components/main-layout';
 
 interface IProps {}
 
 const {{toCamelCase(name)}} = ({}: IProps) => {
-  return <div>{{toCamelCase(name)}}</div>;
+  return (
+    <div>
+      <MainLayout>{{toCamelCase(name)}}</MainLayout>
+    </div>
+  );
 };
 
 export default memo({{toCamelCase(name)}});

@@ -1,5 +1,4 @@
 import React, { memo } from 'react';
-import MainLayout from '@components/main-layout';
 import CodeHighlighter from '@components/code-highlighter';
 import { FormattedMessage } from 'gatsby-plugin-intl';
 import Wizard, { examplesMap, $allFormValues } from '@examples/wizard';
@@ -9,7 +8,7 @@ type Props = {};
 
 const Page: React.FC<Props> = ({}) => {
   return (
-    <MainLayout menuKey="Examples">
+    <>
       <h1>
         <FormattedMessage id="examples.wizard.title" />
       </h1>
@@ -21,7 +20,7 @@ const Page: React.FC<Props> = ({}) => {
         <JsonExample source={$allFormValues} title="$allFormValues" />
       </div>
       <CodeHighlighter examplesMap={examplesMap} />
-    </MainLayout>
+    </>
   );
 };
 

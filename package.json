@@ -17,12 +17,14 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@reach/router": "^1.3.4",
     "architect-project": "2.0.3-beta.9",
     "classnames": "^2.2.6",
     "effector": "^21.7.5",
     "effector-react": "^21.2.1",
     "effector-react-form": "^2.0.37",
     "effector-react-form-v1": "npm:effector-react-form@^1.0.49",
+    "gatsby-plugin-layout": "^3.2.0",
     "jsx-to-string": "^1.4.0",
     "lodash.debounce": "^4.0.8",
     "lodash.isequal": "^4.5.0",
