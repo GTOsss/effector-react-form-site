@@ -2,10 +2,8 @@ import React, { memo } from 'react';
 
 interface IProps {}
 
-const CreateNameHelper = ({}: IProps) => {
-  return (
-    <div>CreateNameHelper</div>
-  );
+const CreateNameHelperPage = ({}: IProps) => {
+  return <div>CreateNameHelper</div>;
 };
 
-export default memo(CreateNameHelper);
+export default memo(CreateNameHelperPage);

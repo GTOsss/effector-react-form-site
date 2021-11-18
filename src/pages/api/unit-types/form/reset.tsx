@@ -2,10 +2,8 @@ import React, { memo } from 'react';
 
 interface IProps {}
 
-const Reset = ({}: IProps) => {
-  return (
-    <div>Reset</div>
-  );
+const ResetPage = ({}: IProps) => {
+  return <div>Reset</div>;
 };
 
-export default memo(Reset);
+export default memo(ResetPage);

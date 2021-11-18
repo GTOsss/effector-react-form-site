@@ -1,11 +1,10 @@
+import CreateForm from '@components/pages/unit-creators/create-form';
 import React, { memo } from 'react';
 
 interface IProps {}
 
-const CreateForm = ({}: IProps) => {
-  return (
-    <div>CreateForm</div>
-  );
+const CreateFormPage = ({}: IProps) => {
+  return <CreateForm />;
 };
 
-export default memo(CreateForm);
+export default memo(CreateFormPage);

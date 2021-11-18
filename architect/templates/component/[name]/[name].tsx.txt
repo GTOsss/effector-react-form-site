@@ -4,7 +4,11 @@ import styles from './styles.module.scss';
 interface IProps {}
 
 const {{toCamelCase(name)}} = ({}: IProps) => {
-  return <div>{{toCamelCase(name)}}</div>;
+  return (
+    <div className={styles.root}>
+      <h1>{{toCamelCase(name)}}</h1>
+    </div>
+  );
 };
 
 export default memo({{toCamelCase(name)}});

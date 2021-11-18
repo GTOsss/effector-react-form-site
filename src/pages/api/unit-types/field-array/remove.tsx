@@ -2,10 +2,8 @@ import React, { memo } from 'react';
 
 interface IProps {}
 
-const Remove = ({}: IProps) => {
-  return (
-    <div>Remove</div>
-  );
+const RemovePage = ({}: IProps) => {
+  return <div>Remove</div>;
 };
 
-export default memo(Remove);
+export default memo(RemovePage);

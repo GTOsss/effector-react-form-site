@@ -2,10 +2,8 @@ import React, { memo } from 'react';
 
 interface IProps {}
 
-const SetOrDeleteOuterError = ({}: IProps) => {
-  return (
-    <div>SetOrDeleteOuterError</div>
-  );
+const SetOrDeleteOuterErrorPage = ({}: IProps) => {
+  return <div>SetOrDeleteOuterError</div>;
 };
 
-export default memo(SetOrDeleteOuterError);
+export default memo(SetOrDeleteOuterErrorPage);

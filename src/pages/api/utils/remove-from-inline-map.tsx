@@ -2,10 +2,8 @@ import React, { memo } from 'react';
 
 interface IProps {}
 
-const RemoveFromInlineMap = ({}: IProps) => {
-  return (
-    <div>RemoveFromInlineMap</div>
-  );
+const RemoveFromInlineMapPage = ({}: IProps) => {
+  return <div>RemoveFromInlineMap</div>;
 };
 
-export default memo(RemoveFromInlineMap);
+export default memo(RemoveFromInlineMapPage);

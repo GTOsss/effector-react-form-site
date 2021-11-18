@@ -2,10 +2,8 @@ import React, { memo } from 'react';
 
 interface IProps {}
 
-const OnBlurFieldBrowser = ({}: IProps) => {
-  return (
-    <div>OnBlurFieldBrowser</div>
-  );
+const OnBlurFieldBrowserPage = ({}: IProps) => {
+  return <div>OnBlurFieldBrowser</div>;
 };
 
-export default memo(OnBlurFieldBrowser);
+export default memo(OnBlurFieldBrowserPage);

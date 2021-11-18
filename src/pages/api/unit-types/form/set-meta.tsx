@@ -2,10 +2,8 @@ import React, { memo } from 'react';
 
 interface IProps {}
 
-const SetMeta = ({}: IProps) => {
-  return (
-    <div>SetMeta</div>
-  );
+const SetMetaPage = ({}: IProps) => {
+  return <div>SetMeta</div>;
 };
 
-export default memo(SetMeta);
+export default memo(SetMetaPage);

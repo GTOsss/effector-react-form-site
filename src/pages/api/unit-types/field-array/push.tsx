@@ -2,10 +2,8 @@ import React, { memo } from 'react';
 
 interface IProps {}
 
-const Push = ({}: IProps) => {
-  return (
-    <div>Push</div>
-  );
+const PushPage = ({}: IProps) => {
+  return <div>Push</div>;
 };
 
-export default memo(Push);
+export default memo(PushPage);
