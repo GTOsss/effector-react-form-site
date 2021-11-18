@@ -2,10 +2,8 @@ import React, { memo } from 'react';
 
 interface IProps {}
 
-const Submit = ({}: IProps) => {
-  return (
-    <div>Submit</div>
-  );
+const SubmitPage = ({}: IProps) => {
+  return <div>Submit</div>;
 };
 
-export default memo(Submit);
+export default memo(SubmitPage);

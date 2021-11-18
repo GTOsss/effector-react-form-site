@@ -2,10 +2,8 @@ import React, { memo } from 'react';
 
 interface IProps {}
 
-const GetInAndGetInTs = ({}: IProps) => {
-  return (
-    <div>GetInAndGetInTs</div>
-  );
+const GetInAndGetInTsPage = ({}: IProps) => {
+  return <div>GetInAndGetInTs</div>;
 };
 
-export default memo(GetInAndGetInTs);
+export default memo(GetInAndGetInTsPage);

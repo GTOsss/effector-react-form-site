@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Link } from 'gatsby-plugin-intl';
 import styles from './styles.module.scss';
 import NavElement from '@components/nav-element/nav-element';
 
@@ -9,10 +8,6 @@ export type Element = {
   link?: string;
   children?: Element[];
 };
-
-// interface Props {
-//   elements: Array<Element>;
-// }
 
 interface Props {
   elements: any;

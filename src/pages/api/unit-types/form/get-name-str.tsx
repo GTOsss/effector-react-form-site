@@ -2,10 +2,8 @@ import React, { memo } from 'react';
 
 interface IProps {}
 
-const GetNameStr = ({}: IProps) => {
-  return (
-    <div>GetNameStr</div>
-  );
+const GetNameStrPage = ({}: IProps) => {
+  return <div>GetNameStr</div>;
 };
 
-export default memo(GetNameStr);
+export default memo(GetNameStrPage);

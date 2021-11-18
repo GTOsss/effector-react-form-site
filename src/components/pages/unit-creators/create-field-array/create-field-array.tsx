@@ -3,12 +3,12 @@ import styles from './styles.module.scss';
 
 interface IProps {}
 
-const {{toCamelCase(name)}} = ({}: IProps) => {
+const CreateFieldArray = ({}: IProps) => {
   return (
     <div className={styles.root}>
-      <h1>{{toCamelCase(name)}}</h1>
+      <h1>CreateFieldArray</h1>
     </div>
   );
 };
 
-export default memo({{toCamelCase(name)}});
+export default memo(CreateFieldArray);

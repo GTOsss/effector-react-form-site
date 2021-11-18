@@ -2,10 +2,8 @@ import React, { memo } from 'react';
 
 interface IProps {}
 
-const SetErrorsInlineState = ({}: IProps) => {
-  return (
-    <div>SetErrorsInlineState</div>
-  );
+const SetErrorsInlineStatePage = ({}: IProps) => {
+  return <div>SetErrorsInlineState</div>;
 };
 
-export default memo(SetErrorsInlineState);
+export default memo(SetErrorsInlineStatePage);

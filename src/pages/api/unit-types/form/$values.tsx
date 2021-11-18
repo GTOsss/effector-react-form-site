@@ -2,10 +2,8 @@ import React, { memo } from 'react';
 
 interface IProps {}
 
-const Values = ({}: IProps) => {
-  return (
-    <div>Values</div>
-  );
+const ValuesPage = ({}: IProps) => {
+  return <div>Values</div>;
 };
 
-export default memo(Values);
+export default memo(ValuesPage);

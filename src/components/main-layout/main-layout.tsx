@@ -42,6 +42,7 @@ const navElementsMap: NavElementsMap = {
         {
           id: getId(),
           label: 'Form',
+          link: '/api/unit-types/form/',
           children: [
             {
               id: getId(),

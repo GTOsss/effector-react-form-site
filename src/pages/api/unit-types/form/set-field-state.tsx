@@ -2,10 +2,8 @@ import React, { memo } from 'react';
 
 interface IProps {}
 
-const SetFieldState = ({}: IProps) => {
-  return (
-    <div>SetFieldState</div>
-  );
+const SetFieldStatePage = ({}: IProps) => {
+  return <div>SetFieldState</div>;
 };
 
-export default memo(SetFieldState);
+export default memo(SetFieldStatePage);

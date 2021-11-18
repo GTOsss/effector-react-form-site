@@ -7,39 +7,53 @@ import styles from './styles.module.scss';
 import './darcula.css';
 
 interface Props {
-  examplesMap: Record<'jsx' | 'tsx', string>;
+  examplesMap?: Record<'jsx' | 'tsx', string>;
+  formula?: string;
 }
 
-const CodeHighlighter: React.FC<Props> = ({ examplesMap }) => {
+const CodeHighlighter: React.FC<Props> = ({ examplesMap = null, formula = null }) => {
   const activeLang = useStore(langValue);
 
   return (
     <div>
-      <div className={styles.switcher}>
-        <button
-          onClick={() => setValue('jsx')}
-          className={cx(styles.switchButton, {
-            [styles.switchButton_active]: activeLang === 'jsx',
-          })}
-        >
-          jsx
-        </button>
-        <button
-          onClick={() => setValue('tsx')}
-          className={cx(styles.switchButton, {
-            [styles.switchButton_active]: activeLang === 'tsx',
-          })}
-        >
-          tsx
-        </button>
-      </div>
-      <div className={styles.wrapCode}>
-        <pre
-          dangerouslySetInnerHTML={{
-            __html: Prism.highlight(examplesMap[activeLang], Prism.languages.tsx, 'tsx'),
-          }}
-        />
-      </div>
+      {examplesMap && (
+        <div className={styles.switcher}>
+          <button
+            onClick={() => setValue('jsx')}
+            className={cx(styles.switchButton, {
+              [styles.switchButton_active]: activeLang === 'jsx',
+            })}
+          >
+            jsx
+          </button>
+          <button
+            onClick={() => setValue('tsx')}
+            className={cx(styles.switchButton, {
+              [styles.switchButton_active]: activeLang === 'tsx',
+            })}
+          >
+            tsx
+          </button>
+        </div>
+      )}
+      {examplesMap && (
+        <div className={styles.wrapCode}>
+          <pre
+            dangerouslySetInnerHTML={{
+              __html: Prism.highlight(examplesMap[activeLang], Prism.languages.tsx, 'tsx'),
+            }}
+          />
+        </div>
+      )}
+      {formula && (
+        <div className={styles.wrapCode}>
+          <pre
+            dangerouslySetInnerHTML={{
+              __html: Prism.highlight(formula, Prism.languages.tsx, 'tsx'),
+            }}
+          />
+        </div>
+      )}
     </div>
   );
 };
