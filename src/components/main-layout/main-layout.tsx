@@ -387,27 +387,20 @@ const MainLayout: React.FC<Props> = ({ children, location }) => {
     .slice(2, 3)
     .join('')
     .toLowerCase();
-  //   console.log('###', location.pathname);
-  console.log('###rest ', location.pathname);
+  const render = menuKey === 'api' || menuKey === 'examples' || menuKey === 'getting-started';
   return (
-    // <context.Consumer>
-    //   {(menuKey) => (
-    // <context.Provider value={$context}>
     <div className={styles.wrap}>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className={cn(styles.body)}>
         <main className={styles.main}>
           <div className={styles.wrapContent}>{children}</div>
         </main>
-        {menuKey && <RightPanel elements={navElementsMap[menuKey]} />}
+        {render && <RightPanel elements={navElementsMap[menuKey]} />}
       </div>
       {/*<footer className={styles.footer}>*/}
       {/*  © {new Date().getFullYear()}*/}
       {/*</footer>*/}
     </div>
-    // </context.Provider>
-    //   )}
-    // </context.Consumer>
   );
 };
 
