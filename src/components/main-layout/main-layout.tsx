@@ -367,10 +367,11 @@ const navElementsMap: NavElementsMap = {
 
 type Props = {
   menuKey?: NavElementsKey;
-  children: React.ReactNode;
+  children: any;
+  location?: any;
 };
 
-const MainLayout: React.FC<Props> = ({ children }) => {
+const MainLayout: React.FC<Props> = ({ children, location }) => {
   const data = useStaticQuery(graphql`
     query HeadingQuery {
       site {
@@ -381,12 +382,13 @@ const MainLayout: React.FC<Props> = ({ children }) => {
     }
   `);
 
-  const menuKey = window.location.pathname
+  const menuKey = location.pathname
     .split('/')
     .slice(2, 3)
     .join('')
     .toLowerCase();
-
+  //   console.log('###', location.pathname);
+  console.log('###rest ', location.pathname);
   return (
     // <context.Consumer>
     //   {(menuKey) => (
