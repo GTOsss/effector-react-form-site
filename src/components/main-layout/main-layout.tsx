@@ -194,6 +194,7 @@ const navElementsMap: NavElementsMap = {
         {
           id: getId(),
           label: 'Field Array',
+          link: '/api/unit-types/field-array',
           children: [
             {
               id: getId(),
