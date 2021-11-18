@@ -1,0 +1,16 @@
+@import '../../assets/variables';
+.root {
+  margin-left: 25px;
+}
+
+.link {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  padding: 10px 30px;
+}
+
+.activeLink {
+  composes: link;
+  background-color: $background-primary;
+}

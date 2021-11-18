@@ -55,20 +55,12 @@ const Friends = ({ controller, name }) => {
               validate: validateRequired,
             })}
           />
-          <button
-            type="button"
-            onClick={() => remove(index)}
-            className="danger"
-          >
+          <button type="button" onClick={() => remove(index)} className="danger">
             remove friend
           </button>
         </div>
       ))}
-      <button
-        type="button"
-        onClick={() => push({ id: getId() })}
-        className="success"
-      >
+      <button type="button" onClick={() => push({ id: getId() })} className="success">
         add friend
       </button>
     </div>
@@ -89,22 +81,14 @@ const Users = ({ controller, name }) => {
               validate: validateRequired,
             })}
           />
-          <button
-            type="button"
-            onClick={() => remove(index)}
-            className="danger"
-          >
+          <button type="button" onClick={() => remove(index)} className="danger">
             remove user
           </button>
 
           <Friends name={`${formItemName}.friends`} controller={controller} />
         </div>
       ))}
-      <button
-        type="button"
-        onClick={() => push({ id: getId(), username: '', profile: {} })}
-        className="success"
-      >
+      <button type="button" onClick={() => push({ id: getId(), username: '', profile: {} })} className="success">
         add user
       </button>
     </div>
