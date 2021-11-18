@@ -24,7 +24,7 @@ const NavPanel: React.FC<Props> = React.memo(({ elements }) => {
       <div className={styles.wrap}>
         <ul className={styles.list}>
           {elements.map((item) => (
-            <NavElement data={item} />
+            <NavElement data={item} key={item.id} />
           ))}
         </ul>
       </div>

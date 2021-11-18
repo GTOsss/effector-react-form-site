@@ -1,13 +1,11 @@
+import { Element } from '@components/right-panel';
 import { Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 import styles from './styles.module.scss';
 
 interface IProps {
-  data: {
-    label: string;
-    link: string;
-    children?: any[];
-  };
+  data: Element;
+  key: number | string;
 }
 
 const NavElement = ({ data }: IProps) => {
@@ -21,7 +19,7 @@ const NavElement = ({ data }: IProps) => {
       ) : (
         <div className={styles.link}>{label}</div>
       )}
-      {children && children.map((item) => <NavElement data={item} />)}
+      {children && children.map((item) => <NavElement data={item} key={item.id} />)}
     </div>
   );
 };
