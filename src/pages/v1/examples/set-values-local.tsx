@@ -17,14 +17,7 @@ const Input = ({ controller, label }) => {
 };
 
 const Form = () => {
-  const {
-    handleSubmit,
-    controller,
-    setValue,
-    $form,
-    $fieldsInline,
-    $values,
-  } = useForm({
+  const { handleSubmit, controller, setValue, $form, $fieldsInline, $values } = useForm({
     onSubmit: ({ values }) => {
       alert(JSON.stringify(values, null, '  '));
     },
@@ -34,20 +27,9 @@ const Form = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <Input label="Username" controller={controller({ name: 'username' })} />
-        <Input
-          label="First name"
-          controller={controller({ name: 'profile.firstName' })}
-        />
-        <Input
-          label="Last name"
-          controller={controller({ name: 'profile.lastName' })}
-        />
-        <button
-          type="button"
-          onClick={() =>
-            setValue({ field: 'profile.firstName', value: 'some value' })
-          }
-        >
+        <Input label="First name" controller={controller({ name: 'profile.firstName' })} />
+        <Input label="Last name" controller={controller({ name: 'profile.lastName' })} />
+        <button type="button" onClick={() => setValue({ field: 'profile.firstName', value: 'some value' })}>
           set first name
         </button>
         <button type="submit">submit</button>
@@ -71,10 +53,7 @@ const SetValuesLocal = React.memo(({}: Props) => {
         <FormattedMessage id="examples.setValuesLocal.title" />
       </h1>
       <p>
-        <FormattedMessage
-          id="examples.setValuesLocal.description"
-          values={{ br: <br /> }}
-        />
+        <FormattedMessage id="examples.setValuesLocal.description" values={{ br: <br /> }} />
       </p>
       <Form />
       <TemplateExamplePage formName="setValuesLocal" />

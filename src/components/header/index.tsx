@@ -18,6 +18,12 @@ const Header = ({ siteTitle }: IProps) => (
       <Link className={styles.link} to="/examples/simple-form">
         <FormattedMessage id="global.navItemExamples" />
       </Link>
+      <Link className={styles.link} to="/api/unit-creators/create-form">
+        API
+      </Link>
+      {/* <Link className={styles.link} to="/api/getting-started">
+        API
+      </Link> */}
     </div>
   </header>
 );

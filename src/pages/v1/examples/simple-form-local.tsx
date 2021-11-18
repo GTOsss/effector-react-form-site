@@ -27,14 +27,8 @@ const Form = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <Input label="Username" controller={controller({ name: 'username' })} />
-        <Input
-          label="First name"
-          controller={controller({ name: 'profile.firstName' })}
-        />
-        <Input
-          label="Last name"
-          controller={controller({ name: 'profile.lastName' })}
-        />
+        <Input label="First name" controller={controller({ name: 'profile.firstName' })} />
+        <Input label="Last name" controller={controller({ name: 'profile.lastName' })} />
         <button type="submit">submit</button>
       </form>
 

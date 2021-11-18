@@ -1,15 +1,21 @@
 import * as React from 'react';
 import { Link } from 'gatsby-plugin-intl';
 import styles from './styles.module.scss';
+import NavElement from '@components/nav-element/nav-element';
 
 export type Element = {
   id: number | string;
   label: React.ReactNode;
-  link: string;
+  link?: string;
+  children?: Element[];
 };
 
+// interface Props {
+//   elements: Array<Element>;
+// }
+
 interface Props {
-  elements: Array<Element>;
+  elements: any;
 }
 
 const NavPanel: React.FC<Props> = React.memo(({ elements }) => {
@@ -17,12 +23,8 @@ const NavPanel: React.FC<Props> = React.memo(({ elements }) => {
     <div className={styles.container}>
       <div className={styles.wrap}>
         <ul className={styles.list}>
-          {elements.map(({ label, link, id }) => (
-            <li key={id}>
-              <Link className={styles.link} activeClassName={styles.activeLink} to={link}>
-                {label}
-              </Link>
-            </li>
+          {elements.map((item) => (
+            <NavElement data={item} />
           ))}
         </ul>
       </div>
