@@ -18,7 +18,8 @@ const CreateFieldArray = ({}: IProps) => {
       <h2>Аргументы</h2>
       <ol className={styles.argumentList}>
         <li>
-          <span className={styles.argumentName}>form</span>: принимает <Link to="/api/unit-types/form/">форму</Link>, на основе полей которой будет создан массив.
+          <span className={styles.argumentName}>form</span>: принимает <Link to="/api/unit-types/form/">форму</Link>, на
+          основании полей которой будет создан массив.
         </li>
         <li>
           <span className={styles.argumentName}>domain</span>: принимает домен, в котором будут созданы сторы и события
