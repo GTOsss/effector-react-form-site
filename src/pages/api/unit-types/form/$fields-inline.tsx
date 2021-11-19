@@ -1,9 +1,10 @@
+import FieldsInline from '@components/pages/unit-types/form/$fields-inline';
 import React, { memo } from 'react';
 
 interface IProps {}
 
 const FieldsInlinePage = ({}: IProps) => {
-  return <div>FieldsInline</div>;
+  return <FieldsInline />;
 };
 
 export default memo(FieldsInlinePage);
