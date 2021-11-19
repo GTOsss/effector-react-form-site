@@ -67,6 +67,7 @@ const map = {
     index: 'component',
     $values: 'component',
     '$errors-inline': 'component',
+    '$outer-errors-inline': 'component',
     '$fields-inline': 'component',
     $form: 'component',
     $meta: 'component',
