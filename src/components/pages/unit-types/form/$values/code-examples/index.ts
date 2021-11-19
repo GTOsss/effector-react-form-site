@@ -44,3 +44,22 @@ const form = createForm({
 form.$values.watch((value) => console.log(value));
 
 `;
+
+export const fromUnits = `import { createStore } from "effector";
+import { createForm } from "effector-react-form";
+
+const form = createForm({
+  initialValues: {
+    text: 'HelloWorld!',
+  };
+});
+
+export const $phrases= createStore('New phrase');
+
+sample({
+  clock: $phrases,
+  fn: (phrase) => ({ text: phrase }),
+  target: form.$values,
+});
+
+`;

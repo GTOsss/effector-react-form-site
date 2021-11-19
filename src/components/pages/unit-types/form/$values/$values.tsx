@@ -1,7 +1,7 @@
 import CodeHighlighter from '@components/code-highlighter';
 import { Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
-import { withSample, withUseStore, withWatch } from './code-examples';
+import { fromUnits, withSample, withUseStore, withWatch } from './code-examples';
 import styles from './styles.module.scss';
 
 interface IProps {}
@@ -9,7 +9,7 @@ interface IProps {}
 const Values = ({}: IProps) => {
   return (
     <div className={styles.root}>
-      <h1>Values</h1>
+      <h1>$values</h1>
       <div>
         Хранит значения <Link to="/api/unit-types/form/">формы</Link>. Является стором.
       </div>
@@ -34,6 +34,12 @@ const Values = ({}: IProps) => {
           <div>
             <span className={styles.exampleName}>С использованием подписки watch</span>
             <CodeHighlighter formula={withWatch} />
+          </div>
+        </li>
+        <li>
+          <div>
+            <span className={styles.exampleName}>Запись значений из других юнитов</span>
+            <CodeHighlighter formula={fromUnits} />
           </div>
         </li>
       </ol>
