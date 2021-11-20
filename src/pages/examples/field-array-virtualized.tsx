@@ -13,7 +13,7 @@ const Page: React.FC<Props> = ({}) => {
         <FormattedMessage id="examples.fieldArrayVirtualized.title" />
       </h1>
       <SimpleForm />
-      <CodeHighlighter examplesMap={examplesMap} />
+      <CodeHighlighter code={examplesMap} />
     </>
   );
 };

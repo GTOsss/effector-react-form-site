@@ -18,7 +18,7 @@ const Page: React.FC<Props> = ({}) => {
         <JsonExample source={form.$fieldsInline} title="$fieldsInline" />
         <JsonExample source={form.$form} title="$form" />
       </div>
-      <CodeHighlighter examplesMap={examplesMap} />
+      <CodeHighlighter code={examplesMap} />
     </>
   );
 };

@@ -19,7 +19,7 @@ const Page: React.FC<Props> = ({}) => {
       <div className="row code-center">
         <JsonExample source={$allFormValues} title="$allFormValues" />
       </div>
-      <CodeHighlighter examplesMap={examplesMap} />
+      <CodeHighlighter code={examplesMap} />
     </>
   );
 };

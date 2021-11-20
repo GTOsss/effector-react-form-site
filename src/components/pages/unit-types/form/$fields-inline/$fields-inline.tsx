@@ -10,8 +10,14 @@ const FieldsInline = ({}: IProps) => {
   return (
     <div className={styles.root}>
       <h1>$fieldsInline</h1>
-      <div>Стор, содержащий объект с метаданными о полях формы.</div>
-      <CodeHighlighter formula={formula} />
+      <div>
+        Стор, содержащий объект с метаданными о полях{' '}
+        <Link to="/api/unit-types/form/" className={styles.Link}>
+          формы
+        </Link>
+        .
+      </div>
+      <CodeHighlighter code={formula} className={styles.codeHighlighter} />
       <h2>Свойства</h2>
       <ol className={styles.propertyList}>
         <li>
@@ -31,18 +37,27 @@ const FieldsInline = ({}: IProps) => {
         </li>
         <li>
           <span className={styles.propertyName}>touchedAfterOuterError</span>: меняет значение на true при клике на
-          элемент формы, если в <Link to="/api/unit-types/form/$outer-errors-inline">$outerErrorsInline</Link> есть поле
-          с ошибкой этого элемента. Повторная отправка формы сбрасывает значение на false.
+          элемент формы, если в{' '}
+          <Link to="/api/unit-types/form/$outer-errors-inline" className={styles.Link}>
+            $outerErrorsInline
+          </Link>{' '}
+          есть поле с ошибкой этого элемента. Повторная отправка формы сбрасывает значение на false.
         </li>
         <li>
           <span className={styles.propertyName}>changedAfterOuterError</span>: меняет значение на true при изменении
-          значений элемента формы, если в <Link to="/api/unit-types/form/$outer-errors-inline">$outerErrorsInline</Link>{' '}
+          значений элемента формы, если в{' '}
+          <Link to="/api/unit-types/form/$outer-errors-inline" className={styles.Link}>
+            $outerErrorsInline
+          </Link>{' '}
           есть поле с ошибкой этого элемента. Повторная отправка формы сбрасывает значение на false.
         </li>
         <li>
           <span className={styles.propertyName}>blurredAfterOuterError</span>: меняет значение на true при потере фокуса
-          на элементе формы, если в <Link to="/api/unit-types/form/$outer-errors-inline">$outerErrorsInline</Link> есть
-          поле с ошибкой этого элемента. Повторная отправка формы или изменение значений элемента формы сбрасывает
+          на элементе формы, если в{' '}
+          <Link to="/api/unit-types/form/$outer-errors-inline" className={styles.Link}>
+            $outerErrorsInline
+          </Link>{' '}
+          есть поле с ошибкой этого элемента. Повторная отправка формы или изменение значений элемента формы сбрасывает
           значение на false.
         </li>
         <li>
