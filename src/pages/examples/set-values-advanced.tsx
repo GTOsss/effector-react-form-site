@@ -22,7 +22,7 @@ const Page: React.FC<Props> = ({}) => {
         <JsonExample source={form.$fieldsInline} title="$fieldsInline" />
         <JsonExample source={$formSnapshot} title="$formSnapshot" />
       </div>
-      <CodeHighlighter examplesMap={examplesMap} />
+      <CodeHighlighter code={examplesMap} />
     </>
   );
 };

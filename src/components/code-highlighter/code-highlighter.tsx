@@ -7,16 +7,16 @@ import styles from './styles.module.scss';
 import './darcula.css';
 
 interface Props {
-  examplesMap?: Record<'jsx' | 'tsx', string>;
-  formula?: string;
+  code: Record<'jsx' | 'tsx', string> | string;
+  className?: string;
 }
 
-const CodeHighlighter: React.FC<Props> = ({ examplesMap = null, formula = null }) => {
+const CodeHighlighter: React.FC<Props> = ({ code, className }) => {
   const activeLang = useStore(langValue);
 
   return (
-    <div>
-      {examplesMap && (
+    <div className={className}>
+      {typeof code !== 'string' && (
         <div className={styles.switcher}>
           <button
             onClick={() => setValue('jsx')}
@@ -36,20 +36,20 @@ const CodeHighlighter: React.FC<Props> = ({ examplesMap = null, formula = null }
           </button>
         </div>
       )}
-      {examplesMap && (
+      {typeof code !== 'string' && (
         <div className={styles.wrapCode}>
           <pre
             dangerouslySetInnerHTML={{
-              __html: Prism.highlight(examplesMap[activeLang], Prism.languages.tsx, 'tsx'),
+              __html: Prism.highlight(code[activeLang], Prism.languages.tsx, 'tsx'),
             }}
           />
         </div>
       )}
-      {formula && (
+      {typeof code === 'string' && (
         <div className={styles.wrapCode}>
           <pre
             dangerouslySetInnerHTML={{
-              __html: Prism.highlight(formula, Prism.languages.tsx, 'tsx'),
+              __html: Prism.highlight(code, Prism.languages.tsx, 'tsx'),
             }}
           />
         </div>

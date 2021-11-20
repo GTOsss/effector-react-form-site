@@ -9,8 +9,11 @@ const OuterErrorsInline = ({}: IProps) => {
     <div className={styles.root}>
       <h1>$outerErrorsInline</h1>
       <div>
-        Стор, содержащий ошибки, добавленные вручную. Используется для
-        <Link to="/examples/server-side-validation">серверной валидации</Link>.
+        Стор, содержащий ошибки, добавленные вручную. Используется для{' '}
+        <Link to="/examples/server-side-validation" className={styles.Link}>
+          серверной валидации
+        </Link>
+        .
       </div>
     </div>
   );

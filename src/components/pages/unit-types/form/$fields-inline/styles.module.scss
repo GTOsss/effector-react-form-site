@@ -3,7 +3,11 @@
   flex-direction: column;
 }
 
-a {
+.codeHighlighter {
+  margin-top: 10px;
+}
+
+.Link {
   color: #FF8C00;
   text-decoration: none;
   &:hover {

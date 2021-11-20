@@ -15,7 +15,7 @@ const Page: React.FC<Props> = ({}) => {
         <FormattedMessage id="examples.virtualized.description" values={{ br: <br /> }} />
       </p>
       <Virtualized />
-      <CodeHighlighter examplesMap={examplesMap} />
+      <CodeHighlighter code={examplesMap} />
     </>
   );
 };

@@ -11,20 +11,24 @@ const Values = ({}: IProps) => {
     <div className={styles.root}>
       <h1>$values</h1>
       <div>
-        Хранит значения <Link to="/api/unit-types/form/">формы</Link>. Является стором.
+        Стор со значениями{' '}
+        <Link to="/api/unit-types/form/" className={styles.Link}>
+          формы
+        </Link>
+        .
       </div>
       <h2>Примеры использования:</h2>
       <ol className={styles.examplesList}>
         <li>
           <div>
             <span className={styles.exampleName}>С использованием useStore</span>
-            <CodeHighlighter formula={withUseStore} />
+            <CodeHighlighter code={withUseStore} />
           </div>
         </li>
         <li>
           <div>
             <span className={styles.exampleName}>С использованием sample</span>
-            <CodeHighlighter formula={withSample} />
+            <CodeHighlighter code={withSample} />
             <span className={styles.exampleName}>
               Как и все юниты API effector, может использоваться как в clock, так и в source.
             </span>
@@ -33,13 +37,13 @@ const Values = ({}: IProps) => {
         <li>
           <div>
             <span className={styles.exampleName}>С использованием подписки watch</span>
-            <CodeHighlighter formula={withWatch} />
+            <CodeHighlighter code={withWatch} />
           </div>
         </li>
         <li>
           <div>
             <span className={styles.exampleName}>Запись значений из других юнитов</span>
-            <CodeHighlighter formula={fromUnits} />
+            <CodeHighlighter code={fromUnits} />
           </div>
         </li>
       </ol>
