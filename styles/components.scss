@@ -1,0 +1,31 @@
+.ComponentRoot {
+  display: flex;
+  flex-direction: column;
+}
+
+.Link {
+  color: #FF8C00;
+  text-decoration: none;
+  &:hover {
+  text-decoration: underline;
+  };
+}
+
+.List {
+  & > li {
+    margin-bottom: 20px;
+
+  }
+}
+
+.ListItemName {
+  background-color: #333437;
+  width: fit-content;
+  margin: 0;
+  padding: 0 10px;
+  border-radius: 5px;
+}
+
+.CodeHighlighter {
+  margin: 10px 0;
+}

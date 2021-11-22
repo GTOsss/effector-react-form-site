@@ -1,16 +1,15 @@
 import { Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
-import styles from './styles.module.scss';
 
 interface IProps {}
 
 const OuterErrorsInline = ({}: IProps) => {
   return (
-    <div className={styles.root}>
+    <div className="componentRoot">
       <h1>$outerErrorsInline</h1>
       <div>
         Стор, содержащий ошибки, добавленные вручную. Используется для{' '}
-        <Link to="/examples/server-side-validation" className={styles.Link}>
+        <Link to="/examples/server-side-validation" className="Link">
           серверной валидации
         </Link>
         .

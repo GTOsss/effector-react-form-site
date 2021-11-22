@@ -8,24 +8,27 @@ interface IProps {}
 
 const CreateFieldArray = ({}: IProps) => {
   return (
-    <div className={styles.root}>
+    <div className="ComponentRoot">
       <h1>CreateFieldArray</h1>
       <div>
-        Метод для создания <Link to="/api/unit-types/field-array">массива полей</Link>
+        Метод для создания{' '}
+        <Link to="/api/unit-types/field-array" className="Link">
+          массива полей
+        </Link>
       </div>
       <h2>Формула</h2>
       <CodeHighlighter code={createFieldArrayCode} />
       <h2>Аргументы</h2>
-      <ol className={styles.argumentList}>
+      <ol className="List">
         <li>
-          <span className={styles.argumentName}>form</span>: принимает{' '}
-          <Link to="/api/unit-types/form/" className={styles.Link}>
+          <span className="ListItemName">form</span>: принимает{' '}
+          <Link to="/api/unit-types/form/" className="Link">
             форму
           </Link>
           , на основании полей которой будет создан массив.
         </li>
         <li>
-          <span className={styles.argumentName}>domain</span>: принимает домен, в котором будут созданы сторы и события
+          <span className="ListItemName">domain</span>: принимает домен, в котором будут созданы сторы и события
           массива.
         </li>
       </ol>
