@@ -8,29 +8,29 @@ interface IProps {}
 
 const Form = ({}: IProps) => {
   return (
-    <div className={styles.root}>
+    <div className="ComponentRoot">
       <h1>$form</h1>
       <div>
         Стор, хранящий основное состояние{' '}
-        <Link to="/api/unit-types/form/" className={styles.Link}>
+        <Link to="/api/unit-types/form/" className="Link">
           формы
         </Link>
         .
       </div>
-      <CodeHighlighter code={type} className={styles.codeHighlighter} />
+      <CodeHighlighter code={type} className="CodeHighlighter" />
       <h2>Свойства</h2>
-      <ol>
-        <li className={styles.listItem}>
-          <span className={styles.propertyName}>submitted</span>: сообщает о том, была ли форма отправлена.
+      <ol className="List">
+        <li>
+          <span className="ListItemName">submitted</span>: сообщает о том, была ли форма отправлена.
         </li>
-        <li className={styles.listItem}>
-          <span className={styles.propertyName}>hasError</span>: сообщает о том, есть ли в форме ошибки, созданые
-          функцией валидации.
+        <li>
+          <span className="ListItemName">hasError</span>: сообщает о том, есть ли в форме ошибки, созданые функцией
+          валидации.
         </li>
-        <li className={styles.listItem}>
-          <span className={styles.propertyName}>hasOuterError</span>: сообщает о том, есть ли в форме ошибки,
-          добавленные внешними функциями в{' '}
-          <Link to="/api/unit-types/form/$outer-errors-inline" className={styles.Link}>
+        <li>
+          <span className="ListItemName">hasOuterError</span>: сообщает о том, есть ли в форме ошибки, добавленные
+          внешними функциями в{' '}
+          <Link to="/api/unit-types/form/$outer-errors-inline" className="Link">
             $outerErrorsInline
           </Link>
           .

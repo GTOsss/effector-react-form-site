@@ -8,21 +8,21 @@ interface IProps {}
 
 const Values = ({}: IProps) => {
   return (
-    <div className={styles.root}>
+    <div className="ComponentRoot">
       <h1>$values</h1>
       <div>
         Стор со значениями{' '}
-        <Link to="/api/unit-types/form/" className={styles.Link}>
+        <Link to="/api/unit-types/form/" className="Link">
           формы
         </Link>
         .
       </div>
       <h2>Примеры использования:</h2>
-      <ol className={styles.examplesList}>
+      <ol className="List">
         <li>
           <div>
             <span className={styles.exampleName}>С использованием useStore</span>
-            <CodeHighlighter code={withUseStore} />
+            <CodeHighlighter code={withUseStore} className="CodeHighlighter" />
           </div>
         </li>
         <li>
