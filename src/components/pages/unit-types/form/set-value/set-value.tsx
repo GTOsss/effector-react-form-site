@@ -9,7 +9,7 @@ const SetValue = ({}: IProps) => {
   return (
     <div className={styles.root}>
       <h1>setValue</h1>
-      <div>Позволяет присвоить значение одному или нескольким полям формы</div>
+      <div>Позволяет присвоить значение одному полю формы</div>
       <CodeHighlighter code={setValueType} className="CodeHighlighter" />
       <h2>Пример использования</h2>
       <CodeHighlighter code={setValueExample} className="CodeHighlighter" />
