@@ -10,7 +10,7 @@ const Page: React.FC<Props> = ({}) => {
   return (
     <>
       <h1>
-        <FormattedMessage id="examples.remoteSubmit .title" />
+        <FormattedMessage id="examples.remoteSubmit.title" />
       </h1>
       <SimpleForm />
       <div className="row">
