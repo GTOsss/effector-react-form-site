@@ -1,5 +1,9 @@
-// place your exports here
-export const formula = `export type FieldState = {
+export const formula = `
+type FieldsInline = {
+  [x: string]: FieldState;
+}
+
+type FieldState = {
   _type: 'fieldMeta';
   active: boolean;
   touched: boolean;
