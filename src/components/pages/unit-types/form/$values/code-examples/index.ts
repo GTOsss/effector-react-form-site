@@ -24,8 +24,6 @@ const form = createForm({
   };
 });
 
-const sayTextFx = createEffect(async (values) => console.log(values.text));
-
 sample({
   source/clock: from.$values,
   fn: (values) => values,
@@ -40,9 +38,6 @@ const form = createForm({
     text: 'HelloWorld!',
   };
 });
-
-form.$values.watch((value) => console.log(value));
-
 `;
 
 export const fromUnits = `import { createStore } from "effector";

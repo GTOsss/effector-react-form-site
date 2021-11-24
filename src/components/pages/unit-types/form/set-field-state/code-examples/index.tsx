@@ -126,8 +126,6 @@ const initialValues = {
 
 const form = createForm<Values>({ initialValues });
 
-form.$fieldsInline.watch((value) => console.log('###', value));
-
 const Input = ({ controller, label }) => {
   const { input, isShowError, error } = controller();
 
@@ -184,8 +182,6 @@ const initialValues = {
 };
 
 const form = createForm({ initialValues });
-
-form.$fieldsInline.watch((value) => console.log('###', value));
 
 const Input = ({ controller, label }) => {
   const { input, isShowError, error } = controller();
