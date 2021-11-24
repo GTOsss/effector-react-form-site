@@ -39,7 +39,8 @@ const SetFieldState = ({}: IProps) => {
       <h2>Результат</h2>
       <WithSetFieldState />
       <div>
-        Более подробно о всех полях стора $fieldsInline мы уже рассказывали <Link to="/api/unit-types/form/$fields-inline" className="Link">
+        Более подробно о всех полях стора $fieldsInline мы уже рассказывали
+        <Link to="/api/unit-types/form/$fields-inline" className="Link">
           здесь
         </Link>
         .
