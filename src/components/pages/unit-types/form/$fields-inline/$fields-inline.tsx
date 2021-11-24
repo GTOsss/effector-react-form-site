@@ -32,7 +32,7 @@ const FieldsInline = ({}: IProps) => {
           <span className="ListItemName">changed</span>: говорит, изменялись ли данные поля после инициализации.
         </li>
         <li>
-          <span className="ListItemName">blured</span>: меняет значение на true при потере фокуса на элементе. Остаётся
+          <span className="ListItemName">blurred</span>: меняет значение на true при потере фокуса на элементе. Остаётся
           в этом состоянии до следующей реинициализации формы.
         </li>
         <li>
