@@ -1,9 +1,10 @@
+import ResetOuterErrors from '@components/pages/unit-types/form/reset-outer-errors';
 import React, { memo } from 'react';
 
 interface IProps {}
 
 const ResetOuterErrorsPage = ({}: IProps) => {
-  return <div>ResetOuterErrors</div>;
+  return <ResetOuterErrors />;
 };
 
 export default memo(ResetOuterErrorsPage);

@@ -1,12 +1,18 @@
+import { Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
-import styles from './styles.module.scss';
-
 interface IProps {}
 
 const ResetOuterErrors = ({}: IProps) => {
   return (
-    <div className={styles.root}>
-      <h1>ResetOuterErrors</h1>
+    <div className="ComponentRoot">
+      <h1>resetOuterErrors</h1>
+      <div>
+        Устанавливает пустой объект в{' '}
+        <Link to="/api/unit-types/$outer-errors-inline" className="Link">
+          $outerErrorsInline
+        </Link>
+        .
+      </div>
     </div>
   );
 };
