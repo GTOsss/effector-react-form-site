@@ -7,14 +7,14 @@ interface IProps {}
 
 const SetOrDeleteError = ({}: IProps) => {
   return (
-    <div className={styles.root}>
+    <div className="ComponentRoot">
       <h1>setOrDeleteError</h1>
       <div>
         Позволяет напрямую установить ошибку в поля формы, заменив ошибку валидатора, либо удалит ошибку, если не
         передать поле error.
       </div>
       <CodeHighlighter code={setOrDeleteErrorType} className="CodeHighlighter" />
-      <CodeHighlighter code={setOrDeleteError} className="CodeHighlighter"/>
+      <CodeHighlighter code={setOrDeleteError} className="CodeHighlighter" />
     </div>
   );
 };
