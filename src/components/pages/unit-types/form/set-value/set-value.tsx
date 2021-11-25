@@ -1,13 +1,12 @@
 import CodeHighlighter from '@components/code-highlighter';
 import React, { memo } from 'react';
 import { setValueType, setValueExample } from './code-examples';
-import styles from './styles.module.scss';
 
 interface IProps {}
 
 const SetValue = ({}: IProps) => {
   return (
-    <div className={styles.root}>
+    <div className="ComponentRoot">
       <h1>setValue</h1>
       <div>Позволяет присвоить значение одному полю формы</div>
       <CodeHighlighter code={setValueType} className="CodeHighlighter" />

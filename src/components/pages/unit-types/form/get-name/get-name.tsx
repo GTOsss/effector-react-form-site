@@ -5,7 +5,7 @@ interface IProps {}
 
 const GetName = ({}: IProps) => {
   return (
-    <div className={styles.root}>
+    <div className="ComponentRoot">
       <h1>GetName</h1>
     </div>
   );

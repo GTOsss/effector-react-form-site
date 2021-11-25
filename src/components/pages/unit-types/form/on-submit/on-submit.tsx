@@ -1,12 +1,16 @@
+import CodeHighlighter from '@components/code-highlighter';
 import React, { memo } from 'react';
-import styles from './styles.module.scss';
+import { onSubmitCode } from './code-examples';
 
 interface IProps {}
 
 const OnSubmit = ({}: IProps) => {
   return (
-    <div className={styles.root}>
-      <h1>OnSubmit</h1>
+    <div className="ComponentRoot">
+      <h1>onSubmit</h1>
+      <div>Определяет функцию для события onSubmit формы. Передаётся в createForm.</div>
+      <h2>Пример использования</h2>
+      <CodeHighlighter code={onSubmitCode} className="CodeHighlighter" />
     </div>
   );
 };

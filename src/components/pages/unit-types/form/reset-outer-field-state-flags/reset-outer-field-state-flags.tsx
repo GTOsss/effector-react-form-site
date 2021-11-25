@@ -1,12 +1,11 @@
 import { Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
-import styles from './styles.module.scss';
 
 interface IProps {}
 
 const ResetOuterFieldStateFlags = ({}: IProps) => {
   return (
-    <div className={styles.root}>
+    <div className="ComponentRoot">
       <h1>resetOuterFieldStateFlags</h1>
       <div>
         Сбрасывает поля blurredAfterOuterError, changedAfterOuterError, touchedAfterOuterError стора{' '}

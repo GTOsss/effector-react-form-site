@@ -1,11 +1,10 @@
 import React, { memo } from 'react';
-import styles from './styles.module.scss';
 
 interface IProps {}
 
 const GetNameStr = ({}: IProps) => {
   return (
-    <div className={styles.root}>
+    <div className="ComponentRoot">
       <h1>GetNameStr</h1>
     </div>
   );

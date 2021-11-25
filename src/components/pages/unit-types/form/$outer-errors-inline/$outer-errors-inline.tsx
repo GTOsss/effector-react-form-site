@@ -5,7 +5,7 @@ interface IProps {}
 
 const OuterErrorsInline = ({}: IProps) => {
   return (
-    <div className="componentRoot">
+    <div className="ComponentRoot">
       <h1>$outerErrorsInline</h1>
       <div>
         Стор, предназначенный для ошибок{' '}

@@ -1,12 +1,15 @@
 import React, { memo } from 'react';
-import styles from './styles.module.scss';
 
 interface IProps {}
 
 const OnBlurFieldBrowser = ({}: IProps) => {
   return (
-    <div className={styles.root}>
+    <div className="ComponentRoot">
       <h1>OnBlurFieldBrowser</h1>
+      <div>
+        Событие, которые при потере фокуса на поле формы. На него можно подписаться через watch, sample и другие методы
+        API effector.
+      </div>
     </div>
   );
 };

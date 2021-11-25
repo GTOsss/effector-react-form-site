@@ -1,1 +1,2 @@
-// place your exports here
+export const metaType = `type Meta = any;
+`;
