@@ -5,7 +5,7 @@ interface IProps {}
 
 const {{toCamelCase(name)}} = ({}: IProps) => {
   return (
-    <div className="componentRoot">
+    <div className="ComponentRoot">
       <h1>{{toCamelCase(name)}}</h1>
     </div>
   );

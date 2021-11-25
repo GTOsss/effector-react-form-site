@@ -7,7 +7,7 @@ interface IProps {}
 
 const SetOuterErrorsInlineState = ({}: IProps) => {
   return (
-    <div className="componentRoot">
+    <div className="ComponentRoot">
       <h1>setOuterErrorsInlineState</h1>
       <div>
         Позволяет установить объект с внешними ошибками для полей формы. Является аналогом{' '}

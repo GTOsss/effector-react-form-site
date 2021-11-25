@@ -7,7 +7,7 @@ interface IProps {}
 
 const SetMeta = ({}: IProps) => {
   return (
-    <div className="componentRoot">
+    <div className="ComponentRoot">
       <h1>setMeta</h1>
       <div>
         Принимает один аргумент, который будет записан в{' '}

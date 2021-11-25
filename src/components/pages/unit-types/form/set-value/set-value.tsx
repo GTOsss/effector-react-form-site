@@ -6,7 +6,7 @@ interface IProps {}
 
 const SetValue = ({}: IProps) => {
   return (
-    <div className="componentRoot">
+    <div className="ComponentRoot">
       <h1>setValue</h1>
       <div>Позволяет присвоить значение одному полю формы</div>
       <CodeHighlighter code={setValueType} className="CodeHighlighter" />

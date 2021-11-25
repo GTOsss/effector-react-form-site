@@ -4,7 +4,7 @@ interface IProps {}
 
 const OnBlurFieldBrowser = ({}: IProps) => {
   return (
-    <div className="componentRoot">
+    <div className="ComponentRoot">
       <h1>OnBlurFieldBrowser</h1>
     </div>
   );

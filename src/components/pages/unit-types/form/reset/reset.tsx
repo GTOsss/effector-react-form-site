@@ -6,7 +6,7 @@ interface IProps {}
 
 const Reset = ({}: IProps) => {
   return (
-    <div className="componentRoot">
+    <div className="ComponentRoot">
       <h1>Reset</h1>
       <div>Полностью сбрасывает форму до состояния иницализации.</div>
       <h2>Пример использования</h2>

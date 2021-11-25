@@ -5,7 +5,7 @@ interface IProps {}
 
 const ResetOuterFieldStateFlags = ({}: IProps) => {
   return (
-    <div className="componentRoot">
+    <div className="ComponentRoot">
       <h1>resetOuterFieldStateFlags</h1>
       <div>
         Сбрасывает поля blurredAfterOuterError, changedAfterOuterError, touchedAfterOuterError стора{' '}

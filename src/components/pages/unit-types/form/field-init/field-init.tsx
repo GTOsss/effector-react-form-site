@@ -4,7 +4,7 @@ interface IProps {}
 
 const FieldInit = ({}: IProps) => {
   return (
-    <div className="componentRoot">
+    <div className="ComponentRoot">
       <h1>FieldInit</h1>
     </div>
   );

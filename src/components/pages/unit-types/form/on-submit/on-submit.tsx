@@ -6,7 +6,7 @@ interface IProps {}
 
 const OnSubmit = ({}: IProps) => {
   return (
-    <div className="componentRoot">
+    <div className="ComponentRoot">
       <h1>onSubmit</h1>
       <div>Определяет функцию для события onSubmit формы. Передаётся в createForm.</div>
       <h2>Пример использования</h2>

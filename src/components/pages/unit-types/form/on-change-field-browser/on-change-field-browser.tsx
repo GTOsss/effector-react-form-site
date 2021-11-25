@@ -4,9 +4,12 @@ interface IProps {}
 
 const OnChangeFieldBrowser = ({}: IProps) => {
   return (
-    <div className="componentRoot">
+    <div className="ComponentRoot">
       <h1>onChangeFieldBrowser</h1>
-      <div>Событие, которые срабатывает при изменении полей формы.</div>
+      <div>
+        Событие, которые срабатывает при изменении полей формы. На него можно подписаться через watch, sample и другие
+        методы API effector.
+      </div>
     </div>
   );
 };
