@@ -92,6 +92,12 @@ button.success {
 	justify-content: space-between;
 }
 
+.column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+} 
+
 .code-center {
 	max-width: 460px;
 	margin: 0 auto;
