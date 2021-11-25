@@ -6,6 +6,7 @@ const FieldInit = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
       <h1>FieldInit</h1>
+      <div>Событие, срабатывающее при инициализации поля формы</div>
     </div>
   );
 };
