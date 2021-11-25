@@ -1,11 +1,10 @@
 import React, { memo } from 'react';
-import styles from './styles.module.scss';
 
 interface IProps {}
 
 const OnChangeFieldBrowser = ({}: IProps) => {
   return (
-    <div className={styles.root}>
+    <div className="componentRoot">
       <h1>OnChangeFieldBrowser</h1>
     </div>
   );
