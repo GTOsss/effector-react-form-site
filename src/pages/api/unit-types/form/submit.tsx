@@ -1,9 +1,10 @@
+import Submit from '@components/pages/unit-types/form/submit';
 import React, { memo } from 'react';
 
 interface IProps {}
 
 const SubmitPage = ({}: IProps) => {
-  return <div>Submit</div>;
+  return <Submit />;
 };
 
 export default memo(SubmitPage);
