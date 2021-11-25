@@ -1,12 +1,17 @@
+import CodeHighlighter from '@components/code-highlighter';
 import React, { memo } from 'react';
-import styles from './styles.module.scss';
+import { submitCode } from './code-examples';
+import SubmitExample from './example/submit-example';
 
 interface IProps {}
 
 const Submit = ({}: IProps) => {
   return (
-    <div className={styles.root}>
-      <h1>Submit</h1>
+    <div className="ComponentRoot">
+      <h1>submit</h1>
+      <div>Метод, для отправки формы.</div>
+      <CodeHighlighter code={submitCode} className="CodeHighlighter" />
+      <SubmitExample />
     </div>
   );
 };
