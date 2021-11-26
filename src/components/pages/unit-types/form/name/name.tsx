@@ -8,7 +8,7 @@ const Name = ({}: IProps) => {
     <div className="ComponentRoot">
       <h1>Name</h1>
       <div>
-        Содержит имя. переданное при{' '}
+        Содержит имя, переданное при{' '}
         <Link to="/api/unit-creators/create-form" className="Link">
           инициализации формы
         </Link>

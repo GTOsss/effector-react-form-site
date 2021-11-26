@@ -2,7 +2,6 @@ import CodeHighlighter from '@components/code-highlighter';
 import { Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 import { type } from './code-examples';
-import styles from './styles.module.scss';
 
 interface IProps {}
 
