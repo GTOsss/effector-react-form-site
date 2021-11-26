@@ -1,6 +1,6 @@
 export const setOrDeleteOuterErrorType = `type SetOrDeleteOuterErrorParams = {
   field: string | string[];
-  error: Message;
+  error: string;
 };
 `;
 

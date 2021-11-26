@@ -1,9 +1,10 @@
+import Name from '@components/pages/unit-types/form/name';
 import React, { memo } from 'react';
 
 interface IProps {}
 
 const NamePage = ({}: IProps) => {
-  return <div>Name</div>;
+  return <Name />;
 };
 
 export default memo(NamePage);

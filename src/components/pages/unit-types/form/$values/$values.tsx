@@ -28,7 +28,7 @@ const Values = ({}: IProps) => {
         <li>
           <div>
             <span className={styles.exampleName}>С использованием sample</span>
-            <CodeHighlighter code={withSample} />
+            <CodeHighlighter code={withSample} className="CodeHighlighter" />
             <span className={styles.exampleName}>
               Как и все юниты API effector, может использоваться как в clock, так и в source.
             </span>
@@ -37,13 +37,13 @@ const Values = ({}: IProps) => {
         <li>
           <div>
             <span className={styles.exampleName}>С использованием подписки watch</span>
-            <CodeHighlighter code={withWatch} />
+            <CodeHighlighter code={withWatch} className="CodeHighlighter" />
           </div>
         </li>
         <li>
           <div>
             <span className={styles.exampleName}>Запись значений из других юнитов</span>
-            <CodeHighlighter code={fromUnits} />
+            <CodeHighlighter code={fromUnits} className="CodeHighlighter" />
           </div>
         </li>
       </ol>

@@ -65,7 +65,7 @@ const ValidateFormExample = () => {
       setFieldState({
         field: 'lastName',
         state: {
-          ...fieldsInline.name,
+          ...fieldsInline.lastName,
           blurred: true,
         },
       });
@@ -158,7 +158,7 @@ const ValidateFormExample = () => {
       setFieldState({
         field: 'lastName',
         state: {
-          ...fieldsInline.name,
+          ...fieldsInline.lastName,
           blurred: true,
         },
       });
