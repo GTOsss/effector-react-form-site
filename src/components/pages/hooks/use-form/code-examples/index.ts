@@ -33,3 +33,25 @@ export const Component = () => {
   return <div>Some content</div>;
 };
 `;
+
+export const controllerResult = `{
+        input: {
+          name,
+          value,
+          onChange,
+        },
+        form,
+        meta,
+        fieldState,
+        error,
+        innerError,
+        outerError,
+        isShowError,
+        isShowOuterError,
+        isShowInnerError,
+        validate,
+        setFieldState,
+        setOrDeleteError,
+        setOrDeleteOuterError,
+        setOuterErrorsInlineState,
+      };`;
