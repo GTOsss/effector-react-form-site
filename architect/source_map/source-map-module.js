@@ -95,10 +95,10 @@ const map = {
     name: 'component',
   },
   'components/pages/unit-types/field-array': {
-    index: 'page',
-    form: 'page',
-    push: 'page',
-    remove: 'page',
+    index: 'component',
+    form: 'component',
+    push: 'component',
+    remove: 'component',
   },
 };
 
