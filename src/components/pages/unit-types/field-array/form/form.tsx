@@ -1,12 +1,19 @@
 import React, { memo } from 'react';
-import styles from './styles.module.scss';
+import { Link } from 'gatsby-plugin-intl';
 
 interface IProps {}
 
 const Form = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
-      <h1>Form</h1>
+      <h1>form</h1>
+      <div>
+        Форма, переданная при{' '}
+        <Link to="/api/unit-creators/create-form" className="Link">
+          инициализации
+        </Link>
+        .
+      </div>
     </div>
   );
 };

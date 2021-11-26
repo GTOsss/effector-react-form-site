@@ -1,9 +1,10 @@
+import Push from '@components/pages/unit-types/field-array/push';
 import React, { memo } from 'react';
 
 interface IProps {}
 
 const PushPage = ({}: IProps) => {
-  return <div>Push</div>;
+  return <Push />;
 };
 
 export default memo(PushPage);
