@@ -94,6 +94,12 @@ const map = {
     'get-name-str': 'component',
     name: 'component',
   },
+  'components/pages/unit-types/field-array': {
+    index: 'page',
+    form: 'page',
+    push: 'page',
+    remove: 'page',
+  },
 };
 
 module.exports = { map, aliases: {} };
