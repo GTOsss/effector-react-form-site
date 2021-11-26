@@ -100,6 +100,11 @@ const map = {
     push: 'component',
     remove: 'component',
   },
+  'components/pages/hooks': {
+    'use-form': 'component',
+    'use-field-array': 'component',
+    'use-error': 'component',
+  },
 };
 
 module.exports = { map, aliases: {} };
