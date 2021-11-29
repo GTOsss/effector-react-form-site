@@ -2,7 +2,6 @@ import CodeHighlighter from '@components/code-highlighter';
 import { Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 import { controllerResult, useFormExample } from './code-examples';
-import UseFormExample from './example/use-form-example';
 
 interface IProps {}
 
@@ -19,8 +18,8 @@ const UseForm = ({}: IProps) => {
       </div>
       <ol className="List">
         <li>
-          <span className="ListItemName">controller</span>: функция, которая возвращает объект с методами для управления
-          полем формы. При вызове принимает объект с полями name, flat и validate.
+          <span className="ListItemName">controller</span>: при вызове принимает объект с полями name, flat и validate и
+          возвращает функцию, которая замыкает в себе эти значения.
           <ul className="List">
             <li>
               <span className="ListItemName">name</span>: имя поля. Вложенные поля можно задавать с испльзованием{' '}
@@ -44,8 +43,8 @@ const UseForm = ({}: IProps) => {
               возвращать строку с ошибкой либо undefined.
             </li>
           </ul>
-          Вызов этой функции в свою очередь возвращает объект с методами и значениями, относящимися к конкретному полю
-          формы.
+          Функция, которую возвращает первый вызов, не принимает никаких аргуметов и возвращает объект с методами для
+          управления полем формы и информацией о нём.
           <CodeHighlighter code={controllerResult} className="CodeHighlighter" />
           <ul className="List">
             <li>
@@ -135,7 +134,6 @@ const UseForm = ({}: IProps) => {
           действия по умолчанию события onSubmit.
         </li>
       </ol>
-      {/* <UseFormExample /> */}
     </div>
   );
 };
