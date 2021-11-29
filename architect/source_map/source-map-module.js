@@ -105,6 +105,14 @@ const map = {
     'use-field-array': 'component',
     'use-error': 'component',
   },
+  'components/pages/utils': {
+    'delete-in': 'component',
+    'get-in-and-get-in-ts': 'component',
+    'set-in': 'component',
+    'make-nested': 'component',
+    'remove-from-inline-map': 'component',
+    'create-name-helper': 'component',
+  },
 };
 
 module.exports = { map, aliases: {} };
