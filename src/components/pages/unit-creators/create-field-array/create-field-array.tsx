@@ -9,7 +9,7 @@ interface IProps {}
 const CreateFieldArray = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
-      <h1>CreateFieldArray</h1>
+      <h1>createFieldArray</h1>
       <div>
         Метод для создания{' '}
         <Link to="/api/unit-types/field-array" className="Link">
