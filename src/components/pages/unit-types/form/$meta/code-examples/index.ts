@@ -72,7 +72,7 @@ const form = createForm({
 const FormComponent = () => {
   const { handleSubmit, controller } = useForm({ form, meta: { redirectAfterSubmit: false, mode: 'create' } });
 
-  return //somejsx
+  return //some jsx
 };`;
 
 export const hookMeta = {

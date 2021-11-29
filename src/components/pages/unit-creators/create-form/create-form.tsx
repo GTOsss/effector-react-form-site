@@ -8,7 +8,7 @@ interface IProps {}
 const CreateForm = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
-      <h1>CreateForm</h1>
+      <h1>createForm</h1>
       <div>
         Метод для создания{' '}
         <Link to="/api/unit-types/form/" className="Link">

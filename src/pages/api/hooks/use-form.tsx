@@ -1,9 +1,10 @@
+import UseForm from '@components/pages/hooks/use-form';
 import React, { memo } from 'react';
 
 interface IProps {}
 
 const UseFormPage = ({}: IProps) => {
-  return <div>UseForm</div>;
+  return <UseForm />;
 };
 
 export default memo(UseFormPage);
