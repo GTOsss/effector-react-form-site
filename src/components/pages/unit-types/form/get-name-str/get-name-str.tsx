@@ -1,7 +1,6 @@
 import CodeHighlighter from '@components/code-highlighter';
 import { Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
-import { Component } from './asdasdasd';
 import { getNameStrCode } from './code-examples';
 
 interface IProps {}
@@ -24,7 +23,6 @@ const GetNameStr = ({}: IProps) => {
           здесь
         </Link>
         .
-        <Component />
       </div>
       <CodeHighlighter code={getNameStrCode} className="CodeHighlighter" />
     </div>
