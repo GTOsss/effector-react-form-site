@@ -9,11 +9,11 @@ const SetIn = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
       <h1>setIn</h1>
-      <div>Позволяет установить значение во вложенный объект. Принимает четыре аргумента: </div>
+      <div>Позволяет установить значение во вложенный объект. Принимает три аргумента: </div>
       <CodeHighlighter code={setInType} className="CodeHighlighter" />
       <ol className="List">
         <li>
-          <span className="ListItemName">state</span>: объект. в который будет установлено значение.
+          <span className="ListItemName">state</span>: объект, в который будет установлено значение.
         </li>
         <li>
           <span className="ListItemName">path</span>: путь, по которому будет установлено значение. Может быть как
@@ -23,10 +23,8 @@ const SetIn = ({}: IProps) => {
         <li>
           <span className="ListItemName">value</span>: устанавливаемое значение.
         </li>
-        <li>
-          <span className="ListItemName">pathIndex</span>: опциональный аргумент.
-        </li>
       </ol>
+      Возвращает новый объект, не мутируя исходный.
     </div>
   );
 };
