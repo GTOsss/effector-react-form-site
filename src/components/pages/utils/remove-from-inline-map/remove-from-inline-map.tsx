@@ -10,13 +10,13 @@ const RemoveFromInlineMap = ({}: IProps) => {
     <div className="ComponentRoot">
       <h1>removeFromInlineMap</h1>
       <div>
-        Метод для удаления из плоских (inline) объектов состояния формы. Главное особенность в том, что в
-        псевдовложенных объектах, таких как состояни{' '}
+        Метод для удаления из плоских (inline) объектов состояния формы. Возвращает новый объект, не мутируя исходный.
+        Главное особенность в том, что в псевдовложенных объектах, таких как состояни{' '}
         <Link to="/en/api/unit-types/form/$fields-inline" className="Link">
           $fieldsInline
         </Link>
-        , где вложенные поля указываются таким образом
-        <CodeHighlighter code={inlineMapExplanation} className="CodeHighlighter" />В основном этот метод используется
+        , удаляются и псевдовложенные поля. Пример объекта в $fieldsInline:
+        <CodeHighlighter code={inlineMapExplanation} className="CodeHighlighter" />. В основном этот метод используется
         при низкоуровневых манипуляций с формой, когда нужно напрямую удалять поля из состояния в дочерних компонентах,
         таких как{' '}
         <Link to="/api/hooks/use-field-array" className="Link">

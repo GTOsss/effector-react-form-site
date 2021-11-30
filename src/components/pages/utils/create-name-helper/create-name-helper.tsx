@@ -9,11 +9,11 @@ const CreateNameHelper = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
       <h1>createNameHelper</h1>
-      <div>Фабрика, возвращающая два метода для удобного получения пути к вложенным полям:</div>
+      <div>Возвращает два метода для удобного получения пути к вложенным полям:</div>
       <CodeHighlighter code={nameHelperExample} className="CodeHighlighter" />
       <ol className="List">
         <li>
-          <span className="ListItemName">getPath</span>:  собирает переданные аргументы в массив:
+          <span className="ListItemName">getPath</span>: собирает переданные аргументы в массив:
           <CodeHighlighter code={getPathExample} className="CodeHighlighter" />
         </li>
         <li>
