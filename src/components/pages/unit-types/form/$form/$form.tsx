@@ -27,8 +27,7 @@ const Form = ({}: IProps) => {
           валидации.
         </li>
         <li>
-          <span className="ListItemName">hasOuterError</span>: сообщает о том, есть ли в форме ошибки, добавленные
-          внешними функциями в{' '}
+          <span className="ListItemName">hasOuterError</span>: сообщает о том, есть ли внешние ошибки в{' '}
           <Link to="/api/unit-types/form/$outer-errors-inline" className="Link">
             $outerErrorsInline
           </Link>

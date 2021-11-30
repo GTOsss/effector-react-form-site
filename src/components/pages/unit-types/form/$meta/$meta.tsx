@@ -10,14 +10,16 @@ const Meta = ({}: IProps) => {
     <div className="ComponentRoot">
       <h1>$meta</h1>
       <div>
-        Стор с метаданными формы. Их можно передать как при{' '}
+        Стор с метаданными формы, которые могут быть использованы для запуска различных сценариев по событию onSubmit.
+        Их можно передать как при{' '}
         <Link to="/api/unit-creators/create-form" className="Link">
-          инициализации формы:
+          инициализации формы
         </Link>
+        :
       </div>
       <CodeHighlighter code={initMeta} className="CodeHighlighter" />
       <div>
-        Так и через hook{' '}
+        Так и динамически через hook{' '}
         <Link to="/api/hooks/use-form" className="Link">
           useForm
         </Link>
