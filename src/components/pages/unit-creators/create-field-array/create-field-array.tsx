@@ -15,6 +15,7 @@ const CreateFieldArray = ({}: IProps) => {
         <Link to="/api/unit-types/field-array" className="Link">
           массива полей
         </Link>
+        .
       </div>
       <h2>Формула</h2>
       <CodeHighlighter code={createFieldArrayCode} />
