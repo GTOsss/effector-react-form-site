@@ -14,6 +14,7 @@ const SetOrDeleteError = ({}: IProps) => {
         передать поле error.
       </div>
       <CodeHighlighter code={setOrDeleteErrorType} className="CodeHighlighter" />
+      <h2>Пример использования:</h2>
       <CodeHighlighter code={setOrDeleteError} className="CodeHighlighter" />
     </div>
   );

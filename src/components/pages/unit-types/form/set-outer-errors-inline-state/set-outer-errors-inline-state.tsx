@@ -1,5 +1,5 @@
 import CodeHighlighter from '@components/code-highlighter';
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 import { ErrorsInlineType, setOuterErrorsInlineState } from './code-examples';
 
@@ -11,8 +11,8 @@ const SetOuterErrorsInlineState = ({}: IProps) => {
       <h1>setOuterErrorsInlineState</h1>
       <div>
         Позволяет установить объект с внешними ошибками для полей формы. Является аналогом{' '}
-        <Link to="/api/unit-types/form/set-errors-inline-state/" className="Link">
-          setOuterErrorsInlineState
+        <Link to="/api/unit-types/form/set-errors-inline-state" className="Link">
+          setErrorsInlineState
         </Link>
         , но для стора{' '}
         <Link to="/api/unit-types/form/$outer-errors-inline" className="Link">
