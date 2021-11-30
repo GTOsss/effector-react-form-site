@@ -1,1 +1,7 @@
-// place your exports here
+export const deleteInType = `{
+  state: object;
+  path: string | string[];
+  removeEmpty = boolean;
+  inDeep: boolean; 
+  index: number;
+};`;

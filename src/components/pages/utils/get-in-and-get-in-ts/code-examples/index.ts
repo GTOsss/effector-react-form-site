@@ -1,1 +1,3 @@
-// place your exports here
+export const getInType = `{
+  getIn(state: object, field: string | string[], defaultValue?: any)
+}`;

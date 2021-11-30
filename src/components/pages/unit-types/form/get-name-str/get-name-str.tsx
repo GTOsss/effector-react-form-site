@@ -9,7 +9,7 @@ const GetNameStr = ({}: IProps) => {
     <div className="ComponentRoot">
       <h1>getNameStr</h1>
       <div>
-        Утилита, которая конкатенирует переданные строки через точку . Применимо для указания полей формы во вложенных
+        Утилита, которая конкатенирует переданные строки через точку. Применимо для указания полей формы во вложенных
         объектах.
       </div>
       <CodeHighlighter code={getNameStrCode} className="CodeHighlighter" />
