@@ -1,7 +1,6 @@
 import CodeHighlighter from '@components/code-highlighter';
 import React, { memo } from 'react';
-import { deleteInType } from './code-examples';
-import styles from './styles.module.scss';
+import { deleteInType, removeEmpty2ndExample, removeEmpty3rdExample, removeEmptyExample } from './code-examples';
 
 interface IProps {}
 
@@ -10,8 +9,8 @@ const DeleteIn = ({}: IProps) => {
     <div className="ComponentRoot">
       <h1>deleteIn</h1>
       <div>
-        Утилита для удаления свойства в объекте со вложенными полями или элемента в массиве. Принимает 5 аргументов, из
-        которых первые два обязательные, а остальные опциональные. Возвращает новый объект или массив.
+        Утилита для удаления свойства в объекте со вложенными полями или элемента в массиве. Принимает 4 аргумента, из
+        которых первые два обязательные, а остальные опциональные. Данный метод является иммутабельным, он не изменяет переданный объект, а возвращает новый объект или массив.
       </div>
       <CodeHighlighter code={deleteInType} className="CodeHighlighter" />
       <ol className="List">
@@ -23,14 +22,14 @@ const DeleteIn = ({}: IProps) => {
           'name', массивом строк: ['user', 'name'] или же строкой, описывающий путь к свойству через точку: 'user.name'.
         </li>
         <li>
-          <span className="ListItemName">removeEmpty</span>:
+          <span className="ListItemName">removeEmpty</span>: указывает, нужно ли удалять пустой объект, если в объекте других свойств не было. Примеры выполнения:
+          <CodeHighlighter code={removeEmptyExample} className="CodeHighlighter" />
+          <CodeHighlighter code={removeEmpty2ndExample} className="CodeHighlighter" />
+          <CodeHighlighter code={removeEmpty3rdExample} className="CodeHighlighter" />
         </li>
         <li>
           <span className="ListItemName">inDeep</span>: булевое значение. Говорит о том, находится ли удаляемое свойство
-          во вложенном объекте или нет. По умолчанию true. 
-        </li>
-        <li>
-          <span className="ListItemName">index</span>: индекс
+          во вложенном объекте или нет. По умолчанию true. При удалении из плоского объекта, следует указать false.
         </li>
       </ol>
     </div>
