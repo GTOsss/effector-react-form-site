@@ -1,6 +1,9 @@
 export default `import { createForm } from 'effector-react-form';
 import React from 'react';
 
+type Values = any;
+type Meta = any;
+
 export const form = createForm({
   name?: string;
   validate?: FormValidate<Values, Meta>;
