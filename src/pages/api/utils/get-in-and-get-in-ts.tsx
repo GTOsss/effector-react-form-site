@@ -1,9 +1,10 @@
+import GetInAndGetInTs from '@components/pages/utils/get-in-and-get-in-ts';
 import React, { memo } from 'react';
 
 interface IProps {}
 
 const GetInAndGetInTsPage = ({}: IProps) => {
-  return <div>GetInAndGetInTs</div>;
+  return <GetInAndGetInTs />;
 };
 
 export default memo(GetInAndGetInTsPage);

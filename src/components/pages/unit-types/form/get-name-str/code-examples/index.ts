@@ -3,18 +3,14 @@ import { createForm, useForm } from 'effector-react-form';
 import cn from 'classnames';
 
 const initialValues = {
-  user: {
-    name: 'unknown',
-    lastName: 'unknown',
-  },
+  'user.name': 'unknown',
+  'user.lastName': 'unknown',
   serverId: 1,
 };
 
 type Values = {
-  user: {
-    name: string;
-    lastName: string;
-  };
+  'user.name': string;
+  'user.lastName': string;
   serverId: number;
 };
 
@@ -37,8 +33,8 @@ export const Component = () => {
 
   return (
     <form>
-      <Input label="Name" controller={controller({ name: form.getNameStr('user', 'name') })} />
-      <Input label="Last name" controller={controller({ name: form.getNameStr('user', 'lastName') })} />
+      <Input label="Name" controller={controller({ name: form.getNameStr('user.name'), flat: true })} />
+      <Input label="Last name" controller={controller({ name: form.getNameStr('user.lastName'), flat: true })} />
       <Input label="Last name" controller={controller({ name: form.getNameStr('serverId') })} />
     </form>
   );
@@ -50,12 +46,11 @@ import { createForm, useForm } from 'effector-react-form';
 import cn from 'classnames';
 
 const initialValues = {
-  user: {
-    name: 'unknown',
-    lastName: 'unknown',
-  },
+  'user.name': 'unknown',
+  'user.lastName': 'unknown',
   serverId: 1,
 };
+
 
 const form = createForm({ initialValues });
 
@@ -76,8 +71,8 @@ export const Component = () => {
 
   return (
     <form>
-      <Input label="Name" controller={controller({ name: form.getNameStr('user', 'name') })} />
-      <Input label="Last name" controller={controller({ name: form.getNameStr('user', 'lastName') })} />
+      <Input label="Name" controller={controller({ name: form.getNameStr('user.name'), flat: true })} />
+      <Input label="Last name" controller={controller({ name: form.getNameStr('user.lastName'), flat: true })} />
       <Input label="Last name" controller={controller({ name: form.getNameStr('serverId') })} />
     </form>
   );

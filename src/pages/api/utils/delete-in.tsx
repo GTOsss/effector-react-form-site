@@ -1,9 +1,10 @@
 import React, { memo } from 'react';
+import DeleteIn from '@components/pages/utils/delete-in';
 
 interface IProps {}
 
 const DeleteInPage = ({}: IProps) => {
-  return <div>DeleteIn</div>;
+  return <DeleteIn />;
 };
 
 export default memo(DeleteInPage);
