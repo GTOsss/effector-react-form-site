@@ -4,7 +4,8 @@
   },
   "components": {
     "all": {
-      "ofForm": "формы"
+      "ofForm": "формы",
+      "ofFieldArray": "массива полей"
     },
     "pages": {
       "createForm": {
@@ -26,6 +27,15 @@
         "domainDescription": "принимает домен, в котором будут созданы сторы и события формы",
         "resetOuterErrorsBySubmitDescription": "принимает true/false. Определяет, нужно ли сбрасывать внешние ошибки формы, на событии onSubmit. Значение по умолчанию true.",
         "resetOuterErrorsByOnChangeDescription": "принимает true/false. Определяет, нужно ли сбрасывать внешние ошибки формы, на событии onChange. Значение по умолчанию true."
+      },
+      "createFieldArray": {
+        "methodForCreating": "Метод для создания",
+        "Formula": "Формула",
+        "Arguments": "Аргументы",
+        "form": "форму",
+        "takes": "принимает",
+        "formDescription": ", на основании полей которой будет создан массив.",
+        "domainDescription": "принимает домен, в котором будут созданы сторы и события массива"
       }
     }
   }

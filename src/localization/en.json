@@ -149,7 +149,8 @@
   },
   "components": {
     "all": {
-      "ofForm": "form"
+      "ofForm": "form",
+      "ofFieldArray": "field array"
     },
     "pages": {
       "createForm": {
@@ -171,6 +172,15 @@
         "domainDescription": "takes the domain the form`s stores and events will be created",
         "resetOuterErrorsBySubmitDescription": "takes true / false. Determines whether outer form errors should be cleared on the onSubmit event. The default is correct.",
         "resetOuterErrorsByOnChangeDescription": "takes true / false. Determines whether outer form errors should be cleared on the onChange event. The default is correct."
+      },
+      "createFieldArray": {
+        "methodForCreating": "Method for creating",
+        "Formula": "Formula",
+        "Arguments": "Arguments",
+        "form": "the form",
+        "takes": "takes",
+        "formDescription": "on the basis of which the array will be created.",
+        "domainDescription": "takes the domain the array`s stores and events will be created"
       }
     }
   }
