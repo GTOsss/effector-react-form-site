@@ -181,6 +181,12 @@
         "takes": "takes",
         "formDescription": "on the basis of which the array will be created.",
         "domainDescription": "takes the domain the array`s stores and events will be created"
+      },
+      "Form": {
+        "description1st": "Form is a collection of stores and events designed for comfortable synchronization of html-form data and the effector state of your application. Upon ",
+        "initialization": "initialization",
+        "description2nd": ", an object is returned with a set of interconnected API effector units and utilities. As with all objects, they are accessible through the '.', But sometimes in the examples below we will use them through the useForm hook for convenience. We have described in more detail what fields are available through this hook ",
+        "here": "here" 
       }
     }
   }
