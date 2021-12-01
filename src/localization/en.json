@@ -150,7 +150,8 @@
   "components": {
     "all": {
       "ofForm": "form",
-      "ofFieldArray": "field array"
+      "ofFieldArray": "field array",
+      "usageExamples": "Usage examples:"
     },
     "pages": {
       "createForm": {
@@ -187,6 +188,11 @@
         "initialization": "initialization",
         "description2nd": ", an object is returned with a set of interconnected API effector units and utilities. As with all objects, they are accessible through the '.', But sometimes in the examples below we will use them through the useForm hook for convenience. We have described in more detail what fields are available through this hook ",
         "here": "here" 
+      },
+      "$values": {
+        "storeWith": "Store with values of",
+        "Using": "Using",
+        "recordingFromOther": "Recording values ​​from other units"
       }
     }
   }
