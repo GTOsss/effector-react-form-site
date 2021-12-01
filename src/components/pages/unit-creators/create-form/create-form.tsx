@@ -1,99 +1,100 @@
 import CodeHighlighter from '@components/code-highlighter';
-import { Link } from 'gatsby-plugin-intl';
+import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 import createFormCode from './create-form-code';
 
 interface IProps {}
+
+const path = 'components.pages.createForm.';
 
 const CreateForm = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
       <h1>createForm</h1>
       <div>
-        Метод для создания{' '}
+        <FormattedMessage id={`${path}methodForCreating`} />{' '}
         <Link to="/api/unit-types/form/" className="Link">
-          формы
+          <FormattedMessage id="components.all.ofForm" />
         </Link>
+        .
       </div>
-      <h2>Формула</h2>
+      <h2>
+        <FormattedMessage id={`${path}Formula`} />
+      </h2>
       <CodeHighlighter code={createFormCode} />
-      <h2>Аргументы</h2>
+      <h2>
+        <FormattedMessage id={`${path}Arguments`} />
+      </h2>
       <ol className="List">
         <li>
-          <span className="ListItemName">name</span>: название формы
+          <span className="ListItemName">name</span>: <FormattedMessage id={`${path}formName`} />.
         </li>
         <li>
-          <span className="ListItemName">validate</span>: функция для валидации полей формы. Принимает значения полей
-          формы Values и объект с дополнительными параметрами{' '}
+          <span className="ListItemName">validate</span>: <FormattedMessage id={`${path}validateDescription1st`} />{' '}
           <Link to="/api/unit-types/form/$meta" className="Link">
             meta
           </Link>
-          . Возвращает объект с ошибками невалидных полей формы.
+          . <FormattedMessage id={`${path}validateDescription2nd`} />.
         </li>
         <li>
-          <span className="ListItemName">mapSubmit</span>: функция, преобразующая данные, полученные из полей формы,
-          перед передачей их в функцию onSubmit.
+          <span className="ListItemName">mapSubmit</span>: <FormattedMessage id={`${path}mapSubmitDescription`} />.
         </li>
         <li>
-          <span className="ListItemName">onSubmit</span>: функция, которая срабатывает на событии{' '}
+          <span className="ListItemName">onSubmit</span>: <FormattedMessage id={`${path}onSubmitDescription1st`} />{' '}
           <Link to="/api/unit-types/form/submit" className="Link">
             submit
           </Link>{' '}
-          формы. Получает преобразованные данные из mappedValues (если она указана) либо напрямую данные из полей формы
-          и объект{' '}
+          <FormattedMessage id={`${path}onSubmitDescription2nd`} />{' '}
           <Link to="/api/unit-types/form/$meta" className="Link">
             meta
           </Link>
           .
         </li>
         <li>
-          <span className="ListItemName">onSubmitGuardFn</span>: перед выполнением функции onSubmit,проверяется значение
-          этого поля. По умолчанию содержит функцию-предикат, которая проверяет, есть ли ошибки валидации в полях формы.
-          Если ошибок нет, возвращает true и запускается onSubmit. Можно передать свою функцию-предикат, которая будет
-          принимать значения полей формы и объект{' '}
+          <span className="ListItemName">onSubmitGuardFn</span>:{' '}
+          <FormattedMessage id={`${path}onSubmitGuardDescription`} />{' '}
           <Link to="/api/unit-types/form/$meta" className="Link">
             meta
           </Link>
           .
         </li>
         <li>
-          <span className="ListItemName">onChange</span>: функция, которая срабатывает при изменении полей формы
-          (onChangeFieldBrowser?). Принимает значения полей формы Values и объект с дополнительными параметрами{' '}
+          <span className="ListItemName">onChange</span>: <FormattedMessage id={`${path}onChangeDescription`} />{' '}
           <Link to="/api/unit-types/form/$meta" className="Link">
             meta
           </Link>
           .
         </li>
         <li>
-          <span className="ListItemName">onChangeGuardFn</span>: перед выполнением функции onChange,проверяется значение
-          этого поля. По умолчанию содержит функцию-предикат, которая проверяет, есть ли ошибки валидации в полях формы.
-          Если ошибок нет, возвращает true и запускается onChange. Можно передать свою функцию-предикат, которая будет
-          принимать значения полей формы и объект{' '}
+          <span className="ListItemName">onChangeGuardFn</span>:{' '}
+          <FormattedMessage id={`${path}onChangeGuardFnDescription`} />{' '}
           <Link to="/api/unit-types/form/$meta" className="Link">
             meta
           </Link>
           .
         </li>
         <li>
-          <span className="ListItemName">initialValues</span>: принимает начальные значения формы.
+          <span className="ListItemName">initialValues</span>:{' '}
+          <FormattedMessage id={`${path}initialValuesDescription`} />.
         </li>
         <li>
-          <span className="ListItemName">initialMeta</span>: принимает начальное значение{' '}
+          <span className="ListItemName">initialMeta</span>:{' '}
+          <FormattedMessage id={`${path}initialMetaDescription1st`} />{' '}
           <Link to="/api/unit-types/form/$meta" className="Link">
             meta
-          </Link>{' '}
-          формы.
+          </Link>
+          <FormattedMessage id={`${path}initialMetaDescription2nd`} />
         </li>
         <li>
-          <span className="ListItemName">domain</span>: принимает домен, в котором будут созданы сторы и события формы.
+          <span className="ListItemName">domain</span>: <FormattedMessage id={`${path}domainDescription`} />.
         </li>
         <li>
-          <span className="ListItemName">resetOuterErrorsBySubmit</span>: принимает true/false. Определяет, нужно ли
-          сбрасывать ошибки формы, на событии onSubmit. Значение по умолчанию true.
+          <span className="ListItemName">resetOuterErrorsBySubmit</span>:{' '}
+          <FormattedMessage id={`${path}resetOuterErrorsBySubmitDescription`} />
         </li>
         <li>
-          <span className="ListItemName">resetOuterErrorByOnChange</span>: принимает true/false. Определяет, нужно ли
-          сбрасывать ошибки формы, на событии onChange. Значение по умолчанию true.
+          <span className="ListItemName">resetOuterErrorByOnChange</span>:{' '}
+          <FormattedMessage id={`${path}resetOuterErrorsByOnChangeDescription`} />
         </li>
       </ol>
     </div>
