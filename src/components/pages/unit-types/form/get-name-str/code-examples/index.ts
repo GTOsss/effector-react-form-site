@@ -1,16 +1,21 @@
-const getNameStrTsx = `import React from 'react';
+const getNameStrTsx = `import React, { useEffect } from 'react';
 import { createForm, useForm } from 'effector-react-form';
 import cn from 'classnames';
+import { useStore } from 'effector-react';
 
 const initialValues = {
-  'user.name': 'unknown',
-  'user.lastName': 'unknown',
+  user: {
+    name: 'unknown',
+    lastName: 'unknown',
+  },
   serverId: 1,
 };
 
 type Values = {
-  'user.name': string;
-  'user.lastName': string;
+  user: {
+    name: string;
+    lastName: string;
+  };
   serverId: number;
 };
 
@@ -30,27 +35,34 @@ const Input = ({ controller, label }) => {
 
 export const Component = () => {
   const { controller } = useForm<Values>({ form });
+  const fields = useStore(form.$fieldsInline);
+
+  useEffect(() => {
+    console.log(fields[form.getNameStr('user', 'name')]);
+  }, []);
 
   return (
     <form>
-      <Input label="Name" controller={controller({ name: form.getNameStr('user.name'), flat: true })} />
-      <Input label="Last name" controller={controller({ name: form.getNameStr('user.lastName'), flat: true })} />
-      <Input label="Last name" controller={controller({ name: form.getNameStr('serverId') })} />
+      <Input label="Name" controller={controller({ name: form.getName('user', 'name') })} />
+      <Input label="Last name" controller={controller({ name: form.getName('user', 'lastName') })} />
+      <Input label="Last name" controller={controller({ name: form.getName('serverId') })} />
     </form>
   );
 };
 `;
 
-const getNameStrJsx = `import React from 'react';
+const getNameStrJsx = `import React, { useEffect } from 'react';
 import { createForm, useForm } from 'effector-react-form';
 import cn from 'classnames';
+import { useStore } from 'effector-react';
 
 const initialValues = {
-  'user.name': 'unknown',
-  'user.lastName': 'unknown',
+  user: {
+    name: 'unknown',
+    lastName: 'unknown',
+  },
   serverId: 1,
 };
-
 
 const form = createForm({ initialValues });
 
@@ -68,12 +80,17 @@ const Input = ({ controller, label }) => {
 
 export const Component = () => {
   const { controller } = useForm({ form });
+  const fields = useStore(form.$fieldsInline);
+
+  useEffect(() => {
+    console.log(fields[form.getNameStr('user', 'name')]);
+  }, []);
 
   return (
     <form>
-      <Input label="Name" controller={controller({ name: form.getNameStr('user.name'), flat: true })} />
-      <Input label="Last name" controller={controller({ name: form.getNameStr('user.lastName'), flat: true })} />
-      <Input label="Last name" controller={controller({ name: form.getNameStr('serverId') })} />
+      <Input label="Name" controller={controller({ name: form.getName('user', 'name') })} />
+      <Input label="Last name" controller={controller({ name: form.getName('user', 'lastName') })} />
+      <Input label="Last name" controller={controller({ name: form.getName('serverId') })} />
     </form>
   );
 };

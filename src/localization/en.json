@@ -238,6 +238,9 @@
         "formInitialization": "form initialization",
         "description2nd": "and dynamically through the",
         "useFormHook": "useForm hook"
+      },
+      "$allFormState": {
+        "description": "Store that contains data from all other stores of the form"
       }
     }
   }
