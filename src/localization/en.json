@@ -283,6 +283,10 @@
       "setOrDeleteOuterError": {
         "description1st": "Sets the error object to",
         "description2nd": ". You can remove the error by not passing the 'error' field."
+      },
+      "setOuterErrorsInlineState": {
+        "description1st": "Lets you to set an object with external errors for form fields. Similar to",
+        "description2nd": "but for"
       }
     }
   }

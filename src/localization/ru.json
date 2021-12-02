@@ -141,6 +141,10 @@
       "setOrDeleteOuterError": {
         "description1st": "Устанавливает объект с ошибками в",
         "description2nd": ". Можно удалить ошибку, не передав поле 'error'."
+      },
+      "setOuterErrorsInlineState": {
+        "description1st": "Позволяет установить объект с внешними ошибками для полей формы. Является аналогом ",
+        "description2nd": "но для"
       }
     }
   }
