@@ -24,7 +24,7 @@ const Form = ({}: IProps) => {
       </h2>
       <ol className="List">
         <li>
-          <span className="ListItemName">submitted</span>: <FormattedMessage id={`${path}submittedDescription`} />
+          a<span className="ListItemName">submitted</span>: <FormattedMessage id={`${path}submittedDescription`} />
         </li>
         <li>
           <span className="ListItemName">hasError</span>: <FormattedMessage id={`${path}hasErrorDescription`} />

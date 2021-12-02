@@ -1,27 +1,28 @@
 import CodeHighlighter from '@components/code-highlighter';
-import { Link } from 'gatsby-plugin-intl';
+import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 import { hookMeta, initMeta } from './code-examples';
 
 interface IProps {}
+
+const path = 'components.pages.$meta.';
 
 const Meta = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
       <h1>$meta</h1>
       <div>
-        Стор с метаданными формы, которые могут быть использованы для запуска различных сценариев по событию onSubmit.
-        Их можно передать как при{' '}
+        <FormattedMessage id={`${path}description1st`} />{' '}
         <Link to="/api/unit-creators/create-form" className="Link">
-          инициализации формы
+          <FormattedMessage id={`${path}formInitialization`} />
         </Link>
         :
       </div>
       <CodeHighlighter code={initMeta} className="CodeHighlighter" />
       <div>
-        Так и динамически через hook{' '}
+        <FormattedMessage id={`${path}description2nd`} />{' '}
         <Link to="/api/hooks/use-form" className="Link">
-          useForm
+          <FormattedMessage id={`${path}useFormHook`} />
         </Link>
         :
       </div>
