@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { createForm, useForm } from 'effector-react-form';
 import cn from 'classnames';
 import { useStore } from 'effector-react';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 
 const initialValues = {
   name: '',
@@ -91,7 +92,7 @@ const ValidateFormExample = () => {
         <Input label="Last name" controller={controller({ name: 'lastName' })} />
       </form>
       <button onClick={handleReset} disabled={disabled}>
-        Сбросить таймер
+        <FormattedMessage id="components.pages.validateForm.resetTimer" />
       </button>
     </div>
   );
