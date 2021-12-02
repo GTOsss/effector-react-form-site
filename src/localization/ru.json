@@ -134,6 +134,13 @@
       "resetOuterFieldStateFlags": {
         "description1st": "Сбрасывает поля blurredAfterOuterError, changedAfterOuterError, touchedAfterOuterError стора",
         "description2nd": "в значения по умолчанию."
+      },
+      "resetOuterErrors": {
+        "description": "Устанавливает пустой объект в"
+      },
+      "setOrDeleteOuterError": {
+        "description1st": "",
+        "description2nd": ""
       }
     }
   }

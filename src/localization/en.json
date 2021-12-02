@@ -276,6 +276,13 @@
       "resetOuterFieldStateFlags": {
         "description1st": "Resets the",
         "description2nd": " store's blurredAfterOuterError, changedAfterOuterError, touchedAfterOuterError fields to their default values."
+      },
+      "resetOuterErrors": {
+        "description": "Sets an empty object to the"
+      },
+      "setOrDeleteOuterError": {
+        "description1st": "",
+        "description2nd": ""
       }
     }
   }
