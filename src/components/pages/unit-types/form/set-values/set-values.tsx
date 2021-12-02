@@ -1,21 +1,25 @@
 import CodeHighlighter from '@components/code-highlighter';
-import { Link } from 'gatsby-plugin-intl';
+import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 import { setValuesExample } from './code-examples';
 
 interface IProps {}
+
+const path = 'components.pages.setValues.';
 
 const SetValues = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
       <h1>SetValues</h1>
       <div>
-        Записывает новый объект со значениям в{' '}
+        <FormattedMessage id={`${path}description`} />{' '}
         <Link to="/api/unit-types/form/$values" className="Link">
           $values
         </Link>{' '}
-        формы.
-        <h2>Пример использования</h2>
+        <FormattedMessage id="components.all.ofTheForm" />.
+        <h2>
+          <FormattedMessage id="components.all.usageExample" />
+        </h2>
         <CodeHighlighter code={setValuesExample} className="CodeHighlighter" />
       </div>
     </div>
