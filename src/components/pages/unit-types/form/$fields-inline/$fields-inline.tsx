@@ -1,71 +1,74 @@
 import CodeHighlighter from '@components/code-highlighter';
-import { Link } from 'gatsby-plugin-intl';
+import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 import { formula } from './code-examples';
 
 interface IProps {}
+
+const path = 'components.pages.$fieldsInline.';
 
 const FieldsInline = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
       <h1>$fieldsInline</h1>
       <div>
-        Стор, содержащий объект с метаданными о полях{' '}
+        <FormattedMessage id={`${path}description1st`} />{' '}
         <Link to="/api/unit-types/form/" className="Link">
-          формы
+          <FormattedMessage id="components.all.ofForm" />
         </Link>
-        .
+        <FormattedMessage id={`${path}description2nd`} />
       </div>
       <CodeHighlighter code={formula} className="CodeHighlighter" />
-      <h2>Свойства</h2>
+      <h2>
+        <FormattedMessage id={`${path}Properties`} />
+      </h2>
       <ol className="List">
         <li>
-          <span className="ListItemName">active</span>: true, когда на элемент формы, соответствующий полю, установлен
-          фокус.
+          <span className="ListItemName">active</span>: <FormattedMessage id={`${path}activeDescription`} />
         </li>
         <li>
-          <span className="ListItemName">touched</span>: говорит, было ли взаимодействие(клик) с элементом формы после
-          рендера. По умолчанию false.
+          <span className="ListItemName">touched</span>: <FormattedMessage id={`${path}touchedDescription`} />
         </li>
         <li>
-          <span className="ListItemName">changed</span>: говорит, изменялись ли данные поля после инициализации.
+          <span className="ListItemName">changed</span>: <FormattedMessage id={`${path}changedDescription`} />
         </li>
         <li>
-          <span className="ListItemName">blurred</span>: меняет значение на true при потере фокуса на элементе. Остаётся
-          в этом состоянии до следующей реинициализации формы. В зависимости от значения этого свойства формируются
-          флаги isShowError и isShowInnerError, о которых говорится{' '}
+          <span className="ListItemName">blurred</span>: <FormattedMessage id={`${path}blurredDescription`} />{' '}
           <Link to="/api/hooks/use-form" className="Link">
-            здесь
+            <FormattedMessage id={`${path}here`} />
           </Link>
           .
         </li>
         <li>
-          <span className="ListItemName">touchedAfterOuterError</span>: меняет значение на true при клике на элемент
-          формы, если в{' '}
+          <span className="ListItemName">touchedAfterOuterError</span>:{' '}
+          <FormattedMessage id={`${path}touchedAfterOuterErrorDescription1st`} />{' '}
           <Link to="/api/unit-types/form/$outer-errors-inline" className="Link">
             $outerErrorsInline
           </Link>{' '}
-          есть поле с ошибкой этого элемента. Повторная отправка формы сбрасывает значение на false.
+          <FormattedMessage id={`${path}touchedAfterOuterErrorDescription2nd`} />
         </li>
         <li>
-          <span className="ListItemName">changedAfterOuterError</span>: меняет значение на true при изменении значений
-          элемента формы, если в{' '}
+          <span className="ListItemName">changedAfterOuterError</span>:{' '}
+          <FormattedMessage id={`${path}changedAfterOuterErrorDescription1st`} />{' '}
           <Link to="/api/unit-types/form/$outer-errors-inline" className="Link">
             $outerErrorsInline
           </Link>{' '}
-          есть поле с ошибкой этого элемента. Повторная отправка формы сбрасывает значение на false.
+          <FormattedMessage id={`${path}changedAfterOuterErrorDescription2nd`} />
         </li>
         <li>
-          <span className="ListItemName">blurredAfterOuterError</span>: меняет значение на true при потере фокуса на
-          элементе формы, если в{' '}
+          <span className="ListItemName">blurredAfterOuterError</span>:
+          <FormattedMessage id={`${path}blurredAfterOuterErrorDescription1st`} />{' '}
           <Link to="/api/unit-types/form/$outer-errors-inline" className="Link">
             $outerErrorsInline
           </Link>{' '}
-          есть поле с ошибкой этого элемента. Повторная отправка формы сбрасывает значение на false. В зависимости от
-          значения этого свойства формируются флаги isShowError и isShowOuterError.
+          <FormattedMessage id={`${path}blurredAfterOuterErrorDescription2nd`} />{' '}
+          <Link to="/api/hooks/use-form" className="Link">
+            <FormattedMessage id={`${path}here`} />
+          </Link>
+          .
         </li>
         <li>
-          <span className="ListItemName">validate</span>: содержит функцию валидации элемента формы.
+          <span className="ListItemName">validate</span>: <FormattedMessage id={`${path}validateDescription`} />
         </li>
       </ol>
     </div>

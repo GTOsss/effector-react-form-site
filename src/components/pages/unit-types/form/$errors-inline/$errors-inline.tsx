@@ -3,7 +3,7 @@ import React, { memo } from 'react';
 
 interface IProps {}
 
-const path = 'components.pages.$errorsInline.'
+const path = 'components.pages.$errorsInline.';
 
 const ErrorsInline = ({}: IProps) => {
   return (

@@ -1,35 +1,36 @@
-import { Link } from 'gatsby-plugin-intl';
+import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 
 interface IProps {}
+
+const path = 'components.pages.$outerErrorsInline.';
 
 const OuterErrorsInline = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
       <h1>$outerErrorsInline</h1>
       <div>
-        Стор, предназначенный для ошибок{' '}
+        <FormattedMessage id={`${path}description1st`} />{' '}
         <Link to="/examples/server-side-validation" className="Link">
           серверной валидации
         </Link>
-        . В отличие от ошибок в{' '}
+        <FormattedMessage id={`${path}description2nd`} />{' '}
         <Link to="/unit-types/form/$errors-inline" className="Link">
           $errorsInline
         </Link>
-        , внешние ошибки не блокируют отправку формы. После изменения значений полей, внешние ошибки скрываются, но
-        остаются в состоянии формы. После отправки ошибки будут отображаться снова, пока поля не изменятся.
+        , <FormattedMessage id={`${path}description3rd`} />
       </div>
       <br />
       <div>
-        Установить внешние ошибки можно при помощи сетеров{' '}
+        <FormattedMessage id={`${path}description4th`} />{' '}
         <Link to="/api/unit-types/form/set-or-delete-outer-error" className="Link">
           setOrDeleteOuterError
         </Link>{' '}
-        и{' '}
+        <FormattedMessage id="components.all.and" />{' '}
         <Link to="/api/unit-types/form/set-outer-errors-inline-state" className="Link">
           setOuterErrorsInlineState
         </Link>
-        .
+        <FormattedMessage id={`${path}end`} />
       </div>
     </div>
   );

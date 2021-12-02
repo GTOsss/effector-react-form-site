@@ -2,7 +2,6 @@ import CodeHighlighter from '@components/code-highlighter';
 import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 import { fromUnits, withSample, withUseStore, withWatch } from './code-examples';
-import styles from './styles.module.scss';
 
 interface IProps {}
 
@@ -25,36 +24,25 @@ const Values = ({}: IProps) => {
       <ol className="List">
         <li>
           <div>
-            <span className={styles.exampleName}>
-              <FormattedMessage id={`${path}Using`} /> useStore
-            </span>
+            <FormattedMessage id={`${path}Using`} /> useStore
             <CodeHighlighter code={withUseStore} className="CodeHighlighter" />
           </div>
         </li>
         <li>
           <div>
-            <span className={styles.exampleName}>
-              <FormattedMessage id={`${path}Using`} /> sample
-            </span>
+            <FormattedMessage id={`${path}Using`} /> sample
             <CodeHighlighter code={withSample} className="CodeHighlighter" />
-            <span className={styles.exampleName}>
-              Как и все юниты API effector, может использоваться как в clock, так и в source.
-            </span>
           </div>
         </li>
         <li>
           <div>
-            <span className={styles.exampleName}>
-              <FormattedMessage id={`${path}Using`} /> watch
-            </span>
+            <FormattedMessage id={`${path}Using`} /> watch
             <CodeHighlighter code={withWatch} className="CodeHighlighter" />
           </div>
         </li>
         <li>
           <div>
-            <span className={styles.exampleName}>
-              <FormattedMessage id={`${path}recordingFromOther`} />
-            </span>
+            <FormattedMessage id={`${path}recordingFromOther`} />
             <CodeHighlighter code={fromUnits} className="CodeHighlighter" />
           </div>
         </li>

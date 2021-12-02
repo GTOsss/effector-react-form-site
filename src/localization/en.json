@@ -200,6 +200,31 @@
         "validationFunction": "validation function",
         "description2nd": "or errors added manually using the",
         "end": " methods."
+      },
+      "$outerErrorsInline": {
+        "description1st": "Stor for",
+        "serverValidation": "server validation",
+        "description2nd": "errors. Unlike errors in",
+        "description3rd": "do not block form submissions. After changing the field values, external errors are hidden, but remain in the form state. Once submitted, the errors will be displayed again until the fields change.",
+        "description4th": "You can set external errors using the",
+        "end": "setters."
+      },
+      "$fieldsInline": {
+        "description1st": "Store containing an object with metadata about",
+        "description2nd": " fields.",
+        "Properties": "Свойства",
+        "activeDescription": "true when focus is set on the form element corresponding to the field.",
+        "touchedDescription": "true if there was an interaction (click) with the form element after rendering. The default is false.",
+        "changedDescription": "true, если данные поля изменялись с момента инициализации.",
+        "blurredDescription": "changes to true when the element loses focus. Remains in this state until the next reinitialization of the form. The isShowError and isShowInnerError flags are calculated based on this value. We will tell you more about them" ,
+        "here": "here",
+        "touchedAfterOuterErrorDescription1st": "changes to true when a form element is clicked and if",
+        "touchedAfterOuterErrorDescription2nd": "has a field with an error for that element. Resubmitting the form resets the value to false.",
+        "changedAfterOuterErrorDescription1st": "changes to true when the values ​​of the form element have been changed and if",
+        "changedAfterOuterErrorDescription2nd": "has a field with an error for that element. Resubmitting the form resets the value to false.",
+        "blurredAfterOuterErrorDescription1st": "changes to true when the form element loses the focus and if",
+        "blurredAfterOuterErrorDescription2nd": "has a field with an error for that element. Resubmitting the form resets the value to false. The isShowError and isShowOuterError flags are calculated based on this value. We will tell you more about them",
+        "validateDescription": "contains a validation function for a form element."
       }
     }
   }
