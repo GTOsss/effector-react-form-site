@@ -1,5 +1,5 @@
 import CodeHighlighter from '@components/code-highlighter';
-import { Link } from 'gatsby-plugin-intl';
+import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 import { setFieldsInlineExample, setFieldStateType, setOrDeleteErrorExample } from './code-examples';
 import WithSetFieldState from './examples/with-set-field-state';
@@ -7,41 +7,45 @@ import WithoutSetFieldState from './examples/without-set-field-state';
 
 interface IProps {}
 
+const path = 'components.pages.setFieldState.';
+
 const SetFieldState = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
       <h1>setFieldState</h1>
       <div>
-        Позволяет установить значения в{' '}
+        <FormattedMessage id={`${path}description1st`} />{' '}
         <Link to="/api/unit-types/form/$fields-inline" className="Link">
           $fieldsInline
         </Link>
         .
       </div>
       <CodeHighlighter code={setFieldStateType} className="CodeHighlighter" />
-      Допустим, мы хотим при инициализации приложения установить ошибку с текстом "Required field" в поле формы в
-      качестве напоминания, что это поле обязательное.
+      <FormattedMessage id={`${path}description2nd`} />
       <CodeHighlighter code={setOrDeleteErrorExample} className="CodeHighlighter" />
-      <h2>Результат:</h2>
+      <h2>
+        <FormattedMessage id="components.all.Result" />
+      </h2>
       <WithoutSetFieldState />
       <div>
         {' '}
-        Как видно, при инициализации никакой ошибки не появилось, хоть мы и добавили её в форму. Так произошло, потому
-        что флаг isShowError зависит от флага "blurred" в{' '}
+        <FormattedMessage id={`${path}description3rd`} />{' '}
         <Link to="/api/unit-types/form/$fields-inline" className="Link">
           $fieldsInline
         </Link>
         .
         <br />
-        Попробуем установить "blurred" поля "name" в значение true:
+        <FormattedMessage id={`${path}description4th`} />
       </div>
       <CodeHighlighter code={setFieldsInlineExample} className="CodeHighlighter" />
-      <h2>Результат</h2>
+      <h2>
+        <FormattedMessage id="components.all.Result" />
+      </h2>
       <WithSetFieldState />
       <div>
-        Более подробно о всех полях стора $fieldsInline мы уже рассказывали{' '}
+        <FormattedMessage id={`${path}description5th`} />{' '}
         <Link to="/api/unit-types/form/$fields-inline" className="Link">
-          здесь
+          <FormattedMessage id="components.all.here" />
         </Link>
         .
       </div>
