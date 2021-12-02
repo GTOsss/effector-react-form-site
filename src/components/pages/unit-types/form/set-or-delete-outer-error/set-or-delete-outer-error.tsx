@@ -1,20 +1,22 @@
 import CodeHighlighter from '@components/code-highlighter';
-import { Link } from 'gatsby-plugin-intl';
+import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 import { setOrDeleteOuterError, setOrDeleteOuterErrorType } from './code-examples';
 
 interface IProps {}
+
+const path = 'components.pages.setOrDeleteOuterError.';
 
 const SetOrDeleteOuterError = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
       <h1>setOrDeleteOuterError</h1>
       <div>
-        Устанавливает объект с ошибками в{' '}
+        <FormattedMessage id={`${path}description1st`} />{' '}
         <Link to="/api/unit-types/$outer-errors-inline" className="Link">
           $outerErrorsInline
         </Link>
-        . Можно удалить ошибку, не передав error.
+        <FormattedMessage id={`${path}description2nd`} />
       </div>
       <CodeHighlighter code={setOrDeleteOuterErrorType} className="CodeHighlighter" />
       <CodeHighlighter code={setOrDeleteOuterError} className="CodeHighlighter" />

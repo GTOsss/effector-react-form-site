@@ -281,8 +281,8 @@
         "description": "Sets an empty object to the"
       },
       "setOrDeleteOuterError": {
-        "description1st": "",
-        "description2nd": ""
+        "description1st": "Sets the error object to",
+        "description2nd": ". You can remove the error by not passing the 'error' field."
       }
     }
   }

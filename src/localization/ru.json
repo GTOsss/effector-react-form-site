@@ -139,8 +139,8 @@
         "description": "Устанавливает пустой объект в"
       },
       "setOrDeleteOuterError": {
-        "description1st": "",
-        "description2nd": ""
+        "description1st": "Устанавливает объект с ошибками в",
+        "description2nd": ". Можно удалить ошибку, не передав поле 'error'."
       }
     }
   }
