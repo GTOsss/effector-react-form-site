@@ -129,7 +129,11 @@
       },
       "setSubmitted": {
         "description1st": "Выставляет переданное значение в поле 'submitted' стора",
-        "description2nd": "Принимает true либо false."
+        "description2nd": ". Принимает true либо false."
+      },
+      "resetOuterFieldStateFlags": {
+        "description1st": "Сбрасывает поля blurredAfterOuterError, changedAfterOuterError, touchedAfterOuterError стора",
+        "description2nd": "в значения по умолчанию."
       }
     }
   }
