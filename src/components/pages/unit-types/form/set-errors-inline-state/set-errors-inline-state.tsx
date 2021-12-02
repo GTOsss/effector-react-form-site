@@ -1,29 +1,34 @@
 import CodeHighlighter from '@components/code-highlighter';
-import { Link } from 'gatsby-plugin-intl';
+import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 import { setErrorsInlineStateExample, setErrorsInlineStateType } from './code-examples';
 
 interface IProps {}
+
+const path = 'components.pages.setErrorsInlineState.';
 
 const SetErrorsInlineState = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
       <h1>setErrorsInlineState</h1>
       <div>
-        Позволяет установить объект с ошибками для полей формы. Принципиальное отличие от метода{' '}
+        <FormattedMessage id={`${path}description1st`} />{' '}
         <Link to="/api/unit-types/form/set-or-delete-error" className="Link">
           setOrDeleteError
         </Link>{' '}
-        в том, что setOrDeleteError устанавливает значение ошибки для одного поля, не затрагивая при этом другие поля.
-        setErrorsInlineState же полностью перезаписывает объект в сторе{' '}
+        <FormattedMessage id={`${path}description2nd`} />{' '}
         <Link to="/api/unit-types/form/$errors-inline" className="Link">
           $errorsInline
         </Link>{' '}
-        формы, на переданный в качестве аргумента объект.
+        <FormattedMessage id={`${path}description3rd`} />
       </div>
       <CodeHighlighter code={setErrorsInlineStateType} className="CodeHighlighter" />
-      <div>Принимает объект с, где ключами являются имена полей формы, а значениями - тексты ошибок.</div>
-      <h2>Пример использования</h2>
+      <div>
+        <FormattedMessage id={`${path}description4th`} />
+      </div>
+      <h2>
+        <FormattedMessage id="components.all.usageExample" />
+      </h2>
       <CodeHighlighter code={setErrorsInlineStateExample} className="CodeHighlighter" />
     </div>
   );

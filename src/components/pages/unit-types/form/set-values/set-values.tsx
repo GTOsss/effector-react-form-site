@@ -10,7 +10,7 @@ const path = 'components.pages.setValues.';
 const SetValues = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
-      <h1>SetValues</h1>
+      <h1>setValues</h1>
       <div>
         <FormattedMessage id={`${path}description`} />{' '}
         <Link to="/api/unit-types/form/$values" className="Link">

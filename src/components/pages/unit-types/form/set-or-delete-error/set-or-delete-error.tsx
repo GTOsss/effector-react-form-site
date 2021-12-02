@@ -6,7 +6,7 @@ import styles from './styles.module.scss';
 
 interface IProps {}
 
-const path = 'components.pages.setOrDeleteError';
+const path = 'components.pages.setOrDeleteError.';
 
 const SetOrDeleteError = ({}: IProps) => {
   return (

@@ -253,6 +253,12 @@
       },
       "setOrDeleteError": {
         "description": "Helps to directly set an error in form fields by replacing a validator error, or remove an error if you do not pass an error field."
+      },
+      "setErrorsInlineState": {
+        "description1st": "Lets you to set the object with errors for form fields. The fundamental difference from the",
+        "description2nd": "method is that setOrDeleteError sets the error value for one field without affecting other fields. setErrorsInlineState, on the other hand, completely overwrites the object in the form's",
+        "description3rd": "store with the object that passed as an argument.",
+        "description4th": "Takes an object, where the keys are the names of the form fields, and the values ​​are the error texts."
       }
     }
   }
