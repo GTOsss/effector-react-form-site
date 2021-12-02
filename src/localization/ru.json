@@ -94,6 +94,9 @@
         "formInitialization": "инициализации формы",
         "description2nd": "Так и динамически через",
         "useFormHook": "хук useForm"
+      },
+      "$allFormState": {
+        "description": "Стор, содержащий в себе данные из всех остальных сторов формы"
       }
     }
   }
