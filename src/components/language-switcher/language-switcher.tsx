@@ -6,7 +6,6 @@ import styles from './styles.module.scss';
 interface IProps {}
 
 const LanguageSwitcher = ({}: IProps) => {
-  console.log(location);
   return (
     <div className={styles.root}>
       <div>{}</div>
