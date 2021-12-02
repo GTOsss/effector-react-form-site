@@ -2,25 +2,3 @@
   display: flex;
   flex-direction: column;
 }
-
-.Link {
-  color: #FF8C00;
-  text-decoration: none;
-  &:hover {
-  text-decoration: underline;
-  };
-}
-
-.examplesList {
-  & > li {
-    margin-bottom: 20px;
-    & > div {
-      display: flex;
-      flex-direction: column;
-    }
-  }
-}
-
-.exampleName {
-  margin: 5px 0;
-}

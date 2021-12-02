@@ -1,3 +1,4 @@
+import LanguageSwitcher from '@components/language-switcher';
 import { Link, FormattedMessage } from 'gatsby-plugin-intl';
 import * as React from 'react';
 import styles from './styles.module.scss';
@@ -24,6 +25,7 @@ const Header = ({ siteTitle }: IProps) => (
       {/* <Link className={styles.link} to="/api/getting-started">
         API
       </Link> */}
+      <LanguageSwitcher />
     </div>
   </header>
 );

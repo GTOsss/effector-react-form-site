@@ -17,6 +17,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "add": "^2.0.6",
     "architect-project": "2.0.3-beta.9",
     "classnames": "^2.2.6",
     "effector": "^21.7.5",
@@ -33,7 +34,8 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-syntax-highlighter": "^12.2.1",
-    "react-virtualized": "^9.21.2"
+    "react-virtualized": "^9.21.2",
+    "yarn": "^1.22.17"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.10",

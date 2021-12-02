@@ -1,36 +1,40 @@
 import CodeHighlighter from '@components/code-highlighter';
-import { Link } from 'gatsby-plugin-intl';
+import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 import createFieldArrayCode from './create-field-array-code/';
-import styles from './styles.module.scss';
 
 interface IProps {}
+
+const path = 'components.pages.createFieldArray.';
 
 const CreateFieldArray = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
       <h1>createFieldArray</h1>
       <div>
-        Метод для создания{' '}
+        <FormattedMessage id={`${path}methodForCreating`} />{' '}
         <Link to="/api/unit-types/field-array" className="Link">
-          массива полей
+          <FormattedMessage id="components.all.ofFieldArray" />
         </Link>
         .
       </div>
-      <h2>Формула</h2>
+      <h2>
+        <FormattedMessage id={`${path}Formula`} />
+      </h2>
       <CodeHighlighter code={createFieldArrayCode} />
-      <h2>Аргументы</h2>
+      <h2>
+        <FormattedMessage id={`${path}Arguments`} />
+      </h2>
       <ol className="List">
         <li>
-          <span className="ListItemName">form</span>: принимает{' '}
+          <span className="ListItemName">form</span>: <FormattedMessage id={`${path}takes`} />{' '}
           <Link to="/api/unit-types/form/" className="Link">
-            форму
-          </Link>
-          , на основании полей которой будет создан массив.
+            <FormattedMessage id={`${path}form`} />
+          </Link>{' '}
+          <FormattedMessage id={`${path}formDescription`} />
         </li>
         <li>
-          <span className="ListItemName">domain</span>: принимает домен, в котором будут созданы сторы и события
-          массива.
+          <span className="ListItemName">domain</span>: <FormattedMessage id={`${path}domainDescription`} />
         </li>
       </ol>
     </div>
