@@ -268,6 +268,10 @@
         "description3rd": "As you can see, no error appeared during initialization, although we added it to the form. This is because the isShowError flag depends on the 'blurred' flag in",
         "description4th": "Let's try setting the 'blurred' of the 'name' field to true:",
         "description5th": "We already told in more detail about all the fields of the $ fieldsInline store"
+      },
+      "setSubmitted": {
+        "description1st": "Set passed value to the field 'submitted' of the",
+        "description2nd": "store. Takes true or false."
       }
     }
   }

@@ -126,6 +126,10 @@
         "description3rd": "Как видно, при инициализации никакой ошибки не появилось, хоть мы и добавили её в форму. Так произошло, потому что флаг isShowError зависит от флага 'blurred' в",
         "description4th": "Попробуем установить 'blurred' поля 'name' в значение true:",
         "description5th": "Более подробно обо всех полях стора $fieldsInline мы уже рассказывали"
+      },
+      "setSubmitted": {
+        "description1st": "Выставляет переданное значение в поле 'submitted' стора",
+        "description2nd": "Принимает true либо false."
       }
     }
   }

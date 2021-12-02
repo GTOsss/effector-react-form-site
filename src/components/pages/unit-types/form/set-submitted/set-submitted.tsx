@@ -1,4 +1,4 @@
-import { Link } from 'gatsby-plugin-intl';
+import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 
 interface IProps {}
@@ -10,11 +10,11 @@ const SetSubmitted = ({}: IProps) => {
     <div className="ComponentRoot">
       <h1>setSubmitted</h1>
       <div>
-        Выставляет переданное значение в поле submitted стора{' '}
+        <FormattedMessage id={`${path}description1st`} />{' '}
         <Link to="/api/unit-types/form/" className="Link">
           $form
         </Link>
-        . Принимает true либо false.
+        <FormattedMessage id={`${path}description2nd`} />
       </div>
     </div>
   );
