@@ -250,6 +250,9 @@
       },
       "setValues": {
         "description": "Writes new object with values to the"
+      },
+      "setOrDeleteError": {
+        "description": "Helps to directly set an error in form fields by replacing a validator error, or remove an error if you do not pass an error field."
       }
     }
   }
