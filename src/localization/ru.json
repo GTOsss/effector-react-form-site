@@ -8,6 +8,7 @@
       "ofFieldArray": "массива полей",
       "usageExamples": "Примеры использования:",
       "and": "и"
+
     },
     "pages": {
       "createForm": {
@@ -80,6 +81,13 @@
         "blurredAfterOuterErrorDescription1st": "меняет значение на true при потере фокуса на элементе формы, если в",
         "blurredAfterOuterErrorDescription2nd": "есть поле с ошибкой этого элемента. Повторная отправка формы сбрасывает значение на false. В зависимости от значения этого свойства формируются флаги isShowError и isShowOuterError, подробнее о которых мы говорим",
         "validateDescription": "содержит функцию валидации для элемента формы."
+      },
+      "$form": {
+        "description": "Стор, хранящий основное состояние",
+        "Properties": "Свойства",
+        "submittedDescription": "сообщает о том, была ли форма отправлена.",
+        "hasErrorDescription": "сообщает о том, есть ли в форме ошибки, созданые функцией валидации.",
+        "hasOuterErrorDescription": "сообщает о том, есть ли внешние ошибки в "
       }
     }
   }

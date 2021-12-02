@@ -1,33 +1,37 @@
 import CodeHighlighter from '@components/code-highlighter';
-import { Link } from 'gatsby-plugin-intl';
+import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 import { type } from './code-examples';
 
 interface IProps {}
+
+const path = 'components.pages.$form.';
 
 const Form = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
       <h1>$form</h1>
       <div>
-        Стор, хранящий основное состояние{' '}
+        <FormattedMessage id={`${path}description`} />{' '}
         <Link to="/api/unit-types/form/" className="Link">
-          формы
+          <FormattedMessage id="components.all.ofForm" />
         </Link>
         .
       </div>
       <CodeHighlighter code={type} className="CodeHighlighter" />
-      <h2>Свойства</h2>
+      <h2>
+        <FormattedMessage id={`${path}Properties`} />
+      </h2>
       <ol className="List">
         <li>
-          <span className="ListItemName">submitted</span>: сообщает о том, была ли форма отправлена.
+          <span className="ListItemName">submitted</span>: <FormattedMessage id={`${path}submittedDescription`} />
         </li>
         <li>
-          <span className="ListItemName">hasError</span>: сообщает о том, есть ли в форме ошибки, созданые функцией
-          валидации.
+          <span className="ListItemName">hasError</span>: <FormattedMessage id={`${path}hasErrorDescription`} />
         </li>
         <li>
-          <span className="ListItemName">hasOuterError</span>: сообщает о том, есть ли внешние ошибки в{' '}
+          <span className="ListItemName">hasOuterError</span>:{' '}
+          <FormattedMessage id={`${path}hasOuterErrorDescription`} />{' '}
           <Link to="/api/unit-types/form/$outer-errors-inline" className="Link">
             $outerErrorsInline
           </Link>
