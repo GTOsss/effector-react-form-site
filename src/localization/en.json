@@ -270,12 +270,12 @@
         "description5th": "We already told in more detail about all the fields of the $ fieldsInline store"
       },
       "setSubmitted": {
-        "description1st": "Set passed value to the field 'submitted' of the",
-        "description2nd": "store. Takes true or false."
+        "description1st": "Sets the passed value to the field 'submitted' of the",
+        "description2nd": " store. Takes true or false."
       },
       "resetOuterFieldStateFlags": {
         "description1st": "Resets the",
-        "description2nd": " store's blurredAfterOuterError, changedAfterOuterError, touchedAfterOuterError fields to their default values.."
+        "description2nd": " store's blurredAfterOuterError, changedAfterOuterError, touchedAfterOuterError fields to their default values."
       }
     }
   }
