@@ -3,6 +3,8 @@ import React, { memo } from 'react';
 
 interface IProps {}
 
+const path = 'components.pages.setSubmitted.';
+
 const SetSubmitted = ({}: IProps) => {
   return (
     <div className="ComponentRoot">

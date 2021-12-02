@@ -154,7 +154,9 @@
       "ofFieldArray": "field array",
       "usageExamples": "Usage examples:",
       "usageExample": "Usage example:",
-      "and": "and"
+      "and": "and",
+      "Result": "Result:",
+      "here": "here"
     },
     "pages": {
       "createForm": {
@@ -259,6 +261,13 @@
         "description2nd": "method is that setOrDeleteError sets the error value for one field without affecting other fields. setErrorsInlineState, on the other hand, completely overwrites the object in the form's",
         "description3rd": "store with the object that passed as an argument.",
         "description4th": "Takes an object, where the keys are the names of the form fields, and the values ​​are the error texts."
+      },
+      "setFieldState": {
+        "description1st": "Lets you to set value in the",
+        "description2nd": "Let's say we want to set an error with the text 'Required field' in a form field when initializing the application as a reminder that this field is required.",
+        "description3rd": "As you can see, no error appeared during initialization, although we added it to the form. This is because the isShowError flag depends on the 'blurred' flag in",
+        "description4th": "Let's try setting the 'blurred' of the 'name' field to true:",
+        "description5th": "We already told in more detail about all the fields of the $ fieldsInline store"
       }
     }
   }
