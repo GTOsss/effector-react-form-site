@@ -289,7 +289,7 @@
         "description2nd": "but for"
       },
       "validateForm": {
-        "description1st": "Lets you to manually run the validation function passed on form initialization. Let's try to remind the user after 3 seconds which fields to fill in by calling validateForm. It is worth remembering that the isShowError flag will not be set to true until the 'blurred' form field is true. Let's set it up manually using the",
+        "description1st": "Lets you to manually run the validation function passed on form initialization. Let's try to remind the user after 3 seconds which fields to fill in by calling validateForm. We must remember that the isShowError flag will not be set to true until the 'blurred' form field is true. Let's set it up manually using the",
         "description2nd": "method."
       }
     }

@@ -16,7 +16,7 @@ const ValidateForm = ({}: IProps) => {
         <FormattedMessage id={`${path}description1st`} />{' '}
         <Link to="/api/unit-types/form/set-field-state" className="Link">
           setFieldState
-        </Link>
+        </Link>{' '}
         <FormattedMessage id={`${path}description2nd`} />
       </div>
       <CodeHighlighter code={validateFormExampleCode} className="CodeHighlighter" />
