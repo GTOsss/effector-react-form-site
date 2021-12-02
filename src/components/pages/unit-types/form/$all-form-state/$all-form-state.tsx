@@ -3,7 +3,7 @@ import React, { memo } from 'react';
 
 interface IProps {}
 
-const path = 'components.pages.$allFormState.'
+const path = 'components.pages.$allFormState.';
 
 const AllFormState = ({}: IProps) => {
   return (

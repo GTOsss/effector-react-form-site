@@ -150,8 +150,10 @@
   "components": {
     "all": {
       "ofForm": "form",
+      "ofTheForm": "of the form",
       "ofFieldArray": "field array",
       "usageExamples": "Usage examples:",
+      "usageExample": "Usage example:",
       "and": "and"
     },
     "pages": {
@@ -191,7 +193,7 @@
         "here": "here" 
       },
       "$values": {
-        "storeWith": "Store with values of",
+        "storeWith": "Store with values of the",
         "Using": "Using",
         "recordingFromOther": "Recording values ​​from other units"
       },
@@ -241,6 +243,16 @@
       },
       "$allFormState": {
         "description": "Store that contains data from all other stores of the form"
+      },
+      "setValue": {
+        "description1st": "Allows you to assign a value to one form field",
+        "description2nd": "As you can see from the example, if the form contains an object with nested fields, there are two options for writing field: a string containing the path to the final property of the object through a dot and an array of strings."
+      },
+      "setValues": {
+        "description": "Writes new object with values to the"
+      },
+      "setOrDeleteError": {
+        "description": "Helps to directly set an error in form fields by replacing a validator error, or remove an error if you do not pass an error field."
       }
     }
   }
