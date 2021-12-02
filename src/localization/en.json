@@ -290,7 +290,14 @@
       },
       "validateForm": {
         "description1st": "Lets you to manually run the validation function passed on form initialization. Let's try to remind the user after 3 seconds which fields to fill in by calling validateForm. We must remember that the isShowError flag will not be set to true until the 'blurred' form field is true. Let's set it up manually using the",
-        "description2nd": "method."
+        "description2nd": "method.",
+        "resetTimer": "Reset timer"
+      },
+      "submit": {
+        "description": "Method for submitting the form"
+      },
+      "reset": {
+        "description": "Resets the form to the initial state."
       }
     }
   }
