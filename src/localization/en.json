@@ -327,6 +327,10 @@
       },
       "name": {
         "description": "Contains name, passed during"
+      },
+      "fieldArray": {
+        "description1st": "Allows you to work directly with array form fields. Provides an object with push and remove methods for comfortable working with arrays in forms. Provides a map method via the ",
+        "description2nd": " hook."
       }
     }
   }
