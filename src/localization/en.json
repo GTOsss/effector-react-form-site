@@ -298,6 +298,9 @@
       },
       "reset": {
         "description": "Resets the form to the initial state."
+      },
+      "onSubmit": {
+        "description": "Sets a function for the Submit event of a form. You can specify it in the"
       }
     }
   }
