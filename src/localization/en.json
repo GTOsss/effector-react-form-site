@@ -316,6 +316,9 @@
       },
       "fieldInit": {
         "description": "Event, that fires on the form initialization."
+      },
+      "getName": {
+        "description": "An utility that collects the passed arguments into an array. Supports highlighting of state fields, making it easier to navigate complex layered forms. In the example below, after opening the quotes in form.getName (), it will suggest field options. In ts / tsx files, when specifying non-existent fields, it will show a typing error."
       }
     }
   }
