@@ -1,5 +1,5 @@
 import CodeHighlighter from '@components/code-highlighter';
-import { Link } from 'gatsby-plugin-intl';
+import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 import { metaType } from './code-examples';
 
@@ -10,7 +10,7 @@ const SetMeta = ({}: IProps) => {
     <div className="ComponentRoot">
       <h1>setMeta</h1>
       <div>
-        Принимает один аргумент, который будет записан в{' '}
+        <FormattedMessage id="components.pages.setMeta.description" />{' '}
         <Link to="/api/unit-types/form/$meta" className="Link">
           $meta
         </Link>

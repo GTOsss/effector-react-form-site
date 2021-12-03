@@ -1,3 +1,4 @@
+import { FormattedMessage } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 
 interface IProps {}
@@ -5,10 +6,9 @@ interface IProps {}
 const OnBlurFieldBrowser = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
-      <h1>OnBlurFieldBrowser</h1>
+      <h1>onBlurFieldBrowser</h1>
       <div>
-        Событие, которые при потере фокуса на поле формы. На него можно подписаться через watch, sample и другие методы
-        API effector.
+        <FormattedMessage id="components.pages.onBlurFieldBrowser.description" />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import CodeHighlighter from '@components/code-highlighter';
-import getName from '@pages/api/unit-types/form/get-name';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 import { getNameCode } from './code-examples';
 
@@ -10,10 +10,11 @@ const GetName = ({}: IProps) => {
     <div className="ComponentRoot">
       <h1>getName</h1>
       <div>
-        Утилита, которая собирает переданные аргументы в массив. Поддерживает подсветку полей состояния в, что позволяет
-        легче ориентироваться в сложных многоуровневых формах. В примере ниже, после открытия кавычек в form.getName(),
-        предложит варианты полей. В ts/tsx файлах, при указании несуществующих полей, покажет ошибку типизации.
+        <FormattedMessage id="components.pages.getName.description" />
       </div>
+      <h2>
+        <FormattedMessage id="components.all.usageExample" />
+      </h2>
       <CodeHighlighter code={getNameCode} className="CodeHighlighter" />
     </div>
   );

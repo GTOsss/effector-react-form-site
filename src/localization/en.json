@@ -156,7 +156,8 @@
       "usageExample": "Usage example:",
       "and": "and",
       "Result": "Result:",
-      "here": "here"
+      "here": "here",
+      "formInitialization": "form initialization"
     },
     "pages": {
       "createForm": {
@@ -298,6 +299,34 @@
       },
       "reset": {
         "description": "Resets the form to the initial state."
+      },
+      "onSubmit": {
+        "description": "Sets a function for the Submit event of a form. You can specify it in the"
+      },
+      "setMeta": {
+        "description": "Takes one argument to be written to"
+      },
+      "onChangeFieldBrowser": {
+        "description": "An event that fires when the form fields change. You can subscribe to it through 'watch', 'sample' and other API effector methods."
+      },
+      "onFocusFieldBrowser": {
+        "description": "An event that fires when the focus is on a form field. You can subscribe to it through watch, sample and other API effector methods."
+      },
+      "onBlurFieldBrowser": {
+        "description": "Event that fires when the focus on the form field is lost. You can subscribe to it through watch, sample and other API effector methods."
+      },
+      "fieldInit": {
+        "description": "Event, that fires on the form initialization."
+      },
+      "getName": {
+        "description": "An utility that collects the passed arguments into an array. Supports highlighting of state fields, making it easier to navigate complex layered forms. In the example below, after opening the quotes in form.getName (), it will suggest field options. In ts / tsx files, when specifying non-existent fields, it will show a typing error."
+      },
+      "getNameStr": {
+        "description1st": "A utility that concatenates the supplied strings, dotted. Supports highlighting of status fields, making it easier to navigate large objects. Applicable for navigating flat objects such as the ",
+        "description2nd": " state. In the example below, after opening the quotes in form.getNameStr (), it will suggest field options. In ts / tsx files, when specifying non-existent fields, it will show a typing error."
+      },
+      "name": {
+        "description": "Contains name, passed during"
       }
     }
   }

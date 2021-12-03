@@ -1,3 +1,4 @@
+import { FormattedMessage } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 
 interface IProps {}
@@ -6,7 +7,9 @@ const FieldInit = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
       <h1>fieldInit</h1>
-      <div>Событие, срабатывающее при инициализации поля формы.</div>
+      <div>
+        <FormattedMessage id="components.pages.fieldInit.description" />
+      </div>
     </div>
   );
 };
