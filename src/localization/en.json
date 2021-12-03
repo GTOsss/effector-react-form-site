@@ -301,6 +301,9 @@
       },
       "onSubmit": {
         "description": "Sets a function for the Submit event of a form. You can specify it in the"
+      },
+      "setMeta": {
+        "description": "Takes one argument to be written to"
       }
     }
   }
