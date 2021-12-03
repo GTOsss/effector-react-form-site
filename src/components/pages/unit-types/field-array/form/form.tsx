@@ -1,16 +1,18 @@
 import React, { memo } from 'react';
-import { Link } from 'gatsby-plugin-intl';
+import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 
 interface IProps {}
+
+const path = 'components.pages.fieldArray.form.';
 
 const Form = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
       <h1>form</h1>
       <div>
-        Форма, переданная при{' '}
+        <FormattedMessage id={`${path}description`} />{' '}
         <Link to="/api/unit-creators/create-form" className="Link">
-          инициализации
+          <FormattedMessage id="components.all.initialization" />
         </Link>
         .
       </div>

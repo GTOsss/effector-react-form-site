@@ -15,7 +15,8 @@
       "and": "и",
       "Result": "Результат:",
       "here": "здесь",
-      "formInitialization": "инициализации формы"
+      "formInitialization": "инициализации формы",
+      "initialization": "инициализации"
     },
     "pages": {
       "createForm": {
@@ -188,7 +189,10 @@
       },
       "fieldArray": {
         "description1st": "Позволяет работать напрямую с полями формы, являющимися массивом. Предоставляет объект с методами push и remove для комфортной работы с массивами в формах. Предоставляет метод map через хук",
-        "description2nd": "."
+        "description2nd": ".",
+        "form": {
+          "description": "Форма, переданная при"
+        }
       }
     }
   }

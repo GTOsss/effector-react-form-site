@@ -157,7 +157,8 @@
       "and": "and",
       "Result": "Result:",
       "here": "here",
-      "formInitialization": "form initialization"
+      "formInitialization": "form initialization",
+      "initialization": "initialization"
     },
     "pages": {
       "createForm": {
@@ -330,7 +331,13 @@
       },
       "fieldArray": {
         "description1st": "Allows you to work directly with array form fields. Provides an object with push and remove methods for comfortable working with arrays in forms. Provides a map method via the ",
-        "description2nd": " hook."
+        "description2nd": " hook.",
+        "form": {
+          "description": "The form that was passed during"
+        },
+        "push": {
+          "description": "Method for adding new element to FieldArray and parent form. Takes an object with the field name and value to add. Adding an element to a form field, that is not an array, converts that field to an array with the passed value."
+        }
       }
     }
   }
