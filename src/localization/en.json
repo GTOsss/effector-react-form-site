@@ -304,6 +304,9 @@
       },
       "setMeta": {
         "description": "Takes one argument to be written to"
+      },
+      "onChangeFieldBrowser": {
+        "description": "An event that is triggered when the form fields change. You can subscribe to it through 'watch', 'sample' and other API effector methods."
       }
     }
   }
