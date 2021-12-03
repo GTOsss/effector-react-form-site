@@ -156,7 +156,8 @@
       "usageExample": "Usage example:",
       "and": "and",
       "Result": "Result:",
-      "here": "here"
+      "here": "here",
+      "formInitialization": "form initialization"
     },
     "pages": {
       "createForm": {
@@ -323,6 +324,9 @@
       "getNameStr": {
         "description1st": "A utility that concatenates the supplied strings, dotted. Supports highlighting of status fields, making it easier to navigate large objects. Applicable for navigating flat objects such as the ",
         "description2nd": " state. In the example below, after opening the quotes in form.getNameStr (), it will suggest field options. In ts / tsx files, when specifying non-existent fields, it will show a typing error."
+      },
+      "name": {
+        "description": "Contains name, passed during"
       }
     }
   }

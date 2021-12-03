@@ -1,4 +1,4 @@
-import { Link } from 'gatsby-plugin-intl';
+import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 
 interface IProps {}
@@ -8,9 +8,9 @@ const Name = ({}: IProps) => {
     <div className="ComponentRoot">
       <h1>Name</h1>
       <div>
-        Содержит имя, переданное при{' '}
+        <FormattedMessage id="components.pages.name.description" />{' '}
         <Link to="/api/unit-creators/create-form" className="Link">
-          инициализации формы
+          <FormattedMessage id="components.all.formInitialization" />
         </Link>
         .
       </div>

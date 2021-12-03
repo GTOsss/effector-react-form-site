@@ -14,7 +14,7 @@ const Meta = ({}: IProps) => {
       <div>
         <FormattedMessage id={`${path}description1st`} />{' '}
         <Link to="/api/unit-creators/create-form" className="Link">
-          <FormattedMessage id={`${path}formInitialization`} />
+          <FormattedMessage id="components.all.formInitialization" />
         </Link>
         :
       </div>
