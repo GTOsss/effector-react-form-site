@@ -171,6 +171,9 @@
       },
       "onBlurFieldBrowser": {
         "description" : "An event that is triggered when the focus on the form field is lost. You can subscribe to it through watch, sample and other API effector methods."
+      },
+      "fieldInit": {
+        "description": "Событие, срабатывающее при инициализации поля формы."
       }
     }
   }
