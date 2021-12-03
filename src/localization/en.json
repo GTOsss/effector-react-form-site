@@ -307,6 +307,9 @@
       },
       "onChangeFieldBrowser": {
         "description": "An event that is triggered when the form fields change. You can subscribe to it through 'watch', 'sample' and other API effector methods."
+      },
+      "onFocusFieldBrowser": {
+        "description": "An event that is triggered when the focus is on a form field. You can subscribe to it through watch, sample and other API effector methods."
       }
     }
   }
