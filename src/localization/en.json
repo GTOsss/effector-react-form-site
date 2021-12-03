@@ -158,7 +158,8 @@
       "Result": "Result:",
       "here": "here",
       "formInitialization": "form initialization",
-      "initialization": "initialization"
+      "initialization": "initialization",
+      "or": "or"
     },
     "pages": {
       "createForm": {
@@ -341,6 +342,38 @@
         "remove": {
           "description": "Method to remove element from FieldArray and parent form. Takes an object with the name of the field and the index at which to remove the item. Removing an element from a form field that is not an array converts that field to an empty array."
         }
+      },
+      "useForm": {
+        "description1st": "A hook for using a form inside a functional component. Takes an object with 'form', 'meta' and 'resetUnmount' fields.",
+        "formDescription": "used form",
+        "metaDescription1st": "data for passing to forms",
+        "metaDescription2nd": ".",
+        "resetUnmountDescription": "describes whether the state of the form should be reset when the component is unmounted. True by default.",
+        "description2nd": "We have already discussed the principle of operation of the returned methods above, with the exception of only 'controller' and 'handleSubmit', so here we will talk about them.",
+        "controllerDescription": "when called, it takes an object with fields 'name', 'flat' and 'validate' and returns a function that encloses these values.",
+        "nameDescription": "field name. Nested fields can be specified using",
+        "flatDescription": "if true, the passed 'user.name' format name argument will mean access to the field in the { 'user.name': '' }. If flat is false, the controller will have access to the nested object's field { 'user': { name: '' } }. The default is false.",
+        "validateDescription": "takes a validation function for a form field, which should return an error string or 'undefined'.",
+        "description3rd": "The function returned by the first call takes no arguments and returns an object with methods for manipulating the form field and information about it.",
+        "input": {
+          "name": "contains name of field in the",
+          "value": "contains the value of the form element",
+          "onChange": "a function to pass the onChange event of the html-element to the"
+        },
+        "formController": "data about form state",
+        "metaController": "meta of the form",
+        "fieldState": "field data from the",
+        "error1st": "contains a field error from",
+        "error2nd": ". Outer errors from $outerErrorsInline take precedence.",
+        "innerError": "contains a field error from",
+        "outerError": "contains a field error from",
+        "isShowError": "a boolean value to conditionally render the error text. True if isShowOuterError or isShowInnerError is set to true.",
+        "isShowOuterError": "a boolean value to conditionally render text with an outer error.",
+        "isShowInnerError": "a boolean value to conditionally render the error text.",
+        "validate": "contains a validation function passed to controller.",
+        "method1st": " ",
+        "method2nd": " method.",
+        "handleSubmit": "method for submitting to the onSubmit handler of the html-form. Prevents the default actions of the onSubmit event."
       }
     }
   }
