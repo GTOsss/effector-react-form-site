@@ -337,6 +337,9 @@
         },
         "push": {
           "description": "Method for adding new element to FieldArray and parent form. Takes an object with the field name and value to add. Adding an element to a form field, that is not an array, converts that field to an array with the passed value."
+        },
+        "remove": {
+          "description": "Method to remove element from FieldArray and parent form. Takes an object with the name of the field and the index at which to remove the item. Removing an element from a form field that is not an array converts that field to an empty array."
         }
       }
     }
