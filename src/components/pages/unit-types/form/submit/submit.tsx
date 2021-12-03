@@ -11,7 +11,7 @@ const Submit = ({}: IProps) => {
     <div className="ComponentRoot">
       <h1>submit</h1>
       <div>
-        <FormattedMessage id="components.pages.submit.description" />
+        <FormattedMessage id="components.pages.submit.description" />.
       </div>
       <CodeHighlighter code={submitCode} className="CodeHighlighter" />
       <SubmitExample />
