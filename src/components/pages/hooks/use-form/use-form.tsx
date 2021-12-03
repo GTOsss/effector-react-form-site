@@ -12,8 +12,24 @@ const UseForm = ({}: IProps) => {
       <div>
         Хук для использования формы внутри функционального компонента. Принимает объект с полем form, meta и
         resetUnmount.
+        <ol className="List">
+          <li>
+            <span className="ListItemName">form</span>: используемая форма.
+          </li>
+          <li>
+            <span className="ListItemName">meta</span>: данные для передачи в{' '}
+            <Link to="/api/unit-types/$meta" className="Link">
+              $meta
+            </Link>{' '}
+            формы.
+          </li>
+          <li>
+            <span className="ListItemName">resetUnmount</span>: говорит, нужно ли сбрасывать состояние формы при
+            размонтировании компонента. По умолчанию true.
+          </li>
+        </ol>
         <CodeHighlighter code={useFormExample} className="CodeHighlighter" />
-        Принцип работы вовзращаемых методов мы уже рассматривали выше, за исключением лишь controller и handleSubmit,
+        Принцип работы возвращаемых методов мы уже рассматривали выше, за исключением лишь controller и handleSubmit,
         так что здесь мы поговорим о них.
       </div>
       <ol className="List">
