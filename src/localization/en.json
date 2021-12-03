@@ -310,6 +310,9 @@
       },
       "onFocusFieldBrowser": {
         "description": "An event that is triggered when the focus is on a form field. You can subscribe to it through watch, sample and other API effector methods."
+      },
+      "onBlurFieldBrowser": {
+        "description": "An event that is triggered when the focus on the form field is lost. You can subscribe to it through watch, sample and other API effector methods."
       }
     }
   }

@@ -1,3 +1,4 @@
+import { FormattedMessage } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 
 interface IProps {}
@@ -7,8 +8,7 @@ const OnFocusFieldBrowser = ({}: IProps) => {
     <div className="ComponentRoot">
       <h1>onFocusFieldBrowser</h1>
       <div>
-        Событие, которые срабатывает при фокусе на поле формы. На него можно подписаться через watch, sample и другие
-        методы API effector.
+        <FormattedMessage id="components.pages.onFocusFieldBrowser.description" />
       </div>
     </div>
   );

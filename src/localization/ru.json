@@ -165,6 +165,12 @@
       },
       "onChangeFieldBrowser": {
         "description": "Событие, которые срабатывает при изменении полей формы. На него можно подписаться через watch, sample и другие методы API effector."
+      },
+      "onFocusFieldBrowser": {
+        "description": "Событие, которые срабатывает при фокусе на поле формы. На него можно подписаться через watch, sample и другие методы API effector."
+      },
+      "onBlurFieldBrowser": {
+        "description" : "An event that is triggered when the focus on the form field is lost. You can subscribe to it through watch, sample and other API effector methods."
       }
     }
   }
