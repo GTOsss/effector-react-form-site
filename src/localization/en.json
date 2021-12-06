@@ -159,7 +159,11 @@
       "here": "here",
       "formInitialization": "form initialization",
       "initialization": "initialization",
-      "or": "or"
+      "or": "or",
+      "showContent": "Show content",
+      "hideContent": "Hide content",
+      "showTypes": "Show types",
+      "hideTypes": "Hide types"
     },
     "pages": {
       "createForm": {

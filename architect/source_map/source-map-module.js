@@ -59,6 +59,7 @@ const map = {
   components: {
     'nav-element': 'component',
     'language-switcher': 'component',
+    spoiler: 'component',
   },
   'components/pages/unit-creators': {
     'create-form': 'component',
