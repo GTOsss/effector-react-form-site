@@ -2,7 +2,7 @@ import CodeHighlighter from '@components/code-highlighter';
 import Spoiler from '@components/spoiler';
 import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
-import { mapSubmitTypes, onSubmitTypes, validateExample, validateTypes } from './code-examples';
+import { mapSubmitExample, mapSubmitTypes, onSubmitTypes, validateExample, validateTypes } from './code-examples';
 import createFormCode from './create-form-code';
 
 interface IProps {}
@@ -73,6 +73,12 @@ const CreateForm = ({}: IProps) => {
             secondLabel={<FormattedMessage id="components.all.hideTypes" />}
           >
             <CodeHighlighter code={mapSubmitTypes} className="CodeHighlighter" />
+          </Spoiler>
+          <Spoiler
+            label={<FormattedMessage id="components.all.showExample" />}
+            secondLabel={<FormattedMessage id="components.all.hideExample" />}
+          >
+            <CodeHighlighter code={mapSubmitExample} className="CodeHighlighter" />
           </Spoiler>
         </li>
         <li>
