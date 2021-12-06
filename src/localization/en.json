@@ -173,8 +173,12 @@
         "Arguments": "Arguments",
         "Formula": "Formula",
         "formName": "form name",
-        "validateDescription1st": "Accepts the values ​​of form fields Values ​​and an object with additional parameters",
-        "validateDescription2nd": "Returns an object with invalid field errors",
+        "validateDescription1st": "takes the values ​​of form fields",
+        "validateDescription1.5": ", an object with additional parameters",
+        "validateDescription2nd": ", fields data from",
+        "validateDescription3rd": ", an object with form errors from",
+        "validateDescription4th": "and objet with form state from",
+        "validateDescription5th": "Returns an object with invalid field errors",
         "mapSubmitDescription": "a function that transforms data that received from the form fields before passing it to the onSubmit function",
         "onSubmitDescription1st": "a function that fires on a form submit event",
         "onSubmitDescription2nd": ". Receives converted data from mappedValues ​​function (if specified) or directly data from form fields and an object with",
@@ -217,10 +221,10 @@
       "$outerErrorsInline": {
         "description1st": "Stor for",
         "serverValidation": "server validation",
-        "description2nd": "errors. Unlike errors in",
+        "description2nd": " errors. Unlike errors in",
         "description3rd": "do not block form submissions. After changing the field values, external errors are hidden, but remain in the form state. Once submitted, the errors will be displayed again until the fields change.",
         "description4th": "You can set external errors using the",
-        "end": "setters."
+        "end": " setters."
       },
       "$fieldsInline": {
         "description1st": "Store containing an object with metadata about",
