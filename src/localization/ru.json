@@ -17,7 +17,11 @@
       "here": "здесь",
       "formInitialization": "инициализации формы",
       "initialization": "инициализации",
-      "or": "или"
+      "or": "или",
+      "showContent": "Показать контент",
+      "hideContent": "Скрыть контент",
+      "showTypes": "Показать типизацию",
+      "hideTypes": "Скрыть типизацию"
     },
     "pages": {
       "createForm": {
@@ -205,7 +209,7 @@
         "description1st": "Хук для использования формы внутри функционального компонента. Принимает объект с полем form, meta и resetUnmount.",
         "formDescription": "используемая форма",
         "metaDescription1st": "данные для передачи в",
-        "metaDescription2nd": "формы",
+        "metaDescription2nd": " формы.",
         "resetUnmountDescription": "говорит, нужно ли сбрасывать состояние формы при размонтировании компонента. По умолчанию true.",
         "description2nd": "Принцип работы возвращаемых методов мы уже рассматривали выше, за исключением лишь 'controller' и 'handleSubmit',так что здесь мы поговорим о них.",
         "controllerDescritpion": "при вызове принимает объект с полями 'name', 'flat' и 'validate' и возвращает функцию, которая замыкает в себе эти значения.",

@@ -6,15 +6,25 @@ type Meta = any;
 
 export const form = createForm({
   name?: string;
-  validate?: FormValidate<Values, Meta>;
+
+  validate?: (params: ValidateParams<Values, Meta>)) => ErrorsInline;
+  
   mapSubmit?: MapSubmit<Values, MappedValues, Meta>;
+
   onSubmit?: OnSubmit<MappedValues, Meta>;
+
   onSubmitGuardFn?: GuardFn<Values, Meta>;
+
   onChange?: OnChange<Values, Meta>;
+
   onChangeGuardFn?: GuardFn<Values, Meta>;
+
   initialValues?: Values;
+
   initialMeta?: Meta;
+
   domain?: Domain;
+  
   resetOuterErrorsBySubmit?: boolean;
   resetOuterErrorByOnChange?: boolean;
 });

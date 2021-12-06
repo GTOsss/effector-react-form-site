@@ -21,7 +21,7 @@ const UseForm = ({}: IProps) => {
             <span className="ListItemName">meta</span>: <FormattedMessage id={`${path}metaDescription1st`} />{' '}
             <Link to="/api/unit-types/$meta" className="Link">
               $meta
-            </Link>{' '}
+            </Link>
             <FormattedMessage id={`${path}metaDescription2nd`} />
           </li>
           <li>
