@@ -384,6 +384,23 @@
         "method1st": " ",
         "method2nd": " method.",
         "handleSubmit": "method for submitting to the onSubmit handler of the html-form. Prevents the default actions of the onSubmit event."
+      },
+      "useError": {
+        "description": "Hook to access the error fields from the parent element. Before that, we received errors inside the Input component, after calling the controller. But what if we need to get errors in the parent component? There is useError for this. The useError hook takes two arguments: the name of the field and the form whose fields we are interested in.",
+        "inputValueDescription": "contains the value written in the input.",
+        "formDescription1st": "contains data from the",
+        "formDescription2nd": "meta of the submitted form.",
+        "metaDescription1st": "contains data from the",
+        "metaDescription2nd": "meta of the submitted form.",
+        "fieldStateDescription1st": "contains data from the",
+        "fieldStateDescription2nd": "the specified form field.",
+        "errorDescription1st": "contains a field error from",
+        "errorDescription2nd": ". Outer errors from $outerErrorsInline take precedence.",
+        "innerErrorDescription": "contains a field error from",
+        "outerErrorDescription": "contains a field error from",
+        "isShowErrorDescription": "a boolean value to conditionally render the error text. True if isShowOuterError or isShowInnerError is set to true.",
+        "isShowOuterErrorDescription": "a boolean value to conditionally render text with an outer error.",
+        "isShowInnerErrorDescription": "a boolean value to conditionally render the error text."
       }
     }
   }

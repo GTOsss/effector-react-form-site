@@ -242,6 +242,23 @@
         "method1st": " метод ",
         "method2nd": ".",
         "handleSubmit": "метод для передачи в обработчик onSubmit html-формы. Отменяет действия по умолчанию события onSubmit."
+      },
+      "useError": {
+        "description": "Хук, для доступа к полям ошибки из родительского элемента. До этого мы получали ошибки внутри компонента Input, после вызова контроллера. Но что, если нам нужно получать ошибки в родительскомм компоненте? Для это существует useError. Хук useError принимает два аргумента: имя поля и форму, поля которой нас интересуют.",
+        "inputValueDescription": "содержит значение, записанное в инпуте.",
+        "formDescription1st": "содержит данные из",
+        "formDescription2nd": "переданной формы.",
+        "metaDescription1st": "содержит данные из",
+        "metaDescription2nd": "переданной формы.",
+        "fieldStateDescription1st": "содержит данные из",
+        "fieldStateDescription2nd": "указанного поля формы.",
+        "errorDescription1st": "содержит ошибку поля из",
+        "errorDescription2nd": ". Внешние ошибки из $outerErrorsInline имеют приоритет.",
+        "innerErrorDescription": "содержит ошибку поля из",
+        "outerErrorDescription": "содержит ошибку поля из",
+        "isShowErrorDescription": "булевое значение для условного рендеринга текста с ошибкой. Имеет значение true, если в isShowOuterError или isShowInnerError записано true.",
+        "isShowOuterErrorDescription": "булевое значение для условного рендеринга текста с внешней ошибкой.",
+        "isShowInnerErrorDescription": "булевое значение для условного рендеринга текста с ошибкой."
       }
     }
   }

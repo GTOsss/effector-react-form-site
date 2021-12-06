@@ -134,6 +134,9 @@ type FormState = {
 };
 `;
 
+const mapSubmitExampleTs = `
+`; 
+
 export const onSubmitTypes = `type SubmitParams<Values = any, Meta = any> = {
   values: Values;
   errorsInline: ErrorsInline;
