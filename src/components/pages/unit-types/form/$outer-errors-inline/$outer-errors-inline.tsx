@@ -12,7 +12,7 @@ const OuterErrorsInline = ({}: IProps) => {
       <div>
         <FormattedMessage id={`${path}description1st`} />{' '}
         <Link to="/examples/server-side-validation" className="Link">
-          серверной валидации
+          <FormattedMessage id={`${path}serverValidation`} />
         </Link>
         <FormattedMessage id={`${path}description2nd`} />{' '}
         <Link to="/unit-types/form/$errors-inline" className="Link">

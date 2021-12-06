@@ -33,10 +33,26 @@ const CreateForm = ({}: IProps) => {
         </li>
         <li>
           <span className="ListItemName">validate</span>: <FormattedMessage id={`${path}validateDescription1st`} />{' '}
+          <Link to="/api/unit-types/form/$values" className="Link">
+            $values
+          </Link>
+          <FormattedMessage id={`${path}validateDescription1.5`} />{' '}
           <Link to="/api/unit-types/form/$meta" className="Link">
             meta
           </Link>
-          . <FormattedMessage id={`${path}validateDescription2nd`} />.{' '}
+          <FormattedMessage id={`${path}validateDescription2nd`} />{' '}
+          <Link to="/api/unit-types/form/$fields-inline" className="Link">
+            $fieldsInline
+          </Link>
+          <FormattedMessage id={`${path}validateDescription3rd`} />{' '}
+          <Link to="/api/unit-types/form/$errors-inline" className="Link">
+            $errorsInline
+          </Link>{' '}
+          <FormattedMessage id={`${path}validateDescription4th`} />{' '}
+          <Link to="/api/unit-types/form/$form" className="Link">
+            $form
+          </Link>
+          . <FormattedMessage id={`${path}validateDescription5th`} />{' '}
           <Spoiler
             label={<FormattedMessage id="components.all.showTypes" />}
             secondLabel={<FormattedMessage id="components.all.hideTypes" />}
