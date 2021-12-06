@@ -1,3 +1,7 @@
+import { mapSubmitExampleJs, mapSubmitExampleTs } from './map-submit';
+import { onSubmitExampleJs, onSubmitExampleTs } from './on-submit';
+import { validateExampleJs, validateExampleTs } from './validate';
+
 export const validateTypes = `
 type ValidateParams<Values = any, Meta = any> = {
   values: Values;
@@ -34,62 +38,6 @@ type FormState = {
   hasError: boolean;
   hasOuterError: boolean;
 };
-`;
-
-export const validateExampleTs = `import { createForm } from 'effector-react-form';
-
-type Values = {
-  oldPassword: string;
-  newPassword: string;
-  repeatPassword: string;
-};
-
-type ErrorsInline = {
-  [x: string]: string | null | undefined;
-};
-
-const validateForm = ({ values }: FormValidateParams<Values, any>) => {
-  const errors: ErrorsInline = {};
-
-  if (values.newPassword !== values.repeatPassword) {
-    errors.newPassword = 'passwordsDontMatch';
-    errors.repeatPassword = 'passwordsDontMatch';
-  }
-
-  if (values.newPassword && values.newPassword === values.oldPassword) {
-    errors.newPassword = 'passwordMustDiffer';
-  }
-
-  return errors;
-};
-
-const formChangePassword = createForm<ValuesChangePassword>({
-  validate: validateForm,
-  onSubmit: submitFx,
-});
-`;
-
-export const validateExampleJs = `import { createForm } from 'effector-react-form';
-
-const validateForm = ({ values }) => {
-  const errors = {};
-
-  if (values.newPassword !== values.repeatPassword) {
-    errors.newPassword = 'passwordsDontMatch';
-    errors.repeatPassword = 'passwordsDontMatch';
-  }
-
-  if (values.newPassword && values.newPassword === values.oldPassword) {
-    errors.newPassword = 'passwordMustDiffer';
-  }
-
-  return errors;
-};
-
-const formChangePassword = createForm({
-  validate: validateForm,
-  onSubmit: submitFx,
-});
 `;
 
 export const validateExample = {
@@ -134,40 +82,6 @@ type FormState = {
 };
 `;
 
-const mapSubmitExampleTs = `import { createForm } from 'effector-react-form';
-
-type Values = {
-  name: string;
-  lastName: string;
-  isNewUser?: any;
-};
-
-const form = createForm<Values>({
-  mapSubmit: ({ values, meta, ...rest }) => {
-    const mappedValues = {
-      ...values,
-      isNewUser: meta.newUser,
-    };
-    return { ...rest, values: mappedValues, meta };
-  },
-  onSubmit: ({ values }) => postUserFx(values),
-});
-`;
-
-const mapSubmitExampleJs = `import { createForm } from 'effector-react-form';
-
-const form = createForm({
-  mapSubmit: ({ values, meta, ...rest }) => {
-    const mappedValues = {
-      ...values,
-      isNewUser: meta.newUser,
-    };
-    return { ...rest, values: mappedValues, meta };
-  },
-  onSubmit: ({ values }) => postUserFx(values),
-});
-`;
-
 export const mapSubmitExample = {
   jsx: mapSubmitExampleJs,
   tsx: mapSubmitExampleTs,
@@ -209,3 +123,8 @@ type FormState = {
   hasOuterError: boolean;
 };
 `;
+
+export const onSubmitExample = {
+  tsx: onSubmitExampleTs,
+  jsx: onSubmitExampleJs,
+};
