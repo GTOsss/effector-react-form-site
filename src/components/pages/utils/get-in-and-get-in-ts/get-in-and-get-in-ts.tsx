@@ -1,31 +1,36 @@
 import CodeHighlighter from '@components/code-highlighter';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
-import { getInType } from './code-examples';
-import styles from './styles.module.scss';
+import { getInTsType, getInType } from './code-examples';
 
 interface IProps {}
+
+const path = 'components.pages.getIn.';
 
 const GetInAndGetInTs = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
       <h1>getIn</h1>
-      <div>Утилита, для получения значения из вложенных объектов. Принимает три аргумента</div>
+      <div>
+        <FormattedMessage id={`${path}description1st`} />
+      </div>
       <CodeHighlighter code={getInType} className="CodeHighlighter" />
       <ol className="List">
         <li>
-          <span className="ListItemName">state</span>: объект, в котором содержится значение.
+          <span className="ListItemName">state</span>: <FormattedMessage id={`${path}state`} />
         </li>
         <li>
-          <span className="ListItemName">path</span> путь к значению. Может быть как обычной строкой: 'name', массивом
-          строк: ['user', 'name'] или же строкой, описывающий путь к свойству через точку: 'user.name'.
+          <span className="ListItemName">path</span>: <FormattedMessage id={`${path}path`} />
         </li>
         <li>
-          <span className="ListItemName">defaultValue</span>: опциональный параметр. В случае, если результат не
-          получен, передан невалидный field или state, вернётся значение по умолчанию.
+          <span className="ListItemName">defaultValue</span>: <FormattedMessage id={`${path}defaultValue`} />
         </li>
       </ol>
       <h1>getInTs</h1>
-      <div>Является улучшенной версией getIn с подсветкой типизации</div>
+      <div>
+        <FormattedMessage id={`${path}description2nd`} />
+      </div>
+      <CodeHighlighter code={getInTsType} className="CodeHighlighter" />
     </div>
   );
 };

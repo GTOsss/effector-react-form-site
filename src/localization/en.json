@@ -401,6 +401,55 @@
         "isShowErrorDescription": "a boolean value to conditionally render the error text. True if isShowOuterError or isShowInnerError is set to true.",
         "isShowOuterErrorDescription": "a boolean value to conditionally render text with an outer error.",
         "isShowInnerErrorDescription": "a boolean value to conditionally render the error text."
+      },
+      "useFieldArray": {
+        "description1st": "Hook for using",
+        "description2nd": "in functional component. Takes a",
+        "description3rd": "and the name of the form field that contains the array as arguments. In addition to the push and remove methods, it also provides a map method for iterating over an array of values.",
+        "description4th": "Using the push and remove methods that the useFieldArray hook returns is slightly different from the methods of the same name available directly from the",
+        "description5th": "object. The difference is that the push method only accepts the value to be added to the array, while remove only takes the index of the element to be removed from the array. The fieldName parameter is no longer needed, since we passed it to the useFieldArray hook.",
+        "description6th": "The map method iterates over the array of values, returning an object for each field:",
+        "field": "contains the value of the field.",
+        "fields": "contains the full array.",
+        "formItemName": "field name. This is the dotted concatenation of the name of the field that contains the array and the index of the element.",
+        "index": "element index."
+      },
+      "deleteIn": {
+        "description": "A utility for removing a property in an object with nested fields or an element in an array. Takes 4 arguments, of which the first two are required and two are optional. This method is immutable: it does not modify the passed object, but returns a new object or array.",
+        "state": "an object or array from which the element will be removed. Can be an array or an object.",
+        "path": "the path to the item to remove. It can be either a regular string: 'name', an array of strings: ['user', 'name'], or a string describing the path to the property through a dot: 'user.name'.",
+        "removeEmpty": "specifies whether to delete an empty object if there were no other properties in the object. Examples of execution:",
+        "inDeep": "boolean value. Tells whether the property to be deleted is in a nested object or not. The default is true. When removing from a flat object, you must specify false."
+      },
+      "getIn": {
+        "description1st": "Utility to get values ​​from nested objects. It takes three arguments:",
+        "state": "the object that contains the value.",
+        "path": "path to value. It can be either a regular string: 'name', an array of strings: ['user', 'name'], or a string describing the path to the property through a dot: 'user.name'.",
+        "defaultValue": "optional parameter. If the result is not received, an invalid field or state is passed, the default value will be returned.",
+        "description2nd": "It is an improved version of getIn with highlighting of object fields. When declaring a path, it offers options for the fields existing in the object, if you enter a non-existent field, it will highlight a typing error. Works with fields up to seven nesting levels."
+      },
+      "setIn": {
+        "description1st": "Helps you to set a value to a nested object. It takes three arguments:",
+        "state": "the object to set the value to.",
+        "path": "the path where the value will be set. It can be either a regular string: 'name', an array of strings: ['user', 'name'], or a string describing the path to the property through a dot: 'user.name'.",
+        "value": "value to be set into the object.",
+        "description2nd": "Returns a new object without mutating the original."
+      },
+      "makeNested": {
+        "description1st": "Takes an object with fields of the following format:",
+        "description2nd": "and returns an object with nested properties:",
+        "description3rd": "The method does not mutate the original object, but returns a new one."
+      },
+      "removeFromInlineMap": {
+        "description1st": "A method for removing form state objects from inline objects. Returns a new object without mutating the original. The main feature is that in pseudo-nested objects such as the",
+        "description2nd": "state, pseudo-nested fields are also removed. Example object in $ fieldsInline:",
+        "description3rd": "This method is mainly used for low-level form manipulation when you need to directly remove fields from state in child components such as",
+        "description4th": ". In most cases, the API described above is sufficient."
+      },
+      "createNameHelper": {
+        "description": "Returns two methods for conveniently getting the path to nested fields:",
+        "getPath": "collects the passed arguments into an array:",
+        "getStr": "concatenates the passed strings through the dote:"
       }
     }
   }

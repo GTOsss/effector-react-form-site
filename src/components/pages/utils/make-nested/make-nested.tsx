@@ -1,18 +1,25 @@
 import CodeHighlighter from '@components/code-highlighter';
+import { FormattedMessage } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
 import { flatObject, nestedObject } from './code-examples';
 
 interface IProps {}
 
+const path = 'components.pages.setIn.';
+
 const MakeNested = ({}: IProps) => {
   return (
     <div className="ComponentRoot">
       <h1>makeNested</h1>
-      <div>Принимает объект с полями формата:</div>
+      <div>
+        <FormattedMessage id={`${path}description1st`} />
+      </div>
       <CodeHighlighter code={flatObject} className="CodeHighlighter" />
-      <div>и возвращает объект со вложенными свойствами:</div>
+      <div>
+        <FormattedMessage id={`${path}description2nd`} />
+      </div>
       <CodeHighlighter code={nestedObject} className="CodeHighlighter" />
-      Метод не мутирует исходный объект, а возвращает новый.
+      <FormattedMessage id={`${path}description3rd`} />
     </div>
   );
 };
