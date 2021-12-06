@@ -6,7 +6,7 @@ import { useErrorExample } from './code-examples';
 interface IProps {}
 
 const path = 'components.pages.useError.';
-<FormattedMessage id={`${path}`} />
+
 const UseError = ({}: IProps) => {
   return (
     <div className="ComponentRoot">

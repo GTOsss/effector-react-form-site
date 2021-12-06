@@ -401,6 +401,18 @@
         "isShowErrorDescription": "a boolean value to conditionally render the error text. True if isShowOuterError or isShowInnerError is set to true.",
         "isShowOuterErrorDescription": "a boolean value to conditionally render text with an outer error.",
         "isShowInnerErrorDescription": "a boolean value to conditionally render the error text."
+      },
+      "useFieldArray": {
+        "description1st": "Hook for using",
+        "description2nd": "in functional component. Takes a",
+        "description3rd": "and the name of the form field that contains the array as arguments. In addition to the push and remove methods, it also provides a map method for iterating over an array of values.",
+        "description4th": "Using the push and remove methods that the useFieldArray hook returns is slightly different from the methods of the same name available directly from the",
+        "description5th": "object. The difference is that the push method only accepts the value to be added to the array, while remove only takes the index of the element to be removed from the array. The fieldName parameter is no longer needed, since we passed it to the useFieldArray hook.",
+        "description6th": "The map method iterates over the array of values, returning an object for each field:",
+        "field": "contains the value of the field.",
+        "fields": "contains the full array.",
+        "formItemName": "field name. This is the dotted concatenation of the name of the field that contains the array and the index of the element.",
+        "index": "element index."
       }
     }
   }
