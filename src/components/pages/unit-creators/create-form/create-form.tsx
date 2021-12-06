@@ -6,6 +6,7 @@ import {
   mapSubmitExample,
   mapSubmitTypes,
   onSubmitExample,
+  onSubmitGuardExample,
   onSubmitTypes,
   validateExample,
   validateTypes,
@@ -118,6 +119,18 @@ const CreateForm = ({}: IProps) => {
             meta
           </Link>
           .
+          <Spoiler
+            label={<FormattedMessage id="components.all.showTypes" />}
+            secondLabel={<FormattedMessage id="components.all.hideTypes" />}
+          >
+            <CodeHighlighter code={onSubmitTypes} className="CodeHighlighter" />
+          </Spoiler>
+          <Spoiler
+            label={<FormattedMessage id="components.all.showExample" />}
+            secondLabel={<FormattedMessage id="components.all.hideExample" />}
+          >
+            <CodeHighlighter code={onSubmitGuardExample} className="CodeHighlighter" />
+          </Spoiler>
         </li>
         <li>
           <span className="ListItemName">onChange</span>: <FormattedMessage id={`${path}onChangeDescription`} />{' '}
