@@ -11,7 +11,7 @@ export const form = createForm({
   
   mapSubmit?: (params: SubmitParams<Values, Meta>,) => SubmitParams<ResultValues, Meta>;
 
-  onSubmit?: OnSubmit<MappedValues, Meta>;
+  onSubmit?: (params: SubmitParams<Values, Meta>) => void;
 
   onSubmitGuardFn?: GuardFn<Values, Meta>;
 
