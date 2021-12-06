@@ -163,7 +163,9 @@
       "showContent": "Show content",
       "hideContent": "Hide content",
       "showTypes": "Show types",
-      "hideTypes": "Hide types"
+      "hideTypes": "Hide types",
+      "showExample": "Show example",
+      "hideExample": "Hide example"
     },
     "pages": {
       "createForm": {

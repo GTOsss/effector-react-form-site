@@ -9,7 +9,7 @@ export const form = createForm({
 
   validate?: (params: ValidateParams<Values, Meta>)) => ErrorsInline;
   
-  mapSubmit?: MapSubmit<Values, MappedValues, Meta>;
+  mapSubmit?: (params: SubmitParams<Values, Meta>,) => SubmitParams<ResultValues, Meta>;
 
   onSubmit?: OnSubmit<MappedValues, Meta>;
 
