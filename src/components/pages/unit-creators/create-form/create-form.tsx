@@ -2,7 +2,7 @@ import CodeHighlighter from '@components/code-highlighter';
 import Spoiler from '@components/spoiler';
 import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
-import { validateTypes } from './code-examples';
+import { mapSubmitTypes, onSubmitTypes, validateExample, validateTypes } from './code-examples';
 import createFormCode from './create-form-code';
 
 interface IProps {}
@@ -36,16 +36,28 @@ const CreateForm = ({}: IProps) => {
           <Link to="/api/unit-types/form/$meta" className="Link">
             meta
           </Link>
-          . <FormattedMessage id={`${path}validateDescription2nd`} />.
+          . <FormattedMessage id={`${path}validateDescription2nd`} />.{' '}
           <Spoiler
             label={<FormattedMessage id="components.all.showTypes" />}
             secondLabel={<FormattedMessage id="components.all.hideTypes" />}
           >
             <CodeHighlighter code={validateTypes} className="CodeHighlighter" />
           </Spoiler>
+          <Spoiler
+            label={<FormattedMessage id="components.all.showExample" />}
+            secondLabel={<FormattedMessage id="components.all.hideExample" />}
+          >
+            <CodeHighlighter code={validateExample} className="CodeHighlighter" />
+          </Spoiler>
         </li>
         <li>
-          <span className="ListItemName">mapSubmit</span>: <FormattedMessage id={`${path}mapSubmitDescription`} />.
+          <span className="ListItemName">mapSubmit</span>: <FormattedMessage id={`${path}mapSubmitDescription`} />.{' '}
+          <Spoiler
+            label={<FormattedMessage id="components.all.showTypes" />}
+            secondLabel={<FormattedMessage id="components.all.hideTypes" />}
+          >
+            <CodeHighlighter code={mapSubmitTypes} className="CodeHighlighter" />
+          </Spoiler>
         </li>
         <li>
           <span className="ListItemName">onSubmit</span>: <FormattedMessage id={`${path}onSubmitDescription1st`} />{' '}
@@ -56,7 +68,13 @@ const CreateForm = ({}: IProps) => {
           <Link to="/api/unit-types/form/$meta" className="Link">
             meta
           </Link>
-          .
+          .{' '}
+          <Spoiler
+            label={<FormattedMessage id="components.all.showTypes" />}
+            secondLabel={<FormattedMessage id="components.all.hideTypes" />}
+          >
+            <CodeHighlighter code={onSubmitTypes} className="CodeHighlighter" />
+          </Spoiler>
         </li>
         <li>
           <span className="ListItemName">onSubmitGuardFn</span>:{' '}

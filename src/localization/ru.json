@@ -21,7 +21,9 @@
       "showContent": "Показать контент",
       "hideContent": "Скрыть контент",
       "showTypes": "Показать типизацию",
-      "hideTypes": "Скрыть типизацию"
+      "hideTypes": "Скрыть типизацию",
+      "showExample": "Показать пример",
+      "hideExample": "Скрыть пример"
     },
     "pages": {
       "createForm": {
