@@ -12,9 +12,7 @@ const Page: React.FC<Props> = ({}) => {
       <h1>
         <FormattedMessage id="examples.wizard.title" />
       </h1>
-      <p>
-        <FormattedMessage id="examples.wizard.description" values={{ br: <br /> }} />
-      </p>
+      <p>{/* <FormattedMessage id="examples.wizard.description" values={{ br: <br /> }} /> */}</p>
       <Wizard />
       <div className="row code-center">
         <JsonExample source={$allFormValues} title="$allFormValues" />
