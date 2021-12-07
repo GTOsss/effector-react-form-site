@@ -1,8 +1,8 @@
+import React, { memo, useState, useRef, useEffect } from 'react';
 import JsonExample from '@components/json-example';
 import cn from 'classnames';
 import { Store } from 'effector';
 import { Form } from 'effector-react-form';
-import React, { memo, useState } from 'react';
 import Settings from '../../assets/images/Settings.svg';
 import styles from './styles.module.scss';
 
@@ -24,10 +24,34 @@ const StoresContainer = ({ form, $formSnapshot }: IProps) => {
     $formSnapshot: Boolean($formSnapshot),
   });
 
+  const filterRef = useRef(null);
+
+  const handleClickOutside = (e: MouseEvent) => {
+    if (filterRef.current && !filterRef.current.contains(e.target)) {
+      setShowFilter(false);
+      document.removeEventListener('click', handleClickOutside);
+    }
+  };
+
+  const handleSettingsClick = () => {
+    if (!showFilter) {
+      document.addEventListener('click', handleClickOutside);
+    } else {
+      document.removeEventListener('click', handleClickOutside);
+    }
+    setShowFilter((prev) => !prev);
+  };
+
+  useEffect(() => {
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+
   return (
     <div className={styles.root}>
-      <div className={styles.filterWrapper}>
-        <button className={styles.settingButton} onClick={() => setShowFilter((prev) => !prev)}>
+      <div className={styles.filterWrapper} ref={filterRef}>
+        <button className={styles.settingButton} onClick={handleSettingsClick}>
           <Settings className={styles.settingsIcon} />
         </button>
         <div className={cn(styles.filter, { [styles.visible]: showFilter })}>
