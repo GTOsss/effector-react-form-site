@@ -25,6 +25,7 @@
     "effector-react-form": "^2.2.6-beta.5",
     "effector-react-form-v1": "npm:effector-react-form@^1.0.49",
     "gatsby-plugin-layout": "^3.2.0",
+    "gatsby-plugin-react-svg": "^3.1.0",
     "jsx-to-string": "^1.4.0",
     "lodash.debounce": "^4.0.8",
     "lodash.isequal": "^4.5.0",

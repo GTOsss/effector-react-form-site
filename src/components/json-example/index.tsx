@@ -14,13 +14,14 @@ interface Props {
   source: Store<any>;
   title: React.ReactNode;
   center?: boolean;
+  className?: string;
 }
 
-const JsonExample: React.FC<Props> = ({ source, title, center = false }) => {
+const JsonExample: React.FC<Props> = ({ source, title, center = false, className }) => {
   const data = useStore(source);
   const code = JSON.stringify(data, null, 2);
   return (
-    <div className={cn(styles.wrap, { [styles.center]: center })}>
+    <div className={cn(styles.wrap, { [styles.center]: center }, className)}>
       <h3 className={styles.title}>
         {title}
         {typeof title === 'string' && linkMap[title] && (
