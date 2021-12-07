@@ -4,6 +4,7 @@ import CodeHighlighter from '@components/code-highlighter';
 import { FormattedMessage } from 'gatsby-plugin-intl';
 import SetValuesAdvanced, { form, examplesMap } from '@examples/set-values-advanced';
 import { $formSnapshot } from '@examples/set-values-advanced/example';
+import StoresContainer from '@components/stores-container';
 
 type Props = {};
 
@@ -17,11 +18,7 @@ const Page: React.FC<Props> = ({}) => {
         <FormattedMessage id="examples.setValuesAdvanced.description" values={{ br: <br /> }} />
       </p>
       <SetValuesAdvanced />
-      <div className="row">
-        <JsonExample source={form.$values} title="$values" />
-        <JsonExample source={form.$fieldsInline} title="$fieldsInline" />
-        <JsonExample source={$formSnapshot} title="$formSnapshot" />
-      </div>
+      <StoresContainer form={form} $formSnapshot={$formSnapshot} />
       <CodeHighlighter code={examplesMap} />
     </>
   );

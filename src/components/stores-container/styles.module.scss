@@ -1,0 +1,122 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.filterWrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid #595b5d;
+}
+
+.filter {
+  position: absolute;
+  right: 0;
+  top: calc(50% + 24px);
+
+  display: flex;
+  flex-direction: column;
+
+  width: 200px;
+
+  background: #2b2b2b;
+  border-radius: 8px;
+  padding: 10px 5px;
+  box-shadow: 0px 0px 5px rgb(86, 86, 86);
+
+  z-index: 2;
+
+  transform-origin: 50% 0;
+
+  transform: scaleY(0);
+
+  transition: transform 0.25s;
+
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+
+  transform: scaleY(1);
+
+  & .checkboxWrapper {
+    & > input::before {
+      visibility: visible;
+    }
+  }
+}
+
+.checkboxWrapper {
+  position: relative;
+  margin: 5px;
+}
+
+.checkbox {
+  visibility: hidden;
+  &::before {
+    position: absolute;
+    left: 0;
+    content: '';
+    height: 15px;
+    width: 15px;
+    background: rgb(65, 66, 66);
+    border: 1px #2b2b2b solid;
+    border-radius: 4px;
+  }
+}
+
+.checkMark {
+  position: absolute;
+  left: 0.7px;
+  top: 3.8px;
+
+  height: 14px;
+  width: 14px;
+
+  path {
+    fill: black;
+  }
+}
+
+.checked::before {
+  background: rgb(208, 208, 208);
+}
+
+.settingButton {
+  position: relative;
+  height: 24px;
+  margin-right: 0px;
+  margin-left: auto;
+
+  background: transparent;
+  border: none;
+}
+
+.settingsIcon {
+  position: absolute;
+  top: auto;
+  bottom: auto;
+  left: 0;
+  transform: translateY(-50%);
+  & path {
+    fill: #595b5d;
+  }
+}
+
+.jsonExample {
+  margin: 0;
+}
+
+.jsonWrapper {
+  & .jsonExample:nth-child(2),
+  .jsonExample:nth-child(5) {
+    margin: 0 20px;
+  }
+}
