@@ -5,8 +5,13 @@ import React, { memo } from 'react';
 import {
   mapSubmitExample,
   mapSubmitTypes,
+  onChangeExample,
+  onChangeGuardExample,
+  onChangeGuardsTypes,
+  onChangeTypes,
   onSubmitExample,
   onSubmitGuardExample,
+  onSubmitGuardsTypes,
   onSubmitTypes,
   validateExample,
   validateTypes,
@@ -123,7 +128,7 @@ const CreateForm = ({}: IProps) => {
             label={<FormattedMessage id="components.all.showTypes" />}
             secondLabel={<FormattedMessage id="components.all.hideTypes" />}
           >
-            <CodeHighlighter code={onSubmitTypes} className="CodeHighlighter" />
+            <CodeHighlighter code={onSubmitGuardsTypes} className="CodeHighlighter" />
           </Spoiler>
           <Spoiler
             label={<FormattedMessage id="components.all.showExample" />}
@@ -138,6 +143,18 @@ const CreateForm = ({}: IProps) => {
             meta
           </Link>
           .
+          <Spoiler
+            label={<FormattedMessage id="components.all.showTypes" />}
+            secondLabel={<FormattedMessage id="components.all.hideTypes" />}
+          >
+            <CodeHighlighter code={onChangeTypes} className="CodeHighlighter" />
+          </Spoiler>
+          <Spoiler
+            label={<FormattedMessage id="components.all.showExample" />}
+            secondLabel={<FormattedMessage id="components.all.hideExample" />}
+          >
+            <CodeHighlighter code={onChangeExample} className="CodeHighlighter" />
+          </Spoiler>
         </li>
         <li>
           <span className="ListItemName">onChangeGuardFn</span>:{' '}
@@ -146,6 +163,18 @@ const CreateForm = ({}: IProps) => {
             meta
           </Link>
           .
+          <Spoiler
+            label={<FormattedMessage id="components.all.showTypes" />}
+            secondLabel={<FormattedMessage id="components.all.hideTypes" />}
+          >
+            <CodeHighlighter code={onChangeGuardsTypes} className="CodeHighlighter" />
+          </Spoiler>
+          <Spoiler
+            label={<FormattedMessage id="components.all.showExample" />}
+            secondLabel={<FormattedMessage id="components.all.hideExample" />}
+          >
+            <CodeHighlighter code={onChangeGuardExample} className="CodeHighlighter" />
+          </Spoiler>
         </li>
         <li>
           <span className="ListItemName">initialValues</span>:{' '}
