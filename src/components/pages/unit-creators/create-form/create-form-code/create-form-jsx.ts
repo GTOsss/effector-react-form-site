@@ -15,9 +15,9 @@ export const form = createForm({
 
   onSubmitGuardFn?: (params: SubmitParams<Values, Meta>) => boolean;
 
-  onChange?: OnChange<Values, Meta>;
+  onChange?: (params: SubmitParams<Values, Meta>) => void;
 
-  onChangeGuardFn?: GuardFn<Values, Meta>;
+  onChangeGuardFn?: (params: SubmitParams<Values, Meta>) => boolean;
 
   initialValues?: Values;
 
