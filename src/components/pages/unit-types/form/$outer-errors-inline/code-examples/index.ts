@@ -1,1 +1,3 @@
-// place your exports here
+export const $outerErrorsInlineType = `type ErrorsInline = {
+  [x: string]: string,
+}`;

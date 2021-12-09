@@ -1,5 +1,7 @@
+import CodeHighlighter from '@components/code-highlighter';
 import { FormattedMessage } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
+import { onChangeFieldBrowserExample } from './code-examples';
 
 interface IProps {}
 
@@ -10,6 +12,7 @@ const OnChangeFieldBrowser = ({}: IProps) => {
       <div>
         <FormattedMessage id="components.pages.onChangeFieldBrowser.description" />
       </div>
+      <CodeHighlighter code={onChangeFieldBrowserExample} className="CodeHighlighter" />
     </div>
   );
 };
