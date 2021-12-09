@@ -25,7 +25,7 @@ const Form = () => {
   const { handleSubmit, controller } = useForm({ form });
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
       <Input label="Search" controller={controller({ name: 'search' })} />
       <Input label="Search by email" controller={controller({ name: 'searchByEmail' })} />
       <button type="submit">search</button>

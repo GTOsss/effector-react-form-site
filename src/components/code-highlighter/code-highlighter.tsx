@@ -15,7 +15,7 @@ const CodeHighlighter: React.FC<Props> = ({ code, className }) => {
   const activeLang = useStore(langValue);
 
   return (
-    <div className={className}>
+    <div className={cx(className, styles.root)}>
       {typeof code !== 'string' && (
         <div className={styles.switcher}>
           <button

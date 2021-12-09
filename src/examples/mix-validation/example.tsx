@@ -12,7 +12,7 @@ const validatePassword = (value) => {
   if (value.length < 4) return 'Minimum of 4 characters';
 };
 
-const formValidate = ({ values, errorsInline }: FormValidateParams<Values>) => {
+const formValidate = ({ values, errorsInline }: FormValidateParams<Values, any>) => {
   const errors = {};
 
   const nameHelper = createNameHelper<Values>();
@@ -63,7 +63,7 @@ const Form = () => {
   // const {handleSubmit, controller} = useForm({$errorsInline});
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
       <Input label="Password" controller={controller({ name: 'password', validate: validatePassword })} />
       <Input label="Repeat password" controller={controller({ name: 'passwordRepeat', validate: validatePassword })} />
       <button type="submit">submit</button>
