@@ -37,7 +37,7 @@ const WithoutSetFieldState = () => {
   });
 
   return (
-    <form>
+    <form className="form">
       <Input label="Name" controller={controller({ name: 'name' })} />
       <Input label="Last name" controller={controller({ name: 'lastName' })} />
     </form>

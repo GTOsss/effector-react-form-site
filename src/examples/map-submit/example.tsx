@@ -23,7 +23,7 @@ const Form = () => {
   const { handleSubmit, controller } = useForm({ form });
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
       <Input label="Username" controller={controller({ name: 'username' })} />
       <Input label="First name" controller={controller({ name: 'profile.firstName' })} />
       <Input label="Last name" controller={controller({ name: 'profile.lastName' })} />

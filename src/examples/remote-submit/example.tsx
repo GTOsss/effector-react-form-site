@@ -36,14 +36,14 @@ const Form = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form">
         <Input label="Username" controller={controller({ name: 'username', validate: validateUsername })} />
         <Input label="First name" controller={controller({ name: 'profile.firstName', validate: validateRequired })} />
         <Input label="Last name" controller={controller({ name: 'profile.lastName', validate: validateRequired })} />
         <button type="submit">submit</button>
       </form>
 
-      <div style={{ width: '460px', margin: 'auto' }}>
+      <div style={{ width: '460px', margin: 'auto', textAlign: 'center' }}>
         <button onClick={form.submit} type="button">
           Button outside the form for submit form
         </button>

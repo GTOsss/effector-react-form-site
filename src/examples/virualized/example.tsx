@@ -78,7 +78,7 @@ const Form = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="form">
         <List
           ref={refList}
           height={350}
