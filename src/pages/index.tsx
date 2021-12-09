@@ -1,9 +1,10 @@
 import React, { memo } from 'react';
+import Main from '@components/pages/main';
 
 type Props = {};
 
 const MainPage: React.FC<Props> = ({}) => {
-  return <h1>Main page</h1>;
+  return <Main />;
 };
 
 export default memo(MainPage);

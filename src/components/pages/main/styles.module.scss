@@ -1,0 +1,166 @@
+.root {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  & > h1 {
+    animation-duration: 1s;
+    animation-name: h1Appear;
+
+    margin-bottom: 15px;
+  }
+
+  & > h3 {
+    animation-duration: 2s;
+    animation-name: h3Appear;
+    margin: 0 auto;
+  }
+}
+
+@keyframes h1Appear {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scaleX(0.75);
+  }
+
+  to {
+    opacity: 100;
+    transform: translateY(0) scaleX(1);
+  }
+}
+
+@keyframes h3Appear {
+  0% {
+    opacity: 0;
+    transform: translateY(15px) scaleX(0.75);
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateY(15px) scaleX(0.75);
+  }
+
+  100% {
+    opacity: 100;
+    transform: translateY(0) scaleX(1);
+  }
+}
+
+.navButton {
+  height: 50px;
+  width: 135px;
+  background: #4C5052;
+
+  border-radius: 8px;
+
+  margin: 15px 25px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: white;
+}
+
+.buttonsWrapper {
+  animation-duration: 3s;
+  animation-name: buttonsAppear;
+}
+
+@keyframes buttonsAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(15px) scaleX(0.75);
+  }
+
+  66% {
+    opacity: 0;
+    transform: translateY(15px) scaleX(0.75);
+  }
+
+  100% {
+    opacity: 100;
+    transform: translateY(0) scaleX(1);
+  }
+}
+
+.benefits {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  animation-duration: 4s;
+  animation-name: otherAppear;
+}
+
+.benefit {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+
+ margin: 55px 25px auto;
+}
+
+.benefitTitle {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.benefitDescription {
+  display: flex;
+  justify-content: center;
+  word-wrap: break-word;
+
+  width: 200px;
+  height: 200px;
+
+  border-radius: 14px;
+
+  text-align: center;
+}
+
+.codeHighlighter {
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgb(86, 86, 86);
+
+  height: 500px;
+
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  margin-bottom: 10px;
+}
+
+@keyframes otherAppear {
+  0% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}
+
+.example {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation-duration: 4s;
+  animation-name: otherAppear;
+}
+
+.description {
+  margin: 55px 25px auto;
+
+  animation-duration: 4s;
+  animation-name: otherAppear;
+}
