@@ -5,7 +5,7 @@ import { flatObject, nestedObject } from './code-examples';
 
 interface IProps {}
 
-const path = 'components.pages.setIn.';
+const path = 'components.pages.makeNested.';
 
 const MakeNested = ({}: IProps) => {
   return (
