@@ -1,5 +1,7 @@
+import CodeHighlighter from '@components/code-highlighter';
 import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
+import { $errorsInlineType } from './code-examples';
 
 interface IProps {}
 
@@ -22,7 +24,7 @@ const ErrorsInline = ({}: IProps) => {
         <Link to="/api/unit-types/form/set-errors-inline-state" className="Link">
           setErrorsInlineState
         </Link>
-        <FormattedMessage id={`${path}end`} />{' '}
+        <FormattedMessage id={`${path}end`} /> <CodeHighlighter code={$errorsInlineType} className="CodeHighlighter" />
       </div>
     </div>
   );

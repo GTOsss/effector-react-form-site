@@ -1,5 +1,7 @@
+import CodeHighlighter from '@components/code-highlighter';
 import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
+import { $outerErrorsInlineType } from './code-examples';
 
 interface IProps {}
 
@@ -31,6 +33,7 @@ const OuterErrorsInline = ({}: IProps) => {
           setOuterErrorsInlineState
         </Link>
         <FormattedMessage id={`${path}end`} />
+        <CodeHighlighter code={$outerErrorsInlineType} className="CodeHighlighter" />
       </div>
     </div>
   );

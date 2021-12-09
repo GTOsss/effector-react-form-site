@@ -1,5 +1,7 @@
+import CodeHighlighter from '@components/code-highlighter';
 import { FormattedMessage } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
+import { onFocusFieldBrowserExample } from './code-examples';
 
 interface IProps {}
 
@@ -10,6 +12,7 @@ const OnFocusFieldBrowser = ({}: IProps) => {
       <div>
         <FormattedMessage id="components.pages.onFocusFieldBrowser.description" />
       </div>
+      <CodeHighlighter code={onFocusFieldBrowserExample} className="CodeHighlighter" />
     </div>
   );
 };

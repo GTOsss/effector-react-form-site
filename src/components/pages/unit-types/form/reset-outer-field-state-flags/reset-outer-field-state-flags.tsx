@@ -1,5 +1,7 @@
+import CodeHighlighter from '@components/code-highlighter';
 import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
+import { resetOuterFieldStateFlagsExample } from './code-examples';
 
 interface IProps {}
 
@@ -15,6 +17,7 @@ const ResetOuterFieldStateFlags = ({}: IProps) => {
           $fieldsInline
         </Link>{' '}
         <FormattedMessage id={`${path}description2nd`} />
+        <CodeHighlighter code={resetOuterFieldStateFlagsExample} className="CodeHighlighter" />
       </div>
     </div>
   );

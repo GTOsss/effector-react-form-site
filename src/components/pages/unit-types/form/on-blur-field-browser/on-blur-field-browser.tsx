@@ -1,5 +1,7 @@
+import CodeHighlighter from '@components/code-highlighter';
 import { FormattedMessage } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
+import { onBlurFieldBrowserExample } from './code-examples';
 
 interface IProps {}
 
@@ -10,6 +12,7 @@ const OnBlurFieldBrowser = ({}: IProps) => {
       <div>
         <FormattedMessage id="components.pages.onBlurFieldBrowser.description" />
       </div>
+      <CodeHighlighter code={onBlurFieldBrowserExample} className="CodeHighlighter" />
     </div>
   );
 };
