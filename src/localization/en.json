@@ -3,7 +3,21 @@
     "navItemExamples": "Examples"
   },
   "index": {
-    "h1": "React Effector Form"
+    "h1": "React Effector Form",
+    "Examples": "Examples",
+    "slogan": "Fast, light, safe",
+    "showResult": "Show result",
+    "hideResult": "Hide result",
+    "description1st": "Effector React Form helps integrate form data processing logic at the state manager level, lets you to create and manage related forms from anywhere in the application, synchronize form values ​​and application state.",
+    "description2nd": "Built-in support for validation with conditional error rendering helps you effortlessly display both client-side and server-side errors in the form.",
+    "Light": "Light",
+    "Fast": "Fast",
+    "Virtualization": "Virtualization",
+    "TypeSafe": "Type-safe",
+    "lightDescription": "Small final bundle size without any extra dependencies.",
+    "fastDescription": "Optimized performance with minimal amount of rerenders.",
+    "virtualizationDescription": "Supports virtualized forms from the box.",
+    "typeSafeDescription": "Checks your types and guarantee that you are not mistaken when working with your data."
   },
   "examples": {
     "simpleForm": {
