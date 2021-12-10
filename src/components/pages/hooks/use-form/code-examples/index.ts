@@ -1,5 +1,6 @@
 const useFormExampleJsx = `import React from 'react';
 import { createForm, useForm } from 'effector-react-form';
+import cn from 'classnames';
 
 const initialValues = {
   name: 'unknown',
@@ -50,6 +51,7 @@ export const Component = () => {
 
 export const useFormExampleTsx = `import React from 'react';
 import { createForm, useForm } from 'effector-react-form';
+import cn from 'classnames';
 
 type Values = {
   name: string;
