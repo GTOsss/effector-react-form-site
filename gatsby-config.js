@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     title: `React Effector Form`,
@@ -33,10 +35,16 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: path.resolve(__dirname, `./src/components/main-layout`),
+      },
+    },
+    {
       resolve: `gatsby-plugin-intl`,
       options: {
         path: `${__dirname}/src/localization`,
-        languages: [`en`],
+        languages: [`en`, `ru`],
         defaultLanguage: `en`,
         redirect: true,
       },
@@ -47,6 +55,9 @@ module.exports = {
         name: `markdown-pages`,
         path: `${__dirname}/src/pages-md`,
       },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
     },
     `gatsby-transformer-remark`,
     // this (optional) plugin enables Progressive Web App + Offline functionality

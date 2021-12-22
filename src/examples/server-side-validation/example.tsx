@@ -69,7 +69,7 @@ const Form = () => {
   const pending = useStore(postUserFx.pending);
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
       <Input label="Username" controller={controller({ name: form.getName('username'), validate: validateRequired })} />
       <Input
         label="First name"

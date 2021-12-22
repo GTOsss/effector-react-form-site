@@ -6,6 +6,7 @@
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
   color: $font-primary;
+  overflow: hidden;
 }
 
 .body {
@@ -13,6 +14,7 @@
   flex-grow: 1;
   background-color: $background-primary;
   padding-top: 60px;
+  height: calc(100vh - 60px);
 }
 
 .main {
@@ -20,6 +22,12 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 40px;
+  height: calc(100vh - 60px);
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }
 
 .wrapContent {

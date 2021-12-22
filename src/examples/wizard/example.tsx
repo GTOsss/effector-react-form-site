@@ -44,7 +44,7 @@ const FormUserInfo = () => {
   const { controller, handleSubmit } = useForm({ form: formUserInfo, resetUnmount: false });
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
       <Input controller={controller({ name: 'username', validate: validateRequired })} label="Username" />
       <Input controller={controller({ name: 'profile.firstName' })} label="First name" />
       <Input controller={controller({ name: 'profile.lastName' })} label="Last name" />
@@ -57,7 +57,7 @@ const FormContactInfo = () => {
   const { controller, handleSubmit } = useForm({ form: formContactInfo, resetUnmount: false });
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
       <Input controller={controller({ name: 'contactInfo.email', validate: validateRequired })} label="Email" />
       <Input controller={controller({ name: 'contactInfo.phone', validate: validateRequired })} label="Phone" />
       <button type="button" onClick={prevStep}>
@@ -72,7 +72,7 @@ const FormAdditionalInfo = () => {
   const { controller, handleSubmit } = useForm({ form: formAdditionalInfo, resetUnmount: false });
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
       <Input controller={controller({ name: 'profile.info', validate: validateRequired })} label="Info" />
       <button type="button" onClick={prevStep}>
         Previous step
@@ -83,7 +83,7 @@ const FormAdditionalInfo = () => {
 };
 
 const ThankForRegistration = () => (
-  <div>
+  <div className="column">
     <h2>Thank you for registering!</h2>
     <button type="button" onClick={prevStep}>
       Previous step

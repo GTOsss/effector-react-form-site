@@ -1,14 +1,10 @@
 import React, { memo } from 'react';
-import MainLayout from '@components/main-layout';
+import Main from '@components/pages/main';
 
 type Props = {};
 
 const MainPage: React.FC<Props> = ({}) => {
-  return (
-    <MainLayout>
-      <h1>Main page</h1>
-    </MainLayout>
-  );
+  return <Main />;
 };
 
 export default memo(MainPage);

@@ -3,9 +3,25 @@
   padding: 10px 20px;
   background-color: #242424;
   overflow: auto;
+
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgb(86, 86, 86);
+}
+
+.root {
+  
+  border-radius: 8px;
 }
 
 .switcher {
+  margin-left: 8px;
+  & .switchButton:nth-child(1) {
+    border-top-left-radius: 8px;
+  }
+
+  & .switchButton:nth-child(2) {
+    border-top-right-radius: 8px;
+  }
 }
 
 .switchButton {

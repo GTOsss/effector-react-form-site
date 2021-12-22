@@ -3,7 +3,21 @@
     "navItemExamples": "Examples"
   },
   "index": {
-    "h1": "Rect Effector Form"
+    "h1": "React Effector Form",
+    "Examples": "Examples",
+    "slogan": "Fast, light, safe",
+    "showResult": "Show result",
+    "hideResult": "Hide result",
+    "description1st": "Effector React Form helps integrate form data processing logic at the state manager level, lets you to create and manage related forms from anywhere in the application, synchronize form values ​​and application state.",
+    "description2nd": "Built-in support for validation with conditional error rendering helps you effortlessly display both client-side and server-side errors in the form.",
+    "Light": "Light",
+    "Fast": "Fast",
+    "Virtualization": "Virtualization",
+    "TypeSafe": "Type-safe",
+    "lightDescription": "Small final bundle size without any extra dependencies.",
+    "fastDescription": "Optimized performance with minimal amount of rerenders.",
+    "virtualizationDescription": "Supports virtualized forms from the box.",
+    "typeSafeDescription": "Checks your types and guarantee that you are not mistaken when working with your data."
   },
   "examples": {
     "simpleForm": {
@@ -144,6 +158,316 @@
       "mapSubmit": {
         "title": "Map submit",
         "description": "Changing data before submitting the form."
+      }
+    }
+  },
+  "components": {
+    "all": {
+      "ofForm": "form",
+      "ofTheForm": "of the form",
+      "ofFieldArray": "field array",
+      "usageExamples": "Usage examples:",
+      "usageExample": "Usage example:",
+      "and": "and",
+      "Result": "Result:",
+      "here": "here",
+      "formInitialization": "form initialization",
+      "initialization": "initialization",
+      "or": "or",
+      "showContent": "Show content",
+      "hideContent": "Hide content",
+      "showTypes": "Show types",
+      "hideTypes": "Hide types",
+      "showExample": "Show example",
+      "hideExample": "Hide example"
+    },
+    "pages": {
+      "createForm": {
+        "methodForCreating": "Method for creating",
+        "Arguments": "Arguments",
+        "Formula": "Formula",
+        "formName": "form name",
+        "validateDescription1st": "takes the values ​​of form fields",
+        "validateDescription1.5": ", an object with additional parameters",
+        "validateDescription2nd": ", fields data from",
+        "validateDescription3rd": ", an object with form errors from",
+        "validateDescription4th": "and objet with form state from",
+        "validateDescription5th": "Returns an object with invalid field errors",
+        "mapSubmitDescription": "a function that transforms data that received from the form fields before passing it to the onSubmit function",
+        "onSubmitDescription1st": "a function that fires on a form submit event",
+        "onSubmitDescription2nd": ". Receives converted data from mappedValues ​​function (if specified) or directly data from form fields and an object with",
+        "onSubmitGuardDescription": "before the onSubmit function is executed, the value of this field is checked. By default, it contains a predicate function that checks if there are validation errors in form fields. If there are no errors, it returns true and onSubmit is triggered. You can pass your own predicate function that will accept the values ​​of the form fields and an object with",
+        "onChangeDescription" : "a function that`s triggered when the form fields change. Accepts form field values ​​and an object with",
+        "onChangeGuardFnDescription": "before the onChange function is executed, the value of this field is checked. By default, it contains a predicate function that checks if there are validation errors in form fields. If there are no errors, it will return true and onChange will be fired. You can pass your own predicate function that will accept the values ​​of the form fields and an object with",
+        "initialValuesDescription": "takes initial values of the form",
+        "initialMetaDescription1st": "takes initial values of the form`s",
+        "initialMetaDescription2nd": ".",
+        "domainDescription": "takes the domain the form`s stores and events will be created",
+        "resetOuterErrorsBySubmitDescription": "takes true / false. Determines whether outer form errors should be cleared on the onSubmit event. The default is correct.",
+        "resetOuterErrorsByOnChangeDescription": "takes true / false. Determines whether outer form errors should be cleared on the onChange event. The default is correct."
+      },
+      "createFieldArray": {
+        "methodForCreating": "Method for creating",
+        "Formula": "Formula",
+        "Arguments": "Arguments",
+        "form": "the form",
+        "takes": "takes",
+        "formDescription": "on the basis of which the array will be created.",
+        "domainDescription": "takes the domain the array`s stores and events will be created"
+      },
+      "Form": {
+        "description1st": "Form is a collection of stores and events designed for comfortable synchronization of html-form data and the effector state of your application. Upon ",
+        "initialization": "initialization",
+        "description2nd": ", an object is returned with a set of interconnected API effector units and utilities. As with all objects, they are accessible through the '.', But sometimes in the examples below we will use them through the useForm hook for convenience. We have described in more detail what fields are available through this hook ",
+        "here": "here" 
+      },
+      "$values": {
+        "storeWith": "Store with values of the",
+        "Using": "Using",
+        "recordingFromOther": "Recording values ​​from other units"
+      },
+      "$errorsInline": {
+        "description1st": "Store containing validation errors. These can be errors generated by the",
+        "validationFunction": "validation function",
+        "description2nd": "or errors added manually using the",
+        "end": " methods. Contains an object where keys are field names and values are error texts."
+      },
+      "$outerErrorsInline": {
+        "description1st": "Stor for",
+        "serverValidation": "server validation",
+        "description2nd": " errors. Contains an object where keys are field names and values are error texts. Unlike errors in",
+        "description3rd": "do not block form submissions. After changing the field values, external errors are hidden, but remain in the form state. Once submitted, the errors will be displayed again until the fields change.",
+        "description4th": "You can set external errors using the",
+        "end": " setters."
+      },
+      "$fieldsInline": {
+        "description1st": "Store containing an object with metadata about",
+        "description2nd": " fields.",
+        "Properties": "Properties",
+        "activeDescription": "true when focus is set on the form element corresponding to the field.",
+        "touchedDescription": "true if there was an interaction (click) with the form element after rendering. The default is false.",
+        "changedDescription": "true, if field values were changed after initialization.",
+        "blurredDescription": "changes to true when the element loses focus. Remains in this state until the next reinitialization of the form. The isShowError and isShowInnerError flags are calculated based on this value. We will tell you more about them" ,
+        "here": "here",
+        "touchedAfterOuterErrorDescription1st": "changes to true when a form element is clicked and if",
+        "touchedAfterOuterErrorDescription2nd": "has a field with an error for that element. Resubmitting the form resets the value to false.",
+        "changedAfterOuterErrorDescription1st": "changes to true when the values ​​of the form element have been changed and if",
+        "changedAfterOuterErrorDescription2nd": "has a field with an error for that element. Resubmitting the form resets the value to false.",
+        "blurredAfterOuterErrorDescription1st": "changes to true when the form element loses the focus and if",
+        "blurredAfterOuterErrorDescription2nd": "has a field with an error for that element. Resubmitting the form resets the value to false. The isShowError and isShowOuterError flags are calculated based on this value. We will tell you more about them",
+        "validateDescription": "contains a validation function for a form element."
+      },
+      "$form": {
+        "description": "Store that contains the main state of the",
+        "Properties": "Properties:",
+        "submittedDescription": "reports whether the form has been submitted.",
+        "hasErrorDescription": "reports whether the form has errors generated by the validation function.",
+        "hasOuterErrorDescription": "reports if there are external errors in"
+      },
+      "$meta": {
+        "description1st": "Stor with form metadata that can be used to trigger various scripts on the onSubmit event. They can be passed both during",
+        "formInitialization": "form initialization",
+        "description2nd": "and dynamically through the",
+        "useFormHook": "useForm hook"
+      },
+      "$allFormState": {
+        "description": "Store that contains data from all other stores of the form"
+      },
+      "setValue": {
+        "description1st": "Allows you to assign a value to one form field",
+        "description2nd": "As you can see from the example, if the form contains an object with nested fields, there are two options for writing field: a string containing the path to the final property of the object through a dot and an array of strings."
+      },
+      "setValues": {
+        "description": "Writes new object with values to the"
+      },
+      "setOrDeleteError": {
+        "description": "Helps to directly set an error in form fields by replacing a validator error, or remove an error if you do not pass an error field."
+      },
+      "setErrorsInlineState": {
+        "description1st": "Lets you to set the object with errors for form fields. The fundamental difference from the",
+        "description2nd": "method is that setOrDeleteError sets the error value for one field without affecting other fields. setErrorsInlineState, on the other hand, completely overwrites the object in the form's",
+        "description3rd": "store with the object that passed as an argument.",
+        "description4th": "Takes an object, where the keys are the names of the form fields, and the values ​​are the error texts."
+      },
+      "setFieldState": {
+        "description1st": "Lets you to set value in the",
+        "description2nd": "Let's say we want to set an error with the text 'Required field' in a form field when initializing the application as a reminder that this field is required.",
+        "description3rd": "As you can see, no error appeared during initialization, although we added it to the form. This is because the isShowError flag depends on the 'blurred' flag in",
+        "description4th": "Let's try setting the 'blurred' of the 'name' field to true:",
+        "description5th": "We already told in more detail about all the fields of the $ fieldsInline store"
+      },
+      "setSubmitted": {
+        "description1st": "Sets the passed value to the field 'submitted' of the",
+        "description2nd": " store. Takes true or false."
+      },
+      "resetOuterFieldStateFlags": {
+        "description1st": "Resets the",
+        "description2nd": " store's blurredAfterOuterError, changedAfterOuterError, touchedAfterOuterError fields to their default values."
+      },
+      "resetOuterErrors": {
+        "description": "Sets an empty object to the"
+      },
+      "setOrDeleteOuterError": {
+        "description1st": "Sets the error object to",
+        "description2nd": ". You can remove the error by not passing the 'error' field."
+      },
+      "setOuterErrorsInlineState": {
+        "description1st": "Lets you to set an object with external errors for form fields. Similar to",
+        "description2nd": "but for"
+      },
+      "validateForm": {
+        "description1st": "Lets you to manually run the validation function passed on form initialization. Let's try to remind the user after 3 seconds which fields to fill in by calling validateForm. We must remember that the isShowError flag will not be set to true until the 'blurred' form field is true. Let's set it up manually using the",
+        "description2nd": "method.",
+        "resetTimer": "Reset timer"
+      },
+      "submit": {
+        "description": "Method for submitting the form"
+      },
+      "reset": {
+        "description": "Resets the form to the initial state."
+      },
+      "onSubmit": {
+        "description": "Sets a function for the Submit event of a form. You can specify it in the"
+      },
+      "setMeta": {
+        "description": "Takes one argument to be written to"
+      },
+      "onChangeFieldBrowser": {
+        "description": "An event that fires when the form fields change. You can subscribe to it through 'watch', 'sample' and other API effector methods. Returns an object with the 'name' property, which contains the name of the field on which the event was triggered."
+      },
+      "onFocusFieldBrowser": {
+        "description": "An event that fires when the focus is on a form field. You can subscribe to it through watch, sample and other API effector methods. Returns an object with the 'name' property, which contains the name of the field on which the event was triggered."
+      },
+      "onBlurFieldBrowser": {
+        "description": "Event that fires when the focus on the form field is lost. You can subscribe to it through watch, sample and other API effector methods. Returns an object with the 'name' property, which contains the name of the field on which the event was triggered."
+      },
+      "fieldInit": {
+        "description": "An event, that fires when the form is initialized for each of its fields. Returns an object with name, validate and flat fields.",
+        "name": "the field name passed to controller.",
+        "validate": "contains a validation function passed to controller.",
+        "flat": "value, passed to controller.",
+        "descriptionController": "We will tell you more about the controller and its fields"
+      },
+      "getName": {
+        "description": "An utility that collects the passed arguments into an array. Supports highlighting of state fields, making it easier to navigate complex layered forms. In the example below, after opening the quotes in form.getName (), it will suggest field options. In ts / tsx files, when specifying non-existent fields, it will show a typing error."
+      },
+      "getNameStr": {
+        "description1st": "A utility that concatenates the supplied strings, dotted. Supports highlighting of status fields, making it easier to navigate large objects. Applicable for navigating flat objects such as the ",
+        "description2nd": " state. In the example below, after opening the quotes in form.getNameStr (), it will suggest field options. In ts / tsx files, when specifying non-existent fields, it will show a typing error."
+      },
+      "name": {
+        "description": "Contains name, passed during"
+      },
+      "fieldArray": {
+        "description1st": "Allows you to work directly with array form fields. Provides an object with push and remove methods for comfortable working with arrays in forms. Provides a map method via the ",
+        "description2nd": " hook.",
+        "form": {
+          "description": "The form that was passed during"
+        },
+        "push": {
+          "description": "Method for adding new element to FieldArray and parent form. Takes an object with the field name and value to add. Adding an element to a form field, that is not an array, converts that field to an array with the passed value."
+        },
+        "remove": {
+          "description": "Method to remove element from FieldArray and parent form. Takes an object with the name of the field and the index at which to remove the item. Removing an element from a form field that is not an array converts that field to an empty array."
+        }
+      },
+      "useForm": {
+        "description1st": "A hook for using a form inside a functional component. Takes an object with 'form', 'meta' and 'resetUnmount' fields.",
+        "formDescription": "used form",
+        "metaDescription1st": "data for passing to forms",
+        "metaDescription2nd": ".",
+        "resetUnmountDescription": "describes whether the state of the form should be reset when the component is unmounted. True by default.",
+        "description2nd": "We have already discussed the principle of operation of the returned methods above, with the exception of only 'controller' and 'handleSubmit', so here we will talk about them.",
+        "controllerDescription": "when called, it takes an object with fields 'name', 'flat' and 'validate' and returns a function that encloses these values.",
+        "nameDescription": "field name. Nested fields can be specified using",
+        "flatDescription": "if true, the passed 'user.name' format name argument will mean access to the field in the { 'user.name': '' }. If flat is false, the controller will have access to the nested object's field { 'user': { name: '' } }. The default is false.",
+        "validateDescription": "takes a validation function for a form field, which should return an error string or 'undefined'.",
+        "description3rd": "The function returned by the first call takes no arguments and returns an object with methods for manipulating the form field and information about it.",
+        "input": {
+          "name": "contains name of field in the",
+          "value": "contains the value of the form element",
+          "onChange": "a function to pass the onChange event of the html-element to the"
+        },
+        "formController": "data about form state",
+        "metaController": "meta of the form",
+        "fieldState": "field data from the",
+        "error1st": "contains a field error from",
+        "error2nd": ". Outer errors from $outerErrorsInline take precedence.",
+        "innerError": "contains a field error from",
+        "outerError": "contains a field error from",
+        "isShowError": "a boolean value to conditionally render the error text. True if isShowOuterError or isShowInnerError is set to true.",
+        "isShowOuterError": "a boolean value to conditionally render text with an outer error.",
+        "isShowInnerError": "a boolean value to conditionally render the error text.",
+        "validate": "contains a validation function passed to controller.",
+        "method1st": " ",
+        "method2nd": " method.",
+        "handleSubmit": "method for submitting to the onSubmit handler of the html-form. Prevents the default actions of the onSubmit event."
+      },
+      "useError": {
+        "description": "Hook to access the error fields from the parent element. Before that, we received errors inside the Input component, after calling the controller. But what if we need to get errors in the parent component? There is useError for this. The useError hook takes two arguments: the name of the field and the form whose fields we are interested in.",
+        "inputValueDescription": "contains the value written in the input.",
+        "formDescription1st": "contains data from the",
+        "formDescription2nd": "meta of the submitted form.",
+        "metaDescription1st": "contains data from the",
+        "metaDescription2nd": "meta of the submitted form.",
+        "fieldStateDescription1st": "contains data from the",
+        "fieldStateDescription2nd": "the specified form field.",
+        "errorDescription1st": "contains a field error from",
+        "errorDescription2nd": ". Outer errors from $outerErrorsInline take precedence.",
+        "innerErrorDescription": "contains a field error from",
+        "outerErrorDescription": "contains a field error from",
+        "isShowErrorDescription": "a boolean value to conditionally render the error text. True if isShowOuterError or isShowInnerError is set to true.",
+        "isShowOuterErrorDescription": "a boolean value to conditionally render text with an outer error.",
+        "isShowInnerErrorDescription": "a boolean value to conditionally render the error text."
+      },
+      "useFieldArray": {
+        "description1st": "Hook for using",
+        "description2nd": "in functional component. Takes a",
+        "description3rd": "and the name of the form field that contains the array as arguments. In addition to the push and remove methods, it also provides a map method for iterating over an array of values.",
+        "description4th": "Using the push and remove methods that the useFieldArray hook returns is slightly different from the methods of the same name available directly from the",
+        "description5th": "object. The difference is that the push method only accepts the value to be added to the array, while remove only takes the index of the element to be removed from the array. The fieldName parameter is no longer needed, since we passed it to the useFieldArray hook.",
+        "description6th": "The map method iterates over the array of values, returning an object for each field:",
+        "field": "contains the value of the field.",
+        "fields": "contains the full array.",
+        "formItemName": "field name. This is the dotted concatenation of the name of the field that contains the array and the index of the element.",
+        "index": "element index."
+      },
+      "deleteIn": {
+        "description": "A utility for removing a property in an object with nested fields or an element in an array. Takes 4 arguments, of which the first two are required and two are optional. This method is immutable: it does not modify the passed object, but returns a new object or array.",
+        "state": "an object or array from which the element will be removed. Can be an array or an object.",
+        "path": "the path to the item to remove. It can be either a regular string: 'name', an array of strings: ['user', 'name'], or a string describing the path to the property through a dot: 'user.name'.",
+        "removeEmpty": "specifies whether to delete an empty object if there were no other properties in the object. Examples of execution:",
+        "inDeep": "boolean value. Tells whether the property to be deleted is in a nested object or not. The default is true. When removing from a flat object, you must specify false."
+      },
+      "getIn": {
+        "description1st": "Utility to get values ​​from nested objects. It takes three arguments:",
+        "state": "the object that contains the value.",
+        "path": "path to value. It can be either a regular string: 'name', an array of strings: ['user', 'name'], or a string describing the path to the property through a dot: 'user.name'.",
+        "defaultValue": "optional parameter. If the result is not received, an invalid field or state is passed, the default value will be returned.",
+        "description2nd": "It is an improved version of getIn with highlighting of object fields. When declaring a path, it offers options for the fields existing in the object, if you enter a non-existent field, it will highlight a typing error. Works with fields up to seven nesting levels."
+      },
+      "setIn": {
+        "description1st": "Helps you to set a value to a nested object. It takes three arguments:",
+        "state": "the object to set the value to.",
+        "path": "the path where the value will be set. It can be either a regular string: 'name', an array of strings: ['user', 'name'], or a string describing the path to the property through a dot: 'user.name'.",
+        "value": "value to be set into the object.",
+        "description2nd": "Returns a new object without mutating the original."
+      },
+      "makeNested": {
+        "description1st": "Takes an object with fields of the following format:",
+        "description2nd": "and returns an object with nested properties:",
+        "description3rd": "The method does not mutate the original object, but returns a new one."
+      },
+      "removeFromInlineMap": {
+        "description1st": "A method for removing form state objects from inline objects. Returns a new object without mutating the original. The main feature is that in pseudo-nested objects such as the",
+        "description2nd": "state, pseudo-nested fields are also removed. Example object in $ fieldsInline:",
+        "description3rd": "This method is mainly used for low-level form manipulation when you need to directly remove fields from state in child components such as",
+        "description4th": ". In most cases, the API described above is sufficient."
+      },
+      "createNameHelper": {
+        "description": "Returns two methods for conveniently getting the path to nested fields:",
+        "getPath": "collects the passed arguments into an array:",
+        "getStr": "concatenates the passed strings through the dote:"
       }
     }
   }

@@ -2,8 +2,8 @@ import React, { memo } from 'react';
 
 interface IProps {}
 
-const {{toCamelCase(name)}} = ({}: IProps) => {
+const {{toCamelCase(name)}}Page = ({}: IProps) => {
   return <div>{{toCamelCase(name)}}</div>;
 };
 
-export default memo({{toCamelCase(name)}});
+export default memo({{toCamelCase(name)}}Page);

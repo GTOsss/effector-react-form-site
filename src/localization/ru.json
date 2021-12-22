@@ -1,5 +1,473 @@
 {
   "index": {
-    "h1": "h1 ru"
+    "h1": "h1 ru",
+    "Examples": "Примеры",
+    "slogan": "Скорость, надёжность, компактность",
+    "showResult": "Показать результат",
+    "hideResult": "Скрыть результат",
+    "description1st": "Effector React Form помогает интегрировать логику обработки данных форм на уровень стейт-менеджера, позволяя создавать связанные формы и управлять ими из любой точки приложения, синхронизировать значения форм и состояние приложения.",
+    "description2nd": "Встроенная поддержка валидации с условным ренедрингом ошибок поможет вам без больших усилий отображать в форме как ошибки на стороне клиента, так и серверные ошибки.",
+    "Light": "Компактность",
+    "Fast": "Скорость",
+    "Virtualization": "Виртуализация",
+    "TypeSafe": "Типизация",
+    "lightDescription": "Минимальный размер финального бандла без лишних зависимостей.",
+    "fastDescription": "Минимальное количество ререндеров обеспечивает высокую производительность.",
+    "virtualizationDescription": "Поддерживает виртуализацию форм прямо из коробки",
+    "typeSafeDescription": "Проверяет присвоенные значения и подсказывает, если вы допустили ошибку в типизации."
+  },
+  "global": {
+    "navItemExamples": "Примеры"
+  },"examples": {
+    "simpleForm": {
+      "title": "Простая форма"
+    },
+    "onchange": {
+      "title": "OnChange обработчик формы",
+      "description": "Пример, реализующий следующие функции: {br}onchange обработчик формы {br}отложенный запрос к серверу (500ms)."
+    },
+    "initialValues": {
+      "title": "Начальные значения"
+    },
+    "initialValuesAdvanced": {
+      "title": "Начальные значения, продвинутый",
+      "description": "Расширенный пример, который реализует следующие функции: {br} начальные значения, {br} сброс до начальных значений, {br} очистка формы."
+    },
+    "setValues": {
+      "title": "Установка значений"
+    },
+    "setValuesAdvanced": {
+      "title": "Продвинутая установка значений",
+      "description": "Расширенный пример, который реализует следующие функции: {br} загрузка пользователя, {br} изменение пользователя, {br} сохранение пользователя, {br} проверка того, что пользователь был изменен, {br} отмена изменений (сброс)"
+    },
+    "fieldLevelValidation": {
+      "title": "Валидация полей"
+    },
+    "formLevelValidation": {
+      "title": "Валидация формы"
+    },
+    "mixValidation": {
+      "title": "Смешанная валидация",
+      "description": "Сочетание валидации на уровне формы и полей."
+    },
+    "setError": {
+      "title": "Установка ошибки",
+      "description": "Установка ошибки поля. {br} Отправка не блокируется, если установлены внешние ошибки. {br} После изменения ошибки скрываются, но остаются в состоянии формы. {br} После отправки ошибки будут отображаться снова, пока поля не изменятся. {br} Эта логика установлена ​​по умолчанию и больше всего подходит для проверки на стороне сервера."
+    },
+    "serverSideValidation": {
+      "title": "Серверная валидация",
+      "description": "Пример, который реализует следующие функции: {br} синхронная првоерка на уровне поля, {br} асинхронная проверка (на стороне сервера), {br} валидация username уже проведена и минимальная длина для firstName составляет 4 символа."
+    },
+    "virtualized": {
+      "title": "Виртуализация",
+      "description": "Пример, который реализует следующие функции: {br} виртуализированный список с 1000 инпутами, {br} проверка и прокрутка до первого невалидного инпута."
+    },
+    "wizard": {
+      "title": "Wizard"
+    },
+    "fieldArray": {
+      "title": "Field array"
+    },
+    "fieldArrayNested": {
+      "title": "Field array с вложенными полями"
+    },
+    "fieldArrayVirtualized": {
+      "title": "Виртуализированный Field array"
+    },
+    "remoteSubmit": {
+      "title": "Удалённая отправка формы"
+    },
+    "mapSubmit": {
+      "title": "Map submit",
+      "description": "Преобразовывает значения перед отрправкой формы."
+    },
+    "v1": {
+      "simpleFormLocal": {
+        "title": "Simple form local",
+        "description": "Simple form with values in local state."
+      },
+      "simpleFormGlobal": {
+        "title": "Simple form global",
+        "description": "Simple form with values in global state."
+      },
+      "initialValues": {
+        "title": "Initial values"
+      },
+      "initialValuesAdvanced": {
+        "title": "Initial values advanced",
+        "description": "An advanced example that implements the following features: {br} initial values, {br}reset to initial values, {br} clear form."
+      },
+      "setValuesLocal": {
+        "title": "Set values local",
+        "description": "Set values local state level."
+      },
+      "setValuesGlobal": {
+        "title": "Set values global",
+        "description": "Set values global state level."
+      },
+      "setValuesAdvanced": {
+        "title": "Set values advanced",
+        "description": "An advanced example that implements the following features: {br}loading a user, {br}changing a user, {br}saving a user, {br}checking that the user was changed, {br}canceling changes (resetting)"
+      },
+      "fieldLevelValidation": {
+        "title": "Field level validation"
+      },
+      "formLevelValidation": {
+        "title": "Form level validation"
+      },
+      "mixValidation": {
+        "title": "Mix validation",
+        "description": "A mix of field-level and form-level validations."
+      },
+      "setErrorLocal": {
+        "title": "Set error local",
+        "description": "Set field error local state level. {br} Submit is not blocked when outer errors are set. {br} After the change, errors are hidden, but still remain in the form state. {br} After submit, errors will be visible again until the fields change. {br} This logic is set by default and it is most suitable for server side validation."
+      },
+      "setErrorGlobal": {
+        "title": "Set error global",
+        "description": "Set field error global state state. {br} Submit is not blocked when outer errors are set. {br} After the change, errors are hidden, but still remain in the form state. {br} After submit, errors will be visible again until the fields change. {br} This logic is set by default and it is most suitable for server side validation."
+      },
+      "serverSideValidation": {
+        "title": "Server side validation",
+        "description": "An example that implements the following features: {br}sync field level validate, {br}async (server side) validate, {br} username test already taken and min length for firstName is  4 characters"
+      },
+      "virtualized": {
+        "title": "Virtualized",
+        "description": "An example that implements the following features: {br}virtualized list with 1000 inputs, {br}validate and scroll to first invalid input."
+      },
+      "onchange": {
+        "title": "OnChange form handler",
+        "description": "An example that implements the following features: {br}onchange form handler {br}debounced request to server (500ms)."
+      },
+      "wizard": {
+        "title": "Wizard"
+      },
+      "fieldArray": {
+        "title": "Field array"
+      },
+      "fieldArrayNested": {
+        "title": "Field array nested"
+      },
+      "fieldArrayVirtualized": {
+        "title": "Field array virtualized"
+      },
+      "remoteSubmit": {
+        "title": "Remote submit"
+      },
+      "mapSubmit": {
+        "title": "Map submit",
+        "description": "Changing data before submitting the form."
+      }
+    }
+  },
+  "components": {
+    "all": {
+      "ofForm": "формы",
+      "ofTheForm": "формы",
+      "ofFieldArray": "массива полей",
+      "usageExamples": "Примеры использования:",
+      "usageExample": "Пример использования:",
+      "and": "и",
+      "Result": "Результат:",
+      "here": "здесь",
+      "formInitialization": "инициализации формы",
+      "initialization": "инициализации",
+      "or": "или",
+      "showContent": "Показать контент",
+      "hideContent": "Скрыть контент",
+      "showTypes": "Показать типизацию",
+      "hideTypes": "Скрыть типизацию",
+      "showExample": "Показать пример",
+      "hideExample": "Скрыть пример"
+    },
+    "pages": {
+      "createForm": {
+        "methodForCreating": "Метод для создания",
+        "Arguments": "Аргументы",
+        "Formula": "Формула",
+        "formName": "название формы",
+        "validateDescription1st": "функция для валидации полей формы. Принимает значения полей формы",
+        "validateDescription1.5": ", объект с дополнительными параметрами",
+        "validateDescription2nd": ", данные полей",
+        "validateDescription3rd": ", объект с ошибками формы из",
+        "validateDescription4th": "и объект с состоянием формы из",
+        "validateDescription5th": "Возвращает объект с ошибками невалидных полей формы",
+        "mapSubmitDescription": "функция, преобразующая данные, полученные из полей формы, перед передачей их в функцию onSubmit",
+        "onSubmitDescription1st": "функция, которая срабатывает на событии",
+        "onSubmitDescription2nd": "формы. Получает преобразованные данные из функции mappedValues (если она указана) либо напрямую данные из полей формы и объект",
+        "onSubmitGuardDescription": "перед выполнением функции onSubmit, проверяется значение этого поля. По умолчанию содержит функцию-предикат, которая проверяет, есть ли ошибки валидации в полях формы. Если ошибок нет, возвращает true и запускается onSubmit. Можно передать свою функцию-предикат, которая будет принимать значения полей формы и объект",
+        "onChangeDescription": "функция, которая срабатывает при изменении полей формы. Принимает значения полей формы и объект",
+        "onChangeGuardFnDescription": "перед выполнением функции onChange,проверяется значение этого поля. По умолчанию содержит функцию-предикат, которая проверяет, есть ли ошибки валидации в полях формы. Если ошибок нет, возвращает true и запускается onChange. Можно передать свою функцию-предикат, которая будет принимать значения полей формы и объект",
+        "initialValuesDescription": "принимает начальные значения формы",
+        "initialMetaDescription1st": "принимает начальные значения",
+        "initialMetaDescription2nd": " формы.",
+        "domainDescription": "принимает домен, в котором будут созданы сторы и события формы",
+        "resetOuterErrorsBySubmitDescription": "принимает true/false. Определяет, нужно ли сбрасывать внешние ошибки формы, на событии onSubmit. Значение по умолчанию true.",
+        "resetOuterErrorsByOnChangeDescription": "принимает true/false. Определяет, нужно ли сбрасывать внешние ошибки формы, на событии onChange. Значение по умолчанию true."
+      },
+      "createFieldArray": {
+        "methodForCreating": "Метод для создания",
+        "Formula": "Формула",
+        "Arguments": "Аргументы",
+        "form": "форму",
+        "takes": "принимает",
+        "formDescription": ", на основании полей которой будет создан массив.",
+        "domainDescription": "принимает домен, в котором будут созданы сторы и события массива"
+      },
+      "Form": {
+        "description1st": "Форма - это совокупность сторов и ивентов, предназначенная для комфортной синхронизации данных html-форм и effector стейтом вашего приложения. При",
+        "initialization": "инициализации",
+        "description2nd": ", возвращается объект с совокупностью взаимосвязанных юнитов API effector и утилит. Как и во всех объектах, они доступны через `.`, но, иногда, в примерах ниже мы будем использовать их через хук useForm для большего удобства. Более подробно, какие поля доступны через этот хук, мы описали",
+        "here": "здесь"
+      },
+      "$values": {
+        "storeWith": "Стор со значениями",
+        "Using": "С использованием",
+        "recordingFromOther": "Запись значений из других юнитов"
+      },
+      "$errorsInline": {
+        "description1st": "Стор, содержащий ошибки валидации. Это могут быть как ошибки, созданные",
+        "validationFunction": "функцией валидации",
+        "description2nd": "так и ошибки, добавленные вручную с помощью методов",
+        "end": ". Содержит объект, где ключи - это имена полей, а значения - тексты ошибок."
+      },
+      "$outerErrorsInline": {
+        "description1st": "Стор, предназначенный для ошибок",
+        "serverValidation": "серверной валидации",
+        "description2nd": ". Содержит объект, где ключи - это имена полей, а значения - тексты ошибок. В отличие от ошибок в",
+        "description3rd": "внешние ошибки не блокируют отправку формы. После изменения значений полей, внешние ошибки скрываются, но остаются в состоянии формы. После отправки ошибки будут отображаться снова, пока поля не изменятся.",
+        "description4th": "Установить внешние ошибки можно при помощи сетеров",
+        "end": "."
+      },
+      "$fieldsInline": {
+        "description1st": "Стор, содержащий объект с метаданными о полях",
+        "description2nd": ".",
+        "Properties": "Properties",
+        "activeDescription": "true, когда на элемент формы, соответствующий полю, установлен фокус.",
+        "touchedDescription": "true, если было взаимодействие(клик) с элементом формы после рендера. По умолчанию false.",
+        "changedDescription": "true, если данные поля изменялись с момента инициализации.",
+        "blurredDescription": "меняет значение на true при потере фокуса на элементе. Остаётся в этом состоянии до следующей реинициализации формы. В зависимости от значения этого свойства формируются флаги isShowError и isShowInnerError, о которых говорится",
+        "here": "здесь",
+        "touchedAfterOuterErrorDescription1st": "меняет значение на true при клике на элемент формы, если в",
+        "touchedAfterOuterErrorDescription2nd": "есть поле с ошибкой этого элемента. Повторная отправка формы сбрасывает значение на false.",
+        "changedAfterOuterErrorDescription1st": "меняет значение на true при клике на элемент формы, если в",
+        "changedAfterOuterErrorDescription2nd": "есть поле с ошибкой этого элемента. Повторная отправка формы сбрасывает значение на false.",
+        "blurredAfterOuterErrorDescription1st": "меняет значение на true при потере фокуса на элементе формы, если в",
+        "blurredAfterOuterErrorDescription2nd": "есть поле с ошибкой этого элемента. Повторная отправка формы сбрасывает значение на false. В зависимости от значения этого свойства формируются флаги isShowError и isShowOuterError, подробнее о которых мы говорим",
+        "validateDescription": "содержит функцию валидации для элемента формы."
+      },
+      "$form": {
+        "description": "Стор, хранящий основное состояние",
+        "Properties": "Свойства",
+        "submittedDescription": "сообщает о том, была ли форма отправлена.",
+        "hasErrorDescription": "сообщает о том, есть ли в форме ошибки, созданые функцией валидации.",
+        "hasOuterErrorDescription": "сообщает о том, есть ли внешние ошибки в "
+      },
+      "$meta": {
+        "description1st": "Стор с метаданными формы, которые могут быть использованы для запуска различных сценариев по событию onSubmit. Их можно передать как при",
+        "formInitialization": "инициализации формы",
+        "description2nd": "Так и динамически через",
+        "useFormHook": "хук useForm"
+      },
+      "$allFormState": {
+        "description": "Стор, содержащий в себе данные из всех остальных сторов формы"
+      },
+      "setValue": {
+        "description1st": "Позволяет присвоить значение одному полю формы",
+        "description2nd": "Как видно из примера, в случае, если в форме содержится объект со вложенными полями, есть два варианта записи field: строка, содеражщая путь к конечному свойству объекта через точку и массив строк."
+      },
+      "setValues": {
+        "description": "Записывает новый объект со значениям в"
+      },
+      "setOrDeleteError": {
+        "description": "Позволяет напрямую установить ошибку в поля формы, заменив ошибку валидатора, либо удалит ошибку, если не передать поле error."
+      },
+      "setErrorsInlineState": {
+        "description1st": "Позволяет установить объект с ошибками для полей формы. Принципиальное отличие от метода",
+        "description2nd": "в том, что setOrDeleteError устанавливает значение ошибки для одного поля, не затрагивая при этом другие поля. setErrorsInlineState же полностью перезаписывает объект в сторе",
+        "description3rd": "формы, на переданный в качестве аргумента объект.",
+        "description4th": "Принимает объект, где ключами являются имена полей формы, а значениями - тексты ошибок."
+      },
+      "setFieldState": {
+        "description1st": "Позволяет установить значение в",
+        "description2nd": "Допустим, мы хотим при инициализации приложения установить ошибку с текстом 'Required field' в поле формы в качестве напоминания, что это поле обязательное.",
+        "description3rd": "Как видно, при инициализации никакой ошибки не появилось, хоть мы и добавили её в форму. Так произошло, потому что флаг isShowError зависит от флага 'blurred' в",
+        "description4th": "Попробуем установить 'blurred' поля 'name' в значение true:",
+        "description5th": "Более подробно обо всех полях стора $fieldsInline мы уже рассказывали"
+      },
+      "setSubmitted": {
+        "description1st": "Выставляет переданное значение в поле 'submitted' стора",
+        "description2nd": ". Принимает true либо false."
+      },
+      "resetOuterFieldStateFlags": {
+        "description1st": "Сбрасывает поля blurredAfterOuterError, changedAfterOuterError, touchedAfterOuterError стора",
+        "description2nd": "в значения по умолчанию."
+      },
+      "resetOuterErrors": {
+        "description": "Устанавливает пустой объект в"
+      },
+      "setOrDeleteOuterError": {
+        "description1st": "Устанавливает объект с ошибками в",
+        "description2nd": ". Можно удалить ошибку, не передав поле 'error'."
+      },
+      "setOuterErrorsInlineState": {
+        "description1st": "Позволяет установить объект с внешними ошибками для полей формы. Является аналогом ",
+        "description2nd": "но для"
+      },
+      "validateForm": {
+        "description1st": "Позволяет вручную запустить функцию валидации, переданную при инициализации формы. Попробуем напомнить пользователю через 3 секунды, какие поля следует заполнить, вызвав validateForm. Стоит помнить, что флаг isShowError не будет выставлен в значение true, пока blurred поля формы не будет true. Выставим и его вручную с помощью метода",
+        "description2nd": ".",
+        "resetTimer": "Сбросить таймер"
+      },
+      "submit": {
+        "description": "Метод для отправки формы"
+      },
+      "reset": {
+        "description": "Полностью сбрасывает форму до состояния иницализации."
+      },
+      "onSubmit": {
+        "description": "Устанавливает функцию для события Submit формы. Вы можете указать её createForm."
+      },
+      "setMeta": {
+        "description": "Принимает один аргумент, который будет записан в"
+      },
+      "onChangeFieldBrowser": {
+        "description": "Событие, которые срабатывает при изменении полей формы. На него можно подписаться через watch, sample и другие методы API effector. Возвращает объект со свойством 'name', которое содержит имя поля, на котором сработал ивент."
+      },
+      "onFocusFieldBrowser": {
+        "description": "Событие, которые срабатывает при фокусе на поле формы. На него можно подписаться через watch, sample и другие методы API effector. Возвращает объект со свойством 'name', которое содержит имя поля, на котором сработал ивент."
+      },
+      "onBlurFieldBrowser": {
+        "description" : "Событие, которые срабатывает при потере фокуса на поле формы. На него можно подписаться через watch, sample и другие методы API effector. Возвращает объект со свойством 'name', которое содержит имя поля, на котором сработал ивент."
+      },
+      "fieldInit": {
+        "description": "Событие, срабатывающее при инициализации формы для каждого её поля. Возвращает объект с полями name, validate и flat.",
+        "name": "имя поля, переданное в controller.",
+        "validate": "содержит функцию валидации, переданную в controller.",
+        "flat":  "Значение, переданное в controller.",
+        "descriptionController": "Мы подробнее расскажем про controller и его поля"
+      },
+      "getName": {
+        "description": "Утилита, которая собирает переданные аргументы в массив. Поддерживает подсветку полей состояния в, что позволяет легче ориентироваться в сложных многоуровневых формах. В примере ниже, после открытия кавычек в form.getName(), предложит варианты полей. В ts/tsx файлах, при указании несуществующих полей, покажет ошибку типизации."
+      },
+      "getNameStr": {
+        "description1st": "Утилита, которая конкатенирует переданные строки через точку. Поддерживает подсветку полей состояния, что позволяет легче ориентироваться в больших объектах. Применимо для навигации по плоским объектам, таким как состояние",
+        "description2n": ". В примере ниже, после открытия кавычек в form.getNameStr(), предложит варианты полей. В ts/tsx файлах, при указании несуществующих полей, покажет ошибку типизации."
+      },
+      "name": {
+        "description": "Содержит имя, переданное при"
+      },
+      "fieldArray": {
+        "description1st": "Позволяет работать напрямую с полями формы, являющимися массивом. Предоставляет объект с методами push и remove для комфортной работы с массивами в формах. Предоставляет метод map через хук",
+        "description2nd": ".",
+        "form": {
+          "description": "Форма, переданная при"
+        },
+        "push": {
+          "description": "Метод для добавления нового элемента в FieldArray и родительскую форму. Принимает объект с названием поля и со значением, которое нужно добавить. Добавление элемента полю формы, которое не является массивом, преобразует это поле в массив с переданным value."
+        },
+        "remove": {
+          "description": "Метод для удаления элемента из FieldArray и родительской формы. Принимает объект с названием поля и с индексом, по которому нужно удалить элемент. Удаление элемента поля формы, которое не является массивом, преобразует это поле в пустой массив."
+        }
+      },
+      "useForm": {
+        "description1st": "Хук для использования формы внутри функционального компонента. Принимает объект с полем form, meta и resetUnmount.",
+        "formDescription": "используемая форма",
+        "metaDescription1st": "данные для передачи в",
+        "metaDescription2nd": " формы.",
+        "resetUnmountDescription": "говорит, нужно ли сбрасывать состояние формы при размонтировании компонента. По умолчанию true.",
+        "description2nd": "Принцип работы возвращаемых методов мы уже рассматривали выше, за исключением лишь 'controller' и 'handleSubmit',так что здесь мы поговорим о них.",
+        "controllerDescritpion": "при вызове принимает объект с полями 'name', 'flat' и 'validate' и возвращает функцию, которая замыкает в себе эти значения.",
+        "nameDescription": "имя поля. Вложенные поля можно задавать с использованием",
+        "flatDescription": "в значении true, переданный аргумент name формата 'user.name' будет означать доступ к полю в объекте { 'user.name': ' ' }. Если же в flat будет false, controller получит доступ к полю вложенного объекта { 'user': { name: ' ' } }. По умолчанию false.",
+        "validateDescription": "принимает функцию валидации для поля формы, которая должна возвращать строку с ошибкой либо 'undefined'.",
+        "description3rd": "Функция, которую возвращает первый вызов, не принимает никаких аргуметов и возвращает объект с методами для управления полем формы и информацией о нём.",
+        "input": {
+          "name": "содержит имя элемента формы в",
+          "value": "содержит значение элемента формы.",
+          "onChange": "функция, для передачи ивента onChange html-элемента в"
+        },
+        "formController": "данные о состоянии формы",
+        "metaController": "мета формы",
+        "fieldState": "данные поля из",
+        "error1st": "содержит ошибку поля из",
+        "error2nd": ". Внешние ошибки из $outerErrorsInline имеют приоритет.",
+        "innerError": "содержит ошибку поля из",
+        "outerError": "содержит ошибку поля из",
+        "isShowError": "булевое значение для условного рендеринга текста с ошибкой. Имеет значение true, если в isShowOuterError или isShowInnerError записано true.",
+        "isShowOuterError": "булевое значение для условного рендеринга текста с внешней ошибкой.",
+        "isShowInnerError": "булевое значение для условного рендеринга текста с ошибкой.",
+        "validate": "содержит функцию валидации, переданную в controller.",
+        "method1st": " метод ",
+        "method2nd": ".",
+        "handleSubmit": "метод для передачи в обработчик onSubmit html-формы. Отменяет действия по умолчанию события onSubmit."
+      },
+      "useError": {
+        "description": "Хук, для доступа к полям ошибки из родительского элемента. До этого мы получали ошибки внутри компонента Input, после вызова контроллера. Но что, если нам нужно получать ошибки в родительскомм компоненте? Для это существует useError. Хук useError принимает два аргумента: имя поля и форму, поля которой нас интересуют.",
+        "inputValueDescription": "содержит значение, записанное в инпуте.",
+        "formDescription1st": "содержит данные из",
+        "formDescription2nd": "переданной формы.",
+        "metaDescription1st": "содержит данные из",
+        "metaDescription2nd": "переданной формы.",
+        "fieldStateDescription1st": "содержит данные из",
+        "fieldStateDescription2nd": "указанного поля формы.",
+        "errorDescription1st": "содержит ошибку поля из",
+        "errorDescription2nd": ". Внешние ошибки из $outerErrorsInline имеют приоритет.",
+        "innerErrorDescription": "содержит ошибку поля из",
+        "outerErrorDescription": "содержит ошибку поля из",
+        "isShowErrorDescription": "булевое значение для условного рендеринга текста с ошибкой. Имеет значение true, если в isShowOuterError или isShowInnerError записано true.",
+        "isShowOuterErrorDescription": "булевое значение для условного рендеринга текста с внешней ошибкой.",
+        "isShowInnerErrorDescription": "булевое значение для условного рендеринга текста с ошибкой."
+      },
+      "useFieldArray": {
+        "description1st": "Хук для использования",
+        "description2nd": "в функциональному компоненте. Принимает в качестве аргумента объект",
+        "description3rd": "и имя поля формы, содержащего массив. Помимо методов push и remove, предоставляет так же метод map для перебора массива значений.",
+        "description4th": "Использование методов push и remove, которые возвращает хук useFieldArray, немного отличается от одноимённых методов, доступных напрямую из объекта",
+        "description5th": ". Отличие состоит в том, что они метод push принимает только значение, которое нужно добавить в массив, а remove принимает лишь индекс элемента, который следует удалить из массива. Параметр fieldName уже не нужен, так как мы передали его в хук useFieldArray.",
+        "description6th": "Метод map перебирает массив значений, возвращая для каждого поля объект:",
+        "field": "содержит значение поля.",
+        "fields": "содержит полный массив.",
+        "formItemName": "имя поля. Является конкатенацией через точку имени поля, содержащего массив и индексом элемента.",
+        "index": "индекс элемента."
+      },
+      "deleteIn": {
+        "description": "Утилита для удаления свойства в объекте со вложенными полями или элемента в массиве. Принимает 4 аргумента, из которых первые два обязательные и два опциональные. Данный метод является иммутабельным, он не изменяет переданный объект, а возвращает новый объект или массив.",
+        "state": "объект или массив, в котором будет удалён элемент. Может быть массивом или объектом.",
+        "path": "путь к удаляемому элементу. Может быть как обычной строкой: 'name', массивом строк: ['user', 'name'] или же строкой, описывающий путь к свойству через точку: 'user.name'.",
+        "removeEmpty": "указывает, нужно ли удалять пустой объект, если в объекте других свойств не было. Примеры выполнения:",
+        "inDeep": "булевое значение. Говорит о том, находится ли удаляемое свойство во вложенном объекте или нет. По умолчанию true. При удалении из плоского объекта, следует указать false."
+      },
+      "getIn": {
+        "description1st": "Утилита, для получения значения из вложенных объектов. Принимает три аргумента:",
+        "state": "объект, в котором содержится значение.",
+        "path": "путь к значению. Может быть как обычной строкой: 'name', массивом строк: ['user', 'name'] или же строкой, описывающий путь к свойству через точку: 'user.name'.",
+        "defaultValue": "опциональный параметр. В случае, если результат не получен, передан невалидный field или state, вернётся значение по умолчанию.",
+        "description2nd": "Является улучшенной версией getIn с подсветкой полей объекта. При объявлении пути предлагает варианты существующих в объекте полей, если ввести несуществующее поле - подсветит ошибку типизации. Работает с полями до семи уровней вложенности."
+      },
+      "setIn": {
+        "description1st": "Позволяет установить значение во вложенный объект. Принимает три аргумента:",
+        "state": "объект, в который будет установлено значение.",
+        "path": "путь, по которому будет установлено значение. Может быть как обычной строкой: 'name', массивом строк: ['user', 'name'] или же строкой, описывающий путь к свойству через точку: 'user.name'.",
+        "value": "устанавливаемое значение.",
+        "description2nd": "Возвращает новый объект, не мутируя исходный."
+      },
+      "makeNested": {
+        "description1st": "Принимает объект с полями формата:",
+        "description2nd": "и возвращает объект со вложенными свойствами:",
+        "description3rd": "Метод не мутирует исходный объект, а возвращает новый."
+      },
+      "removeFromInlineMap": {
+        "description1st": "Метод для удаления из плоских (inline) объектов состояния формы. Возвращает новый объект, не мутируя исходный. Главное особенность в том, что в псевдовложенных объектах, таких как состояние",
+        "description2nd": ", удаляются и псевдовложенные поля. Пример объекта в $fieldsInline:",
+        "description3rd": "В основном этот метод используется при низкоуровневых манипуляций с формой, когда нужно напрямую удалять поля из состояния в дочерних компонентах, таких как",
+        "description4th": ". В большинстве случаев, достаточно описанного выше API."
+      },
+      "createNameHelper": {
+        "description": "Возвращает два метода для удобного получения пути к вложенным полям:",
+        "getPath": "собирает переданные аргументы в массив:",
+        "getStr": "конкатенирует переданные строки через точку:"
+      }
+    }
   }
 }
