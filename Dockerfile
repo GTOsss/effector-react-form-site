@@ -1,6 +1,6 @@
-FROM node:alpine
+FROM node:14.15-alpine as build
 
-WORKDIR ./app
+WORKDIR /app
 
 COPY ./ ./
 
@@ -14,4 +14,4 @@ ENV HOST=0.0.0.0
 
 EXPOSE $PORT
 
-CMD ["sh", "-c", "serve -s -l tcp://${HOST}:${PORT} ./public"]
+CMD ["sh", "-c", "serve -n -s -l tcp://${HOST}:${PORT} ./public"]
