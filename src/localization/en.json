@@ -195,17 +195,17 @@
         "validateDescription4th": "and objet with form state from",
         "validateDescription5th": "Returns an object with invalid field errors",
         "mapSubmitDescription": "a function that transforms data that received from the form fields before passing it to the onSubmit function",
-        "onSubmitDescription1st": "a function that fires on a form submit event",
-        "onSubmitDescription2nd": ". Receives converted data from mappedValues ​​function (if specified) or directly data from form fields and an object with",
+        "onSubmitDescription1st": "a function that fires on a form ",
+        "onSubmitDescription2nd": "event. Receives converted data from mappedValues ​​function (if specified) or directly data from form fields and an object with",
         "onSubmitGuardDescription": "before the onSubmit function is executed, the value of this field is checked. By default, it contains a predicate function that checks if there are validation errors in form fields. If there are no errors, it returns true and onSubmit is triggered. You can pass your own predicate function that will accept the values ​​of the form fields and an object with",
         "onChangeDescription" : "a function that`s triggered when the form fields change. Accepts form field values ​​and an object with",
         "onChangeGuardFnDescription": "before the onChange function is executed, the value of this field is checked. By default, it contains a predicate function that checks if there are validation errors in form fields. If there are no errors, it will return true and onChange will be fired. You can pass your own predicate function that will accept the values ​​of the form fields and an object with",
         "initialValuesDescription": "takes initial values of the form",
         "initialMetaDescription1st": "takes initial values of the form`s",
         "initialMetaDescription2nd": ".",
-        "domainDescription": "takes the domain the form`s stores and events will be created",
-        "resetOuterErrorsBySubmitDescription": "takes true / false. Determines whether outer form errors should be cleared on the onSubmit event. The default is correct.",
-        "resetOuterErrorsByOnChangeDescription": "takes true / false. Determines whether outer form errors should be cleared on the onChange event. The default is correct."
+        "domainDescription": "takes the domain in which stores and form events will be created",
+        "resetOuterErrorsBySubmitDescription": "takes true / false. Determines whether outer form errors should be cleared on the onSubmit event. The default is true.",
+        "resetOuterErrorsByOnChangeDescription": "takes true / false. Determines whether outer form errors should be cleared on the onChange event. The default is true."
       },
       "createFieldArray": {
         "methodForCreating": "Method for creating",

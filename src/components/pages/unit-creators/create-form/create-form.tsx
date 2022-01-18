@@ -65,7 +65,7 @@ const CreateForm = ({}: IProps) => {
           <Link to="/api/unit-types/form/$form" className="Link">
             $form
           </Link>
-          . <FormattedMessage id={`${path}validateDescription5th`} />{' '}
+          . <FormattedMessage id={`${path}validateDescription5th`} />.{' '}
           <Spoiler
             label={<FormattedMessage id="components.all.showTypes" />}
             secondLabel={<FormattedMessage id="components.all.hideTypes" />}
@@ -123,7 +123,7 @@ const CreateForm = ({}: IProps) => {
           <Link to="/api/unit-types/form/$meta" className="Link">
             meta
           </Link>
-          .
+          .{' '}
           <Spoiler
             label={<FormattedMessage id="components.all.showTypes" />}
             secondLabel={<FormattedMessage id="components.all.hideTypes" />}
@@ -142,7 +142,7 @@ const CreateForm = ({}: IProps) => {
           <Link to="/api/unit-types/form/$meta" className="Link">
             meta
           </Link>
-          .
+          .{' '}
           <Spoiler
             label={<FormattedMessage id="components.all.showTypes" />}
             secondLabel={<FormattedMessage id="components.all.hideTypes" />}
@@ -162,7 +162,7 @@ const CreateForm = ({}: IProps) => {
           <Link to="/api/unit-types/form/$meta" className="Link">
             meta
           </Link>
-          .
+          .{' '}
           <Spoiler
             label={<FormattedMessage id="components.all.showTypes" />}
             secondLabel={<FormattedMessage id="components.all.hideTypes" />}
