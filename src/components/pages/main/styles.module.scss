@@ -1,4 +1,4 @@
-$factor: 2;
+$factor: 5;
 .root {
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@ $factor: 2;
   }
 
   & > h3 {
-    animation-duration: $factor * 200ms;
+    animation-duration: $factor * 150ms;
     animation-name: h3Appear;
     margin: 0 auto;
   }
@@ -37,7 +37,7 @@ $factor: 2;
     transform: translateY(15px) scaleX(0.75);
   }
 
-  50% {
+  33% {
     opacity: 0;
     transform: translateY(15px) scaleX(0.75);
   }
@@ -64,7 +64,7 @@ $factor: 2;
 }
 
 .buttonsWrapper {
-  animation-duration: $factor * 300ms;
+  animation-duration: $factor * 200ms;
   animation-name: buttonsAppear;
 }
 
@@ -74,7 +74,7 @@ $factor: 2;
     transform: translateY(15px) scaleX(0.75);
   }
 
-  66% {
+  50% {
     opacity: 0;
     transform: translateY(15px) scaleX(0.75);
   }
@@ -92,7 +92,7 @@ $factor: 2;
 
   flex-wrap: wrap;
 
-  animation-duration: $factor * 400ms;
+  animation-duration: $factor * 250ms;
   animation-name: otherAppear;
 }
 
@@ -140,7 +140,7 @@ $factor: 2;
     opacity: 0;
   }
 
-  75% {
+  60% {
     opacity: 0;
   }
 
@@ -153,13 +153,13 @@ $factor: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation-duration: $factor * 400ms;
+  animation-duration: $factor * 250ms;
   animation-name: otherAppear;
 }
 
 .description {
   margin: 55px 25px auto;
 
-  animation-duration: $factor * 400ms;
+  animation-duration: $factor * 250ms;
   animation-name: otherAppear;
 }
