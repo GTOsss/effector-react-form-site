@@ -46,6 +46,7 @@ export const SimpleFormCode = `import React from 'react';
 import { createForm, useForm } from 'effector-react-form';
 
 const form = createForm({ onSubmit: ({ values }) => alert('Hi there, ' + values.username) });
+
 const validateRequired = (value) => (!value ? 'Field is required' : undefined);
 
 const SimpleForm = () => {
