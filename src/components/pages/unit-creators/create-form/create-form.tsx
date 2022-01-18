@@ -36,7 +36,7 @@ const CreateForm = ({}: IProps) => {
       <h2>
         <FormattedMessage id={`${path}Formula`} />
       </h2>
-      <CodeHighlighter code={createFormCode} />
+      <CodeHighlighter code={createFormCode} className="CodeHighlighter" />
       <h2>
         <FormattedMessage id={`${path}Arguments`} />
       </h2>
