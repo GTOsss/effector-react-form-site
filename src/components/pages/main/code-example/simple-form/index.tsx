@@ -27,7 +27,7 @@ const Input = ({ controller, label }) => {
 };
 
 const SimpleForm = () => {
-  const { controller, handleSubmit, submit } = useForm({ form });
+  const { controller, handleSubmit } = useForm({ form });
   return (
     <div className={styles.root}>
       <form onSubmit={handleSubmit} className={styles.form}>

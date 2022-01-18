@@ -49,6 +49,7 @@ const Main = ({}: IProps) => {
         <Spoiler
           label={<FormattedMessage id="index.showResult" />}
           secondLabel={<FormattedMessage id="index.hideResult" />}
+          isOpen={true}
         >
           <SimpleForm />
         </Spoiler>
