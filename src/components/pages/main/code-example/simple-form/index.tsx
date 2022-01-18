@@ -20,7 +20,6 @@ const Input = ({ controller, label }) => {
         className={cn('input', {
           'input-error': isShowError,
         })}
-        autoComplete="off"
       />
       {isShowError && <div className="input-error-message">{error}</div>}
     </div>
@@ -45,19 +44,14 @@ export default SimpleForm;
 
 export const SimpleFormCode = `import React from 'react';
 import { createForm, useForm } from 'effector-react-form';
-import cn from 'classnames';
-import styles from './styles.module.scss';
 
-const form = createForm({
-  onSubmit: ({ values }) => alert('Hi there, ' + values.username),
-});
-
+const form = createForm({ onSubmit: ({ values }) => alert('Hi there, ' + values.username) });
 const validateRequired = (value) => (!value ? 'Field is required' : undefined);
 
 const SimpleForm = () => {
   const { controller, handleSubmit } = useForm({ form });
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
+    <form onSubmit={handleSubmit}>
       <Input controller={controller({ name: 'username', validate: validateRequired })} label="Username" />
       <Input controller={controller({ name: 'firstName' })} label="First name" />
       <Input controller={controller({ name: 'lastName' })} label="Last name" />
@@ -69,20 +63,11 @@ const SimpleForm = () => {
 const Input = ({ controller, label }) => {
   const { input, error, isShowError } = controller();
   return (
-    <div className="input-wrap">
+    <div>
       <label>{label}</label>
-      <input
-        {...input}
-        value={input.value || ''}
-        className={cn('input', {
-          'input-error': isShowError,
-        })}
-        autoComplete="off"
-      />
-      {isShowError && <div className="input-error-message">{error}</div>}
+      <input {...input} value={input.value || ''}/>
+      {isShowError && <div>{error}</div>}
     </div>
   );
 };
-
-export default SimpleForm;
 `;
