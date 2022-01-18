@@ -2,7 +2,8 @@ import CodeHighlighter from '@components/code-highlighter';
 import Spoiler from '@components/spoiler';
 import { FormattedMessage, Link } from 'gatsby-plugin-intl';
 import React, { memo } from 'react';
-import FormComponent, { codeExample } from './code-example';
+import SimpleForm, { SimpleFormCode } from './code-example/simple-form';
+import FormComponent, { codeExample } from './code-example/wizard';
 import styles from './styles.module.scss';
 
 interface IProps {}
@@ -43,6 +44,15 @@ const Main = ({}: IProps) => {
           <button className={styles.navButton}>API</button>
         </Link>
       </nav>
+      <div className={styles.example}>
+        <CodeHighlighter code={SimpleFormCode} className={styles.codeHighlighter} />
+        <Spoiler
+          label={<FormattedMessage id="index.showResult" />}
+          secondLabel={<FormattedMessage id="index.hideResult" />}
+        >
+          <SimpleForm />
+        </Spoiler>
+      </div>
       <div className={styles.example}>
         <CodeHighlighter code={codeExample} className={styles.codeHighlighter} />
         <Spoiler

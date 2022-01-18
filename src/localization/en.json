@@ -17,7 +17,8 @@
     "lightDescription": "Small final bundle size without any extra dependencies.",
     "fastDescription": "Optimized performance with minimal amount of rerenders.",
     "virtualizationDescription": "Supports virtualized forms from the box.",
-    "typeSafeDescription": "Checks your types and guarantee that you are not mistaken when working with your data."
+    "typeSafeDescription": "Checks your types and guarantee that you are not mistaken when working with your data.",
+    "hiThere": "Hi there"
   },
   "examples": {
     "simpleForm": {
