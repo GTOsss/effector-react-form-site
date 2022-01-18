@@ -39,7 +39,7 @@ $factor: 5;
 
   33% {
     opacity: 0;
-    transform: translateX(200px) scaleX(1);
+    transform: translateX(-200px) scaleX(1);
   }
 
   100% {
@@ -142,7 +142,7 @@ $factor: 5;
 
   60% {
     opacity: 0;
-    transform: translateX(200px);
+    transform: translateX(-200px);
   }
 
   100% {
