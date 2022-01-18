@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
   siteMetadata: {
     title: `React Effector Form`,
@@ -37,7 +35,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-layout`,
       options: {
-        component: path.resolve(__dirname, `./src/components/main-layout`),
+        component: `${__dirname}/src/components/main-layout`,
       },
     },
     {

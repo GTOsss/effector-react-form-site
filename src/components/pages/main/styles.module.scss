@@ -1,3 +1,4 @@
+$factor: 5;
 .root {
   display: flex;
   flex-direction: column;
@@ -5,14 +6,14 @@
   align-items: center;
 
   & > h1 {
-    animation-duration: 1s;
+    animation-duration: $factor * 100ms;
     animation-name: h1Appear;
 
     margin-bottom: 15px;
   }
 
   & > h3 {
-    animation-duration: 2s;
+    animation-duration: $factor * 200ms;
     animation-name: h3Appear;
     margin: 0 auto;
   }
@@ -63,7 +64,7 @@
 }
 
 .buttonsWrapper {
-  animation-duration: 3s;
+  animation-duration: $factor * 300ms;
   animation-name: buttonsAppear;
 }
 
@@ -91,7 +92,7 @@
 
   flex-wrap: wrap;
 
-  animation-duration: 4s;
+  animation-duration: $factor * 400ms;
   animation-name: otherAppear;
 }
 
@@ -152,13 +153,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  animation-duration: 4s;
+  animation-duration: $factor * 400ms;
   animation-name: otherAppear;
 }
 
 .description {
   margin: 55px 25px auto;
 
-  animation-duration: 4s;
+  animation-duration: $factor * 400ms;
   animation-name: otherAppear;
 }
