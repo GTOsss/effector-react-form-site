@@ -165,10 +165,8 @@ export default App;
 
 export const codeExample = `import { createForm, useForm } from 'effector-react-form';
 import React from 'react';
-import cn from 'classnames';
 import { createEvent, createStore, sample } from 'effector';
 import { useStore } from 'effector-react';
-import styles from './styles.module.scss';
 
 const initialValues = {
   username: '',
@@ -217,17 +215,10 @@ const validateRequired = (value) => (!value ? 'Field is required' : undefined);
 const Input = ({ controller, label }) => {
   const { input, error, isShowError } = controller();
   return (
-    <div className="input-wrap">
+    <div>
       <label>{label}</label>
-      <input
-        {...input}
-        value={input.value || ''}
-        className={cn('input', {
-          'input-error': isShowError,
-        })}
-        autoComplete="off"
-      />
-      {isShowError && <div className="input-error-message">{error}</div>}
+      <input {...input} value={input.value || ''} />
+      {isShowError && <div>{error}</div>}
     </div>
   );
 };
@@ -238,7 +229,7 @@ const FormUserInfo = () => {
     resetUnmount: false,
   });
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
+    <form onSubmit={handleSubmit}>
       <Input controller={controller({ name: 'username', validate: validateRequired })} label="Username" />
       <Input controller={controller({ name: 'profile.firstName' })} label="First name" />
       <Input controller={controller({ name: 'profile.lastName' })} label="Last name" />
@@ -253,13 +244,13 @@ const FormContactInfo = () => {
     resetUnmount: false,
   });
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
+    <form onSubmit={handleSubmit}>
       <Input controller={controller({ name: 'contactInfo.email', validate: validateRequired })} label="Email" />
       <Input controller={controller({ name: 'contactInfo.phone', validate: validateRequired })} label="Phone" />
-      <button type="button" onClick={prevStep} className={styles.button}>
+      <button type="button" onClick={prevStep}>
         Previous step
       </button>
-      <button type="submit" className={styles.button}>
+      <button type="submit">
         Next step
       </button>
     </form>
@@ -272,12 +263,12 @@ const FormAdditionalInfo = () => {
     resetUnmount: false,
   });
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
+    <form onSubmit={handleSubmit}>
       <Input controller={controller({ name: 'profile.info', validate: validateRequired })} label="Info" />
-      <button type="button" onClick={prevStep} className={styles.button}>
+      <button type="button" onClick={prevStep}>
         Previous step
       </button>
-      <button type="submit" className={styles.button}>
+      <button type="submit">
         Next step
       </button>
     </form>
@@ -290,7 +281,7 @@ const AllData = () => {
     resetUnmount: false,
   });
   return (
-    <form onSubmit={handleSubmit} className={styles.form}>
+    <form onSubmit={handleSubmit}>
       <Input controller={controller({ name: 'username', validate: validateRequired })} label="Username" />
       <Input controller={controller({ name: 'profile.firstName' })} label="First name" />
       <Input controller={controller({ name: 'profile.lastName' })} label="Last name" />
@@ -302,9 +293,9 @@ const AllData = () => {
 };
 
 const ThankForRegistration = () => (
-  <div className="column">
+  <div>
     <h2>Thank you for registering!</h2>
-    <button type="button" onClick={prevStep} className={styles.button}>
+    <button type="button" onClick={prevStep}>
       Previous step
     </button>
   </div>
@@ -319,12 +310,10 @@ const Form = () => {
 
 const App = () => {
   return (
-    <div className={styles.root}>
+    <div>
       <Form />
       <AllData />
     </div>
   );
 };
-
-export default App;
 `;
