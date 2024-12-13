@@ -1,0 +1,8 @@
+version: '3'
+services:
+  effector-react-form-site:
+    build: '.'
+    image: 'effector-react-form-site'
+    container_name: 'effector-react-form-site'
+    ports:
+      - "6000:80"

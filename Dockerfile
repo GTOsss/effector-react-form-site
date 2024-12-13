@@ -1,4 +1,4 @@
-FROM node:14.15-alpine as build
+FROM node:14.16-alpine as build
 
 WORKDIR /app
 
@@ -9,7 +9,7 @@ RUN apk add python libpng-dev autoconf automake make g++ libtool nasm && \
     yarn global add serve && \
     yarn run build
 
-ENV PORT=6000
+ENV PORT=80
 ENV HOST=0.0.0.0
 
 EXPOSE $PORT
