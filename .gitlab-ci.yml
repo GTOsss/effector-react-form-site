@@ -30,6 +30,11 @@ test-image:
     - laptop-dc
   stage: test
   script:
+    - apk add --no-cache curl
     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
-    - docker run --rm $CI_REGISTRY_IMAGE:latest
-    - curl http://localhost:80
+    - docker run -d --name effector-react-form-site -p 8080:80 $CI_REGISTRY_IMAGE:latest
+    # Порт публикуется на хосте dind-сервиса, поэтому стучимся в docker, а не в localhost
+    - curl --fail --silent --show-error --retry 10 --retry-delay 2 --retry-connrefused http://docker:8080
+  after_script:
+    - docker logs effector-react-form-site || true
+    - docker rm -f effector-react-form-site || true
