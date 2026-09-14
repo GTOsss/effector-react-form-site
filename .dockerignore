@@ -1,4 +1,17 @@
 .git
+.gitignore
+.idea
 node_modules
 .cache
 public
+
+Dockerfile
+.dockerignore
+docker-compose.yml
+.gitlab-ci.yml
+
+README.md
+LICENSE
+*.log
+.env*
+.DS_Store
